@@ -1,0 +1,219 @@
+<entry timestamp="2015-01-06#07:49:08" user="FactoryBuiltAgent" level="NORMAL">CONFIGURING AGENT VirtualCarolyn_c</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.AGENT" level="NORMAL"><created>VirtualCarolyn_c</created></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.stateMemory" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.stateMemory" level="NORMAL"><created>stateMemory</created></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.client" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.client" level="NORMAL"><created>client</created></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.client" level="NORMAL">Property read: socket_url =	http://conversation.lti.cs.cmu.edu:8000</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL"><created>inputCoordinator</created></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.outputCoordinator" level="NORMAL"><created>outputCoordinator</created></entry>
+<entry timestamp="2015-01-06#07:49:08" user="(client->inputCoordinator)" level="INFO">Connection initialized. Id=1420548548205</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.client" level="INFO">Outgoing connection added from client to inputCoordinator</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="INFO">Inward connection added from inputCoordinator to client</entry>
+<entry timestamp="2015-01-06#07:49:08" user="(inputCoordinator->inputCoordinator)" level="INFO">Connection initialized. Id=1420548548205</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="INFO">Outgoing connection added from inputCoordinator to inputCoordinator</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="INFO">Outgoing connection added from inputCoordinator to inputCoordinator</entry>
+<entry timestamp="2015-01-06#07:49:08" user="(inputCoordinator->outputCoordinator)" level="INFO">Connection initialized. Id=1420548548205</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="INFO">Outgoing connection added from inputCoordinator to outputCoordinator</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Inward connection added from outputCoordinator to inputCoordinator</entry>
+<entry timestamp="2015-01-06#07:49:08" user="(outputCoordinator->client)" level="INFO">Connection initialized. Id=1420548548205</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Outgoing connection added from outputCoordinator to client</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.client" level="INFO">Inward connection added from client to outputCoordinator</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.AGENT" level="NORMAL"><initialized>VirtualCarolyn_c</initialized></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.stateMemory" level="INFO">Observer Added:stateMemory.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.client" level="INFO">Observer Added:client.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Observer Added:outputCoordinator.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="INFO">Observer Added:inputCoordinator.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2015-01-06#07:49:08" user="(client->inputCoordinator)" level="NORMAL">Observer Added:(client->inputCoordinator).ui.edge</entry>
+<entry timestamp="2015-01-06#07:49:08" user="(inputCoordinator->inputCoordinator)" level="NORMAL">Observer Added:(inputCoordinator->inputCoordinator).ui.edge</entry>
+<entry timestamp="2015-01-06#07:49:08" user="(inputCoordinator->outputCoordinator)" level="NORMAL">Observer Added:(inputCoordinator->outputCoordinator).ui.edge</entry>
+<entry timestamp="2015-01-06#07:49:08" user="(outputCoordinator->client)" level="NORMAL">Observer Added:(outputCoordinator->client).ui.edge</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.stateMemory" level="INFO">Observer Added:stateMemory.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.client" level="INFO">Observer Added:client.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Observer Added:outputCoordinator.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="INFO">Observer Added:inputCoordinator.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2015-01-06#07:49:08" user="(client->inputCoordinator)" level="NORMAL">Observer Added:(client->inputCoordinator).ui.panel</entry>
+<entry timestamp="2015-01-06#07:49:08" user="(inputCoordinator->inputCoordinator)" level="NORMAL">Observer Added:(inputCoordinator->inputCoordinator).ui.panel</entry>
+<entry timestamp="2015-01-06#07:49:08" user="(inputCoordinator->outputCoordinator)" level="NORMAL">Observer Added:(inputCoordinator->outputCoordinator).ui.panel</entry>
+<entry timestamp="2015-01-06#07:49:08" user="(outputCoordinator->client)" level="NORMAL">Observer Added:(outputCoordinator->client).ui.panel</entry>
+<entry timestamp="2015-01-06#07:49:08" user="AgreeDisagreeActor" level="WARNING">agree condition: false</entry>
+<entry timestamp="2015-01-06#07:49:08" user="AskForExplanationActor" level="WARNING">explain_other condition: false</entry>
+<entry timestamp="2015-01-06#07:49:08" user="RevoiceActor" level="WARNING">revoice condition: false</entry>
+<entry timestamp="2015-01-06#07:49:08" user="SayMoreActor" level="WARNING">say_more condition: false</entry>
+<entry timestamp="2015-01-06#07:49:08" user="PlanExecutor" level="NORMAL"><configuration planfile="plans/plan_steps.xml"></entry>
+<entry timestamp="2015-01-06#07:49:08" user="PlanExecutor" level="ERROR">PlanExecutor: Can't do that...java.io.IOException: No such file or directory</entry>
+<entry timestamp="2015-01-06#07:49:08" user="PlanExecutor" level="ERROR">Error while reading Status File (java.io.FileNotFoundException: planstatus/VirtualCarolyn_c.planstatus.txt (No such file or directory))</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="0" initiated="false">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+</State></commit></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.AGENT" level="NORMAL"><starting>Initializing each component</starting></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.stateMemory" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.stateMemory" level="NORMAL"><initialized>stateMemory</initialized></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.client" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.client" level="NORMAL"><initialized>client</initialized></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.outputCoordinator" level="NORMAL"><initialized>outputCoordinator</initialized></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL"><initialized>inputCoordinator</initialized></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.AGENT" level="NORMAL"><starting>All components initialized</starting></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="INFO">Observer Added:frame2. 3 Observers now.</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.client" level="INFO"><broadcasting>PRESENCE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2015-01-06#07:49:08" user="(client->inputCoordinator)" level="INFO">Communicate PRESENCE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="INFO"><queued name="PRESENCE_EVENT" from="client"></queued></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.client" level="INFO"><broadcasting>PRESENCE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2015-01-06#07:49:08" user="(client->inputCoordinator)" level="INFO">Communicate PRESENCE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="INFO"><queued name="PRESENCE_EVENT" from="client"></queued></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="INFO"><processing name="PRESENCE_EVENT" from="client">Presence: David A is now PRESENT</processing></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL">InputCoordinator received event: Presence: David A is now PRESENT</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="0" initiated="false">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+</State></retrieve></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="1" initiated="false">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="David A" name="David A" role="UNASSIGNED" present="true" /></State></commit></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="false">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="David A" name="David A" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="1" initiated="true">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="David A" name="David A" role="UNASSIGNED" present="true" /></State></commit></entry>
+<entry timestamp="2015-01-06#07:49:08" user="PlanExecutor" level="NORMAL">Plan: <stage name="initiate" timeout="0">set</stage></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL">Events After Preprocessing: [Presence: David A is now PRESENT]</entry>
+<entry timestamp="2015-01-06#07:49:08" user="PlanExecutor" level="ERROR">Error while updating Status File (java.io.FileNotFoundException: planstatus/VirtualCarolyn_c.planstatus.txt (No such file or directory))</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="David A" name="David A" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="1" initiated="true">
+	<Stage name="body" type="other" />
+	<Step name="ABOUT_TUTORIALS_STEP" type="prompt"/>
+	<student id="David A" name="David A" role="UNASSIGNED" present="true" /></State></commit></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="body" type="other" />
+	<Step name="ABOUT_TUTORIALS_STEP" type="prompt"/>
+	<student id="David A" name="David A" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="INFO"><processed name="PRESENCE_EVENT" from="client"></processed></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="INFO"><processing name="PRESENCE_EVENT" from="client">Presence: VirtualCarolyn is now PRESENT</processing></entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL">InputCoordinator received event: Presence: VirtualCarolyn is now PRESENT</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL">Events After Preprocessing: [Presence: VirtualCarolyn is now PRESENT]</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2015-01-06#07:49:08" user="VirtualCarolyn_c.inputCoordinator" level="INFO"><processed name="PRESENCE_EVENT" from="client"></processed></entry>
+<entry timestamp="2015-01-06#07:49:08" user="PlanExecutor" level="ERROR">Error while updating Status File (java.io.FileNotFoundException: planstatus/VirtualCarolyn_c.planstatus.txt (No such file or directory))</entry>
+<entry timestamp="2015-01-06#07:49:09" user="VirtualCarolyn_c.client" level="INFO"><broadcasting>PRESENCE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2015-01-06#07:49:09" user="(client->inputCoordinator)" level="INFO">Communicate PRESENCE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2015-01-06#07:49:09" user="VirtualCarolyn_c.inputCoordinator" level="INFO"><queued name="PRESENCE_EVENT" from="client"></queued></entry>
+<entry timestamp="2015-01-06#07:49:09" user="VirtualCarolyn_c.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2015-01-06#07:49:09" user="VirtualCarolyn_c.inputCoordinator" level="INFO"><processing name="PRESENCE_EVENT" from="client">Presence: VirtualCarolyn is now PRESENT</processing></entry>
+<entry timestamp="2015-01-06#07:49:09" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL">InputCoordinator received event: Presence: VirtualCarolyn is now PRESENT</entry>
+<entry timestamp="2015-01-06#07:49:09" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL">Events After Preprocessing: [Presence: VirtualCarolyn is now PRESENT]</entry>
+<entry timestamp="2015-01-06#07:49:09" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2015-01-06#07:49:09" user="VirtualCarolyn_c.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2015-01-06#07:49:09" user="VirtualCarolyn_c.inputCoordinator" level="INFO"><processed name="PRESENCE_EVENT" from="client"></processed></entry>
+<entry timestamp="2015-01-06#07:49:10" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Proposal Queue: [Message from VirtualCarolyn: Now I'll start an interactive dialogue. ABOUT_TUTORIALS]</entry>
+<entry timestamp="2015-01-06#07:49:10" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Proposal Message from VirtualCarolyn: Now I'll start an interactive dialogue. ABOUT_TUTORIALSbelief*priority: 1.0*0.75=0.75</entry>
+<entry timestamp="2015-01-06#07:49:10" user="VirtualCarolyn_c.outputCoordinator" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2015-01-06#07:49:10" user="(outputCoordinator->client)" level="INFO">Communicate MESSAGE_EVENT from outputCoordinator to client</entry>
+<entry timestamp="2015-01-06#07:49:10" user="VirtualCarolyn_c.client" level="INFO"><queued name="MESSAGE_EVENT" from="outputCoordinator"></queued></entry>
+<entry timestamp="2015-01-06#07:49:10" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2015-01-06#07:49:10" user="VirtualCarolyn_c.client" level="INFO"><processing name="MESSAGE_EVENT" from="outputCoordinator">Message from VirtualCarolyn: Now I'll start an interactive dialogue. ABOUT_TUTORIALS</processing></entry>
+<entry timestamp="2015-01-06#07:49:10" user="VirtualCarolyn_c.client" level="INFO"><processed name="MESSAGE_EVENT" from="outputCoordinator"></processed></entry>
+<entry timestamp="2015-01-06#07:49:10" user="VirtualCarolyn_c.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="body" type="other" />
+	<Step name="ABOUT_TUTORIALS_STEP" type="prompt"/>
+	<student id="David A" name="David A" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2015-01-06#07:49:10" user="VirtualCarolyn_c.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="1" initiated="true">
+	<Stage name="body" type="other" />
+	<Step name="DEMO_TUTORIAL" type="dialogue"/>
+	<student id="David A" name="David A" role="UNASSIGNED" present="true" /></State></commit></entry>
+<entry timestamp="2015-01-06#07:49:10" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL"><dispatching to="inputCoordinator">DO_TUTORING_EVENT</dispatching></entry>
+<entry timestamp="2015-01-06#07:49:10" user="(inputCoordinator->inputCoordinator)" level="INFO">Communicate DO_TUTORING_EVENT from inputCoordinator to inputCoordinator</entry>
+<entry timestamp="2015-01-06#07:49:10" user="VirtualCarolyn_c.inputCoordinator" level="INFO"><queued name="DO_TUTORING_EVENT" from="inputCoordinator"></queued></entry>
+<entry timestamp="2015-01-06#07:49:10" user="VirtualCarolyn_c.inputCoordinator" level="INFO">Informing 3 Observers of Event Sending</entry>
+<entry timestamp="2015-01-06#07:49:10" user="PlanExecutor" level="ERROR">Error while updating Status File (java.io.FileNotFoundException: planstatus/VirtualCarolyn_c.planstatus.txt (No such file or directory))</entry>
+<entry timestamp="2015-01-06#07:49:10" user="VirtualCarolyn_c.inputCoordinator" level="INFO"><processing name="DO_TUTORING_EVENT" from="inputCoordinator">Do Tutoring concept=GOAL_IDENTIFICATION</processing></entry>
+<entry timestamp="2015-01-06#07:49:10" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL">InputCoordinator received event: Do Tutoring concept=GOAL_IDENTIFICATION</entry>
+<entry timestamp="2015-01-06#07:49:10" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL">Events After Preprocessing: [Do Tutoring concept=GOAL_IDENTIFICATION]</entry>
+<entry timestamp="2015-01-06#07:49:10" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2015-01-06#07:49:10" user="VirtualCarolyn_c.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2015-01-06#07:49:10" user="VirtualCarolyn_c.inputCoordinator" level="INFO"><processed name="DO_TUTORING_EVENT" from="inputCoordinator"></processed></entry>
+<entry timestamp="2015-01-06#07:49:12" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Proposal Queue: [Message from VirtualCarolyn: What type of android app, you are planning to develop? TUTOR]</entry>
+<entry timestamp="2015-01-06#07:49:12" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Proposal Message from VirtualCarolyn: What type of android app, you are planning to develop? TUTORbelief*priority: 0.375*0.75=0.28125</entry>
+<entry timestamp="2015-01-06#07:49:12" user="VirtualCarolyn_c.outputCoordinator" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2015-01-06#07:49:12" user="(outputCoordinator->client)" level="INFO">Communicate MESSAGE_EVENT from outputCoordinator to client</entry>
+<entry timestamp="2015-01-06#07:49:12" user="VirtualCarolyn_c.client" level="INFO"><queued name="MESSAGE_EVENT" from="outputCoordinator"></queued></entry>
+<entry timestamp="2015-01-06#07:49:12" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2015-01-06#07:49:12" user="VirtualCarolyn_c.client" level="INFO"><processing name="MESSAGE_EVENT" from="outputCoordinator">Message from VirtualCarolyn: What type of android app, you are planning to develop? TUTOR</processing></entry>
+<entry timestamp="2015-01-06#07:49:12" user="VirtualCarolyn_c.client" level="INFO"><processed name="MESSAGE_EVENT" from="outputCoordinator"></processed></entry>
+<entry timestamp="2015-01-06#07:49:16" user="VirtualCarolyn_c.client" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2015-01-06#07:49:16" user="(client->inputCoordinator)" level="INFO">Communicate MESSAGE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2015-01-06#07:49:16" user="VirtualCarolyn_c.inputCoordinator" level="INFO"><queued name="MESSAGE_EVENT" from="client"></queued></entry>
+<entry timestamp="2015-01-06#07:49:16" user="VirtualCarolyn_c.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2015-01-06#07:49:16" user="VirtualCarolyn_c.inputCoordinator" level="INFO"><processing name="MESSAGE_EVENT" from="client">Message from David A: audio source mic </processing></entry>
+<entry timestamp="2015-01-06#07:49:16" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL">InputCoordinator received event: Message from David A: audio source mic </entry>
+<entry timestamp="2015-01-06#07:49:16" user="VirtualCarolyn_c.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="body" type="other" />
+	<Step name="DEMO_TUTORIAL" type="dialogue"/>
+	<student id="David A" name="David A" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2015-01-06#07:49:16" user="VirtualCarolyn_c.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="body" type="other" />
+	<Step name="DEMO_TUTORIAL" type="dialogue"/>
+	<student id="David A" name="David A" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2015-01-06#07:49:16" user="VirtualCarolyn_c.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="1" initiated="true">
+	<Stage name="body" type="other" />
+	<Step name="DEMO_TUTORIAL" type="dialogue"/>
+	<student id="David A" name="David A" role="UNASSIGNED" present="true" /></State></commit></entry>
+<entry timestamp="2015-01-06#07:49:16" user="VirtualCarolyn_c.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="body" type="other" />
+	<Step name="DEMO_TUTORIAL" type="dialogue"/>
+	<student id="David A" name="David A" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2015-01-06#07:49:16" user="VirtualCarolyn_c.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="body" type="other" />
+	<Step name="DEMO_TUTORIAL" type="dialogue"/>
+	<student id="David A" name="David A" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2015-01-06#07:49:16" user="SocialController" level="NORMAL">ratio NaN, </entry>
+<entry timestamp="2015-01-06#07:49:16" user="VirtualCarolyn_c.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="1" initiated="true">
+	<Stage name="body" type="other" />
+	<Step name="DEMO_TUTORIAL" type="dialogue"/>
+	<student id="David A" name="David A" role="UNASSIGNED" present="true" /></State></commit></entry>
+<entry timestamp="2015-01-06#07:49:17" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL"><dispatching to="inputCoordinator">repeat of Okay, it seems plan is ready now. You're on your own from here on. Good luck! by NOTICE_DONE</dispatching></entry>
+<entry timestamp="2015-01-06#07:49:17" user="(inputCoordinator->inputCoordinator)" level="INFO">Communicate repeat of Okay, it seems plan is ready now. You're on your own from here on. Good luck! by NOTICE_DONE from inputCoordinator to inputCoordinator</entry>
+<entry timestamp="2015-01-06#07:49:17" user="VirtualCarolyn_c.inputCoordinator" level="INFO"><queued name="repeat of Okay, it seems plan is ready now. You're on your own from here on. Good luck! by NOTICE_DONE" from="inputCoordinator"></queued></entry>
+<entry timestamp="2015-01-06#07:49:17" user="VirtualCarolyn_c.inputCoordinator" level="INFO">Informing 3 Observers of Event Sending</entry>
+<entry timestamp="2015-01-06#07:49:17" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL">Events After Preprocessing: [Message from David A: audio source mic TYPE_AUDIO_SOURCE+AUDIO_SOURCE, Do Tutoring concept=AUDIO_SOURCE]</entry>
+<entry timestamp="2015-01-06#07:49:17" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2015-01-06#07:49:17" user="VirtualCarolyn_c.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2015-01-06#07:49:17" user="VirtualCarolyn_c.inputCoordinator" level="INFO"><processed name="MESSAGE_EVENT" from="client"></processed></entry>
+<entry timestamp="2015-01-06#07:49:17" user="VirtualCarolyn_c.inputCoordinator" level="INFO"><processing name="repeat of Okay, it seems plan is ready now. You're on your own from here on. Good luck! by NOTICE_DONE" from="inputCoordinator">repeat of Okay, it seems plan is ready now. You're on your own from here on. Good luck! by NOTICE_DONE</processing></entry>
+<entry timestamp="2015-01-06#07:49:17" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL">InputCoordinator received event: repeat of Okay, it seems plan is ready now. You're on your own from here on. Good luck! by NOTICE_DONE</entry>
+<entry timestamp="2015-01-06#07:49:17" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL">Events After Preprocessing: [repeat of Okay, it seems plan is ready now. You're on your own from here on. Good luck! by NOTICE_DONE]</entry>
+<entry timestamp="2015-01-06#07:49:17" user="VirtualCarolyn_c.inputCoordinator" level="NORMAL">Events After Agent Processing:[Message from VirtualCarolyn: Okay, it seems plan is ready now. You're on your own from here on. Good luck! NOTICE_DONE]</entry>
+<entry timestamp="2015-01-06#07:49:17" user="VirtualCarolyn_c.outputCoordinator" level="NORMAL">Added to Proposal Queue: [Message from VirtualCarolyn: Okay, it seems plan is ready now. You're on your own from here on. Good luck! NOTICE_DONE]</entry>
+<entry timestamp="2015-01-06#07:49:17" user="VirtualCarolyn_c.inputCoordinator" level="INFO"><processed name="repeat of Okay, it seems plan is ready now. You're on your own from here on. Good luck! by NOTICE_DONE" from="inputCoordinator"></processed></entry>
+<entry timestamp="2015-01-06#07:49:18" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Proposal Queue: [Message from VirtualCarolyn: Yes, we need to set an audio source on recorder object. TUTOR, Message from VirtualCarolyn: Okay, it seems plan is ready now. You're on your own from here on. Good luck! NOTICE_DONE]</entry>
+<entry timestamp="2015-01-06#07:49:18" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Proposal Message from VirtualCarolyn: Yes, we need to set an audio source on recorder object. TUTORbelief*priority: 0.37490625*0.75=0.2811796875</entry>
+<entry timestamp="2015-01-06#07:49:18" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Proposal not allowed by Source: TUTOR_DIALOG: Message from VirtualCarolyn: Okay, it seems plan is ready now. You're on your own from here on. Good luck! NOTICE_DONE</entry>
+<entry timestamp="2015-01-06#07:49:18" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Proposal Message from VirtualCarolyn: Okay, it seems plan is ready now. You're on your own from here on. Good luck! NOTICE_DONEbelief*priority: 0.0*100000.0=0.0</entry>
+<entry timestamp="2015-01-06#07:49:18" user="VirtualCarolyn_c.outputCoordinator" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2015-01-06#07:49:18" user="(outputCoordinator->client)" level="INFO">Communicate MESSAGE_EVENT from outputCoordinator to client</entry>
+<entry timestamp="2015-01-06#07:49:18" user="VirtualCarolyn_c.client" level="INFO"><queued name="MESSAGE_EVENT" from="outputCoordinator"></queued></entry>
+<entry timestamp="2015-01-06#07:49:18" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2015-01-06#07:49:18" user="VirtualCarolyn_c.client" level="INFO"><processing name="MESSAGE_EVENT" from="outputCoordinator">Message from VirtualCarolyn: Yes, we need to set an audio source on recorder object. TUTOR</processing></entry>
+<entry timestamp="2015-01-06#07:49:18" user="VirtualCarolyn_c.client" level="INFO"><processed name="MESSAGE_EVENT" from="outputCoordinator"></processed></entry>
+<entry timestamp="2015-01-06#07:49:20" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Proposal Queue: [Message from VirtualCarolyn: Okay, it seems plan is ready now. You're on your own from here on. Good luck! NOTICE_DONE]</entry>
+<entry timestamp="2015-01-06#07:49:20" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Proposal not allowed by Source: TUTOR_DIALOG: Message from VirtualCarolyn: Okay, it seems plan is ready now. You're on your own from here on. Good luck! NOTICE_DONE</entry>
+<entry timestamp="2015-01-06#07:49:20" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Proposal Message from VirtualCarolyn: Okay, it seems plan is ready now. You're on your own from here on. Good luck! NOTICE_DONEbelief*priority: 0.0*76880.0=0.0</entry>
+<entry timestamp="2015-01-06#07:49:22" user="VirtualCarolyn_c.outputCoordinator" level="INFO">Proposal Queue: [Message from VirtualCarolyn: Okay, it seems plan is ready now. You're on your own from here on. Good luck! NOTICE_DONE]</entry>

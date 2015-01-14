@@ -1,0 +1,13 @@
+aac_adts
+aac adts
+default format
+mpeg
+mpeg_4
+mpeg4
+raw_amr
+three_gpp
+3gpp
+webm
+wav
+\amr_nb*format\
+\amr_wb*format\

@@ -1,0 +1,6 @@
+2014-12-26,14:37:33,0,ExampleAgent,1419622653205,"Hello, I'm ExampleAgent, the Bazaar example agent! This message comes from the PromptStepHandler, by way of the PlanExecutor component.",GREETING
+2014-12-26,14:37:39,0,David A,1419622659074,hi,
+2014-12-26,14:37:39,0,ExampleAgent,1419622661245,Hm.  hi,MIMICRY+PREFIXED
+2014-12-26,14:38:03,0,David A,1419622684066,say something,
+2014-12-26,14:38:04,0,ExampleAgent,1419622685276,Hm.  say something,MIMICRY+PREFIXED
+2014-12-26,14:38:20,0,ExampleAgent,1419622701296,"The rest of the responses you'll see from me come from two dynamic components, the RepeatReactor and the ParrotTalker, which are paying attention to what you say (supported by the MessageAnnotator component), and how often you say it.",EXPLAIN

@@ -1,0 +1,10 @@
+2015-01-03,14:45:19,0,VirtualCarolyn,1420314321099,Hello! I'm VirtualCarolyn. Take a minute to introduce yourselves.,INTRODUCE
+2015-01-03,14:45:36,0,David A,1420314337048,I am gaurav,GIVING_NAME+AFFIRMATIVE
+2015-01-03,14:45:37,0,VirtualCarolyn,1420314337133,"Hi, Gaurav.",GREET
+2015-01-03,14:45:49,0,VirtualCarolyn,1420314351161,"While I won't answer your questions directly, I can help guide your group discussion.",SETUP
+2015-01-03,14:46:03,0,VirtualCarolyn,1420314365176,"Once you get an idea of what's going on, replace these prompts with something domain appropriate!",INSTRUCTIONS
+2015-01-03,14:46:18,0,VirtualCarolyn,1420314379190,You can also share images to the whiteboard:,WHITEBOARD_INSTRUCTIONS
+2015-01-03,14:46:31,0,VirtualCarolyn,1420314393204,The agent is listening for several kinds of triggers to start supporting students.,ABOUT_ACCOUNTABLE_TALK
+2015-01-03,14:46:31,0,VirtualCarolyn,1420314393206,"For example, David cares a lot about ""Accountable Talk"" style facilitation these days.",ABOUT_ACCOUNTABLE_TALK
+2015-01-03,14:46:31,0,VirtualCarolyn,1420314393207,"The provided AT example is configured for college chemistry. If you've turned on any of the revoice, agree, say_more, or explain conditions, try saying something like ""boiling point increases with dipole moment.""",ABOUT_ACCOUNTABLE_TALK
+2015-01-03,14:46:31,0,VirtualCarolyn,1420314393208,"(and then wait a little while, this behavior waits for other students to follow up before offering support.)",ABOUT_ACCOUNTABLE_TALK

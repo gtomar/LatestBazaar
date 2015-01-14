@@ -1,0 +1,84 @@
+2015-01-02,00:03:11,0,David A,1420174992226,Hello,
+2015-01-02,00:04:04,0,David A,1420175044571,?,QUESTION
+2015-01-02,00:04:58,0,Sage,1420175099949,"Hi, I'm Sage. I'll be facilitating this group exercise. 
+I won't answer your questions directly, but I'll structure the activity and add a few comments to your discussion.",AGENT_INTRODUCE
+2015-01-02,00:05:12,0,Sage,1420175113966,Each of you will be the expert for a different kind of compound - take a few minutes to review your individual training materials.,DO_GREETING
+2015-01-02,00:05:24,0,Sage,1420175125982,"<div class=""chem_box chem_text""> 
+ <h2>General Introduction</h2> 
+ <p>Each member of your group has received some training materials on the intermolecular forces that hold liquids together and influence a liquid's boiling point. In particular, one of you has learned about the forces at work in liquids consisting of non-polar molecules, one of you learned about liquids composed of polar molecules, and one of you learned about ionic liquids.</p> 
+ <p>We'll be asking you some questions that will give you an opportunity to teach the other members of your group about the things you've read about. In addition, we'll ask you some questions that will require your collective expertise. Make sure you discuss things with the other members of your group - because by doing so, you'll be able produce more accurate answers to the questions and you'll all learn more.</p> 
+</div>",
+2015-01-02,00:05:29,0,Sage,1420175129997,"When you've finished reading your training materials and you think your whole group is ready, press the ""We're Ready"" button to begin.",WAIT_FOR_CHECKIN
+2015-01-02,00:06:01,0,Sage,1420175162032,"<div class=""chem_box chem_text""> 
+ <h2>Getting on the Same Page</h2> 
+ <p>Before we start looking at data that will require you to combine your respective expertise, we'll take a look at three data sets, each of which can be explained by just one of you. Looking at these data sets together will provide an opportunity for each of you to share with the other group members what you learned. Try to explain what you learned as well as you can - your group is relying on you! </p> 
+</div>",
+2015-01-02,00:06:06,0,Sage,1420175170048,"Take a minute to read the overview for this section. Press the ""We're Ready"" button when you think your team is done.",WAIT_FOR_CHECKIN
+2015-01-02,00:06:40,0,Sage_wssup,1420175202078,"Thanks, David A. Hang on until everyone else is ready...",ACKNOWLEDGE+PRIVATE_MESSAGE+to:David A
+2015-01-02,00:06:43,0,Sage,1420175204084,Moving on...,ALL_READY
+2015-01-02,00:06:46,0,Sage,1420175208094,I'll post the first data set - we'll continue when you all understand what factors are at play.,INTRO_1
+2015-01-02,00:06:52,0,Sage,1420175214102,"<div class=""chem_box chem_text""> 
+ <p><strong>1</strong>. This data set involves the boiling point of unbranched and branched alkanes.</p> 
+ <img class=""chem_image"" alt=""Boiling Point vs van der Waals Area for Linear and Branched Alkanes"" src=""http://collective2.chem.cmu.edu/chem105/intermolecular/images/samepage_1_linear_700.png"" /> 
+ <p>Questions pertaining to this data: </p> 
+ <ol type=""a""> 
+  <li>Which type of molecule (non-polar, polar, ionic) is represented here? </li> 
+  <li>Which factors influence the boiling point of the chemical species in the figure? How do those factors show up in the figure? </li> 
+  <li>Are there any factors that influence the boiling point of these chemicals that aren't evident from the figure? If so, what are they?</li> 
+ </ol> 
+ <p>Use the space below to take notes during your group's discussion of this data set.</p> 
+ <p><textarea class=""chem_notes"" style=""width:80%"" placeholder=""add notes here""> </textarea></p> 
+ <div class=""chem_comment"">
+  These are your personal notes - nobody else can see what you write here.
+ </div> 
+</div>",
+2015-01-02,00:06:52,0,Sage,1420175218114,"Once you've fully discussed this with your team, press the ""We're Ready"" button.",WAIT_FOR_CHECKIN
+2015-01-02,00:07:01,0,David A,1420175221288,ok,AFFIRMATIVE
+2015-01-02,00:07:05,0,GST,1420175225327,yes,AFFIRMATIVE
+2015-01-02,00:08:09,0,Sage_wssup,1420175290189,"Thanks, David A. Hang on until everyone else is ready...",ACKNOWLEDGE+PRIVATE_MESSAGE+to:David A
+2015-01-02,00:08:15,0,Sage,1420175296197,Let's look at the second dataset.,INTRO_2
+2015-01-02,00:08:17,0,Sage,1420175298203,"<div class=""chem_box chem_text""> 
+ <p><strong>2</strong>. This data set involves two groups of molecules. Within each group, the molecules have the same number and type of atoms but in different arrangements. Within each group are molecules that are classified as ethers, aldehydes, and ketones, etc.</p> 
+ <img class=""chem_image"" alt=""Boiling Point as a Function of Dipole Moment"" src=""http://collective2.chem.cmu.edu/chem105/intermolecular/images/samepage_2_isomer_700.png"" /> 
+ <p>Questions pertaining to this data: </p> 
+ <ol type=""a""> 
+  <li>Which type of molecule (non-polar, polar, ionic) is represented here? </li> 
+  <li>Which factors influence the boiling point of the chemical species in the figure? How do those factors show up in the figure? </li> 
+  <li>Are there any factors that influence the boiling point of these chemicals that aren't evident from the figure? If so, what are they?</li> 
+ </ol> 
+ <p>Use the space below to take notes during your group's discussion of this data set.</p> 
+ <p><textarea class=""chem_notes"" style=""width:80%"" placeholder=""add notes here""> </textarea></p> 
+ <div class=""chem_comment"">
+  These are your personal notes - nobody else can see what you write here.
+ </div> 
+</div>",
+2015-01-02,00:08:17,0,Sage,1420175302217,We'll start the next part once everyone is comfortable with this - press Ready when your group is set.,WAIT_FOR_CHECKIN
+2015-01-02,00:08:48,0,David A,1420175329910,I am not able to understand anything,AFFIRMATIVE+NEGATIVE
+2015-01-02,00:08:54,0,GST,1420175334334,me too,
+2015-01-02,00:08:57,0,GST,1420175337740,please help ?,CONFUSION+HELP_REQUEST+QUESTION
+2015-01-02,00:09:10,0,David A,1420175351497,Sage can you help ?,CONFUSION+HELP_REQUEST+QUESTION
+2015-01-02,00:10:22,0,GST,1420175422613,Anyone there ?,QUESTION
+2015-01-02,00:10:31,0,GST,1420175435313,factors that influence the boiling point of these chemicals that aren't evident from the figure,RESTATE_CANDIDATE+SAY_MORE_CANDIDATE+AGREE_CANDIDATE+PRESS_REASONING_CANDIDATE
+2015-01-02,00:10:42,0,David A,1420175443764,factors influence the boiling point of the chemical species in the figure,RESTATE_CANDIDATE+SAY_MORE_CANDIDATE+AGREE_CANDIDATE+PRESS_REASONING_CANDIDATE
+2015-01-02,00:11:24,0,GST,1420175484979,agent is dead I think,GIVING_OPINION+SILLYNESS
+2015-01-02,00:12:25,0,David A,1420175546241,"type of molecule (non-polar, polar, ionic) is represented here",SAY_MORE_CANDIDATE
+2015-01-02,00:12:48,0,Sage,1420175568536,It's nearly time to start the next section - please finish discussing this one.,TIMEOUT_WARNING
+2015-01-02,00:13:09,0,Sage_wssup,1420175590560,"Thanks, David A. Hang on until everyone else is ready...",ACKNOWLEDGE+PRIVATE_MESSAGE+to:David A
+2015-01-02,00:13:14,0,Sage,1420175594564,"Okay, everyone. Let's move on...",ALL_READY
+2015-01-02,00:13:17,0,Sage,1420175598570,Let's look at the third set of data.,INTRO_3
+2015-01-02,00:13:19,0,Sage,1420175602577,"<div class=""chem_box chem_text""> 
+ <p><strong>3</strong>. The last data set we'll look at involves diatomic substances composed of one atom from the left side of the periodic table and one element from the right side of the periodic table.</p> 
+ <img class=""chem_image"" alt=""Boiling Point as a Function of Reciprocal of Square of Sum of Ion Radii"" src=""http://collective2.chem.cmu.edu/chem105/intermolecular/images/samepage_3_radii_700.png"" /> 
+ <p>Questions pertaining to this data: </p> 
+ <ol type=""a""> 
+  <li>Which type of molecule (non-polar, polar, ionic) is represented here? </li> 
+  <li>Which factors influence the boiling point of the chemical species in the figure? How do those factors show up in the figure? </li> 
+  <li>Are there any factors that influence the boiling point of these chemicals that aren't evident from the figure? If so, what are they?</li> 
+ </ol> 
+ <p>Use the space below to take notes during your group's discussion of this data set.</p> 
+ <p><textarea class=""chem_notes"" style=""width:80%"" placeholder=""add notes here""> </textarea></p> 
+ <div class=""chem_comment"">
+  These are your personal notes - nobody else can see what you write here.
+ </div> 
+</div>",
+2015-01-02,00:13:19,0,Sage,1420175606586,We'll start the next part once everyone is comfortable with this - press Ready when your group is set.,WAIT_FOR_CHECKIN

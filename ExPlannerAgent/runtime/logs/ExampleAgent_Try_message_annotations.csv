@@ -1,0 +1,20 @@
+2015-01-03,10:01:22,0,ExampleAgent,1420297282440,"Hello, I'm ExampleAgent, the Bazaar planner agent!",GREETING
+2015-01-03,10:02:00,0,GST,1420297320089,ok,AFFIRMATIVE
+2015-01-03,10:02:00,0,ExampleAgent,1420297320548,Hm.  ok,MIMICRY+PREFIXED
+2015-01-03,10:02:05,0,ExampleAgent,1420297326693,It will be replaced by DIALOGUE.,EXPLAIN
+2015-01-03,10:02:10,0,GST,1420297330261,ok,AFFIRMATIVE
+2015-01-03,10:02:10,0,ExampleAgent,1420297330702,"You're repeating something that's already been said, GST",NOTICE_REPEAT
+2015-01-03,10:03:22,0,ExampleAgent,1420297402755,"Okay, it seems plan is ready now. You're on your own from here on out. Good luck!",CONCLUDE
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-03,10:07:14,0,ExampleAgent,1420297634415,It will be replaced by DIALOGUE.,EXPLAIN
+2015-01-03,10:07:44,0,ExampleAgent,1420297664572,"Okay, it seems plan is ready now. You're on your own from here on out. Good luck!",CONCLUDE
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-03,10:26:49,0,ExampleAgent,1420298809542,It will be replaced by DIALOGUE.,EXPLAIN
+2015-01-03,10:27:49,0,ExampleAgent,1420298869701,"Okay, it seems plan is ready now. You're on your own from here on out. Good luck!",CONCLUDE
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-03,10:39:38,0,ExampleAgent,1420299578131,INTRODUCE,INTRODUCE
+2015-01-03,10:40:15,0,David A,1420299616056,i m gst,
+2015-01-03,10:40:16,0,ExampleAgent,1420299616187,Hm.  i m gst,MIMICRY+PREFIXED
+2015-01-03,10:40:38,0,ExampleAgent,1420299638214,It will be replaced by DIALOGUE.,EXPLAIN
+2015-01-03,10:40:38,0,ExampleAgent,1420299642221,GIVE_UP_ON_INTRODUCTIONS,GIVE_UP_ON_INTRODUCTIONS
+2015-01-03,10:41:38,0,ExampleAgent,1420299698288,"Okay, it seems plan is ready now. You're on your own from here on out. Good luck!",CONCLUDE

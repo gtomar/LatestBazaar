@@ -1,0 +1,78 @@
+<entry timestamp="2015-01-05#16:00:07" user="FancyTalkRunner" level="INFO">Logger initialized</entry>
+<entry timestamp="2015-01-05#16:00:07" user="FancyTalkRunner" level="NORMAL">AgentOperator FancyTalkRunner created</entry>
+<entry timestamp="2015-01-05#16:00:07" user="FancyTalkRunner" level="NORMAL">Operation Created</entry>
+<entry timestamp="2015-01-05#16:00:07" user="FancyTalkRunner" level="NORMAL">Classes: [class basilica2.agents.listeners.PresenceWatcher, class basilica2.agents.listeners.MessageAnnotator, class basilica2.social.listeners.ActivityTracker, class basilica2.tutor.listeners.TutorialTriggerWatcher, class basilica2.tutor.listeners.TutorTurnWatcher, class basilica2.social.listeners.StrategyScoreComputer, class basilica2.social.listeners.RuleBasedTriggerComputer, class basilica2.social.listeners.SocialController, class basilica2.accountable.listeners.AgreeDisagreeActor, class basilica2.accountable.listeners.AskForExplanationActor, class basilica2.accountable.listeners.RevoiceActor, class basilica2.accountable.listeners.SayMoreActor]</entry>
+<entry timestamp="2015-01-05#16:00:07" user="FancyTalkRunner" level="NORMAL">Classes: [class basilica2.social.listeners.SocialController, class basilica2.accountable.listeners.AgreeDisagreeActor, class basilica2.accountable.listeners.AskForExplanationActor, class basilica2.accountable.listeners.RevoiceActor, class basilica2.accountable.listeners.SayMoreActor, class basilica2.agents.listeners.plan.PlanExecutor, class basilica2.tutor.listeners.TutorActor]</entry>
+<entry timestamp="2015-01-05#16:00:07" user="FancyTalkRunner" level="NORMAL">Starting operation</entry>
+<entry timestamp="2015-01-05#16:00:07" user="FancyTalkRunner" level="NORMAL">Operation started</entry>
+<entry timestamp="2015-01-05#16:00:09" user="ConditionAgentUI" level="NORMAL">Conditions set to tutorial_trigger</entry>
+<entry timestamp="2015-01-05#16:00:12" user="ConditionAgentUI" level="NORMAL">Conditions set to social tutorial_trigger</entry>
+<entry timestamp="2015-01-05#16:00:13" user="ConditionAgentUI" level="NORMAL">Conditions set to participation social tutorial_trigger</entry>
+<entry timestamp="2015-01-05#16:00:14" user="ConditionAgentUI" level="NORMAL">Conditions set to participation social tutorial_trigger revoice</entry>
+<entry timestamp="2015-01-05#16:00:16" user="ConditionAgentUI" level="NORMAL">Conditions set to participation social tutorial_trigger revoice explain</entry>
+<entry timestamp="2015-01-05#16:00:17" user="ConditionAgentUI" level="NORMAL">Conditions set to participation social tutorial_trigger revoice explain agree</entry>
+<entry timestamp="2015-01-05#16:00:18" user="ConditionAgentUI" level="NORMAL">Conditions set to participation social tutorial_trigger say_more revoice explain agree</entry>
+<entry timestamp="2015-01-05#16:00:19" user="FancyTalkRunner" level="NORMAL">setting basilica2.agents.room_name to trying</entry>
+<entry timestamp="2015-01-05#16:00:19" user="FancyTalkRunner" level="NORMAL"><launching room=trying/></entry>
+<entry timestamp="2015-01-05#16:00:19" user="AgentFactory" level="NORMAL">Making Agent from agent.xml</entry>
+<entry timestamp="2015-01-05#16:00:19" user="AgentFactory" level="NORMAL">File Read</entry>
+<entry timestamp="2015-01-05#16:00:19" user="AgentFactory" level="NORMAL">Agent Tag Read</entry>
+<entry timestamp="2015-01-05#16:00:19" user="AgentFactory" level="NORMAL">Components Tag Read</entry>
+<entry timestamp="2015-01-05#16:00:19" user="AgentFactory" level="NORMAL">Components read. N=4</entry>
+<entry timestamp="2015-01-05#16:00:19" user="AgentFactory" level="NORMAL">Agent build. VirtualCarolyn_trying</entry>
+<entry timestamp="2015-01-05#16:00:19" user="FancyTalkRunner" level="NORMAL">Adding agent VirtualCarolyn_trying</entry>
+<entry timestamp="2015-01-05#16:00:19" user="FancyTalkRunner" level="INFO">Added. 1 agents now working</entry>
+<entry timestamp="2015-01-05#16:00:19" user="FancyTalkRunner" level="INFO">Initializing new agent</entry>
+<entry timestamp="2015-01-05#16:00:20" user="PromptStepHandler" level="NORMAL">default priority=0.75, wait 0.1 seconds after prompts, +3.3333333333333335 wps</entry>
+<entry timestamp="2015-01-05#16:00:20" user="FancyTalkRunner" level="INFO">Starting new Agent</entry>
+<entry timestamp="2015-01-05#16:00:20" user="FancyTalkRunner" level="NORMAL">notified UI of agent launch for VirtualCarolyn_trying</entry>
+<entry timestamp="2015-01-05#16:00:20" user="FancyTalkRunner" level="NORMAL">Agent added VirtualCarolyn_trying</entry>
+<entry timestamp="2015-01-05#16:00:20" user="PresenceWatcher" level="NORMAL">STUDENTS COUNT: 1</entry>
+<entry timestamp="2015-01-05#16:00:20" user="PlanExecutor" level="NORMAL">PLAN: activiating next stage: initiate</entry>
+<entry timestamp="2015-01-05#16:00:20" user="PlanExecutor" level="NORMAL">Firing Stage 'initiate'</entry>
+<entry timestamp="2015-01-05#16:00:20" user="basilica2.agents.listeners.plan.Stage" level="NORMAL">finished stage initiate</entry>
+<entry timestamp="2015-01-05#16:00:20" user="PlanExecutor" level="NORMAL">Firing Stage 'body'</entry>
+<entry timestamp="2015-01-05#16:00:20" user="Step" level="NORMAL">Handlers for ABOUT_TUTORIALS_STEP(prompt): [basilica2.agents.listeners.plan.PromptStepHandler@6495c6a8]</entry>
+<entry timestamp="2015-01-05#16:00:20" user="PromptStepHandler" level="NORMAL">starting 1.9 second prompt delay</entry>
+<entry timestamp="2015-01-05#16:00:21" user="" level="NORMAL">accepted. Message from VirtualCarolyn: Now I'll start an interactive dialogue. ABOUT_TUTORIALS.
+Starting blockout countdown... </entry>
+<entry timestamp="2015-01-05#16:00:22" user="PromptStepHandler" level="NORMAL">ending 1.9 second prompt delay</entry>
+<entry timestamp="2015-01-05#16:00:22" user="Step" level="NORMAL">Handlers for DEMO_TUTORIAL(dialogue): [basilica2.tutor.listeners.DialogStepHandler@61aa7aa4]</entry>
+<entry timestamp="2015-01-05#16:00:24" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: What type of android app, you are planning to develop? TUTOR</entry>
+<entry timestamp="2015-01-05#16:01:06" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Great, we will be planning to develop an audio recorder. TUTOR</entry>
+<entry timestamp="2015-01-05#16:01:08" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Should we get started? TUTOR</entry>
+<entry timestamp="2015-01-05#16:01:10" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Spend some time to come up with your initial plan. TUTOR</entry>
+<entry timestamp="2015-01-05#16:01:10" user="PlanExecutor" level="NORMAL">starting 10 second delay timer for DEMO_TUTORIAL</entry>
+<entry timestamp="2015-01-05#16:01:14" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Yes, we need to set an audio encoder on recorder object.. TUTOR</entry>
+<entry timestamp="2015-01-05#16:01:16" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: It sounds like you're confused. Would you like some help? TUTOR</entry>
+<entry timestamp="2015-01-05#16:01:18" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: But, it seems you have a question regarding audio encoding. TUTOR</entry>
+<entry timestamp="2015-01-05#16:01:20" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: I can help you to decide the type of audio encoding to be used and example code snippet to do it.|audio_source TUTOR</entry>
+<entry timestamp="2015-01-05#16:01:20" user="PlanExecutor" level="NORMAL">PLAN: current step done: DEMO_TUTORIAL</entry>
+<entry timestamp="2015-01-05#16:01:20" user="Step" level="NORMAL">Handlers for LAST_STEP(prompt): [basilica2.agents.listeners.plan.PromptStepHandler@6495c6a8]</entry>
+<entry timestamp="2015-01-05#16:01:20" user="PromptStepHandler" level="NORMAL">starting 5.199999999999999 second prompt delay</entry>
+<entry timestamp="2015-01-05#16:01:25" user="PromptStepHandler" level="NORMAL">ending 5.199999999999999 second prompt delay</entry>
+<entry timestamp="2015-01-05#16:01:25" user="PlanExecutor" level="NORMAL">starting 5 second delay timer for LAST_STEP</entry>
+<entry timestamp="2015-01-05#16:01:30" user="PlanExecutor" level="NORMAL">PLAN: current step done: LAST_STEP</entry>
+<entry timestamp="2015-01-05#16:01:30" user="basilica2.agents.listeners.plan.Stage" level="NORMAL">finished stage body</entry>
+<entry timestamp="2015-01-05#16:01:34" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Okay, no problem! TUTOR</entry>
+<entry timestamp="2015-01-05#16:01:36" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Ok|Maybe this will help:|You may probably want to use one of the following possible audio codecs
+aac
+aac_eld
+amr_nb
+amr_wb
+default
+he_aac
+vorbis|Which one you will like to choose? TUTOR</entry>
+<entry timestamp="2015-01-05#16:01:38" user="" level="NORMAL">accepted. Message from VirtualCarolyn: Okay, it seems plan is ready now. You're on your own from here on out. Good luck! END_MACRO.
+Starting blockout countdown... </entry>
+<entry timestamp="2015-01-05#16:02:16" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: You can use AMR (Wideband) audio codec using following code snippet
+			
+			recorder_obj.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_WB);|Ok, move on. TUTOR</entry>
+<entry timestamp="2015-01-05#16:02:16" user="PlanExecutor" level="NORMAL">starting 5 second delay timer for LAST_STEP</entry>
+<entry timestamp="2015-01-05#16:02:21" user="PlanExecutor" level="NORMAL">PLAN: current step done: LAST_STEP</entry>
+<entry timestamp="2015-01-05#16:02:21" user="basilica2.agents.listeners.plan.Stage" level="NORMAL">finished stage body</entry>
+<entry timestamp="2015-01-05#16:02:30" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Yes, we need to set an output format type on recorder object.. TUTOR</entry>
+<entry timestamp="2015-01-05#16:02:50" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: It sounds like you're confused. Would you like some help? TUTOR</entry>
+<entry timestamp="2015-01-05#16:02:52" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: But, it seems you have a question regarding output format. TUTOR</entry>
+<entry timestamp="2015-01-05#16:03:34" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: ...? TUTOR</entry>
+<entry timestamp="2015-01-05#16:04:34" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Okay, no problem! TUTOR</entry>

@@ -1,0 +1,8 @@
+object of recorder
+instance of recorder
+recorder api
+recorder object
+recorder's api
+recorder instance
+recorder's object
+recorder's instance

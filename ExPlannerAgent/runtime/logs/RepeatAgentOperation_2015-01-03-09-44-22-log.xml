@@ -1,0 +1,56 @@
+<entry timestamp="2015-01-03#09:44:22" user="RepeatAgentOperation" level="INFO">Logger initialized</entry>
+<entry timestamp="2015-01-03#09:44:22" user="RepeatAgentOperation" level="NORMAL">AgentOperator RepeatAgentOperation created</entry>
+<entry timestamp="2015-01-03#09:44:22" user="RepeatAgentOperation" level="NORMAL">Operation Created</entry>
+<entry timestamp="2015-01-03#09:44:22" user="RepeatAgentOperation" level="NORMAL">Classes: [class basilica2.agents.listeners.MessageAnnotator, class basilica2.myagent.listeners.RepeatWatcher, class basilica2.agents.listeners.PresenceWatcher]</entry>
+<entry timestamp="2015-01-03#09:44:22" user="RepeatAgentOperation" level="NORMAL">Classes: [class basilica2.myagent.listeners.RepeatReactor, class basilica2.myagent.listeners.ParrotTalker, class basilica2.agents.listeners.plan.PlanExecutor]</entry>
+<entry timestamp="2015-01-03#09:44:23" user="RepeatAgentOperation" level="NORMAL">Starting operation</entry>
+<entry timestamp="2015-01-03#09:44:23" user="RepeatAgentOperation" level="NORMAL">Operation started</entry>
+<entry timestamp="2015-01-03#09:44:29" user="RepeatAgentOperation" level="NORMAL">setting basilica2.agents.room_name to Try</entry>
+<entry timestamp="2015-01-03#09:44:29" user="RepeatAgentOperation" level="NORMAL"><launching room=Try/></entry>
+<entry timestamp="2015-01-03#09:44:29" user="AgentFactory" level="NORMAL">Making Agent from agent.xml</entry>
+<entry timestamp="2015-01-03#09:44:29" user="AgentFactory" level="NORMAL">File Read</entry>
+<entry timestamp="2015-01-03#09:44:29" user="AgentFactory" level="NORMAL">Agent Tag Read</entry>
+<entry timestamp="2015-01-03#09:44:29" user="AgentFactory" level="NORMAL">Components Tag Read</entry>
+<entry timestamp="2015-01-03#09:44:29" user="AgentFactory" level="NORMAL">Components read. N=4</entry>
+<entry timestamp="2015-01-03#09:44:29" user="AgentFactory" level="NORMAL">Agent build. ExampleAgent_Try</entry>
+<entry timestamp="2015-01-03#09:44:29" user="RepeatAgentOperation" level="NORMAL">Adding agent ExampleAgent_Try</entry>
+<entry timestamp="2015-01-03#09:44:29" user="RepeatAgentOperation" level="INFO">Added. 1 agents now working</entry>
+<entry timestamp="2015-01-03#09:44:29" user="RepeatAgentOperation" level="INFO">Initializing new agent</entry>
+<entry timestamp="2015-01-03#09:44:29" user="PromptStepHandler" level="NORMAL">default priority=0.75, wait 0.1 seconds after prompts, +2.5 wps</entry>
+<entry timestamp="2015-01-03#09:44:29" user="RepeatAgentOperation" level="INFO">Starting new Agent</entry>
+<entry timestamp="2015-01-03#09:44:29" user="RepeatAgentOperation" level="NORMAL">notified UI of agent launch for ExampleAgent_Try</entry>
+<entry timestamp="2015-01-03#09:44:29" user="RepeatAgentOperation" level="NORMAL">Agent added ExampleAgent_Try</entry>
+<entry timestamp="2015-01-03#10:01:22" user="PresenceWatcher" level="NORMAL">STUDENTS COUNT: 1</entry>
+<entry timestamp="2015-01-03#10:01:22" user="PlanExecutor" level="NORMAL">PLAN: activiating next stage: script</entry>
+<entry timestamp="2015-01-03#10:01:22" user="PlanExecutor" level="NORMAL">Firing Stage 'script'</entry>
+<entry timestamp="2015-01-03#10:01:22" user="Step" level="NORMAL">Handlers for GREETING_STEP(prompt): [basilica2.agents.listeners.plan.PromptStepHandler@193ff426]</entry>
+<entry timestamp="2015-01-03#10:01:22" user="PromptStepHandler" level="NORMAL">starting 2.9 second prompt delay</entry>
+<entry timestamp="2015-01-03#10:01:22" user="" level="NORMAL">accepted. Message from ExampleAgent: Hello, I'm ExampleAgent, the Bazaar planner agent! GREETING.
+Starting blockout countdown... </entry>
+<entry timestamp="2015-01-03#10:01:22" user="PresenceWatcher" level="NORMAL">STUDENTS COUNT: 1</entry>
+<entry timestamp="2015-01-03#10:01:24" user="PromptStepHandler" level="NORMAL">ending 2.9 second prompt delay</entry>
+<entry timestamp="2015-01-03#10:01:24" user="PlanExecutor" level="NORMAL">starting 10 second delay timer for GREETING_STEP</entry>
+<entry timestamp="2015-01-03#10:01:34" user="PlanExecutor" level="NORMAL">PLAN: current step done: GREETING_STEP</entry>
+<entry timestamp="2015-01-03#10:01:34" user="Step" level="NORMAL">Handlers for IMAGE_STEP(whiteboard): [basilica2.agents.listeners.plan.WhiteboardStepHandler@e65aa9c]</entry>
+<entry timestamp="2015-01-03#10:01:34" user="WhiteboardStepHandler" level="NORMAL">whiteboard step image:IMAGE_STEP</entry>
+<entry timestamp="2015-01-03#10:01:34" user="PlanExecutor" level="NORMAL">starting 30 second delay timer for IMAGE_STEP</entry>
+<entry timestamp="2015-01-03#10:01:36" user="" level="NORMAL">ACCEPTED! CREATE whiteboard-image http://blogs.adobe.com/digitalpublishing/files/2011/02/android_logo.gif</entry>
+<entry timestamp="2015-01-03#10:02:00" user="" level="NORMAL">ACCEPTED! Message from ExampleAgent: Hm.  ok MIMICRY+PREFIXED</entry>
+<entry timestamp="2015-01-03#10:02:04" user="PlanExecutor" level="NORMAL">PLAN: current step done: IMAGE_STEP</entry>
+<entry timestamp="2015-01-03#10:02:04" user="Step" level="NORMAL">Handlers for EXPLAIN(prompt): [basilica2.agents.listeners.plan.PromptStepHandler@193ff426]</entry>
+<entry timestamp="2015-01-03#10:02:05" user="PromptStepHandler" level="NORMAL">starting 2.5 second prompt delay</entry>
+<entry timestamp="2015-01-03#10:02:06" user="" level="NORMAL">accepted. Message from ExampleAgent: It will be replaced by DIALOGUE. EXPLAIN.
+Starting blockout countdown... </entry>
+<entry timestamp="2015-01-03#10:02:07" user="PromptStepHandler" level="NORMAL">ending 2.5 second prompt delay</entry>
+<entry timestamp="2015-01-03#10:02:07" user="PlanExecutor" level="NORMAL">starting 300 second delay timer for EXPLAIN</entry>
+<entry timestamp="2015-01-03#10:02:10" user="" level="NORMAL">accepted. Message from ExampleAgent: You're repeating something that's already been said, GST NOTICE_REPEAT.
+Starting blockout countdown... </entry>
+<entry timestamp="2015-01-03#10:02:14" user="" level="NORMAL">REJECTED!Message from ExampleAgent: Hm.  ok MIMICRY+PREFIXED</entry>
+<entry timestamp="2015-01-03#10:03:22" user="PlanExecutor" level="NORMAL">PLAN: activiating next stage: wrap</entry>
+<entry timestamp="2015-01-03#10:03:22" user="PlanExecutor" level="NORMAL">Firing Stage 'wrap'</entry>
+<entry timestamp="2015-01-03#10:03:22" user="Step" level="NORMAL">Handlers for CONCLUDE(prompt): [basilica2.agents.listeners.plan.PromptStepHandler@193ff426]</entry>
+<entry timestamp="2015-01-03#10:03:22" user="PromptStepHandler" level="NORMAL">starting 6.8999999999999995 second prompt delay</entry>
+<entry timestamp="2015-01-03#10:03:22" user="" level="NORMAL">accepted. Message from ExampleAgent: Okay, it seems plan is ready now. You're on your own from here on out. Good luck! CONCLUDE.
+Starting blockout countdown... </entry>
+<entry timestamp="2015-01-03#10:03:29" user="PromptStepHandler" level="NORMAL">ending 6.8999999999999995 second prompt delay</entry>
+<entry timestamp="2015-01-03#10:03:29" user="basilica2.agents.listeners.plan.Stage" level="NORMAL">finished stage wrap</entry>

@@ -1,0 +1,7 @@
+#Fri Dec 26 14:34:11 EST 2014
+org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
+org.eclipse.jdt.core.classpathVariable.JRE_LIB=/Library/Java/JavaVirtualMachines/1.7.0u.jdk/Contents/Home/jre/lib/rt.jar
+org.eclipse.jdt.core.classpathVariable.JRE_SRC=/Library/Java/JavaVirtualMachines/1.7.0u.jdk/Contents/Home/src.zip
+eclipse.preferences.version=1
+org.eclipse.jdt.core.builder.resourceCopyExclusionFilter=
+org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
