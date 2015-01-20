@@ -104,7 +104,7 @@ public class WhiteboardEvent extends Event  implements Serializable
 		
 		String filename = "images"+File.separator+messageName+".png";
 		
-		fc.writeToFile(messageName, "png");
+		fc.writeToFile(filename, "png");
 		
 		return new WhiteboardEvent(source, filename, messageName, new Point(20, 20));
 	}

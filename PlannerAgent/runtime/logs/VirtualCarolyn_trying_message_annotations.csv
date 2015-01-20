@@ -2178,3 +2178,311 @@ amr_wb",TUTOR
 2015-01-12,17:48:04,0,VirtualCarolyn,1421102886960,Is it clear?,TUTOR
 2015-01-12,17:48:21,0,David A,1421102901663,yes,AFFIRMATIVE
 2015-01-12,17:48:25,0,VirtualCarolyn,1421102906985,Ok,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-15,15:33:53,0,VirtualCarolyn,1421354034499,Hello! I'm VirtualCarolyn. Take a minute to introduce yourselves.,INTRODUCE
+2015-01-15,15:34:26,0,David A,1421354067056,i am Gaurav?,GIVING_NAME+AFFIRMATIVE+QUESTION
+2015-01-15,15:34:27,0,VirtualCarolyn,1421354068758,"Hi, Gaurav.",GREET
+2015-01-15,15:34:53,0,VirtualCarolyn,1421354094786,"While I may not tell how to develop the desired app directly, I can help/guide you planning its development.",SETUP
+2015-01-15,15:35:09,0,VirtualCarolyn,1421354110797,I will share images to the whiteboard to help/guide you,WHITEBOARD_INSTRUCTIONS
+2015-01-15,15:35:22,0,VirtualCarolyn,1421354122812,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-15,15:35:24,0,VirtualCarolyn,1421354124816,"What type of android app, you are planning to develop?",TUTOR
+2015-01-15,15:35:38,0,David A,1421354139028,audio record?,AUDIO_CAPTURE+QUESTION
+2015-01-15,15:35:39,0,VirtualCarolyn,1421354140830,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-15,15:35:39,0,VirtualCarolyn,1421354142836,Should we get started?,TUTOR
+2015-01-15,15:35:53,0,David A,1421354153644,yes?,AFFIRMATIVE+QUESTION
+2015-01-15,15:35:54,0,VirtualCarolyn,1421354154847,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-15,15:36:04,0,VirtualCarolyn,1421354166860,...,END_MACRO
+2015-01-15,15:36:54,0,David A,1421354214226,ok?,AFFIRMATIVE+QUESTION
+2015-01-15,15:37:12,0,David A,1421354233146,which recorder api?,RECORDER_API+QUESTION
+2015-01-15,15:37:13,0,VirtualCarolyn,1421354234919,"Correct, we need to create a new instance/object for recorder and choose a recorder api to do so.",TUTOR
+2015-01-15,15:37:13,0,VirtualCarolyn,1421354236921,"But, it seems you have a question regarding recorder instance.",TUTOR
+2015-01-15,15:37:13,0,VirtualCarolyn,1421354238926,I can help you to decide the type of recorder api to be used and example code snippet to do it.,TUTOR
+2015-01-15,15:37:13,0,VirtualCarolyn,1421354238931,Do you know or decided on any recorder api that can be used?,TUTOR
+2015-01-15,15:37:42,0,David A,1421354262723,no?,QUESTION+NEGATIVE
+2015-01-15,15:37:44,0,VirtualCarolyn,1421354264956,Ok,TUTOR
+2015-01-15,15:37:44,0,VirtualCarolyn,1421354264957,Maybe this will help:,TUTOR
+2015-01-15,15:37:44,0,VirtualCarolyn,1421354264958,You can record audio using the MediaRecorder or AudioRecord APIs if supported by the device hardware,TUTOR
+2015-01-15,15:37:44,0,VirtualCarolyn,1421354264959,Which one you will like to choose?,TUTOR
+2015-01-15,15:38:10,0,David A,1421354290273,mediarecorder?,TYPE_RECORDER+QUESTION
+2015-01-15,15:38:14,0,VirtualCarolyn,1421354294988,"Use following code snippet to use MediaRecorder. But note that wav audio format is not supported by MediaRecorder.
+			
+			import android.media.MediaRecorder; 
+			MediaRecorder Recorder_obj = null;",TUTOR
+2015-01-15,15:38:14,0,VirtualCarolyn,1421354294989,"Ok, move on and decide other steps.",TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-15,22:08:14,0,VirtualCarolyn,1421377695021,Hello! I'm VirtualCarolyn. Take a minute to introduce yourselves.,INTRODUCE
+2015-01-15,22:08:30,0,David A,1421377710646,I am Gaurav,GIVING_NAME+AFFIRMATIVE
+2015-01-15,22:08:30,0,VirtualCarolyn,1421377711236,"Howdy, Gaurav!",GREET
+2015-01-15,22:09:14,0,VirtualCarolyn,1421377755277,"While I may not tell how to develop the desired app directly, I can help/guide you planning its development.",SETUP
+2015-01-15,22:09:30,0,VirtualCarolyn,1421377771291,I will share images to the whiteboard to help/guide you,WHITEBOARD_INSTRUCTIONS
+2015-01-15,22:09:43,0,VirtualCarolyn,1421377783305,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-15,22:09:45,0,VirtualCarolyn,1421377785307,"What type of android app, you are planning to develop?",TUTOR
+2015-01-15,22:10:08,0,David A,1421377809028,audio record,AUDIO_CAPTURE
+2015-01-15,22:10:09,0,VirtualCarolyn,1421377809331,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-15,22:10:09,0,VirtualCarolyn,1421377811334,Should we get started?,TUTOR
+2015-01-15,22:10:33,0,David A,1421377833111,yes,AFFIRMATIVE
+2015-01-15,22:10:34,0,VirtualCarolyn,1421377835355,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-15,22:10:45,0,VirtualCarolyn,1421377847366,...,END_MACRO
+2015-01-15,22:11:25,0,David A,1421377888950,i will use mic as audio source,TYPE_AUDIO_SOURCE+AUDIO_SOURCE
+2015-01-15,22:11:28,0,VirtualCarolyn,1421377889467,"Yes, we need to set an audio source on recorder object.",TUTOR
+2015-01-15,22:11:28,0,VirtualCarolyn,1421377891469,Move on and decide other steps.,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-15,22:15:35,0,VirtualCarolyn,1421378135592,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-15,22:15:36,0,VirtualCarolyn,1421378137690,"What type of android app, you are planning to develop?",TUTOR
+2015-01-15,22:16:06,0,David A,1421378166306,audio record,AUDIO_CAPTURE
+2015-01-15,22:16:06,0,VirtualCarolyn,1421378167715,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-15,22:16:06,0,VirtualCarolyn,1421378169719,Should we get started?,TUTOR
+2015-01-15,22:16:27,0,David A,1421378187735,yes,AFFIRMATIVE
+2015-01-15,22:16:32,0,VirtualCarolyn,1421378193747,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-15,22:16:43,0,VirtualCarolyn,1421378205758,...,END_MACRO
+2015-01-15,22:16:58,0,David A,1421378219767,use mic as audio source,TYPE_AUDIO_SOURCE+AUDIO_SOURCE
+2015-01-15,22:16:59,0,VirtualCarolyn,1421378221774,"Yes, we need to set an audio source on recorder object.",TUTOR
+2015-01-15,22:16:59,0,VirtualCarolyn,1421378223776,Move on and decide other steps.,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-15,22:24:31,0,VirtualCarolyn,1421378672372,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-15,22:24:33,0,VirtualCarolyn,1421378674404,"What type of android app, you are planning to develop?",TUTOR
+2015-01-15,22:26:33,0,VirtualCarolyn,1421378794500,I am waiting for your response to start. Please ask for help if you are stuck.,TUTOR
+2015-01-15,22:27:42,0,David A,1421378862403,audio record,AUDIO_CAPTURE
+2015-01-15,22:27:42,0,VirtualCarolyn,1421378862564,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-15,22:27:42,0,VirtualCarolyn,1421378864567,Should we get started?,TUTOR
+2015-01-15,22:27:49,0,David A,1421378870013,yes,AFFIRMATIVE
+2015-01-15,22:27:52,0,VirtualCarolyn,1421378874576,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-15,22:28:04,0,VirtualCarolyn,1421378886588,...,END_MACRO
+2015-01-15,22:28:42,0,David A,1421378923127,mic as audio source,TYPE_AUDIO_SOURCE+AUDIO_SOURCE
+2015-01-15,22:28:43,0,VirtualCarolyn,1421378926643,"Yes, we need to set an audio source on recorder object.",TUTOR
+2015-01-15,22:28:43,0,VirtualCarolyn,1421378928646,Move on and decide other steps.,TUTOR
+2015-01-15,22:30:53,0,David A,1421379054070,mpeg as output format,TYPE_OUTPUT_FORMAT+OUTPUT_FORMAT
+2015-01-15,22:30:54,0,VirtualCarolyn,1421379056824,"Yes, we need to set an output format type on recorder object..",TUTOR
+2015-01-15,22:30:54,0,VirtualCarolyn,1421379058828,Move on and decide other steps.,TUTOR
+2015-01-15,22:35:42,0,VirtualCarolyn,1421379343090,"Yes, you need to Start audio recording",TUTOR
+2015-01-15,22:37:42,0,VirtualCarolyn,1421379463217,I am waiting for your response to start. Please ask for help if you are stuck.,TUTOR
+2015-01-15,22:39:42,0,VirtualCarolyn,1421379583377,We need to prepare recorder instance before starting it.,TUTOR
+2015-01-15,22:40:42,0,VirtualCarolyn,1421379643456,Move on and decide other steps.,TUTOR
+2015-01-15,22:43:43,0,VirtualCarolyn,1421379823720,"Yes, you need to Stop audio recording",TUTOR
+2015-01-15,22:44:55,0,David A,1421379895976,ok,AFFIRMATIVE
+2015-01-15,22:45:15,0,David A,1421379916553,prepare recorder object .prepare(),PREPARE+RECORDER_API
+2015-01-15,22:45:16,0,VirtualCarolyn,1421379919840,We need to prepare recorder instance before starting it.,TUTOR
+2015-01-15,22:45:16,0,VirtualCarolyn,1421379921842,"Correct, we need to create a new instance/object for recorder and choose a recorder api to do so.",TUTOR
+2015-01-15,22:45:43,0,VirtualCarolyn,1421379943859,I am waiting for your response to start. Please ask for help if you are stuck.,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-15,23:04:23,0,VirtualCarolyn,1421381065208,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-15,23:04:25,0,VirtualCarolyn,1421381067225,"What type of android app, you are planning to develop?",TUTOR
+2015-01-15,23:04:59,0,David A,1421381099586,audio record,AUDIO_CAPTURE
+2015-01-15,23:04:59,0,VirtualCarolyn,1421381101258,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-15,23:04:59,0,VirtualCarolyn,1421381103262,Should we get started?,TUTOR
+2015-01-15,23:05:17,0,David A,1421381117204,yes,AFFIRMATIVE
+2015-01-15,23:05:20,0,VirtualCarolyn,1421381121279,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-15,23:05:31,0,VirtualCarolyn,1421381133290,...,END_MACRO
+2015-01-15,23:06:16,0,David A,1421381177091,mic as audio source,TYPE_AUDIO_SOURCE+AUDIO_SOURCE
+2015-01-15,23:06:17,0,VirtualCarolyn,1421381179331,"Yes, we need to set an audio source on recorder object.",TUTOR
+2015-01-15,23:06:17,0,VirtualCarolyn,1421381181334,Move on and decide other steps.,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-15,23:13:00,0,VirtualCarolyn,1421381581732,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-15,23:13:02,0,VirtualCarolyn,1421381583976,"What type of android app, you are planning to develop?",TUTOR
+2015-01-15,23:13:47,0,David A,1421381627781,audio record,AUDIO_CAPTURE
+2015-01-15,23:13:47,0,VirtualCarolyn,1421381628027,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-15,23:13:47,0,VirtualCarolyn,1421381630030,Should we get started?,TUTOR
+2015-01-15,23:13:56,0,David A,1421381636937,yes,AFFIRMATIVE
+2015-01-15,23:13:58,0,VirtualCarolyn,1421381640041,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-15,23:14:10,0,VirtualCarolyn,1421381652053,...,END_MACRO
+2015-01-15,23:14:45,0,David A,1421381687284,mic audio source,TYPE_AUDIO_SOURCE+AUDIO_SOURCE
+2015-01-15,23:14:47,0,VirtualCarolyn,1421381690086,"Yes, we need to set an audio source on recorder object.",TUTOR
+2015-01-15,23:14:47,0,VirtualCarolyn,1421381692088,Move on and decide other steps.,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-16,11:20:06,0,VirtualCarolyn,1421425208582,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-16,11:20:08,0,VirtualCarolyn,1421425210788,"What type of android app, you are planning to develop?",TUTOR
+2015-01-16,11:20:37,0,David A,1421425237647,audio record,AUDIO_CAPTURE
+2015-01-16,11:20:37,0,VirtualCarolyn,1421425238814,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-16,11:20:37,0,VirtualCarolyn,1421425240817,Should we get started?,TUTOR
+2015-01-16,11:20:59,0,David A,1421425259751,yes,AFFIRMATIVE
+2015-01-16,11:21:03,0,VirtualCarolyn,1421425264840,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-16,11:21:14,0,VirtualCarolyn,1421425276851,...,END_MACRO
+2015-01-16,11:21:29,0,David A,1421425291230,mic as audio source,TYPE_AUDIO_SOURCE+AUDIO_SOURCE
+2015-01-16,11:21:31,0,VirtualCarolyn,1421425294868,"Yes, we need to set an audio source on recorder object.",TUTOR
+2015-01-16,11:21:31,0,VirtualCarolyn,1421425296872,Move on and decide other steps.,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-16,11:23:23,0,VirtualCarolyn,1421425404398,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-16,11:23:24,0,VirtualCarolyn,1421425406423,"What type of android app, you are planning to develop?",TUTOR
+2015-01-16,11:23:48,0,David A,1421425429117,audio record,AUDIO_CAPTURE
+2015-01-16,11:23:49,0,VirtualCarolyn,1421425430444,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-16,11:23:49,0,VirtualCarolyn,1421425432448,Should we get started?,TUTOR
+2015-01-16,11:24:49,0,VirtualCarolyn,1421425490495,:-(,TUTOR
+2015-01-16,11:25:00,0,VirtualCarolyn,1421425502509,...,END_MACRO
+2015-01-16,11:25:25,0,David A,1421425525407,yes,AFFIRMATIVE
+2015-01-16,11:25:33,0,David A,1421425534353,mic as audio source,TYPE_AUDIO_SOURCE+AUDIO_SOURCE
+2015-01-16,11:25:34,0,VirtualCarolyn,1421425536537,"Yes, we need to set an audio source on recorder object.",TUTOR
+2015-01-16,11:25:34,0,VirtualCarolyn,1421425538541,Move on and decide other steps.,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-16,11:30:22,0,VirtualCarolyn,1421425823587,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-16,11:30:24,0,VirtualCarolyn,1421425825636,"What type of android app, you are planning to develop?",TUTOR
+2015-01-16,11:31:08,0,David A,1421425868420,audio record,AUDIO_CAPTURE
+2015-01-16,11:31:08,0,VirtualCarolyn,1421425869676,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-16,11:31:08,0,VirtualCarolyn,1421425871679,Should we get started?,TUTOR
+2015-01-16,11:31:15,0,David A,1421425876022,yes,AFFIRMATIVE
+2015-01-16,11:31:18,0,VirtualCarolyn,1421425879688,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-16,11:31:29,0,VirtualCarolyn,1421425891700,...,END_MACRO
+2015-01-16,11:31:44,0,David A,1421425905322,mic as audio source,TYPE_AUDIO_SOURCE+AUDIO_SOURCE
+2015-01-16,11:31:45,0,VirtualCarolyn,1421425907718,"Yes, we need to set an audio source on recorder object.",TUTOR
+2015-01-16,11:31:45,0,VirtualCarolyn,1421425909721,Move on and decide other steps.,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-16,12:29:39,0,VirtualCarolyn,1421429380976,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-16,12:29:41,0,VirtualCarolyn,1421429383040,"What type of android app, you are planning to develop?",TUTOR
+2015-01-16,12:30:09,0,David A,1421429409216,audio record,AUDIO_CAPTURE
+2015-01-16,12:30:09,0,VirtualCarolyn,1421429411068,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-16,12:30:09,0,VirtualCarolyn,1421429413072,Should we get started?,TUTOR
+2015-01-16,12:30:32,0,David A,1421429432448,yes,AFFIRMATIVE
+2015-01-16,12:30:35,0,VirtualCarolyn,1421429435089,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-16,12:30:45,0,VirtualCarolyn,1421429447101,...,END_MACRO
+2015-01-16,12:32:51,0,David A,1421429572538,mic as audio source,TYPE_AUDIO_SOURCE+AUDIO_SOURCE
+2015-01-16,12:32:52,0,VirtualCarolyn,1421429575219,"Yes, we need to set an audio source on recorder object.",TUTOR
+2015-01-16,12:32:52,0,VirtualCarolyn,1421429577225,Move on and decide other steps.,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-16,12:34:49,0,VirtualCarolyn,1421429690741,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-16,12:34:51,0,VirtualCarolyn,1421429692759,"What type of android app, you are planning to develop?",TUTOR
+2015-01-16,12:35:21,0,David A,1421429721252,audio record,AUDIO_CAPTURE
+2015-01-16,12:35:21,0,VirtualCarolyn,1421429722788,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-16,12:35:21,0,VirtualCarolyn,1421429724794,Should we get started?,TUTOR
+2015-01-16,12:35:42,0,David A,1421429742231,yes,AFFIRMATIVE
+2015-01-16,12:35:46,0,VirtualCarolyn,1421429748823,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-16,12:35:58,0,VirtualCarolyn,1421429760837,...,END_MACRO
+2015-01-16,12:36:20,0,David A,1421429781420,mic as audio source,TYPE_AUDIO_SOURCE+AUDIO_SOURCE
+2015-01-16,12:36:21,0,VirtualCarolyn,1421429784862,"Yes, we need to set an audio source on recorder object.",TUTOR
+2015-01-16,12:36:21,0,VirtualCarolyn,1421429786865,Move on and decide other steps.,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-18,21:13:12,0,VirtualCarolyn,1421633593353,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-18,21:13:14,0,VirtualCarolyn,1421633595507,"What type of android app, you are planning to develop?",TUTOR
+2015-01-18,21:13:26,0,David A,1421633606425,audio record,AUDIO_CAPTURE
+2015-01-18,21:13:26,0,VirtualCarolyn,1421633607524,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-18,21:13:26,0,VirtualCarolyn,1421633609530,Should we get started?,TUTOR
+2015-01-18,21:13:33,0,David A,1421633613432,yes,AFFIRMATIVE
+2015-01-18,21:13:36,0,VirtualCarolyn,1421633617539,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-18,21:13:47,0,VirtualCarolyn,1421633629550,...,END_MACRO
+2015-01-18,21:13:55,0,David A,1421633637525,mic as audio source,TYPE_AUDIO_SOURCE+AUDIO_SOURCE
+2015-01-18,21:13:57,0,VirtualCarolyn,1421633639563,"Yes, we need to set an audio source on recorder object.",TUTOR
+2015-01-18,21:13:57,0,VirtualCarolyn,1421633641567,Move on and decide other steps.,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-18,21:24:23,0,VirtualCarolyn,1421634264762,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-18,21:24:25,0,VirtualCarolyn,1421634266783,"What type of android app, you are planning to develop?",TUTOR
+2015-01-18,21:24:53,0,David A,1421634294031,audio record,AUDIO_CAPTURE
+2015-01-18,21:24:54,0,VirtualCarolyn,1421634294815,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-18,21:24:54,0,VirtualCarolyn,1421634296819,Should we get started?,TUTOR
+2015-01-18,21:25:19,0,David A,1421634319580,yes,AFFIRMATIVE
+2015-01-18,21:25:19,0,VirtualCarolyn,1421634320847,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-18,21:25:30,0,VirtualCarolyn,1421634332865,...,END_MACRO
+2015-01-18,21:25:46,0,David A,1421634347234,audio source of mic,TYPE_AUDIO_SOURCE+AUDIO_SOURCE
+2015-01-18,21:25:47,0,VirtualCarolyn,1421634350888,"Yes, we need to set an audio source on recorder object.",TUTOR
+2015-01-18,21:25:47,0,VirtualCarolyn,1421634352891,Move on and decide other steps.,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-18,21:32:43,0,VirtualCarolyn,1421634764378,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-18,21:32:45,0,VirtualCarolyn,1421634766424,"What type of android app, you are planning to develop?",TUTOR
+2015-01-18,21:33:15,0,David A,1421634795462,audio record,AUDIO_CAPTURE
+2015-01-18,21:33:15,0,VirtualCarolyn,1421634796461,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-18,21:33:15,0,VirtualCarolyn,1421634798471,Should we get started?,TUTOR
+2015-01-18,21:33:35,0,David A,1421634815875,yes,AFFIRMATIVE
+2015-01-18,21:33:36,0,VirtualCarolyn,1421634816493,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-18,21:33:46,0,VirtualCarolyn,1421634828507,...,END_MACRO
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-18,21:35:29,0,VirtualCarolyn,1421634930995,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-18,21:35:31,0,VirtualCarolyn,1421634933026,"What type of android app, you are planning to develop?",TUTOR
+2015-01-18,21:35:59,0,David A,1421634959371,audio record,AUDIO_CAPTURE
+2015-01-18,21:35:59,0,VirtualCarolyn,1421634961056,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-18,21:35:59,0,VirtualCarolyn,1421634963062,Should we get started?,TUTOR
+2015-01-18,21:36:23,0,David A,1421634983592,yes,AFFIRMATIVE
+2015-01-18,21:36:25,0,VirtualCarolyn,1421634987094,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-18,21:36:37,0,VirtualCarolyn,1421634999108,...,END_MACRO
+2015-01-18,21:37:29,0,David A,1421635049483,audio source mic,TYPE_AUDIO_SOURCE+AUDIO_SOURCE
+2015-01-18,21:37:29,0,VirtualCarolyn,1421635053166,"Yes, we need to set an audio source on recorder object.",TUTOR
+2015-01-18,21:37:29,0,VirtualCarolyn,1421635055170,Move on and decide other steps.,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-18,21:41:49,0,VirtualCarolyn,1421635309943,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-18,21:41:50,0,VirtualCarolyn,1421635311975,"What type of android app, you are planning to develop?",TUTOR
+2015-01-18,21:42:17,0,David A,1421635337528,audio record,AUDIO_CAPTURE
+2015-01-18,21:42:17,0,VirtualCarolyn,1421635338006,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-18,21:42:17,0,VirtualCarolyn,1421635340011,Should we get started?,TUTOR
+2015-01-18,21:42:27,0,David A,1421635348049,yes,AFFIRMATIVE
+2015-01-18,21:42:33,0,VirtualCarolyn,1421635354026,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-18,21:42:44,0,VirtualCarolyn,1421635366038,...,END_MACRO
+2015-01-18,21:43:02,0,David A,1421635382791,audio source mic,TYPE_AUDIO_SOURCE+AUDIO_SOURCE
+2015-01-18,21:43:02,0,VirtualCarolyn,1421635386063,"Yes, we need to set an audio source on recorder object.",TUTOR
+2015-01-18,21:43:02,0,VirtualCarolyn,1421635388067,Move on and decide other steps.,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-18,21:44:59,0,VirtualCarolyn,1421635500410,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-18,21:45:01,0,VirtualCarolyn,1421635502429,"What type of android app, you are planning to develop?",TUTOR
+2015-01-18,21:45:09,0,David A,1421635509978,audio record,AUDIO_CAPTURE
+2015-01-18,21:45:09,0,VirtualCarolyn,1421635510440,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-18,21:45:10,0,VirtualCarolyn,1421635512445,Should we get started?,TUTOR
+2015-01-18,21:45:17,0,David A,1421635517274,yes,AFFIRMATIVE
+2015-01-18,21:45:20,0,VirtualCarolyn,1421635520455,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-18,21:45:30,0,VirtualCarolyn,1421635532473,...,END_MACRO
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-18,21:58:33,0,VirtualCarolyn,1421636314060,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-18,21:58:35,0,VirtualCarolyn,1421636316090,"What type of android app, you are planning to develop?",TUTOR
+2015-01-18,21:58:59,0,David A,1421636340193,audio record,AUDIO_CAPTURE
+2015-01-18,21:59:00,0,VirtualCarolyn,1421636342134,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-18,21:59:00,0,VirtualCarolyn,1421636344138,Should we get started?,TUTOR
+2015-01-18,21:59:25,0,David A,1421636365441,yes,AFFIRMATIVE
+2015-01-18,21:59:25,0,VirtualCarolyn,1421636366163,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-18,21:59:36,0,VirtualCarolyn,1421636378178,...,END_MACRO
+2015-01-18,21:59:54,0,David A,1421636394810,mic as audio source,TYPE_AUDIO_SOURCE+AUDIO_SOURCE
+2015-01-18,21:59:54,0,VirtualCarolyn,1421636398201,"Yes, we need to set an audio source on recorder object.",TUTOR
+2015-01-18,21:59:54,0,VirtualCarolyn,1421636400205,Move on and decide other steps.,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-18,22:03:46,0,VirtualCarolyn,1421636627527,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-18,22:03:48,0,VirtualCarolyn,1421636629577,"What type of android app, you are planning to develop?",TUTOR
+2015-01-18,22:04:18,0,David A,1421636658955,audio source,AUDIO_SOURCE
+2015-01-18,22:04:18,0,VirtualCarolyn,1421636661617,"Yes, we need to set an audio source on recorder object.",TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-18,22:06:07,0,VirtualCarolyn,1421636768679,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-18,22:06:09,0,VirtualCarolyn,1421636770698,"What type of android app, you are planning to develop?",TUTOR
+2015-01-18,22:06:25,0,David A,1421636786267,audio source,AUDIO_SOURCE
+2015-01-18,22:06:26,0,VirtualCarolyn,1421636788719,"Yes, we need to set an audio source on recorder object.",TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-18,22:16:19,0,VirtualCarolyn,1421637380674,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-18,22:16:21,0,VirtualCarolyn,1421637382716,"What type of android app, you are planning to develop?",TUTOR
+2015-01-18,22:16:51,0,David A,1421637411613,audio record,AUDIO_CAPTURE
+2015-01-18,22:16:51,0,VirtualCarolyn,1421637412751,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-18,22:16:51,0,VirtualCarolyn,1421637414755,Should we get started?,TUTOR
+2015-01-18,22:17:19,0,David A,1421637439451,yes,AFFIRMATIVE
+2015-01-18,22:17:22,0,VirtualCarolyn,1421637442786,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-18,22:17:32,0,VirtualCarolyn,1421637454799,...,END_MACRO
+2015-01-18,22:17:41,0,David A,1421637461757,mic as audio source,TYPE_AUDIO_SOURCE+AUDIO_SOURCE
+2015-01-18,22:17:41,0,VirtualCarolyn,1421637464813,"Yes, we need to set an audio source on recorder object.",TUTOR
+2015-01-18,22:17:41,0,VirtualCarolyn,1421637466818,Move on and decide other steps.,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-18,22:25:08,0,VirtualCarolyn,1421637908949,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-18,22:25:09,0,VirtualCarolyn,1421637911078,"What type of android app, you are planning to develop?",TUTOR
+2015-01-18,22:25:26,0,David A,1421637926903,audio record,AUDIO_CAPTURE
+2015-01-18,22:25:26,0,VirtualCarolyn,1421637927097,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-18,22:25:26,0,VirtualCarolyn,1421637929102,Should we get started?,TUTOR
+2015-01-18,22:25:33,0,David A,1421637933319,yes,AFFIRMATIVE
+2015-01-18,22:25:37,0,VirtualCarolyn,1421637939116,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-18,22:25:39,0,David A,1421637939911,audio source,AUDIO_SOURCE
+2015-01-18,22:25:39,0,VirtualCarolyn,1421637943130,"Yes, we need to set an audio source on recorder object.",TUTOR
+2015-01-18,22:25:49,0,VirtualCarolyn,1421637951143,...,END_MACRO
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-18,22:27:07,0,VirtualCarolyn,1421638028461,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-18,22:27:09,0,VirtualCarolyn,1421638030482,"What type of android app, you are planning to develop?",TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-18,22:28:09,0,VirtualCarolyn,1421638091007,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-18,22:28:11,0,VirtualCarolyn,1421638093029,"What type of android app, you are planning to develop?",TUTOR
+2015-01-18,22:28:21,0,David A,1421638101465,audio record,AUDIO_CAPTURE
+2015-01-18,22:28:21,0,VirtualCarolyn,1421638103043,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-18,22:28:21,0,VirtualCarolyn,1421638105047,Should we get started?,TUTOR
+2015-01-18,22:28:38,0,David A,1421638118644,yes,AFFIRMATIVE
+2015-01-18,22:28:42,0,VirtualCarolyn,1421638123070,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-18,22:28:53,0,VirtualCarolyn,1421638135085,...,END_MACRO
+2015-01-18,22:29:18,0,David A,1421638159033,audio source mic,TYPE_AUDIO_SOURCE+AUDIO_SOURCE
+2015-01-18,22:29:19,0,VirtualCarolyn,1421638161115,"Yes, we need to set an audio source on recorder object.",TUTOR
+2015-01-18,22:29:19,0,VirtualCarolyn,1421638163118,Move on and decide other steps.,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-01-18,22:34:05,0,VirtualCarolyn,1421638446264,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-18,22:34:07,0,VirtualCarolyn,1421638448297,"What type of android app, you are planning to develop?",TUTOR
+2015-01-18,22:35:15,0,David A,1421638515724,audio record,AUDIO_CAPTURE
+2015-01-18,22:35:15,0,VirtualCarolyn,1421638516371,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-18,22:35:15,0,VirtualCarolyn,1421638518375,Should we get started?,TUTOR
+2015-01-18,22:35:22,0,David A,1421638522619,yes,AFFIRMATIVE
+2015-01-18,22:35:26,0,VirtualCarolyn,1421638526387,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-18,22:35:36,0,VirtualCarolyn,1421638538402,...,END_MACRO
+2015-01-18,22:35:48,0,David A,1421638548657,mic as audio source,TYPE_AUDIO_SOURCE+AUDIO_SOURCE
+2015-01-18,22:35:48,0,VirtualCarolyn,1421638552421,"Yes, we need to set an audio source on recorder object.",TUTOR
+2015-01-18,22:35:48,0,VirtualCarolyn,1421638554426,Move on and decide other steps.,TUTOR
