@@ -1,0 +1,6 @@
+*/runtime/logs/*
+*/build/classes/*
+.metadata/*
+*/bin/
+*~
+*.class
