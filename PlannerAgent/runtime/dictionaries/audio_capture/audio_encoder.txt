@@ -1,5 +1,4 @@
-audio encoder
-voice encoder
+/(audio|voice) encoder/
 encoder
 setaudioencoder
 audioencoder

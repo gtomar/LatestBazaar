@@ -5,9 +5,9 @@ mpeg
 mpeg_4
 mpeg4
 raw_amr
-three_gpp
+/three[_ ]gpp/
 3gpp
 webm
-wav
-\amr_nb*format\
-\amr_wb*format\
+/wave?/
+/amr_nb*format/
+/amr_wb*format/

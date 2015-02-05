@@ -1,7 +1,5 @@
-output format
+/(set)?output ?format/
 o/p format
 file format
-format of file
-format of output
-setoutputformat
-outputformat
+/format of( the)? file/
+/format of( the)? output/

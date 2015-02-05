@@ -1,6 +1,1 @@
-prepare recorder
-initialize recorder
-prepare mediarecorder
-initialize mediarecorder
-prepare audiorecord
-initialize audiorecord
+/(prepare|initialize)( the)? ((media)?recorder|audiorecord)/

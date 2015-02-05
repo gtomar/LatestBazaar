@@ -1,8 +1,2 @@
-object of recorder
-instance of recorder
-recorder api
-recorder object
-recorder's api
-recorder instance
-recorder's object
-recorder's instance
+/(object|api|instance) of (the )?recorder/
+/recorder('s)? (api|object|instance)/
