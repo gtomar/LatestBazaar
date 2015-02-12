@@ -39,6 +39,10 @@
     	<text>Now I'll start an interactive dialogue.</text>
     </prompt>
     
+    <prompt strategy="task" id="INTRO_SHORT">
+    	<text>Welcome! I'm [AGENT NAME]. I'm here to have an interactive dialogue with you to assist you in your programming task.</text>
+    </prompt>
+    
     <prompt strategy="task" id="FINISH_TUTORIALS">
     	<text>(You can trigger the same tutorial dynamically by talking about animals - see dialouges/dialogues-example.xml and dictionaries/animals.txt for details)</text>
     </prompt>

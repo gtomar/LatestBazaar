@@ -6,8 +6,8 @@
     	
     	<!-- The intro prompt is offered to students. 
     	If they respond in the affirmative, the dialogue begins.-->
-        <intro>What type of android app, you are planning to develop?</intro>
-        <accept annotation="AUDIO_CAPTURE">Great, we will be planning to develop an audio recorder.</accept>
+        <intro>What type of android app are you planning to develop?</intro>
+        <accept annotation="AUDIO_CAPTURE">Great, I'll help you create a plan for an audio recorder.</accept>
         <cancel>Sorry, I can't help you with this. You are on your own.</cancel>
     </dialog>
     
@@ -18,8 +18,8 @@
     	
     	<!-- The intro prompt is offered to students. 
     	If they respond in the affirmative, the dialogue begins.-->
-        <intro>Correct, we need to create a new instance/object for recorder and choose a recorder api to do so.</intro>
-        <accept annotation="QUESTION">But, it seems you have a question regarding recorder instance.</accept>
+        <intro>Correct, we need to create a new instance/object for recorder and choose a recorder api to use.</intro>
+        <accept annotation="QUESTION">It seems you have a question regarding recorder instance.</accept>
         <cancel annotation="TYPE_RECORDER">Move on and decide other steps.</cancel>                
         
     </dialog>
@@ -32,8 +32,8 @@
     	
     	<!-- The intro prompt is offered to students. 
     	If they respond in the affirmative, the dialogue begins.-->
-        <intro>Yes, we need to set an audio source on recorder object.</intro>
-        <accept annotation="QUESTION">But, it seems you have a question regarding audio sources or how to set them.</accept>
+        <intro>Yes, we need to set an audio source on the recorder object.</intro>
+        <accept annotation="QUESTION">It seems you have a question regarding audio sources or how to set them.</accept>
         <cancel annotation="TYPE_AUDIO_SOURCE">Move on and decide other steps.</cancel>                
         
     </dialog>
@@ -45,7 +45,7 @@
     	
     	<!-- The intro prompt is offered to students. 
     	If they respond in the affirmative, the dialogue begins.-->
-        <intro>Yes, we need to set an audio encoder on recorder object..</intro>
+        <intro>Yes, we need to set an audio encoder on the recorder object.</intro>
         <accept annotation="QUESTION">But, it seems you have a question regarding audio encoding.</accept>
         <cancel annotation="TYPE_AUDIO_ENCODER">Move on and decide other steps.</cancel>                
         
@@ -58,8 +58,8 @@
     	
     	<!-- The intro prompt is offered to students. 
     	If they respond in the affirmative, the dialogue begins.-->
-        <intro>Yes, we need to set an output format type on recorder object..</intro>
-        <accept annotation="QUESTION">But, it seems you have a question regarding output format.</accept>
+        <intro>Yes, we need to set an output format type on recorder object.</intro>
+        <accept annotation="QUESTION">It seems you have a question regarding output format.</accept>
         <cancel annotation="TYPE_OUTPUT_FORMAT">Move on and decide other steps.</cancel>                
         
     </dialog>
@@ -71,7 +71,7 @@
     	
     	<!-- The intro prompt is offered to students. 
     	If they respond in the affirmative, the dialogue begins.-->
-        <intro>We need to prepare recorder instance before starting it.</intro>
+        <intro>We need to prepare the recorder instance before starting it.</intro>
         <accept annotation="QUESTION">Call recorder_obj.prepare() on the Recorder instance.</accept>
         <cancel annotation="PREPARE_SYNTAX">Move on and decide other steps.</cancel>                
         
@@ -84,7 +84,7 @@
     	
     	<!-- The intro prompt is offered to students. 
     	If they respond in the affirmative, the dialogue begins.-->
-        <intro>When you are done with the Recorder instance, call release on recorder. It is always recommended to free the resource immediately..</intro>
+        <intro>When you are done with the Recorder instance, call release on recorder. It is always recommended to free the resource immediately.</intro>
         <accept annotation="QUESTION">Call recorder_obj.release() on the Recorder instance.</accept>
         <cancel annotation="RELEASE_SYNTAX">Move on and decide other steps.</cancel>                
         
