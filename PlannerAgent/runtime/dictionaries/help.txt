@@ -2,3 +2,8 @@ help
 stuck
 not sure
 what to do
+choices
+don't know
+where to start
+what should i begin with
+how to begin
