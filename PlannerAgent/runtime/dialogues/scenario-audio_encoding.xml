@@ -6,13 +6,6 @@
 		<!-- It *is* possible to hook up a LightSide classifier to TuTalk, 
 		such that the predicted labels are treated as concepts. 
 		but not today. -->
-			
-		<!-- 	
-		<module kind="model" name="animals"
-			classname="edu.cmu.cs.lti.tutalk.module.SidePredictor">
-			<param key="path" value="models/animals.ser" />
-		</module> 
-		-->
 
 	</configuration>
 

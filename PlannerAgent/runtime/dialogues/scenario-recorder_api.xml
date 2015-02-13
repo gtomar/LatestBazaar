@@ -135,6 +135,7 @@
 			<phrase>support</phrase>
 			<phrase>device</phrase>
 			<phrase>hardware</phrase>
+			<phrase>supported</phrase>
 		</concept>
 		
 		<concept label="ask_easiest" type="regex">
@@ -205,12 +206,14 @@
 			</step>
 			<step>
 				<initiation>Which one would you like to choose?</initiation>
-                <response say="mr">mediarecorder</response>
+                <response push="elicitate" say="mr">mediarecorder</response>
 				<response say="ar">audiorecord</response>
 				<response push="elicitate" say="explain_diff">ask_diff</response>
+				<!--
 				<response push="elicitate" say="explain_support">ask_support</response>
 				<response push="elicitate" say="explain_easiest">ask_easiest</response>
 				<response push="eliciate" say="unrecognized">unanticipated-response</response>
+				-->
 			</step>
 		</goal>
 		

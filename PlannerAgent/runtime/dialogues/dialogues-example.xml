@@ -18,7 +18,7 @@
     	
     	<!-- The intro prompt is offered to students. 
     	If they respond in the affirmative, the dialogue begins.-->
-        <intro>Correct, we need to create a new instance/object for recorder and choose a recorder api to use.</intro>
+        <intro>We need to create a new instance/object for recorder and choose a recorder api to use.</intro>
         <accept annotation="QUESTION">It seems you have a question regarding recorder instance.</accept>
         <cancel annotation="TYPE_RECORDER">Move on and decide other steps.</cancel>                
         
@@ -32,7 +32,7 @@
     	
     	<!-- The intro prompt is offered to students. 
     	If they respond in the affirmative, the dialogue begins.-->
-        <intro>Yes, we need to set an audio source on the recorder object.</intro>
+        <intro>Yes, we need to set an audio source for the recorder object.</intro>
         <accept annotation="QUESTION">It seems you have a question regarding audio sources or how to set them.</accept>
         <cancel annotation="TYPE_AUDIO_SOURCE">Move on and decide other steps.</cancel>                
         
@@ -45,7 +45,7 @@
     	
     	<!-- The intro prompt is offered to students. 
     	If they respond in the affirmative, the dialogue begins.-->
-        <intro>Yes, we need to set an audio encoder on the recorder object.</intro>
+        <intro>Yes, we need to set an audio encoder for the recorder object.</intro>
         <accept annotation="QUESTION">But, it seems you have a question regarding audio encoding.</accept>
         <cancel annotation="TYPE_AUDIO_ENCODER">Move on and decide other steps.</cancel>                
         

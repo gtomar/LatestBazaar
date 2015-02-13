@@ -115,10 +115,6 @@ amr_wb
 			<phrase>Sounds good...</phrase>
 		</concept>
 		
-		<concept label="incorrect_birth">
-			<phrase>Fish and birds lay eggs. Mammals give birth to live young, and give their babies milk!</phrase>
-		</concept>
-		
 		<concept label="ok">
 			<phrase>Ok</phrase>
 		</concept>
