@@ -1,0 +1,17 @@
+<entry timestamp="2015-01-19#17:31:18" user="PlanAgentRunner" level="INFO">Logger initialized</entry>
+<entry timestamp="2015-01-19#17:31:18" user="PlanAgentRunner" level="NORMAL">AgentOperator PlanAgentRunner created</entry>
+<entry timestamp="2015-01-19#17:31:18" user="PlanAgentRunner" level="NORMAL">Operation Created</entry>
+<entry timestamp="2015-01-19#17:31:19" user="PlanAgentRunner" level="NORMAL">Starting operation</entry>
+<entry timestamp="2015-01-19#17:31:19" user="PlanAgentRunner" level="NORMAL">Operation started</entry>
+<entry timestamp="2015-01-19#17:31:22" user="PlanAgentRunner" level="NORMAL">setting basilica2.agents.room_name to Try</entry>
+<entry timestamp="2015-01-19#17:31:22" user="PlanAgentRunner" level="NORMAL"><launching room=Try/></entry>
+<entry timestamp="2015-01-19#17:31:22" user="AgentFactory" level="NORMAL">Making Agent from null</entry>
+<entry timestamp="2015-01-19#17:31:26" user="PlanAgentRunner" level="NORMAL">setting basilica2.agents.room_name to Try</entry>
+<entry timestamp="2015-01-19#17:31:26" user="PlanAgentRunner" level="NORMAL"><launching room=Try/></entry>
+<entry timestamp="2015-01-19#17:31:26" user="AgentFactory" level="NORMAL">Making Agent from null</entry>
+<entry timestamp="2015-01-19#17:31:28" user="PlanAgentRunner" level="NORMAL">setting basilica2.agents.room_name to Try</entry>
+<entry timestamp="2015-01-19#17:31:28" user="PlanAgentRunner" level="NORMAL"><launching room=Try/></entry>
+<entry timestamp="2015-01-19#17:31:28" user="AgentFactory" level="NORMAL">Making Agent from null</entry>
+<entry timestamp="2015-01-19#17:31:30" user="PlanAgentRunner" level="NORMAL">setting basilica2.agents.room_name to Try</entry>
+<entry timestamp="2015-01-19#17:31:30" user="PlanAgentRunner" level="NORMAL"><launching room=Try/></entry>
+<entry timestamp="2015-01-19#17:31:30" user="AgentFactory" level="NORMAL">Making Agent from null</entry>
