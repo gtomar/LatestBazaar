@@ -40,7 +40,7 @@
     </prompt>
     
     <prompt strategy="task" id="INTRO_SHORT">
-    	<text>Welcome! I'm [AGENT NAME]. I'm here to have an interactive dialogue with you to assist you in your programming task.</text>
+    	<text>Welcome! I'm [AGENT NAME]. Today I’ll be helping you write a program to calculate Circular Primes.</text>
     </prompt>
     
     <prompt strategy="task" id="FINISH_TUTORIALS">

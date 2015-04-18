@@ -16,8 +16,8 @@
         
     </stage>
     <stage name="body" type="other" delay="5">
-        <!--  <step type="prompt" delay="0" prompt="INTRO_SHORT" >ABOUT_TUTORIALS_STEP</step>
+        <step type="prompt" delay="0" prompt="INTRO_SHORT" >ABOUT_TUTORIALS_STEP</step>
     	<step type="dialogue"  delay="10" dialogue="GOAL_IDENTIFICATION">DEMO_TUTORIAL</step> 
-        <step type="prompt" delay="5" prompt="END_MACRO" >...</step>-->
+        <step type="prompt" delay="5" prompt="END_MACRO" >...</step>
     </stage>
 </plan>

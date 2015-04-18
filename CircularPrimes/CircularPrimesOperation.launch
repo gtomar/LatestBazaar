@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/PlannerAgent/src/basilica2/myagent/operation/FancyTalkRunner.java"/>
+<listEntry value="/CircularPrimes/src/basilica2/myagent/operation/FancyTalkRunner.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
@@ -10,6 +10,6 @@
 <listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="basilica2.myagent.operation.PlanAgentRunner"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="PlannerAgent"/>
-<stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${workspace_loc:PlannerAgent/runtime}"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="CircularPrimes"/>
+<stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${workspace_loc:CircularPrimes/runtime}"/>
 </launchConfiguration>
