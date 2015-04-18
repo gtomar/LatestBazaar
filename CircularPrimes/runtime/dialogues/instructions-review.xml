@@ -27,15 +27,7 @@
 		<!-- the tutor will choose randomly between multiple phrases for a concept. -->	
 
 		<concept label="introduction">
-			<phrase>Let’s make sure you understand the problem by going through our three test cases.</phrase>
-		</concept>
-		
-		<concept label="test-case-0">
-			<phrase>You saw in the instructions that if you input 0, it should print 2.</phrase>
-		</concept>
-		
-		<concept label="test-case-1">
-			<phrase>What happens if you input 9?</phrase>
+			<phrase>You saw in the instructions that if you input 0, it should print 2. What happens if you input 9?</phrase>
 		</concept>
 		
 		<concept label="test-case-2">
@@ -46,11 +38,21 @@
 			<phrase>Remember, we’re using 0-indexing. Give it another try.</phrase>
 		</concept>
 		
+		<concept label="description">
+			<phrase>The input number (9) means you need to find a list of Circular Primes and return index 9. The instructions give you a list of Circular Primes. Take another shot at the question.</phrase>
+		</concept>
+		
 		<concept label="ok">
 			<phrase>Okay</phrase>
 			<phrase>Good</phrase>
 			<phrase>Great</phrase>
 			<phrase>Correct!</phrase>
+		</concept>
+		
+		<concept label="wrong">
+			<phrase>Not quite...</phrase>
+			<phrase>Almost...</phrase>
+			<phrase>Sorry...</phrase>
 		</concept>
 		<!-- end tutor concepts. -->
 		
@@ -75,7 +77,7 @@
 	
 	
 	<script>
-		<goal name="start" difficulty="1">
+		<goal name="start" difficulty="0">
 			
 			<!--   <step>-->
 				<!-- deliver a statement from the concept named "introduction"  -->
@@ -92,10 +94,11 @@
 				    "push" adds another goal to the dialogue's stack. 
 					 Note that goals should NOT be recursively nested. -->
 				
-				<response push="test_case_1" say="test-case-0">yes</response>
+				<response push="test_case_2" say="ok">71</response>
+                <response push="indexing" say="wrong">37</response>
                 
 				<!-- unanticipated-response is special: it's anything that doesn't match one of the above. -->
-				<response push="indexing" say="idx">unanticipated-response</response>
+				<response push="step_through_1" say="wrong">unanticipated-response</response>
 			</step>
 			
 			
@@ -105,27 +108,31 @@
 		</goal>
 		
 		<!-- Goals are referenced by their names. "difficulty" is meaningless for now. -->
-		<goal name="test_case_1" difficulty="0">
-			<step>
-				<initiation>test-case-1</initiation>
-                <response push="test_case_2" say="ok">71</response>
-                <response push="indexing" say="wrong">37</response>
-			</step>
-		</goal>
 		
 		<goal name="test_case_2" difficulty="0">
 			<step>
 				<initiation>test-case-2</initiation>
                 <response say="ok">199</response>
                 <response push="indexing" say="wrong">197</response>
+                <response push="start" say="Take another look at the question">unanticipated-response</response>
 			</step>
 		</goal>
 		
 		<goal name="indexing" difficulty="0">
 			<step>
 				<initiation>index</initiation>
-				<response say="ok">71</response>
+				<!-- Technically these two should be broken up into two separate things, I guess. -->
+				<response push="test_case_2" say="ok">71</response>
                 <response say="ok">199</response>
+			</step>
+		</goal>
+		
+		<goal name="step_through_1" difficulty="0">
+			<step>
+				<initiation>description</initiation>
+				<response push="test_case_2" say="ok">71</response>
+                <response push="indexing" say="wrong">37</response>
+                <response push="start" say="Take another look at the question">unanticipated-response</response>
 			</step>
 		</goal>
 		
