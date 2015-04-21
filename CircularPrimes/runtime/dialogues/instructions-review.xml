@@ -95,7 +95,7 @@
 					 Note that goals should NOT be recursively nested. -->
 				
 				<response push="test_case_2" say="ok">71</response>
-                <response push="indexing" say="wrong">37</response>
+                <response push="indexing_1" say="wrong">37</response>
                 
 				<!-- unanticipated-response is special: it's anything that doesn't match one of the above. -->
 				<response push="step_through_1" say="wrong">unanticipated-response</response>
@@ -113,17 +113,24 @@
 			<step>
 				<initiation>test-case-2</initiation>
                 <response say="ok">199</response>
-                <response push="indexing" say="wrong">197</response>
-                <response push="start" say="Take another look at the question">unanticipated-response</response>
+                <response push="indexing_2" say="wrong">197</response>
+                <response push="step_through_2" say="wrong">unanticipated-response</response>
 			</step>
 		</goal>
 		
-		<goal name="indexing" difficulty="0">
+		<goal name="indexing_1" difficulty="0">
 			<step>
 				<initiation>index</initiation>
-				<!-- Technically these two should be broken up into two separate things, I guess. -->
 				<response push="test_case_2" say="ok">71</response>
+				<response push="step_through_1" say="wrong">unanticipated-response</response>
+			</step>
+		</goal>
+		
+		<goal name="indexing_2" difficulty="0">
+			<step>
+				<initiation>index</initiation>
                 <response say="ok">199</response>
+                <response push="step_through_2" say="wrong">unanticipated-response</response>
 			</step>
 		</goal>
 		
@@ -131,8 +138,17 @@
 			<step>
 				<initiation>description</initiation>
 				<response push="test_case_2" say="ok">71</response>
-                <response push="indexing" say="wrong">37</response>
-                <response push="start" say="Take another look at the question">unanticipated-response</response>
+                <!--  <response push="indexing" say="wrong">37</response> Creates a loop? -->
+                <response push="test_case_2" say="An input of 9 would give an output of 71. e just count to the 9th item of our 0-indexed list of circular primes.">unanticipated-response</response>
+			</step>
+		</goal>
+		
+		<goal name="step_through_2" difficulty="0">
+			<step>
+				<initiation>description</initiation>
+				<response say="ok">199</response>
+                <!--  <response push="indexing" say="wrong">197</response> Creates a loop? -->
+                <response say="An input of 16 would give an output of 199. We just count to the 16th item of our 0-indexed list of circular primes.">unanticipated-response</response>
 			</step>
 		</goal>
 		
