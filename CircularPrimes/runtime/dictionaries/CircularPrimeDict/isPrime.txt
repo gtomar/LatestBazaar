@@ -1,0 +1,4 @@
+is prime
+is a prime
+isprime
+primality

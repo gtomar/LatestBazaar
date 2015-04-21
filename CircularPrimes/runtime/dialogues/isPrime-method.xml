@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scenario SYSTEM "TuTalkScenario.dtd">
+<scenario default-language="en" scenario-name="isPrime-method">
+	<configuration>
+		
+		<!-- It *is* possible to hook up a LightSide classifier to TuTalk, 
+		such that the predicted labels are treated as concepts. 
+		but not today. -->
+
+	</configuration>
+	
+	<!-- 'Concepts' define things that students might say,
+	     AND things that the tutor might say back. 
+	     Tutor concepts should take the form of phrase lists.
+		 Student concepts can be phrase lists, 
+		 regular expressions, or lists of annotations,
+	     but only one of these at a time. -->
+		
+	<concepts>
+		<!-- this is a special kind of concept for catching unexpected student responses -->
+		<concept label="unanticipated-response">
+			<phrase>anything else</phrase>
+		</concept>
+		
+		
+		<!-- tutor concepts. -->
+		<!-- the tutor will choose randomly between multiple phrases for a concept. -->	
+
+		<concept label="introduction">
+			<phrase>How will you test if the number is prime?</phrase>
+		</concept>
+		
+		<concept label="confused">
+			<phrase>Sorry, I don't understand what you're getting at. Can you try rephrasing?</phrase>
+		</concept>
+		
+		<concept label="brute_force">
+			<phrase>Using brute force is a fine way to accomplish this.</phrase>
+		</concept>
+		
+		<concept label="brute_force_better">
+			<phrase>Great! This is a little more elegant that pure brute force.</phrase>
+		</concept>
+		
+		<concept label="sieve">
+			<phrase>Wonderful! The sieve method is a great way to figure out if a number is prime.</phrase>
+		</concept>
+		
+		<concept label="describe_brute_froce">
+			<phrase>The easiest way to check if a number is prime is to test each smaller number, and see if the target number can be evenly divided by it.</phrase>
+		</concept>
+		
+		<concept label="describe_mod">
+			<phrase>To check if one number is divisible by another, use the mod function. A mod B, written a%b, returns the remainder of a/b, so if a is divisible by b, it will return 0.</phrase>
+		</concept>
+		
+		<!-- end tutor concepts. -->
+		
+		
+		<!-- student concepts. -->
+		
+		<!-- these match against external (MessageAnnotator) annotations. -->
+		<concept label="yes" type="annotation">
+			<phrase>AFFIRMATIVE</phrase>
+		</concept>
+		
+		<concept label="no" type="annotation">
+			<phrase>NEGATIVE</phrase>
+		</concept>
+		
+		<concept label="done" type="regex">
+			<phrase>done</phrase>
+			<phrase>finished</phrase>
+			<phrase>next</phrase>
+			<phrase>move on</phrase>
+		</concept>
+		
+		<concept label="help" type="annotation">
+			<phrase>help_isPrime</phrase>
+		</concept>
+		
+		<concept label="divisors" type="regex">
+			<phrase>find the divisors</phrase>
+			<phrase>divides evenly</phrase>
+			<phrase>mod</phrase>
+			<phrase>factors</phrase>
+		</concept>
+		
+		<!-- these match against regular expressions. -->
+		
+		
+		<!-- end student concepts. -->
+		
+	</concepts>
+	
+	
+	<script>
+		<goal name="start" difficulty="0">
+			
+			<!--   <step>-->
+				<!-- deliver a statement from the concept named "introduction"  -->
+				<!--   <initiation>introduction</initiation>
+			</step> -->
+			
+			<step>
+				<!-- Every step begins with an initiating concept or literal phrase -->
+				<initiation>introduction</initiation>
+				
+				<!-- These are the "response" options. 
+					If the concept between the tags matches the student statement, 
+				    the "say" concept/phrase will be delivered by the tutor.
+				    "push" adds another goal to the dialogue's stack. 
+					 Note that goals should NOT be recursively nested. -->
+				
+				<response push="good_plan" say="brute_force">brute-force</response>
+				<response push="good_plan" say="brute_force_better">brute-force-better</response>
+				<response push="good_plan" say="sieve_method">sieve-method</response> 
+				<!-- We might want to expand this help phrase into a full dialog/knowledge construction -->
+                <response push="good_plan" say="describe_brute_force">help</response>
+                
+				<!-- unanticipated-response is special: it's anything that doesn't match one of the above. -->
+				<response say="confused">unanticipated-response</response>
+			</step>
+				
+			<step>
+				<initiation>Let's move on to the next method.</initiation>
+			</step>
+		</goal>
+		
+		<goal name="good_plan" difficulty="0">
+			<step>
+				<initiation>Sounds like you know what you're doing. Go ahead and write the method to calculate if a number is prime. Let me know when you're done.</initiation>
+				
+				<response say="Awesome!">done</response>
+				<response say="describe_mod">divisors</response>
+				<response say="confused">unanticipated-response</response>
+			</step>
+		</goal>
+		
+		
+	</script>
+
+</scenario>

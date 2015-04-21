@@ -12,16 +12,15 @@
         <cancel>Are you ready to get started?</cancel>
     </dialog>
     
-    <dialog concept="RECORDER_API" scenario="scenario-recorder_api">
+    <dialog concept="IS_PRIME" scenario="isPrime-method">
     	
-        <trigger annotation="RECORDER_API"/>
-        <trigger annotation="TYPE_RECORDER"/>
+        <trigger annotation="isPrime"/>
     	
     	<!-- The intro prompt is offered to students. 
     	If they respond in the affirmative, the dialogue begins.-->
-        <intro>We need to create a new instance/object for recorder and choose a recorder api to use.</intro>
-        <accept annotation="QUESTION">It seems you have a question regarding recorder instance.</accept>
-        <cancel annotation="TYPE_RECORDER">Move on and decide other steps.</cancel>                
+        <intro>Let's go into some more detail about your method to identify primes, okay?</intro>
+        <accept annotation="AFFIRMATIVE"></accept>
+        <cancel annotation="NEGATIVE">Okay, let me know if you want to come back to it later.</cancel>                
         
     </dialog>
 
