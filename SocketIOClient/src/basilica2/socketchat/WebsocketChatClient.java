@@ -149,7 +149,6 @@ public class WebsocketChatClient extends Component implements ChatClient
 			MessageEvent me = (MessageEvent) e;
 			try
 			{
-				System.out.println("mess.");
 				insertMessage(me.getText());
 			}
 			catch (Exception e1)
@@ -159,7 +158,6 @@ public class WebsocketChatClient extends Component implements ChatClient
 				e1.printStackTrace();
 			}
 		}
-
 		//TODO: private messages? "beeps"?
 
 	}

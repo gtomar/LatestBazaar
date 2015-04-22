@@ -102,7 +102,6 @@ public class TutorialTriggerWatcher extends BasilicaAdapter
 			}
 		}
 	}
-	//
 	
 	@Override
 	public void processEvent(InputCoordinator source, Event event)

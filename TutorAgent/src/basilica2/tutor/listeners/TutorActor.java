@@ -227,7 +227,6 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 			{
 				handleRequestDetectedEvent((MessageEvent) me);
 			}
-			//
 		}
 		else if (e instanceof TutoringStartedEvent)
 		{

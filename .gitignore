@@ -4,4 +4,8 @@
 */bin/
 *~
 *.class
+<<<<<<< HEAD
 PlannerAgent/runtime/Text.png
+=======
+PlannerAgent/runtime/Text.png
+>>>>>>> 6aa6178abaaae6131d8da73bacb2dfd52361dac8
