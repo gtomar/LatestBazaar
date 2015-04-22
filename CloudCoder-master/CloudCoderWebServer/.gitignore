@@ -1,0 +1,16 @@
+/bin/*
+/apps/cloudCoder
+/log.txt
+/instance.pid
+/instance-*.fifo
+/logs
+/cloudcoderApp.jar
+/cloudcoderApp-v*.jar
+/cloudcoderBuilder-v*.jar
+/cloudCoder.pid
+/cloudcoder.properties
+/keystore.jks
+/dummy.properties
+/VERSION
+/bin
+/nopoke

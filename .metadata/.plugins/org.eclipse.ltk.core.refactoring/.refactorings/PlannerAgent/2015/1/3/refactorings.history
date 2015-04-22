@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;PlannerAgent/FancyAgentOperation.launch&apos; to &apos;PlannerAgentOperation.launch&apos;" description="Rename resource &apos;FancyAgentOperation.launch&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="FancyAgentOperation.launch" name="PlannerAgentOperation.launch" stamp="1421087398484" updateReferences="true"/>
+</session>

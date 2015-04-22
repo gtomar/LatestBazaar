@@ -61,11 +61,18 @@ public class TutorialTriggerWatcher extends BasilicaAdapter
 								String trigger = triggerMeElmo.getAttribute("annotation");
 								triggers[j] = trigger;
 							}
-							dialogueTriggers.put(triggers, conceptName);
+							// commented out by gst
+							//dialogueTriggers.put(triggers, conceptName);
 							
 						}
 					}
 				}
+				
+				// added by gst
+				Element conceptNode = (Element) dialogsNodes.item(0);
+				NodeList conceptNodes = conceptNode.getElementsByTagName("CONCEPT");
+				addTriggers(conceptNodes,1);
+				//
 			}
 		}
 		catch (Exception ex)
@@ -73,6 +80,30 @@ public class TutorialTriggerWatcher extends BasilicaAdapter
 			ex.printStackTrace();
 		}
 	}
+	
+	// method added by gst
+	private void addTriggers(NodeList conceptNodes,int level)
+	{
+		if ((conceptNodes != null) && (conceptNodes.getLength() != 0))
+		{
+			for (int i = 0; i < conceptNodes.getLength(); i++)
+			{
+				Element conceptElement = (Element) conceptNodes.item(i);
+				String conceptName = conceptElement.getAttribute("name");
+				
+				String[] triggers = new String[1];
+				triggers[0] = conceptName;
+				
+				dialogueTriggers.put(triggers, conceptName);
+				
+				NodeList tempconceptNodes = conceptElement.getElementsByTagName("CONCEPT"+level);
+				addTriggers(tempconceptNodes, level+1);
+				
+			}
+		}
+	}
+	//
+	
 	@Override
 	public void processEvent(InputCoordinator source, Event event)
 	{}
@@ -98,9 +129,10 @@ public class TutorialTriggerWatcher extends BasilicaAdapter
 		}
 		for(String[] trigger : dialogueTriggers.keySet())
 		{
+			
 			if(me.hasAnyAnnotations(trigger))
 			{
-			    // gst edit	
+			    // gst edit	- added additional parameter
 				DoTutoringEvent toot = new DoTutoringEvent(source, dialogueTriggers.get(trigger), me);
 				source.addPreprocessedEvent(toot);
 			}

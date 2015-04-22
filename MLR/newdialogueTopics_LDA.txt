@@ -1,0 +1,16 @@
+1 0.00603161981442 Hi all! Today, instructor student. Each responsible looking opportunities specific discussion strategy used conversation.
+5 0.00690986133274 Lets get started introducing ourselves. I Alex.
+2 0.00136089960575 {s001}
+2 0.0191481899524 Hi {s001} Revoicer. When explanation idea given would benefit revoicing, please encourage one team mates so, example, asking explain said words.
+2 0.00966831133161 {s005} Challenger. When see statement made (whether right wrong) would benefit challenged, please encourage one team mates so, example, asking whether agree disagree said, why.
+3 0.01329415379 Its nice meet all. :) Please make sure understood responsible looking pages 7-9 book remembering role assigned.
+4 0.0233626659068 In condition A, placed glucose solution inside cell model immerse distilled water. In condition B, opposite.
+3 0.00788798917058 Nice meet u 2.
+5 0.00872318002099 Please discuss predict happen two conditions.
+4 0.0206400294606 In condition C, made modification condition A. We replace glucose solution starch suspension. In order detect presence starch, replace distilled water Lugol's Iodine solution.
+1 0.00886026483148 You move discussing happen Condition C explanation change.
+1 0.0107026387025 When agreement, write predictions explanations Conditions A, B C worksheet.
+3 0.0242504898691 You going watch video showing cell Conditions A, B C.
+1 0.0075211842651 As watch video, write observations worksheet.
+3 0.00799636796064 Go Videos folder Desktop, watch video there.
+4 0.010182155161 I predict Condition A cell model would gain water Codition b would loose water cell model

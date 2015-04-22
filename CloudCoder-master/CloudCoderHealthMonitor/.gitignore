@@ -1,0 +1,7 @@
+/bin
+/lib
+/logs
+/*.pid
+/*.fifo
+/cloudcoderHealthMonitor.jar
+/cloudcoder.properties

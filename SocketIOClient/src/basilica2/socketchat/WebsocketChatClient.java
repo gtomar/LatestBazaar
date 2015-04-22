@@ -19,7 +19,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import basilica2.agents.components.ChatClient;
+import basilica2.agents.events.CodeEvent;
 import basilica2.agents.events.MessageEvent;
+import basilica2.agents.events.MethodEvent;
 import basilica2.agents.events.PresenceEvent;
 import basilica2.agents.events.PrivateMessageEvent;
 import basilica2.agents.events.ReadyEvent;
@@ -127,11 +129,27 @@ public class WebsocketChatClient extends Component implements ChatClient
 				e1.printStackTrace();
 			}
 		}
+		else if(e instanceof MethodEvent)
+		{
+			MethodEvent m = (MethodEvent) e;
+			try
+			{
+				System.out.println("share method stub.");
+				shareSuggestion(m.getMethod());
+			}
+			catch (Exception e1)
+			{
+				System.err.println("couldn't send plan: ");
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		}
 		else if(e instanceof MessageEvent)
 		{
 			MessageEvent me = (MessageEvent) e;
 			try
 			{
+				System.out.println("mess.");
 				insertMessage(me.getText());
 			}
 			catch (Exception e1)
@@ -141,6 +159,7 @@ public class WebsocketChatClient extends Component implements ChatClient
 				e1.printStackTrace();
 			}
 		}
+
 		//TODO: private messages? "beeps"?
 
 	}
@@ -197,6 +216,11 @@ public class WebsocketChatClient extends Component implements ChatClient
 	protected void shareImage(String imageURL)
 	{
 		socket.emit("sendimage", imageURL);
+	}
+	
+	protected void shareSuggestion(String method)
+	{
+		socket.emit("sendsuggestion", method);
 	}
 	
 	protected void shareReady(boolean ready, boolean global)
@@ -299,6 +323,11 @@ public class WebsocketChatClient extends Component implements ChatClient
 			{
 				String message = (String)args[1];
 				WhiteboardEvent me = new WhiteboardEvent(WebsocketChatClient.this, message, (String)args[0], message);
+				WebsocketChatClient.this.broadcast(me);
+			}
+			else if(event.equals("updatecode"))
+			{
+				CodeEvent me = new CodeEvent(WebsocketChatClient.this, (String)args[0], (String)args[1], (String)args[2], (String)args[3], (String)args[4], (String)args[5]);
 				WebsocketChatClient.this.broadcast(me);
 			}
 			else if(event.equals("updatepresence"))

@@ -1,0 +1,243 @@
+<entry timestamp="2015-01-03#09:38:16" user="FactoryBuiltAgent" level="NORMAL">CONFIGURING AGENT ExampleAgent_Try</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.AGENT" level="NORMAL"><created>ExampleAgent_Try</created></entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.stateMemory" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.stateMemory" level="NORMAL"><created>stateMemory</created></entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.client" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.client" level="NORMAL"><created>client</created></entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.client" level="NORMAL">Property read: socket_url =	http://conversation.lti.cs.cmu.edu:8000</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.inputCoordinator" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.inputCoordinator" level="NORMAL"><created>inputCoordinator</created></entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.outputCoordinator" level="INFO">Informing 0 Observers of CREATED</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.outputCoordinator" level="NORMAL"><created>outputCoordinator</created></entry>
+<entry timestamp="2015-01-03#09:38:16" user="(client->inputCoordinator)" level="INFO">Connection initialized. Id=1420295896333</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.client" level="INFO">Outgoing connection added from client to inputCoordinator</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.inputCoordinator" level="INFO">Inward connection added from inputCoordinator to client</entry>
+<entry timestamp="2015-01-03#09:38:16" user="(inputCoordinator->inputCoordinator)" level="INFO">Connection initialized. Id=1420295896333</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.inputCoordinator" level="INFO">Outgoing connection added from inputCoordinator to inputCoordinator</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.inputCoordinator" level="INFO">Outgoing connection added from inputCoordinator to inputCoordinator</entry>
+<entry timestamp="2015-01-03#09:38:16" user="(inputCoordinator->outputCoordinator)" level="INFO">Connection initialized. Id=1420295896333</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.inputCoordinator" level="INFO">Outgoing connection added from inputCoordinator to outputCoordinator</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.outputCoordinator" level="INFO">Inward connection added from outputCoordinator to inputCoordinator</entry>
+<entry timestamp="2015-01-03#09:38:16" user="(outputCoordinator->client)" level="INFO">Connection initialized. Id=1420295896333</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.outputCoordinator" level="INFO">Outgoing connection added from outputCoordinator to client</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.client" level="INFO">Inward connection added from client to outputCoordinator</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.AGENT" level="NORMAL"><initialized>ExampleAgent_Try</initialized></entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.stateMemory" level="INFO">Observer Added:stateMemory.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.client" level="INFO">Observer Added:client.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.outputCoordinator" level="INFO">Observer Added:outputCoordinator.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.inputCoordinator" level="INFO">Observer Added:inputCoordinator.ui.cell. 1 Observers now.</entry>
+<entry timestamp="2015-01-03#09:38:16" user="(client->inputCoordinator)" level="NORMAL">Observer Added:(client->inputCoordinator).ui.edge</entry>
+<entry timestamp="2015-01-03#09:38:16" user="(inputCoordinator->inputCoordinator)" level="NORMAL">Observer Added:(inputCoordinator->inputCoordinator).ui.edge</entry>
+<entry timestamp="2015-01-03#09:38:16" user="(inputCoordinator->outputCoordinator)" level="NORMAL">Observer Added:(inputCoordinator->outputCoordinator).ui.edge</entry>
+<entry timestamp="2015-01-03#09:38:16" user="(outputCoordinator->client)" level="NORMAL">Observer Added:(outputCoordinator->client).ui.edge</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.stateMemory" level="INFO">Observer Added:stateMemory.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.client" level="INFO">Observer Added:client.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.outputCoordinator" level="INFO">Observer Added:outputCoordinator.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.inputCoordinator" level="INFO">Observer Added:inputCoordinator.ui.panel. 2 Observers now.</entry>
+<entry timestamp="2015-01-03#09:38:16" user="(client->inputCoordinator)" level="NORMAL">Observer Added:(client->inputCoordinator).ui.panel</entry>
+<entry timestamp="2015-01-03#09:38:16" user="(inputCoordinator->inputCoordinator)" level="NORMAL">Observer Added:(inputCoordinator->inputCoordinator).ui.panel</entry>
+<entry timestamp="2015-01-03#09:38:16" user="(inputCoordinator->outputCoordinator)" level="NORMAL">Observer Added:(inputCoordinator->outputCoordinator).ui.panel</entry>
+<entry timestamp="2015-01-03#09:38:16" user="(outputCoordinator->client)" level="NORMAL">Observer Added:(outputCoordinator->client).ui.panel</entry>
+<entry timestamp="2015-01-03#09:38:16" user="PlanExecutor" level="NORMAL"><configuration planfile="plans/example_steps.xml"></entry>
+<entry timestamp="2015-01-03#09:38:16" user="PlanExecutor" level="ERROR">PlanExecutor: Can't do that...java.io.IOException: No such file or directory</entry>
+<entry timestamp="2015-01-03#09:38:16" user="PlanExecutor" level="ERROR">Error while reading Status File (java.io.FileNotFoundException: planstatus/ExampleAgent_Try.planstatus.txt (No such file or directory))</entry>
+<entry timestamp="2015-01-03#09:38:16" user="ExampleAgent_Try.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="0" initiated="false">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+</State></commit></entry>
+<entry timestamp="2015-01-03#09:38:17" user="ExampleAgent_Try.AGENT" level="NORMAL"><starting>Initializing each component</starting></entry>
+<entry timestamp="2015-01-03#09:38:17" user="ExampleAgent_Try.stateMemory" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2015-01-03#09:38:17" user="ExampleAgent_Try.stateMemory" level="NORMAL"><initialized>stateMemory</initialized></entry>
+<entry timestamp="2015-01-03#09:38:17" user="ExampleAgent_Try.client" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2015-01-03#09:38:17" user="ExampleAgent_Try.client" level="NORMAL"><initialized>client</initialized></entry>
+<entry timestamp="2015-01-03#09:38:17" user="ExampleAgent_Try.outputCoordinator" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2015-01-03#09:38:17" user="ExampleAgent_Try.outputCoordinator" level="NORMAL"><initialized>outputCoordinator</initialized></entry>
+<entry timestamp="2015-01-03#09:38:17" user="ExampleAgent_Try.inputCoordinator" level="INFO">Informing 2 Observers of STARTED</entry>
+<entry timestamp="2015-01-03#09:38:17" user="ExampleAgent_Try.inputCoordinator" level="NORMAL"><initialized>inputCoordinator</initialized></entry>
+<entry timestamp="2015-01-03#09:38:17" user="ExampleAgent_Try.AGENT" level="NORMAL"><starting>All components initialized</starting></entry>
+<entry timestamp="2015-01-03#09:38:17" user="ExampleAgent_Try.inputCoordinator" level="INFO">Observer Added:frame2. 3 Observers now.</entry>
+<entry timestamp="2015-01-03#09:38:18" user="ExampleAgent_Try.client" level="INFO"><broadcasting>PRESENCE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2015-01-03#09:38:18" user="(client->inputCoordinator)" level="INFO">Communicate PRESENCE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2015-01-03#09:38:18" user="ExampleAgent_Try.inputCoordinator" level="INFO"><queued name="PRESENCE_EVENT" from="client"></queued></entry>
+<entry timestamp="2015-01-03#09:38:18" user="ExampleAgent_Try.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2015-01-03#09:38:18" user="ExampleAgent_Try.inputCoordinator" level="INFO"><processing name="PRESENCE_EVENT" from="client">Presence: ExampleAgent is now PRESENT</processing></entry>
+<entry timestamp="2015-01-03#09:38:18" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">InputCoordinator received event: Presence: ExampleAgent is now PRESENT</entry>
+<entry timestamp="2015-01-03#09:38:18" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">Events After Preprocessing: [Presence: ExampleAgent is now PRESENT]</entry>
+<entry timestamp="2015-01-03#09:38:18" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2015-01-03#09:38:18" user="ExampleAgent_Try.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2015-01-03#09:38:18" user="ExampleAgent_Try.inputCoordinator" level="INFO"><processed name="PRESENCE_EVENT" from="client"></processed></entry>
+<entry timestamp="2015-01-03#09:38:19" user="ExampleAgent_Try.client" level="INFO"><broadcasting>PRESENCE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2015-01-03#09:38:19" user="(client->inputCoordinator)" level="INFO">Communicate PRESENCE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2015-01-03#09:38:19" user="ExampleAgent_Try.inputCoordinator" level="INFO"><queued name="PRESENCE_EVENT" from="client"></queued></entry>
+<entry timestamp="2015-01-03#09:38:19" user="ExampleAgent_Try.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2015-01-03#09:38:19" user="ExampleAgent_Try.inputCoordinator" level="INFO"><processing name="PRESENCE_EVENT" from="client">Presence: ExampleAgent is now PRESENT</processing></entry>
+<entry timestamp="2015-01-03#09:38:19" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">InputCoordinator received event: Presence: ExampleAgent is now PRESENT</entry>
+<entry timestamp="2015-01-03#09:38:19" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">Events After Preprocessing: [Presence: ExampleAgent is now PRESENT]</entry>
+<entry timestamp="2015-01-03#09:38:19" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2015-01-03#09:38:19" user="ExampleAgent_Try.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2015-01-03#09:38:19" user="ExampleAgent_Try.inputCoordinator" level="INFO"><processed name="PRESENCE_EVENT" from="client"></processed></entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.client" level="INFO"><broadcasting>PRESENCE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2015-01-03#09:40:32" user="(client->inputCoordinator)" level="INFO">Communicate PRESENCE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.inputCoordinator" level="INFO"><queued name="PRESENCE_EVENT" from="client"></queued></entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.client" level="INFO"><broadcasting>PRESENCE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2015-01-03#09:40:32" user="(client->inputCoordinator)" level="INFO">Communicate PRESENCE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.inputCoordinator" level="INFO"><queued name="PRESENCE_EVENT" from="client"></queued></entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.inputCoordinator" level="INFO"><processing name="PRESENCE_EVENT" from="client">Presence: ExampleAgent is now PRESENT</processing></entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">InputCoordinator received event: Presence: ExampleAgent is now PRESENT</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">Events After Preprocessing: [Presence: ExampleAgent is now PRESENT]</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.inputCoordinator" level="INFO"><processed name="PRESENCE_EVENT" from="client"></processed></entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.inputCoordinator" level="INFO"><processing name="PRESENCE_EVENT" from="client">Presence: GST is now PRESENT</processing></entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">InputCoordinator received event: Presence: GST is now PRESENT</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="0" initiated="false">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+</State></retrieve></entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="1" initiated="false">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="GST" name="GST" role="UNASSIGNED" present="true" /></State></commit></entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="false">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="GST" name="GST" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="1" initiated="true">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="GST" name="GST" role="UNASSIGNED" present="true" /></State></commit></entry>
+<entry timestamp="2015-01-03#09:40:32" user="PlanExecutor" level="NORMAL">Plan: <stage name="script" timeout="0">set</stage></entry>
+<entry timestamp="2015-01-03#09:40:32" user="PlanExecutor" level="NORMAL">Plan: <stage name="wrap" timeout="120">set</stage></entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="null" type="null" />
+	<Step name="null" type="null"/>
+	<student id="GST" name="GST" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">Events After Preprocessing: [Presence: GST is now PRESENT]</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="1" initiated="true">
+	<Stage name="script" type="other" />
+	<Step name="GREETING_STEP" type="prompt"/>
+	<student id="GST" name="GST" role="UNASSIGNED" present="true" /></State></commit></entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="script" type="other" />
+	<Step name="GREETING_STEP" type="prompt"/>
+	<student id="GST" name="GST" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.inputCoordinator" level="INFO"><processed name="PRESENCE_EVENT" from="client"></processed></entry>
+<entry timestamp="2015-01-03#09:40:32" user="PlanExecutor" level="ERROR">Error while updating Status File (java.io.FileNotFoundException: planstatus/ExampleAgent_Try.planstatus.txt (No such file or directory))</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.outputCoordinator" level="INFO">Proposal Queue: [Message from ExampleAgent: Hello, I'm ExampleAgent, the Bazaar example agent! This message comes from the PromptStepHandler, by way of the PlanExecutor component. GREETING]</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.outputCoordinator" level="INFO">Proposal Message from ExampleAgent: Hello, I'm ExampleAgent, the Bazaar example agent! This message comes from the PromptStepHandler, by way of the PlanExecutor component. GREETINGbelief*priority: 1.0*0.75=0.75</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.outputCoordinator" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2015-01-03#09:40:32" user="(outputCoordinator->client)" level="INFO">Communicate MESSAGE_EVENT from outputCoordinator to client</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.client" level="INFO"><queued name="MESSAGE_EVENT" from="outputCoordinator"></queued></entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.outputCoordinator" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.client" level="INFO"><processing name="MESSAGE_EVENT" from="outputCoordinator">Message from ExampleAgent: Hello, I'm ExampleAgent, the Bazaar example agent! This message comes from the PromptStepHandler, by way of the PlanExecutor component. GREETING</processing></entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.client" level="INFO"><processed name="MESSAGE_EVENT" from="outputCoordinator"></processed></entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.client" level="INFO"><broadcasting>PRESENCE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2015-01-03#09:40:32" user="(client->inputCoordinator)" level="INFO">Communicate PRESENCE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.inputCoordinator" level="INFO"><queued name="PRESENCE_EVENT" from="client"></queued></entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.inputCoordinator" level="INFO"><processing name="PRESENCE_EVENT" from="client">Presence: GST is now PRESENT</processing></entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">InputCoordinator received event: Presence: GST is now PRESENT</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="script" type="other" />
+	<Step name="GREETING_STEP" type="prompt"/>
+	<student id="GST" name="GST" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="1" initiated="true">
+	<Stage name="script" type="other" />
+	<Step name="GREETING_STEP" type="prompt"/>
+	<student id="GST" name="GST" role="UNASSIGNED" present="true" /></State></commit></entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">Events After Preprocessing: [Presence: GST is now PRESENT]</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2015-01-03#09:40:32" user="ExampleAgent_Try.inputCoordinator" level="INFO"><processed name="PRESENCE_EVENT" from="client"></processed></entry>
+<entry timestamp="2015-01-03#09:40:48" user="ExampleAgent_Try.client" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2015-01-03#09:40:48" user="(client->inputCoordinator)" level="INFO">Communicate MESSAGE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2015-01-03#09:40:48" user="ExampleAgent_Try.inputCoordinator" level="INFO"><queued name="MESSAGE_EVENT" from="client"></queued></entry>
+<entry timestamp="2015-01-03#09:40:48" user="ExampleAgent_Try.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2015-01-03#09:40:48" user="ExampleAgent_Try.inputCoordinator" level="INFO"><processing name="MESSAGE_EVENT" from="client">Message from ExampleAgent: Hello, I'm ExampleAgent, the Bazaar example agent! This message comes from the PromptStepHandler, by way of the PlanExecutor component. </processing></entry>
+<entry timestamp="2015-01-03#09:40:48" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">InputCoordinator received event: Message from ExampleAgent: Hello, I'm ExampleAgent, the Bazaar example agent! This message comes from the PromptStepHandler, by way of the PlanExecutor component. </entry>
+<entry timestamp="2015-01-03#09:40:48" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">Events After Preprocessing: [Echo: Message from ExampleAgent: Hello, I'm ExampleAgent, the Bazaar example agent! This message comes from the PromptStepHandler, by way of the PlanExecutor component. ]</entry>
+<entry timestamp="2015-01-03#09:40:48" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2015-01-03#09:40:48" user="ExampleAgent_Try.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2015-01-03#09:40:48" user="ExampleAgent_Try.inputCoordinator" level="INFO"><processed name="MESSAGE_EVENT" from="client"></processed></entry>
+<entry timestamp="2015-01-03#09:40:49" user="ExampleAgent_Try.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="script" type="other" />
+	<Step name="GREETING_STEP" type="prompt"/>
+	<student id="GST" name="GST" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2015-01-03#09:40:49" user="ExampleAgent_Try.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="1" initiated="true">
+	<Stage name="script" type="other" />
+	<Step name="IMAGE_STEP" type="whiteboard"/>
+	<student id="GST" name="GST" role="UNASSIGNED" present="true" /></State></commit></entry>
+<entry timestamp="2015-01-03#09:40:49" user="PlanExecutor" level="ERROR">Error while updating Status File (java.io.FileNotFoundException: planstatus/ExampleAgent_Try.planstatus.txt (No such file or directory))</entry>
+<entry timestamp="2015-01-03#09:40:50" user="ExampleAgent_Try.outputCoordinator" level="INFO">Proposal Queue: [CREATE whiteboard-image http://ankara.lti.cs.cmu.edu/bazaar/barter.jpg]</entry>
+<entry timestamp="2015-01-03#09:40:50" user="ExampleAgent_Try.outputCoordinator" level="INFO">Proposal CREATE whiteboard-image http://ankara.lti.cs.cmu.edu/bazaar/barter.jpgbelief*priority: 0.375*1.0=0.375</entry>
+<entry timestamp="2015-01-03#09:40:50" user="ExampleAgent_Try.outputCoordinator" level="INFO"><broadcasting>Whiteboard Event on 1 connections</broadcasting></entry>
+<entry timestamp="2015-01-03#09:40:50" user="(outputCoordinator->client)" level="INFO">Communicate Whiteboard Event from outputCoordinator to client</entry>
+<entry timestamp="2015-01-03#09:40:50" user="ExampleAgent_Try.client" level="INFO"><queued name="Whiteboard Event" from="outputCoordinator"></queued></entry>
+<entry timestamp="2015-01-03#09:40:50" user="ExampleAgent_Try.outputCoordinator" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2015-01-03#09:40:50" user="ExampleAgent_Try.client" level="INFO"><processing name="Whiteboard Event" from="outputCoordinator">CREATE whiteboard-image http://ankara.lti.cs.cmu.edu/bazaar/barter.jpg</processing></entry>
+<entry timestamp="2015-01-03#09:40:50" user="ExampleAgent_Try.client" level="INFO"><processed name="Whiteboard Event" from="outputCoordinator"></processed></entry>
+<entry timestamp="2015-01-03#09:41:09" user="ExampleAgent_Try.client" level="INFO"><broadcasting>PRESENCE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2015-01-03#09:41:09" user="(client->inputCoordinator)" level="INFO">Communicate PRESENCE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2015-01-03#09:41:10" user="ExampleAgent_Try.inputCoordinator" level="INFO"><queued name="PRESENCE_EVENT" from="client"></queued></entry>
+<entry timestamp="2015-01-03#09:41:10" user="ExampleAgent_Try.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2015-01-03#09:41:10" user="ExampleAgent_Try.client" level="INFO"><broadcasting>PRESENCE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2015-01-03#09:41:10" user="(client->inputCoordinator)" level="INFO">Communicate PRESENCE_EVENT from client to inputCoordinator</entry>
+<entry timestamp="2015-01-03#09:41:10" user="ExampleAgent_Try.inputCoordinator" level="INFO"><queued name="PRESENCE_EVENT" from="client"></queued></entry>
+<entry timestamp="2015-01-03#09:41:10" user="ExampleAgent_Try.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2015-01-03#09:41:10" user="ExampleAgent_Try.inputCoordinator" level="INFO"><processing name="PRESENCE_EVENT" from="client">Presence: ExampleAgent is now PRESENT</processing></entry>
+<entry timestamp="2015-01-03#09:41:10" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">InputCoordinator received event: Presence: ExampleAgent is now PRESENT</entry>
+<entry timestamp="2015-01-03#09:41:10" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">Events After Preprocessing: [Presence: ExampleAgent is now PRESENT]</entry>
+<entry timestamp="2015-01-03#09:41:10" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2015-01-03#09:41:10" user="ExampleAgent_Try.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2015-01-03#09:41:10" user="ExampleAgent_Try.inputCoordinator" level="INFO"><processed name="PRESENCE_EVENT" from="client"></processed></entry>
+<entry timestamp="2015-01-03#09:41:10" user="ExampleAgent_Try.inputCoordinator" level="INFO"><processing name="PRESENCE_EVENT" from="client">Presence: GST is now ABSENT</processing></entry>
+<entry timestamp="2015-01-03#09:41:10" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">InputCoordinator received event: Presence: GST is now ABSENT</entry>
+<entry timestamp="2015-01-03#09:41:10" user="ExampleAgent_Try.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="script" type="other" />
+	<Step name="IMAGE_STEP" type="whiteboard"/>
+	<student id="GST" name="GST" role="UNASSIGNED" present="true" /></State></retrieve></entry>
+<entry timestamp="2015-01-03#09:41:10" user="ExampleAgent_Try.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="1" initiated="true">
+	<Stage name="script" type="other" />
+	<Step name="IMAGE_STEP" type="whiteboard"/>
+	<student id="GST" name="GST" role="UNASSIGNED" present="false" /></State></commit></entry>
+<entry timestamp="2015-01-03#09:41:10" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">Events After Preprocessing: [Presence: GST is now ABSENT]</entry>
+<entry timestamp="2015-01-03#09:41:10" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2015-01-03#09:41:10" user="ExampleAgent_Try.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2015-01-03#09:41:10" user="ExampleAgent_Try.inputCoordinator" level="INFO"><processed name="PRESENCE_EVENT" from="client"></processed></entry>
+<entry timestamp="2015-01-03#09:41:13" user="ExampleAgent_Try.client" level="INFO"><broadcasting>Whiteboard Event on 1 connections</broadcasting></entry>
+<entry timestamp="2015-01-03#09:41:13" user="(client->inputCoordinator)" level="INFO">Communicate Whiteboard Event from client to inputCoordinator</entry>
+<entry timestamp="2015-01-03#09:41:13" user="ExampleAgent_Try.inputCoordinator" level="INFO"><queued name="Whiteboard Event" from="client"></queued></entry>
+<entry timestamp="2015-01-03#09:41:13" user="ExampleAgent_Try.client" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2015-01-03#09:41:13" user="ExampleAgent_Try.inputCoordinator" level="INFO"><processing name="Whiteboard Event" from="client">CREATE whiteboard-image http://ankara.lti.cs.cmu.edu/bazaar/barter.jpg</processing></entry>
+<entry timestamp="2015-01-03#09:41:13" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">InputCoordinator received event: CREATE whiteboard-image http://ankara.lti.cs.cmu.edu/bazaar/barter.jpg</entry>
+<entry timestamp="2015-01-03#09:41:13" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">Events After Preprocessing: [CREATE whiteboard-image http://ankara.lti.cs.cmu.edu/bazaar/barter.jpg]</entry>
+<entry timestamp="2015-01-03#09:41:13" user="ExampleAgent_Try.inputCoordinator" level="NORMAL">Events After Agent Processing:[]</entry>
+<entry timestamp="2015-01-03#09:41:13" user="ExampleAgent_Try.outputCoordinator" level="NORMAL">Added to Proposal Queue: []</entry>
+<entry timestamp="2015-01-03#09:41:13" user="ExampleAgent_Try.inputCoordinator" level="INFO"><processed name="Whiteboard Event" from="client"></processed></entry>
+<entry timestamp="2015-01-03#09:41:19" user="ExampleAgent_Try.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="script" type="other" />
+	<Step name="IMAGE_STEP" type="whiteboard"/>
+	<student id="GST" name="GST" role="UNASSIGNED" present="false" /></State></retrieve></entry>
+<entry timestamp="2015-01-03#09:41:19" user="ExampleAgent_Try.stateMemory" level="INFO">Informing 2 Observers of <commit type="basilica2.agents.data.State"><State students="1" initiated="true">
+	<Stage name="script" type="other" />
+	<Step name="EXPLAIN" type="prompt"/>
+	<student id="GST" name="GST" role="UNASSIGNED" present="false" /></State></commit></entry>
+<entry timestamp="2015-01-03#09:41:19" user="ExampleAgent_Try.stateMemory" level="INFO">Informing 2 Observers of <retrieve position="0"><State students="1" initiated="true">
+	<Stage name="script" type="other" />
+	<Step name="EXPLAIN" type="prompt"/>
+	<student id="GST" name="GST" role="UNASSIGNED" present="false" /></State></retrieve></entry>
+<entry timestamp="2015-01-03#09:41:19" user="PlanExecutor" level="ERROR">Error while updating Status File (java.io.FileNotFoundException: planstatus/ExampleAgent_Try.planstatus.txt (No such file or directory))</entry>
+<entry timestamp="2015-01-03#09:41:20" user="ExampleAgent_Try.outputCoordinator" level="INFO">Proposal Queue: [Message from ExampleAgent: The rest of the responses you'll see from me come from two dynamic components, the RepeatReactor and the ParrotTalker, which are paying attention to what you say (supported by the MessageAnnotator component), and how often you say it. EXPLAIN]</entry>
+<entry timestamp="2015-01-03#09:41:20" user="ExampleAgent_Try.outputCoordinator" level="INFO">Proposal Message from ExampleAgent: The rest of the responses you'll see from me come from two dynamic components, the RepeatReactor and the ParrotTalker, which are paying attention to what you say (supported by the MessageAnnotator component), and how often you say it. EXPLAINbelief*priority: 0.5625*0.75=0.421875</entry>
+<entry timestamp="2015-01-03#09:41:20" user="ExampleAgent_Try.outputCoordinator" level="INFO"><broadcasting>MESSAGE_EVENT on 1 connections</broadcasting></entry>
+<entry timestamp="2015-01-03#09:41:20" user="(outputCoordinator->client)" level="INFO">Communicate MESSAGE_EVENT from outputCoordinator to client</entry>
+<entry timestamp="2015-01-03#09:41:20" user="ExampleAgent_Try.client" level="INFO"><queued name="MESSAGE_EVENT" from="outputCoordinator"></queued></entry>
+<entry timestamp="2015-01-03#09:41:20" user="ExampleAgent_Try.outputCoordinator" level="INFO">Informing 2 Observers of Event Sending</entry>
+<entry timestamp="2015-01-03#09:41:20" user="ExampleAgent_Try.client" level="INFO"><processing name="MESSAGE_EVENT" from="outputCoordinator">Message from ExampleAgent: The rest of the responses you'll see from me come from two dynamic components, the RepeatReactor and the ParrotTalker, which are paying attention to what you say (supported by the MessageAnnotator component), and how often you say it. EXPLAIN</processing></entry>
+<entry timestamp="2015-01-03#09:41:20" user="ExampleAgent_Try.client" level="INFO"><processed name="MESSAGE_EVENT" from="outputCoordinator"></processed></entry>

@@ -90,15 +90,17 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	
 	private double tutorMessagePriority = 0.75;
 	private boolean interruptForNewDialogues = false;
-	private boolean startAnyways = true;//gst edit
+	private boolean startAnyways = true;//gst edited it to true
 	private String dialogueFolder = "dialogs";
 	
 	private String dialogueConfigFile = "dialogues/dialogues-config.xml";
 	private int introduction_cue_timeout = 60;
 	private int introduction_cue_timeout2 = 60;
 	private int tutorTimeout = 45;
+	//edited by gst
 	private String request_poke_prompt_text = "I am waiting for your response to start. Please ask for help if you are stuck.";
 	private String goahead_prompt_text = "Let's go ahead with this.";
+	//edited by gst
 	private String response_poke_prompt_text = "I am waiting for your response to start. Please ask for help if you are stuck.";
 	private String dont_know_prompt_text = "Anybody?";
 	private String moving_on_text = "Okay, let's move on.";
@@ -218,11 +220,14 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 			//queue up the start of the tutoring engine.
 			
 			handleDoTutoringEvent((DoTutoringEvent) e);
+			
+			// added by gst but why
 			MessageEvent me = ((DoTutoringEvent) e).getMessageEvent();
 			if(me != null)
 			{
 				handleRequestDetectedEvent((MessageEvent) me);
 			}
+			//
 		}
 		else if (e instanceof TutoringStartedEvent)
 		{
@@ -288,35 +293,31 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 
 	private synchronized void handleRequestDetectedEvent(MessageEvent e)
 	{
-		System.out.println("Inside");
 		for(String concept : e.getAllAnnotations())
 		{
 			Dialog killMeNow = null;
-			System.out.println("*****************" + concept );
 
 			for(Dialog d : pendingDialogs.values())
 			{
-				System.out.println("*****************" + d.acceptAnnotation + "****" +  d.cancelAnnotation);
+
 				if (d.acceptAnnotation.equals(concept))
 				{
-					System.out.println("accept *****************"  + d.acceptAnnotation );
+
 					killMeNow = d;
 					sendTutorMessage(d.acceptText);
 					startDialog(d);
 				}
 				else if(d.cancelAnnotation.equals(concept))
 				{
-					System.out.println("cancel *****************"  + d.cancelAnnotation );
+
 					killMeNow = d;
 					sendTutorMessage(d.cancelText);
-
 					prioritySource.setBlocking(false);
 					
 				}
 				if(killMeNow != null)
 				{
 					pendingDialogs.remove(killMeNow.acceptAnnotation);
-					System.out.println("*********------*******" + d.acceptAnnotation);
 					break;
 				}
 			}
@@ -542,7 +543,6 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 		enlistedDialog = d.conceptName;
 		//hook up dialog to cue - here, it's any "affirmative" response
 		pendingDialogs.put(d.acceptAnnotation, d);
-		System.out.println(d.conceptName+ "^^^^^^^^^^^^^^^^^^^^^^^^^" + d.acceptAnnotation);
 
 		// Setup timer (or tick count) to poke students if the enlisted request
 		// is not responded to yet!
@@ -620,7 +620,6 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 				Dialog d2 = proposedDialogs.get(tokens[1]);
 				
 				d2 = pendingDialogs.remove(d2.acceptAnnotation);
-				System.out.println("---------" + d2.acceptAnnotation);
 				if (d2 != null)
 				{
 					//TODONE: continue dialog even if students haven't responded approrpriately.

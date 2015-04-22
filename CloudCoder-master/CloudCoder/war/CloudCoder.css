@@ -1,0 +1,331 @@
+/*
+ * CloudCoder CSS styles.
+ */
+.cc-pageTitle {
+	font-size: 140%;
+	font-weight: bold;
+}
+.cc-errorText {
+	color: red;
+	font-style: italic;
+}
+/* Style for input fields marked as invalid during validation. */
+.cc-invalid {
+	background: #f88;
+}
+/* Style to make buttons float to the right in a dialog box. */
+.cc-floatRightButton {
+	float: right;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.cc-problemName, .cc-courseLabel, .cc-dialogTitle, .cc-userIdentity {
+	font-weight: bold;
+	font-size: 20px;
+}
+.cc-problemDescription {
+	overflow: auto; /* Allow problem description text to scroll. */
+	background-color: #fffacd;
+	padding: 0px 8px;
+}
+.cc-centered {
+	margin-left: 0 auto;
+	margin-right: 0 auto;
+}
+.cc-sectionLabel {
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 2px solid gray;
+}
+
+/*
+ * Styles for StatusMessageView
+ */
+.cc-statusIcon {
+	margin-top: 4px;
+	margin-right: 8px;
+}
+.cc-statusMessageNone, .cc-statusMessageInformation, .cc-statusMessageError, .cc-statusMessageGoodNews,
+.cc-statusMessagePending {
+	font-size: 16px;
+	vertical-align: 8px;
+}
+.cc-statusMessageInformation {
+}
+.cc-statusMessageError {
+	color: red;
+}
+.cc-statusMessageGoodNews {
+	color: green;
+}
+.cc-statusMessagePending {
+}
+
+/*
+ * Emphasized button style (adapted from .gwtButton styles in clean.css).
+ * We use emphasized buttons to indicate the "most important" button
+ * on each page.
+ */
+.cc-emphButton {
+  margin: 0;
+  padding: 5px 7px;
+  text-decoration: none;
+  cursor: pointer;
+  cursor: hand;
+  font-size:120%;
+  font-weight: bold;
+  background: url("cloudcoder/gwt/clean/images/hborder.png") repeat-x 0px -2077px;
+  border:1px solid #bbb;
+  border-bottom: 1px solid #a0a0a0;
+  border-radius: 3px;
+ -moz-border-radius: 3px;
+}
+.cc-emphButton:active {
+  border: 1px inset #ccc;
+}
+.cc-emphButton:hover {
+  border-color: #939393;
+}
+.cc-emphButton[disabled] {
+  cursor: default;
+  color: #888;
+}
+.cc-emphButton[disabled]:hover {
+  border: 1px outset #ccc;
+}
+
+/*
+ * Increase the z-index for .gwt-DialogBox.
+ * The default value leaves part of the dialog box below the current
+ * (highlighted) line in the Ace editor.
+ */
+.gwt-DialogBox {
+	z-index: 1001 !important;
+}
+
+/*
+ * Styles for the test result outcome column.
+ */
+.cc-passedTest {
+	color: #006400;
+	font-weight: bold;
+}
+.cc-failedTest {
+	color: #b22222;
+	font-weight: bold;
+}
+
+/*
+ * Styles for the test outcome summary view (the green/red bar).
+ * Say what you will about CSS, it's pretty good for drawing
+ * rectangles.
+ */
+.cc-testOutcomeSummary {
+	position: relative;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	width: 160px;
+	height: 28px;
+	background-color: black;
+}
+.cc-testOutcomeSummaryInner {
+	position: absolute;
+	top: 1px;
+	bottom: 1px;
+	left: 1px;
+	right: 1px;
+}
+.cc-testOutcomeSummaryInnerBackground {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+.cc-testOutcomeSummaryInnerBackgroundEmpty {
+	background-color: white;
+}
+.cc-testOutcomeSummaryInnerBackgroundNonEmpty {
+	background-color: #ff2222;
+}
+.cc-testOutcomeSummaryPassedTests {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	background-color: #44dd44;
+}
+
+/* Give the edit problem center scroll panel a distinctive background. */
+.cc-editProblemPanel {
+	background: #ccf;
+}
+
+/*
+ * Styles for model object field editor widgets.
+ */
+.cc-fieldEditor {
+	/* Make sure there is a bit of vertical separation between editor widgets. */
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+.cc-fieldEditorLabel, .cc-fieldEditorErrorLabel {
+	font-size: 16px;
+}
+.cc-fieldEditorLabel {
+	font-weight: bold;
+}
+.cc-fieldEditorErrorLabel {
+	color: red;
+}
+
+/*
+ * Styles for TestCaseEditor.
+ */
+.cc-testCaseEditor {
+	background: #ddd;
+	border-top: 2px solid #888;
+	border-bottom: 2px solid #888;
+}
+.cc-testCaseDeleteButton {
+	float: right;
+	margin-top: 8px;
+	margin-right: 8px;
+}
+/* We get the components in a EditDateTimeField UI to appear next to each other by floating them left. */
+.cc-editDateTimeFloatLeft {
+	float: left;
+	margin-right: 10px;
+}
+/*
+ * An empty div in EditDateTimeField with this style after the floated divs allows the overall
+ * widget to have a natural height.
+ */ 
+.cc-editDateTimeClearFloats {
+	clear: both;
+}
+.cc-dialogTitle {
+}
+
+/* Timer in QuizPage. */
+.cc-quizTimer {
+	font-weight: bold;
+	font-size: 92px;
+	text-align: right;
+}
+/* Bar graphs (tests passed vs. attempted) in StudentProgressView */
+.cc-barNoInfo {
+	height: 12px;
+	width: 120px;
+	background: silver;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+.cc-barOuter {
+	height: 12px;
+	width: 120px;
+	position: relative;
+	background: #ff2222;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+.cc-barInner { /* nested inside cc-barInner div to make a green bar: set width to desired percentage */
+	height: 12px;
+	left: 0px;
+	background: #44dd44;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+/* Add this style to a FlowPanel to change it to inline display. */
+.cc-inlineFlowPanel {
+	display: inline;
+}
+
+/* Padding for a HorizontalPanel */
+.paddedHorizontalPanel {
+    margin-left: 40px !important;
+}
+
+/* I'm just fudging the position of the slider. */
+#ccSubSlider {
+	position: relative;
+	top: 6px !important;
+	left: 8px !important;
+	right: 16px !important;
+}
+
+/*
+ * Styles for author information.
+ */
+ .cc-authorInfo {
+	border-top: 1px solid gray;	
+}
+
+/*
+ * Style for DevActionsPanel2 (reset and submit buttons).
+ * We want them to float right in their container div.
+ * Also push it down a tad to allow some visual separation
+ * from the editor.
+ */
+ .cc-devActionsPanel {
+    margin-top: 4px;
+ 	float: right;
+ }
+ 
+ /**
+  * Style for labeled date/time picker.
+  * Used in SetDatesPanel (for setting the assigned/due dates
+  * of many problems at once).
+  */
+.cc-labeledDateTimePicker {
+	display: inline-block;
+	margin: 10px 10px;
+}
+
+/**
+ * ExerciseSummaryView and ExerciseSummaryItem styles.
+ */
+.cc-exerciseSummary {
+}
+
+/* Basic style for an exercise summary item. */
+.cc-exerciseSummaryItem {
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	margin: 2px 2px;
+	border: 3px solid transparent;
+}
+
+.cc-exerciseSummaryItem:hover {
+	border: 3px solid black;
+}
+
+/* Styles for exercises summary items: these correspond to SubmissionStatus enumeration members. */
+.cc-exerciseNotStarted { background: gray; }
+.cc-exerciseStarted { background: silver; }
+.cc-exerciseTestsPassed { background: #44dd44; }
+.cc-exerciseCompileError { background: orange; }
+.cc-exerciseBuildError { background: black; }
+.cc-exerciseTestsFailed { background: #ff2222; }
+
+/**
+ * Increase the z-index for date box popups so that they
+ * are above the current dialog (which has a high z-index to
+ * ensure that it is visible above any Ace editor instance.
+ */
+.dateBoxPopup {
+	z-index: 1002 !important;
+}
+/*
+ * Same goes for the TimeBox menu (needs to float above
+ * dialogs).
+ */
+.gwt-TimeBox-menu {
+	z-index: 1002 !important;
+}

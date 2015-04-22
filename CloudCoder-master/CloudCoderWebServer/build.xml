@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="jar" name="CloudCoderWebServer">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="${user.home}/linux/java/eclipse"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+
+	<!-- Read CloudCoder global configuration properties. -->
+	<property file="../cloudcoder.properties"/>
+	
+	<!-- Name of the deployable jarfile to run the webapp. -->
+	<property name="jarname" value="cloudcoderApp.jar" />
+
+	<path id="CloudCoderWebServer.classpath">
+        <pathelement location="bin"/>
+		<pathelement path="../CloudCoderJetty/cloudcoderJetty.jar"/>
+		<fileset dir="../CloudCoderJetty/lib" includes="**/*.jar"/>
+		<fileset dir="../CloudCoderLogging/lib" includes="**.jar"/>
+    </path>
+    
+	<target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+	
+    <target depends="init,jetty" name="build">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+    	<mkdir dir="bin"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="CloudCoderWebServer.classpath"/>
+        </javac>
+    </target>
+	
+	<!-- Target to build the webapp. -->
+	<target name="webapp">
+		<ant inheritall="false" dir="../CloudCoder" target="build"/>
+	</target>
+	
+	<!-- Target to build model classes library. -->
+	<target name="modelClasses">
+		<ant inheritall="false" dir="../CloudCoderModelClasses" target="jar" />
+	</target>
+	
+	<!-- Target to build model classes persistence library. -->
+	<target name="modelClassesPersistence">
+		<ant inheritall="false" dir="../CloudCoderModelClassesPersistence" target="jar" />
+	</target>
+	
+	<!-- Target to build model classes JSON serialization library. -->
+	<target name="modelClassesJSON">
+		<ant inheritall="false" dir="../CloudCoderModelClassesJSON" target="jar"/>
+	</target>
+
+	<!-- Ensure that the builder submission queue library is built. -->
+	<target name="submissionQueue">
+		<ant inheritall="false" dir="../CloudCoderSubmissionQueue" target="jar"/>
+	</target>
+
+	<!-- Ensure that the builder submission queue library servlet context listener is built. -->
+	<target name="submissionQueueServletContextListener">
+		<ant inheritall="false" dir="../CloudCoderSubmissionQueueServletContextListener" target="jar"/>
+	</target>
+	
+	<!-- Target to build the CloudCoder Jetty library. -->
+	<target name="jetty">
+		<ant inheritall="false" dir="../CloudCoderJetty" target="jar"/>
+	</target>
+	
+	<!--
+		Depending on whether or not this is a distribution build, decide
+		which cloudcoder.properties to use (dummy or real) and
+		whether or not a keystore should be included (no for dist builds.)
+	-->
+	<target name="checkDistBuild">
+		<condition property="cloudcoderProperties" value="dummy.properties" else="../cloudcoder.properties">
+			<isset property="distBuild"/>
+		</condition>
+		<condition property="cloudcoderKeystoreSource"
+			value=""
+			else="../${cloudcoder.submitsvc.ssl.keystore}">
+			<isset property="distBuild"/>
+		</condition>
+		<condition property="cloudcoderKeystoreTarget"
+			value=""
+			else="war/WEB-INF/classes/${cloudcoder.submitsvc.ssl.keystore}">
+			<isset property="distBuild"/>
+		</condition>
+		<property name="versionFile" value="../CloudCoder/src/VERSION"/>
+
+		<!-- for gwt-2.5.0, we need requestfactory-server.jar:
+			see: http://code.google.com/p/google-web-toolkit/issues/detail?id=7527 -->
+		<condition property="requestFactorySource" value="${gwt.sdk}/requestfactory-server.jar" else="">
+			<contains string="${gwt.sdk}" substring="gwt-2.5.0" />
+		</condition>
+		<condition property="requestFactoryTarget" value="war/WEB-INF/lib/requestfactory-server.jar" else="">
+			<contains string="${gwt.sdk}" substring="gwt-2.5.0" />
+		</condition>
+	</target>
+	
+	<!--
+		Target to build a "distribution" jarfile containing a dummy cloudcoder.properties file
+		and no keystore. 
+	-->
+	<target name="distjar">
+		<!-- Set distBuild property. -->
+		<property name="distBuild" value="true"/>
+		
+		<!-- Ensure that the dummy properties file exists. -->
+		<propertyfile file="dummy.properties">
+			<entry key="dummy" value="true"/>
+		</propertyfile>
+		
+		<!-- Now we can call the normal jar target. -->
+		<antcall target="jar"/>
+	</target>
+	
+	<!--
+		Target to build a single deployable jarfile containing both
+		the webapp (and required libraries) and Jetty (the web server).
+	-->
+	<target name="jar" depends="checkDistBuild,build,modelClasses,modelClassesPersistence,modelClassesJSON,submissionQueue,webapp">
+		
+		<!--
+			Build single deployable jarfile containing our launcher code,
+			all requried libraries, and the webapp.  Note that signatures
+			must be removed from the libraries.
+		-->
+		<jar destfile="${jarname}" update="true">
+			<!-- Copy classes  from the bin directory. -->
+			<fileset dir="bin" includes="**"/>
+
+			<!-- Copy classes and other files from required libraries and Jetty. -->
+			<zipfileset src="../CloudCoderJetty/jettyDeps.jar" excludes="META-INF/**"/>
+			
+			<!-- Copy Jetty single-file-deployment support code. -->
+			<zipfileset src="../CloudCoderJetty/cloudcoderJetty.jar" excludes="META-INF/**"/>
+			
+			<!-- Include the webapp.
+			     However, exclude the slf4j jars, since Jetty will already have
+			     them on its classpath, and we don't want two copies. -->
+			<fileset
+				dir="../CloudCoder"
+				includes="war/**"
+				excludes="**/slf4j*.jar,war/logs/**" />			
+				
+			<!-- Include the model classes jar file in webapp's WEB-INF/lib. -->
+			<zipfileset
+				file="../CloudCoderModelClasses/cloudcoderModelClasses.jar"
+				fullpath="war/WEB-INF/lib/cloudcoderModelClasses.jar"/>
+
+			<!-- Include the model classes persistence jar file in webapp's WEB-INF/lib. -->
+			<zipfileset
+				file="../CloudCoderModelClassesPersistence/cloudcoderModelClassesPersist.jar"
+				fullpath="war/WEB-INF/lib/cloudcoderModelClassesPersist.jar"/>
+			
+			<!-- Include the model classes JSON serialization jar file in the webapp's WEB-INF/lib. -->
+			<zipfileset
+				file="../CloudCoderModelClassesJSON/cloudcoderModelClassesJSON.jar"
+				fullpath="war/WEB-INF/lib/cloudcoderModelClassesJSON.jar"/>
+			
+			<!-- Libraries needed for JSON serialization should already be in
+				the war/WEB-INF/lib directory of the webapp, so there's no need
+				to include them explicitly. -->
+			
+			<!-- Include the submission queue jar file in the webapp's WEB-INF/lib. -->
+			<zipfileset
+				file="../CloudCoderSubmissionQueue/cloudcoderSubmissionQueue.jar"
+				fullpath="war/WEB-INF/lib/cloudcoderSubmissionQueue.jar"/>
+			
+			<!-- Include the submission queue servlet context listener jar file in the webapp's WEB-INF/lib. -->
+			<zipfileset
+				file="../CloudCoderSubmissionQueueServletContextListener/cloudcoderSubmissionQueueServletContextListener.jar"
+				fullpath="war/WEB-INF/lib/cloudcoderSubmissionQueueServletContextListener.jar"/>
+
+			<!-- Include GWT requestfactory-server.jar if needed. -->
+			<zipfileset file="${requestFactorySource}" fullpath="${requestFactoryTarget}"/>
+			
+			<!-- Include keystore for secure communications with builder. -->
+			<zipfileset
+				file="${cloudcoderKeystoreSource}"
+				fullpath="${cloudcoderKeystoreTarget}" />
+			
+			<!-- Include cloudcoder configuration properties (cloudcoder.properties) -->
+			<zipfileset
+				file="${cloudcoderProperties}"
+				fullpath="cloudcoder.properties"/>
+
+			<!-- Include the VERSION file -->
+			<zipfileset
+				file="${versionFile}"
+				fullpath="VERSION"/>
+
+			<!-- Include a Manifest specifying the Main-Class to start/control/shutdown the webapp. -->
+			<manifest>
+				<attribute name="Main-Class" value="org.cloudcoder.webserver.CloudCoderWebServer" />
+			</manifest>
+		</jar>
+
+		<!-- Now we can delete deps.jar. -->
+		<delete file="deps.jar"/>
+	</target>
+	
+    <target name="clean">
+        <delete quiet="true">
+        	<fileset dir="bin" includes="**"/>
+        </delete>
+    	<delete quiet="true" file="cloudcoderApp.jar"/>
+    	<delete file="dummy.properties"/>
+    </target>
+	
+	<!-- Clean this target and all depended-on targets. -->
+	<target name="depclean" depends="clean">
+		<ant inheritall="false" dir="../CloudCoder" target="clean"/>
+		<ant inheritall="false" dir="../CloudCoderModelClasses" target="clean"/>
+		<ant inheritall="false" dir="../CloudCoderModelClassesPersistence" target="clean"/>
+		<ant inheritall="false" dir="../CloudCoderModelClassesJSON" target="clean"/>
+		<ant inheritall="false" dir="../CloudCoderSubmissionQueue" target="clean"/>
+		<ant inheritall="false" dir="../CloudCoderSubmissionQueueServletContextListener" target="clean"/>
+		<ant inheritall="false" dir="../CloudCoderJetty" target="clean"/>
+	</target>
+</project>

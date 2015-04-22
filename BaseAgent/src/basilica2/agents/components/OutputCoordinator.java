@@ -82,7 +82,7 @@ public class OutputCoordinator extends Component implements TimeoutReceiver
 				for (PriorityEvent p : proposalQueue)
 				{
 					double belief = beliefGivenHistory(p);
-					double d =  p.getPriority();// gst edit
+					double d =  p.getPriority();// gst edit but why ?
 
 					log(Logger.LOG_LOW, "Proposal " + p + "belief*priority: " + belief + "*" + p.getPriority() + "=" + d);
 

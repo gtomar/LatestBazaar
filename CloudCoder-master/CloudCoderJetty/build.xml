@@ -1,0 +1,41 @@
+<project name="CloudCoderJetty" default="jar">
+	<path id="CloudCoderJetty.classpath">
+        <pathelement location="bin"/>
+		<fileset dir="lib" includes="**/*.jar"/>
+		<fileset dir="../CloudCoderLogging/lib" includes="*.jar"/>
+    </path>
+
+	<target name="javac">
+		<mkdir dir="bin"/>
+		<javac source="1.6" target="1.6" srcdir="src" destdir="bin" debug="true">
+			<classpath refid="CloudCoderJetty.classpath"/>
+		</javac>
+	</target>
+	
+	<!--
+		Target to build deps.jar, which is a single jarfile containing the
+		contents of all of the Jetty jarfiles and the logging jarfiles.
+		The single-jarfile deployable apps will include the contents
+		(minus the signing information).
+		
+		TODO: should prune out Jetty libraries that we don't
+		actually need.
+	-->
+	<target name="deps">
+		<jar destfile="jettyDeps.jar">
+			<zipgroupfileset dir="lib" includes="**/*.jar" excludes="**/*taglibs*.jar"/>
+			<zipgroupfileset dir="../CloudCoderLogging/lib" includes="**.jar"/>
+		</jar>
+	</target>
+	
+	<target name="jar" depends="javac,deps">
+		<jar destfile="cloudcoderJetty.jar" basedir="bin" includes="**/*.class"/>
+	</target>
+	
+	<target name="clean">
+        <delete quiet="true">
+        	<fileset dir="bin" includes="**"/>
+        </delete>
+    	<delete quiet="true" file="cloudcoderJetty.jar"/>
+	</target>
+</project>

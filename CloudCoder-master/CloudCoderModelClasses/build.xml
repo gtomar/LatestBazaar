@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="jar" name="CloudCoderModelClasses">
+	<!-- name of jar file to create -->
+	<property name="jarfile" value="cloudcoderModelClasses.jar"/>
+	
+	<target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+	</target>
+	
+	<target name="build" depends="init">
+		<mkdir dir="bin"/>
+		<javac source="1.6" target="1.6" debug="true" srcdir="src" destdir="bin"/>
+	</target>
+	
+	<target name="jar" depends="build">
+		<jar destfile="${jarfile}" update="true">
+			<fileset dir="bin" includes="**"/>
+		</jar>
+	</target>
+
+	<target name="clean">
+		<delete file="${jarfile}"/>
+		<delete includeemptydirs="true">
+			<fileset dir="bin" includes="**/*"/>
+		</delete>
+	</target>
+</project>

@@ -1,0 +1,108 @@
+<entry timestamp="2014-12-26#17:18:41" user="FancyTalkRunner" level="INFO">Logger initialized</entry>
+<entry timestamp="2014-12-26#17:18:41" user="FancyTalkRunner" level="NORMAL">AgentOperator FancyTalkRunner created</entry>
+<entry timestamp="2014-12-26#17:18:41" user="FancyTalkRunner" level="NORMAL">Operation Created</entry>
+<entry timestamp="2014-12-26#17:18:41" user="FancyTalkRunner" level="NORMAL">Classes: [class basilica2.agents.listeners.PresenceWatcher, class basilica2.agents.listeners.MessageAnnotator, class basilica2.social.listeners.ActivityTracker, class basilica2.tutor.listeners.TutorialTriggerWatcher, class basilica2.tutor.listeners.TutorTurnWatcher, class basilica2.social.listeners.StrategyScoreComputer, class basilica2.social.listeners.RuleBasedTriggerComputer, class basilica2.social.listeners.SocialController, class basilica2.accountable.listeners.AgreeDisagreeActor, class basilica2.accountable.listeners.AskForExplanationActor, class basilica2.accountable.listeners.RevoiceActor, class basilica2.accountable.listeners.SayMoreActor]</entry>
+<entry timestamp="2014-12-26#17:18:41" user="FancyTalkRunner" level="NORMAL">Classes: [class basilica2.social.listeners.SocialController, class basilica2.accountable.listeners.AgreeDisagreeActor, class basilica2.accountable.listeners.AskForExplanationActor, class basilica2.accountable.listeners.RevoiceActor, class basilica2.accountable.listeners.SayMoreActor, class basilica2.agents.listeners.plan.PlanExecutor, class basilica2.tutor.listeners.TutorActor]</entry>
+<entry timestamp="2014-12-26#17:18:43" user="FancyTalkRunner" level="NORMAL">Starting operation</entry>
+<entry timestamp="2014-12-26#17:18:43" user="FancyTalkRunner" level="NORMAL">Operation started</entry>
+<entry timestamp="2014-12-26#17:18:57" user="ConditionAgentUI" level="NORMAL">Conditions set to tutorial_trigger</entry>
+<entry timestamp="2014-12-26#17:18:58" user="ConditionAgentUI" level="NORMAL">Conditions set to social tutorial_trigger</entry>
+<entry timestamp="2014-12-26#17:18:58" user="ConditionAgentUI" level="NORMAL">Conditions set to participation social tutorial_trigger</entry>
+<entry timestamp="2014-12-26#17:18:59" user="ConditionAgentUI" level="NORMAL">Conditions set to participation social tutorial_trigger revoice</entry>
+<entry timestamp="2014-12-26#17:19:00" user="ConditionAgentUI" level="NORMAL">Conditions set to participation social tutorial_trigger revoice explain</entry>
+<entry timestamp="2014-12-26#17:19:01" user="ConditionAgentUI" level="NORMAL">Conditions set to participation social tutorial_trigger revoice explain agree</entry>
+<entry timestamp="2014-12-26#17:19:02" user="ConditionAgentUI" level="NORMAL">Conditions set to participation social tutorial_trigger say_more revoice explain agree</entry>
+<entry timestamp="2014-12-26#17:19:03" user="FancyTalkRunner" level="NORMAL">setting basilica2.agents.room_name to FancyBazaar-3</entry>
+<entry timestamp="2014-12-26#17:19:03" user="FancyTalkRunner" level="NORMAL"><launching room=FancyBazaar-3/></entry>
+<entry timestamp="2014-12-26#17:19:03" user="AgentFactory" level="NORMAL">Making Agent from agent.xml</entry>
+<entry timestamp="2014-12-26#17:19:03" user="AgentFactory" level="NORMAL">File Read</entry>
+<entry timestamp="2014-12-26#17:19:03" user="AgentFactory" level="NORMAL">Agent Tag Read</entry>
+<entry timestamp="2014-12-26#17:19:03" user="AgentFactory" level="NORMAL">Components Tag Read</entry>
+<entry timestamp="2014-12-26#17:19:03" user="AgentFactory" level="NORMAL">Components read. N=4</entry>
+<entry timestamp="2014-12-26#17:19:03" user="AgentFactory" level="NORMAL">Agent build. VirtualCarolyn_FancyBazaar-3</entry>
+<entry timestamp="2014-12-26#17:19:03" user="FancyTalkRunner" level="NORMAL">Adding agent VirtualCarolyn_FancyBazaar-3</entry>
+<entry timestamp="2014-12-26#17:19:03" user="FancyTalkRunner" level="INFO">Added. 1 agents now working</entry>
+<entry timestamp="2014-12-26#17:19:03" user="FancyTalkRunner" level="INFO">Initializing new agent</entry>
+<entry timestamp="2014-12-26#17:19:04" user="PromptStepHandler" level="NORMAL">default priority=0.75, wait 0.1 seconds after prompts, +3.3333333333333335 wps</entry>
+<entry timestamp="2014-12-26#17:19:04" user="FancyTalkRunner" level="INFO">Starting new Agent</entry>
+<entry timestamp="2014-12-26#17:19:05" user="FancyTalkRunner" level="NORMAL">notified UI of agent launch for VirtualCarolyn_FancyBazaar-3</entry>
+<entry timestamp="2014-12-26#17:19:05" user="FancyTalkRunner" level="NORMAL">Agent added VirtualCarolyn_FancyBazaar-3</entry>
+<entry timestamp="2014-12-26#17:19:25" user="PresenceWatcher" level="NORMAL">STUDENTS COUNT: 1</entry>
+<entry timestamp="2014-12-26#17:19:25" user="PlanExecutor" level="NORMAL">PLAN: activiating next stage: initiate</entry>
+<entry timestamp="2014-12-26#17:19:25" user="PlanExecutor" level="NORMAL">Firing Stage 'initiate'</entry>
+<entry timestamp="2014-12-26#17:19:25" user="Step" level="NORMAL">starting 30 second timeout for GREETINGS</entry>
+<entry timestamp="2014-12-26#17:19:25" user="Step" level="NORMAL">Handlers for GREETINGS(greet): [basilica2.agents.listeners.plan.GreetStepHandler@132ca201]</entry>
+<entry timestamp="2014-12-26#17:19:25" user="GreetStepHandler" level="NORMAL">starting greet step...</entry>
+<entry timestamp="2014-12-26#17:19:25" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Hello! I'm VirtualCarolyn. Take a minute to introduce yourselves. INTRODUCE</entry>
+<entry timestamp="2014-12-26#17:19:25" user="PresenceWatcher" level="NORMAL">STUDENTS COUNT: 1</entry>
+<entry timestamp="2014-12-26#17:19:55" user="EndStepOnStopListeningDelegate" level="NORMAL">ending step GREETINGS...</entry>
+<entry timestamp="2014-12-26#17:19:55" user="PlanExecutor" level="NORMAL">starting 10 second delay timer for GREETINGS</entry>
+<entry timestamp="2014-12-26#17:19:55" user="PlanExecutor" level="NORMAL">PLAN: current step done: GREETINGS</entry>
+<entry timestamp="2014-12-26#17:19:55" user="Step" level="NORMAL">Handlers for SETUP_STEP(prompt): [basilica2.agents.listeners.plan.PromptStepHandler@7f59d713]</entry>
+<entry timestamp="2014-12-26#17:19:55" user="PromptStepHandler" level="NORMAL">starting 4.3 second prompt delay</entry>
+<entry timestamp="2014-12-26#17:19:55" user="" level="NORMAL">accepted. Message from VirtualCarolyn: While I won't answer your questions directly, I can help guide your group discussion. SETUP.
+Starting blockout countdown... </entry>
+<entry timestamp="2014-12-26#17:19:59" user="PromptStepHandler" level="NORMAL">ending 4.3 second prompt delay</entry>
+<entry timestamp="2014-12-26#17:19:59" user="PlanExecutor" level="NORMAL">starting 10 second delay timer for SETUP_STEP</entry>
+<entry timestamp="2014-12-26#17:20:05" user="PlanExecutor" level="WARNING">PLAN: no idea what to do with timeout key GREETINGS</entry>
+<entry timestamp="2014-12-26#17:20:09" user="PlanExecutor" level="NORMAL">PLAN: current step done: SETUP_STEP</entry>
+<entry timestamp="2014-12-26#17:20:09" user="Step" level="NORMAL">Handlers for INSTRUCTIONS_STEP(prompt): [basilica2.agents.listeners.plan.PromptStepHandler@7f59d713]</entry>
+<entry timestamp="2014-12-26#17:20:09" user="PromptStepHandler" level="NORMAL">starting 4.8999999999999995 second prompt delay</entry>
+<entry timestamp="2014-12-26#17:20:09" user="" level="NORMAL">accepted. Message from VirtualCarolyn: Once you get an idea of what's going on, replace these prompts with something domain appropriate! INSTRUCTIONS.
+Starting blockout countdown... </entry>
+<entry timestamp="2014-12-26#17:20:14" user="PromptStepHandler" level="NORMAL">ending 4.8999999999999995 second prompt delay</entry>
+<entry timestamp="2014-12-26#17:20:14" user="PlanExecutor" level="NORMAL">starting 10 second delay timer for INSTRUCTIONS_STEP</entry>
+<entry timestamp="2014-12-26#17:20:24" user="PlanExecutor" level="NORMAL">PLAN: current step done: INSTRUCTIONS_STEP</entry>
+<entry timestamp="2014-12-26#17:20:24" user="Step" level="NORMAL">Handlers for WHITEBOARD_INSTRUCTIONS(prompt): [basilica2.agents.listeners.plan.PromptStepHandler@7f59d713]</entry>
+<entry timestamp="2014-12-26#17:20:24" user="PromptStepHandler" level="NORMAL">starting 2.5 second prompt delay</entry>
+<entry timestamp="2014-12-26#17:20:25" user="" level="NORMAL">accepted. Message from VirtualCarolyn: You can also share images to the whiteboard: WHITEBOARD_INSTRUCTIONS.
+Starting blockout countdown... </entry>
+<entry timestamp="2014-12-26#17:20:27" user="PromptStepHandler" level="NORMAL">ending 2.5 second prompt delay</entry>
+<entry timestamp="2014-12-26#17:20:27" user="PlanExecutor" level="NORMAL">starting 5 second delay timer for WHITEBOARD_INSTRUCTIONS</entry>
+<entry timestamp="2014-12-26#17:20:29" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Okay! Let's begin. GIVE_UP_ON_INTRODUCTIONS</entry>
+<entry timestamp="2014-12-26#17:20:32" user="PlanExecutor" level="NORMAL">PLAN: current step done: WHITEBOARD_INSTRUCTIONS</entry>
+<entry timestamp="2014-12-26#17:20:32" user="Step" level="NORMAL">Handlers for SHOW_IMAGE(whiteboard): [basilica2.agents.listeners.plan.WhiteboardStepHandler@28c9c429]</entry>
+<entry timestamp="2014-12-26#17:20:32" user="WhiteboardStepHandler" level="NORMAL">whiteboard step image:SHOW_IMAGE</entry>
+<entry timestamp="2014-12-26#17:20:32" user="PlanExecutor" level="NORMAL">starting 5 second delay timer for SHOW_IMAGE</entry>
+<entry timestamp="2014-12-26#17:20:33" user="" level="NORMAL">ACCEPTED! CREATE whiteboard-image http://ankara.lti.cs.cmu.edu/bazaar/chemactivity/periodic.jpg</entry>
+<entry timestamp="2014-12-26#17:20:35" user="" level="NORMAL">accepted. Message from VirtualCarolyn: ... okay SHOW_COMPREHENSION_APPROVAL+SOCIAL.
+Starting blockout countdown... </entry>
+<entry timestamp="2014-12-26#17:20:37" user="PlanExecutor" level="NORMAL">PLAN: current step done: SHOW_IMAGE</entry>
+<entry timestamp="2014-12-26#17:20:37" user="basilica2.agents.listeners.plan.Stage" level="NORMAL">finished stage initiate</entry>
+<entry timestamp="2014-12-26#17:20:37" user="PlanExecutor" level="NORMAL">Firing Stage 'body'</entry>
+<entry timestamp="2014-12-26#17:20:37" user="Step" level="NORMAL">Handlers for ABOUT_AT_STEP(prompt): [basilica2.agents.listeners.plan.PromptStepHandler@7f59d713]</entry>
+<entry timestamp="2014-12-26#17:20:37" user="PromptStepHandler" level="NORMAL">starting 22.900000000000002 second prompt delay</entry>
+<entry timestamp="2014-12-26#17:20:41" user="" level="NORMAL">accepted. Message from VirtualCarolyn: The agent is listening for several kinds of triggers to start supporting students. |For example, David cares a lot about "Accountable Talk" style facilitation these days. | The provided AT example is configured for college chemistry. If you've turned on any of the revoice, agree, say_more, or explain conditions, try saying something like "boiling point increases with dipole moment."|(and then wait a little while, this behavior waits for other students to follow up before offering support.) ABOUT_ACCOUNTABLE_TALK.
+Starting blockout countdown... </entry>
+<entry timestamp="2014-12-26#17:21:00" user="PromptStepHandler" level="NORMAL">ending 22.900000000000002 second prompt delay</entry>
+<entry timestamp="2014-12-26#17:21:00" user="PlanExecutor" level="NORMAL">starting 45 second delay timer for ABOUT_AT_STEP</entry>
+<entry timestamp="2014-12-26#17:21:45" user="PlanExecutor" level="NORMAL">PLAN: current step done: ABOUT_AT_STEP</entry>
+<entry timestamp="2014-12-26#17:21:45" user="Step" level="NORMAL">Handlers for ABOUT_TUTORIALS_STEP(prompt): [basilica2.agents.listeners.plan.PromptStepHandler@7f59d713]</entry>
+<entry timestamp="2014-12-26#17:21:45" user="PromptStepHandler" level="NORMAL">starting 5.8 second prompt delay</entry>
+<entry timestamp="2014-12-26#17:21:45" user="" level="NORMAL">accepted. Message from VirtualCarolyn: Now I'll start an interactive dialogue.|Even if you disable tutorial triggers, you can still have dialogues in your macro-script. ABOUT_TUTORIALS.
+Starting blockout countdown... </entry>
+<entry timestamp="2014-12-26#17:21:51" user="PromptStepHandler" level="NORMAL">ending 5.8 second prompt delay</entry>
+<entry timestamp="2014-12-26#17:21:51" user="Step" level="NORMAL">Handlers for ABOUT_LISTENING_STEP(prompt): [basilica2.agents.listeners.plan.PromptStepHandler@7f59d713]</entry>
+<entry timestamp="2014-12-26#17:21:51" user="PromptStepHandler" level="NORMAL">starting 5.199999999999999 second prompt delay</entry>
+<entry timestamp="2014-12-26#17:21:52" user="" level="NORMAL">accepted. Message from VirtualCarolyn: Note that other agent behaviors (like accountable-talk style listening) will be suppressed while the dialogue is underway. ABOUT_LISTENING.
+Starting blockout countdown... </entry>
+<entry timestamp="2014-12-26#17:21:56" user="PromptStepHandler" level="NORMAL">ending 5.199999999999999 second prompt delay</entry>
+<entry timestamp="2014-12-26#17:21:56" user="Step" level="NORMAL">Handlers for DEMO_TUTORIAL(dialogue): [basilica2.tutor.listeners.DialogStepHandler@690c3515]</entry>
+<entry timestamp="2014-12-26#17:21:58" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: We can work on your basic zoology. Are you ready? TUTOR</entry>
+<entry timestamp="2014-12-26#17:22:12" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Let's get started. TUTOR</entry>
+<entry timestamp="2014-12-26#17:22:14" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: There are three kinds of animals - birds, fish, and mammals.|Can you tell me something about some kind of animal? TUTOR</entry>
+<entry timestamp="2014-12-26#17:22:48" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: ...that's a mammal!|Let's try something harder - what kind of animal gives birth to live young? TUTOR</entry>
+<entry timestamp="2014-12-26#17:22:51" user="PresenceWatcher" level="NORMAL">STUDENTS COUNT: 2</entry>
+<entry timestamp="2014-12-26#17:22:51" user="PresenceWatcher" level="NORMAL">STUDENTS COUNT: 2</entry>
+<entry timestamp="2014-12-26#17:22:51" user="PresenceWatcher" level="NORMAL">STUDENTS COUNT: 2</entry>
+<entry timestamp="2014-12-26#17:22:58" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: ...?|Let's try something harder - what kind of animal gives birth to live young? TUTOR</entry>
+<entry timestamp="2014-12-26#17:23:08" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Fish and birds lay eggs. Mammals give birth to live young, and give their babies milk!|You're ready to be a zoologist! TUTOR</entry>
+<entry timestamp="2014-12-26#17:23:08" user="PlanExecutor" level="NORMAL">starting 10 second delay timer for DEMO_TUTORIAL</entry>
+<entry timestamp="2014-12-26#17:23:16" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: It sounds like you're confused. Would you like some help? TUTOR</entry>
+<entry timestamp="2014-12-26#17:23:18" user="PlanExecutor" level="NORMAL">PLAN: current step done: DEMO_TUTORIAL</entry>
+<entry timestamp="2014-12-26#17:23:18" user="Step" level="NORMAL">Handlers for FINISH_TUTORIAL_STEP(dialogue): [basilica2.tutor.listeners.DialogStepHandler@690c3515]</entry>
+<entry timestamp="2014-12-26#17:23:32" user="" level="NORMAL">rejected! Message from VirtualCarolyn: Got it SHOW_COMPREHENSION_APPROVAL+SOCIAL</entry>
+<entry timestamp="2014-12-26#17:23:42" user="" level="NORMAL">rejected! Message from VirtualCarolyn: Do you have any thoughts, gst? ENCOURAGE_INDIVIDUAL+SOCIAL</entry>
+<entry timestamp="2014-12-26#17:24:00" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: ...? TUTOR</entry>
+<entry timestamp="2014-12-26#17:24:06" user="FancyTalkRunner" level="NORMAL">Starting operation</entry>
+<entry timestamp="2014-12-26#17:24:06" user="FancyTalkRunner" level="NORMAL">Operation started</entry>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="edu.cmu.cs.lti.basilica2.core.Event"/>
+<fullyQualifiedTypeName name="basilica2.agents.events.CodeEvent"/>
+<fullyQualifiedTypeName name="basilica2.myagent.Code"/>
+<fullyQualifiedTypeName name="basilica2.agents.events.MethodEvent"/>
+</qualifiedTypeNameHistroy>

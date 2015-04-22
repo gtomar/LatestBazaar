@@ -1,0 +1,10 @@
+/cloudcoder.properties
+/keystore.jks
+*~
+*.swp
+installations
+/deps
+CloudCoderTools
+CloudCoderBuilder
+LATEST
+.DS_Store
