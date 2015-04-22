@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename compilation unit &apos;basilica2.myagent.PlanConcept.java&apos; to &apos;PlanTree.java&apos;&#x0A;- Original project: &apos;PlannerAgent&apos;&#x0A;- Original element: &apos;basilica2.myagent.PlanConcept.java&apos;&#x0A;- Renamed element: &apos;basilica2.myagent.PlanTree.java&apos;" description="Rename compilation unit &apos;PlanConcept.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;basilica2.myagent{PlanConcept.java" name="PlanTree.java" references="false" stamp="1423510987611" version="1.0"/>
-</session>

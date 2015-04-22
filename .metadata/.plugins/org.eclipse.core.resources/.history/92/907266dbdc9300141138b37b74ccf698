@@ -1,4 +1,0 @@
-MediaRecorder
-AudioRecord
-/(import) android.media.MediaRecorder/
-/(import) android.media.AudioRecord/
