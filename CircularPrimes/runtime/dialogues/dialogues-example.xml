@@ -12,6 +12,20 @@
         <cancel>Are you ready to get started?</cancel>
     </dialog>
     
+    <dialog concept="NTH_CIRCULAR" scenario="scenario-main">
+    	<trigger annotation="main"/>
+    	
+    	<intro>Do you want to talk more about the structure of your main method?</intro>
+    	<accept annotation="AFFIRMATIVE"></accept>
+        <cancel annotation="NEGATIVE">Okay, let me know if you change your mind later.</cancel>
+    </dialog>
+    
+    <dialog concept="IS_CIRCULAR_PRIME" scenario="tmp">
+    	<trigger annotation="isCircularPrime"/>
+    	
+    	<intro>TMP: talking about circular primes</intro>
+    </dialog>
+    
     <dialog concept="IS_PRIME" scenario="isPrime-method">
     	
         <trigger annotation="isPrime"/>
@@ -23,97 +37,30 @@
         <cancel annotation="NEGATIVE">Okay, let me know if you want to come back to it later.</cancel>                
         
     </dialog>
-
     
-    <dialog concept="AUDIO_SOURCE" scenario="scenario-audio_source">
+    <dialog concept="PRIME_ITERATE" scenario="tmp">
+    	<trigger annotation="prime_iterate"/>
     	
-        <trigger annotation="AUDIO_SOURCE"/>
-        <trigger annotation="TYPE_AUDIO_SOURCE"/>
-    	
-    	<!-- The intro prompt is offered to students. 
-    	If they respond in the affirmative, the dialogue begins.-->
-        <intro>Yes, we need to set an audio source for the recorder object.</intro>
-        <accept annotation="QUESTION">It seems you have a question regarding audio sources or how to set them.</accept>
-        <cancel annotation="TYPE_AUDIO_SOURCE">Move on and decide other steps.</cancel>                
-        
-    </dialog>
-
-    <dialog concept="AUDIO_ENCODER" scenario="scenario-audio_encoding">
-    	
-        <trigger annotation="AUDIO_ENCODER"/>
-        <trigger annotation="TYPE_AUDIO_ENCODER"/>
-    	
-    	<!-- The intro prompt is offered to students. 
-    	If they respond in the affirmative, the dialogue begins.-->
-        <intro>Yes, we need to set an audio encoder for the recorder object.</intro>
-        <accept annotation="QUESTION">But, it seems you have a question regarding audio encoding.</accept>
-        <cancel annotation="TYPE_AUDIO_ENCODER">Move on and decide other steps.</cancel>                
-        
+    	<intro>TMP: talking about how we iterate to find primes</intro>
     </dialog>
     
-    <dialog concept="OUTPUT_FORMAT" scenario="scenario-output_format">
+    <dialog concept="PRIME_DIVISIBILITY" scenario="tmp">
+    	<trigger annotation="prime_divisibility"/>
     	
-        <trigger annotation="OUTPUT_FORMAT"/>
-        <trigger annotation="TYPE_OUTPUT_FORMAT"/>
-    	
-    	<!-- The intro prompt is offered to students. 
-    	If they respond in the affirmative, the dialogue begins.-->
-        <intro>Yes, we need to set an output format type on recorder object.</intro>
-        <accept annotation="QUESTION">It seems you have a question regarding output format.</accept>
-        <cancel annotation="TYPE_OUTPUT_FORMAT">Move on and decide other steps.</cancel>                
-        
-    </dialog>
-
-    <dialog concept="PREPARE" scenario="scenario-donothing">
-    	
-        <trigger annotation="PREPARE"/>
-        <trigger annotation="PREPARE_SYNTAX"/>
-    	
-    	<!-- The intro prompt is offered to students. 
-    	If they respond in the affirmative, the dialogue begins.-->
-        <intro>We need to prepare the recorder instance before starting it.</intro>
-        <accept annotation="QUESTION">Call recorder_obj.prepare() on the Recorder instance.</accept>
-        <cancel annotation="PREPARE_SYNTAX">Move on and decide other steps.</cancel>                
-        
+    	<intro>TMP: talking about how we check divisibility in order to find a prime number</intro>
     </dialog>
     
-    <dialog concept="RELEASE" scenario="scenario-donothing">
+    <dialog concept="ROTATE_STRING" scenario="tmp">
+    	<trigger annotation="rotate_string"/>
     	
-        <trigger annotation="RELEASE"/>
-        <trigger annotation="RELEASE_SYNTAX"/>
-    	
-    	<!-- The intro prompt is offered to students. 
-    	If they respond in the affirmative, the dialogue begins.-->
-        <intro>When you are done with the Recorder instance, call release on recorder. It is always recommended to free the resource immediately.</intro>
-        <accept annotation="QUESTION">Call recorder_obj.release() on the Recorder instance.</accept>
-        <cancel annotation="RELEASE_SYNTAX">Move on and decide other steps.</cancel>                
-        
+    	<intro>TMP: talking about how we'll have a method to rotate the string</intro>
     </dialog>
     
-        <dialog concept="START" scenario="scenario-donothing">
-    	
-        <trigger annotation="START"/>
-        <trigger annotation="START_SYNTAX"/>
-    	
-    	<!-- The intro prompt is offered to students. 
-    	If they respond in the affirmative, the dialogue begins.-->
-        <intro>Yes, you need to Start audio recording</intro>
-        <accept annotation="QUESTION">To start audio capture, call Recorder_obj.start().</accept>
-        <cancel annotation="START_SYNTAX">Move on and decide other steps.</cancel>                
-        
+	<dialog concept="ROTATE_BY_CHAR" scenario="tmp">
+		<trigger annotation="rotate_by_char"/>
+		
+		<intro>TMP: talking about we'll use a char array to rotate the string</intro>
     </dialog>
     
-       <dialog concept="STOP" scenario="scenario-donothing">
-    	
-        <trigger annotation="STOP"/>
-        <trigger annotation="STOP_SYNTAX"/>
-    	
-    	<!-- The intro prompt is offered to students. 
-    	If they respond in the affirmative, the dialogue begins.-->
-        <intro>Yes, you need to Stop audio recording</intro>
-        <accept annotation="QUESTION">To stop audio capture, call Recorder_obj.start().</accept>
-        <cancel annotation="STOP_SYNTAX">Move on and decide other steps.</cancel>                
-        
-    </dialog>
     
 </dialogs>

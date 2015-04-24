@@ -1,0 +1,4 @@
+divisibility
+/divides? by/
+evenly
+goes into
