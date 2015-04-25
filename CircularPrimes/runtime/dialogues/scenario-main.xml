@@ -126,11 +126,11 @@ int n = Integer.parseInt(args[0]); </phrase>
 		</concept>
 		
 		<concept label="concept-3-right-answer" type="annotation">
-			<phrase>MAIN_ITER_ALL</phrase>
+			<phrase>MAIN_CIRCULAR_PRIMES</phrase>
 		</concept>
 		
 		<concept label="concept-4-right-answer" type="annotation">
-			<phrase>MAIN_CIRCULAR_PRIMES</phrase>
+			<phrase>MAIN_ITER_ALL</phrase>
 		</concept>
 		
 		
