@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dialogs>
 	
-	<dialog concept="GOAL_IDENTIFICATION" scenario="scenario-template">
+	<dialog concept="GOAL_IDENTIFICATION" scenario="scenario-instructions">
     	
     	
     	<!-- The intro prompt is offered to students. 

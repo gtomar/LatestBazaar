@@ -4,5 +4,5 @@
 */bin/
 *~
 *.class
-*/.DS_Store
+*.DS_Store
 PlannerAgent/runtime/Text.png

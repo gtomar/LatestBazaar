@@ -27,35 +27,35 @@
 		<!-- the tutor will choose randomly between multiple phrases for a concept. -->	
 
 		<concept label="introduction">
-			<phrase>Optional introduction</phrase>
+			<phrase>You saw in the instructions that if you input 0, it should print 2.</phrase>
 		</concept>
 		
 		<concept label="conclusion">
-			<phrase>Good work. Let's move on to the next step.</phrase>
+			<phrase>Great! You can hit “Submit” at any time to see what your program does given these three cases (0, 9, 16).</phrase>
 		</concept>
 		
 		<concept label="ask-concept-1">
-			<phrase>How are you doing concept 1?</phrase>
+			<phrase>What happens if you input 9?</phrase>
 		</concept>
 		
 		<concept label="ask-concept-2">
-			<phrase>How are you doing concept 2?</phrase>
+			<phrase>How about an input of 16?</phrase>
 		</concept>
 		
 		<concept label="concept-1-help">
-			<phrase>Here's an explanation of concept 1. Try answering again.</phrase>
+			<phrase>The instructions provide a list of Circular Primes. To find the 9th, just find the 9th item in the list. Don't forget to start counting with 0. Try again.</phrase>
 		</concept>
 		
 		<concept label="concept-2-help">
-			<phrase>Here's an explanation of concept 2. Try answering again.</phrase>
+			<phrase>The instructions provide a list of Circular Primes. To find the 16th, just find the 16th item in the list. Don't forget to start counting with 0. Try again.</phrase>
 		</concept>
 		
 		<concept label="explain-concept-1">
-			<phrase>This is how to do concept 1.</phrase>
+			<phrase>Take a look at the list in the example. The 0th is 2, the 1st is 3, the 2nd is 5, etc. Using that, you can figure out that the 9th is 71.</phrase>
 		</concept>
 		
 		<concept label="explain-concept-2">
-			<phrase>This is how to do concept 2.</phrase>
+			<phrase>Take a look at the list in the example. The 0th is 2, the 1st is 3, the 2nd is 5, etc. Using that, you can figure out that the 16th is 199.</phrase>
 		</concept>
 		
 		<concept label="ok">
@@ -96,15 +96,16 @@
 		<!-- these match against regular expressions. -->
 		
 		<concept label="concept-1-right-answer" type="regex">
-			<phrase>correct</phrase>
-			<phrase>right</phrase>
-			<phrase>accurate</phrase>
+			<phrase>71</phrase>
+			<phrase>seventy-one</phrase>
+			<phrase>seventy one</phrase>
 		</concept>
 		
 		<concept label="concept-2-right-answer" type="regex">
-			<phrase>correct</phrase>
-			<phrase>right</phrase>
-			<phrase>accurate</phrase>
+			<phrase>199</phrase>
+			<phrase>one ninety nine</phrase>
+			<phrase>one hundred ninety nine</phrase>
+			<phrase>one nine nine</phrase>
 		</concept>
 		
 		
