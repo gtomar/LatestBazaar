@@ -12,11 +12,12 @@
         <cancel>Are you ready to get started?</cancel>
     </dialog>
     
-    <dialog concept="NTH_CIRCULAR" scenario="scenario-main">
+    <dialog concept="MAIN" scenario="scenario-main">
     	<trigger annotation="main"/>
     	
     	<intro>Do you want to talk more about the structure of your main method?</intro>
     	<accept annotation="AFFIRMATIVE"></accept>
+    	<!-- Currently not possible to return to a method, right? But ideally this would be nice. -->
         <cancel annotation="NEGATIVE">Okay, let me know if you change your mind later.</cancel>
     </dialog>
     
