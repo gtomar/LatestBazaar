@@ -21,13 +21,15 @@
         <cancel annotation="NEGATIVE">Okay, let me know if you change your mind later.</cancel>
     </dialog>
     
-    <dialog concept="IS_CIRCULAR_PRIME" scenario="tmp">
+    <dialog concept="IS_CIRCULAR_PRIME" scenario="scenario-template">
     	<trigger annotation="isCircularPrime"/>
     	
     	<intro>TMP: talking about circular primes</intro>
     </dialog>
     
     <dialog concept="IS_PRIME" scenario="isPrime-method">
+    
+    	<!--  NOTE: This method is totally not done/not functional. -->
     	
         <trigger annotation="isPrime"/>
     	
@@ -39,28 +41,10 @@
         
     </dialog>
     
-    <dialog concept="PRIME_ITERATE" scenario="tmp">
-    	<trigger annotation="prime_iterate"/>
-    	
-    	<intro>TMP: talking about how we iterate to find primes</intro>
-    </dialog>
-    
-    <dialog concept="PRIME_DIVISIBILITY" scenario="tmp">
-    	<trigger annotation="prime_divisibility"/>
-    	
-    	<intro>TMP: talking about how we check divisibility in order to find a prime number</intro>
-    </dialog>
-    
-    <dialog concept="ROTATE_STRING" scenario="tmp">
+    <dialog concept="ROTATE_STRING" scenario="scenario-template">
     	<trigger annotation="rotate_string"/>
     	
     	<intro>TMP: talking about how we'll have a method to rotate the string</intro>
-    </dialog>
-    
-	<dialog concept="ROTATE_BY_CHAR" scenario="tmp">
-		<trigger annotation="rotate_by_char"/>
-		
-		<intro>TMP: talking about we'll use a char array to rotate the string</intro>
     </dialog>
     
     
