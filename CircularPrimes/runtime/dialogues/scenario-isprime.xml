@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE scenario SYSTEM "TuTalkScenario.dtd">
-<scenario default-language="en" scenario-name="scenario-circprime">
+<scenario default-language="en" scenario-name="scenario-isprime">
 	<configuration>
 		
 		<!-- It *is* possible to hook up a LightSide classifier to TuTalk, 
@@ -10,17 +10,9 @@
 	</configuration>
 	
 	<!-- 
-	Concept 1: iterating over the rotations of a string
-	Concept 2: calling a method to rotate the string
-	Concept 3: checking if individual numbers are prime
-	 -->
-	
-	<!-- 'Concepts' define things that students might say,
-	     AND things that the tutor might say back. 
-	     Tutor concepts should take the form of phrase lists.
-		 Student concepts can be phrase lists, 
-		 regular expressions, or lists of annotations,
-	     but only one of these at a time. -->
+	Concept 1: how to determine if prime
+	Concept 2: iteration
+	Concept 3: check divisibility -->
 		
 	<concepts>
 		<!-- this is a special kind of concept for catching unexpected student responses -->
@@ -32,58 +24,49 @@
 		<!-- tutor concepts. -->
 		<!-- the tutor will choose randomly between multiple phrases for a concept. -->	
 
-		<!--
 		<concept label="introduction">
-			<phrase></phrase>
+			<phrase>Optional introduction</phrase>
 		</concept>
-		-->
 		
 		<concept label="conclusion">
 			<phrase>Good work. Let's move on to the next step.</phrase>
 		</concept>
 		
 		<concept label="ask-concept-1">
-			<phrase>However, you're not just testing one number, you're testing a series. How many times will you need to go through the loop?</phrase>
+			<phrase>First of all, do you know how to determine if a number is prime?</phrase>
 		</concept>
 		
 		<concept label="ask-concept-2">
-			<phrase>Now you know how many times to iterate, but how will you find which number to test?</phrase>
+			<phrase>Okay, tell me about the type of loop you'll have in this method.</phrase>
 		</concept>
 		
 		<concept label="ask-concept-3">
-			<phrase>Finally, given a number from the rotated string, how will you know what your isCircularPrime method should return?</phrase>
+			<phrase>So, given your iterator, how will you decide whether the method should return true or false?</phrase>
 		</concept>
 		
 		<concept label="concept-1-help">
-			<phrase>Think about how many different numbers you'll have to test, and how you can find that number most easily.</phrase>
+			<phrase>The definition of a prime number is one that can only be divided by itself and 1.</phrase>
 		</concept>
 		
 		<concept label="concept-2-help">
-			<phrase>For example, if you want to test 179, you actually have to test three different numbers (179, 791, 971).
-Can you identify a method that would return the next number in that series?</phrase>
+			<phrase>You need a loop so you can test every possible divisor of the input number.</phrase>
 		</concept>
 		
 		<concept label="concept-3-help">
-			<phrase>Remember, a number is a circular prime if each of its rotations is prime.</phrase>
+			<phrase>Each number of your iteration is a possible divisor. What does it mean if you can divide? What does it mean if you can't?</phrase>
 		</concept>
 		
 		<concept label="explain-concept-1">
-			<phrase>You need to iterate over the length of the number. There are a number of ways to do that, but for this exercise I want you to convert the number to a string, and then iterate up to the length of the string.
-You can convert an int to a string using:
-	String s = Integer.toString(i)
-You can find the length of the string using:
-	s.length()</phrase>
+			<phrase>For the purpose of this exercise we'd like you to iterate through every possible divisor and see if your input can be divided by it.</phrase>
 		</concept>
 		
 		<concept label="explain-concept-2">
-			<phrase>For each iteration of your loop, you should call a RotateNumber method that takes a number as input, and returns its rotation.
-For example, it might take 179 and return 719.</phrase>
+			<phrase>You should have an iterator that goes from 2 up to (input-1).</phrase>
 		</concept>
 		
 		<concept label="explain-concept-3">
-			<phrase>For each rotation of the string that you identify, you should call another method (isPrime, or something similar), that tests whether it's a prime.
-We recommend converting the string back into an int before passing it to isPrime.
-int i = Integer.parseInt(s);</phrase>
+			<phrase>For each number (i) up to the input (n), you should try n/i. If the remainder is 0, that means n is not prime, so you can safely return False. If you finish iterating and have not found any divisors, then you can return True.
+I recommend using the mod function (n%i) to test for divisibility.</phrase>
 		</concept>
 		
 		<concept label="ok">
@@ -122,30 +105,19 @@ int i = Integer.parseInt(s);</phrase>
 		</concept>
 		
 		<concept label="concept-1-right-answer" type="annotation">
-			<phrase>CIRCPRIME_ITERATION</phrase>
+			<phrase>ISPRIME_METHOD</phrase>
 		</concept>
 		
 		<concept label="concept-2-right-answer" type="annotation">
-			<phrase>CIRCPRIME_ROTATE</phrase>
+			<phrase>ISPRIME_ITERATE</phrase>
 		</concept>
 		
 		<concept label="concept-3-right-answer" type="annotation">
-			<phrase>CIRCPRIME_ISPRIME</phrase>
+			<phrase>ISPRIME_DIVIDE</phrase>
 		</concept>
 		
 		<!-- these match against regular expressions. -->
 		
-		<concept label="concept-1-right-answer" type="regex">
-			<phrase>correct</phrase>
-			<phrase>right</phrase>
-			<phrase>accurate</phrase>
-		</concept>
-		
-		<concept label="concept-2-right-answer" type="regex">
-			<phrase>correct</phrase>
-			<phrase>right</phrase>
-			<phrase>accurate</phrase>
-		</concept>
 		
 		
 		<!-- end student concepts. -->
@@ -156,11 +128,10 @@ int i = Integer.parseInt(s);</phrase>
 	<script>
 		<goal name="start" difficulty="0">
 			
-			<!--
-			<step>
-				<initiation>introduction</initiation>
-			</step>
-			  -->
+			<!--   <step>-->
+				<!-- OPTIONAL INTRODUCTION  -->
+				<!--   <initiation>introduction</initiation>
+			</step> -->
 			
 			<step>
 				<!-- Every step begins with an initiating concept or literal phrase -->
@@ -172,7 +143,7 @@ int i = Integer.parseInt(s);</phrase>
 				    "push" adds another goal to the dialogue's stack. 
 					 Note that goals should NOT be recursively nested. -->
 				
-				<response push="concept_2" say="Good. You should convert the int to a string in order to find its length.">concept-1-right-answer</response>
+				<response push="concept_2" say="ok">concept-1-right-answer</response>
                 
 				<!-- unanticipated-response is special: it's anything that doesn't match one of the above. -->
 				<response push="concept_1_help" say="wrong">unanticipated-response</response>
@@ -197,7 +168,7 @@ int i = Integer.parseInt(s);</phrase>
 		<goal name="concept_3" difficulty="0">
 			<step>
 				<initiation>ask-concept-3</initiation>
-                <response =say="ok">concept-3-right-answer</response>
+                <response say="ok">concept-3-right-answer</response>
                 <response push="concept_3_help" say="wrong">unanticipated-response</response>
 			</step>
 		</goal>

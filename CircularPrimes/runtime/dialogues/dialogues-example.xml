@@ -30,16 +30,14 @@
         <cancel annotation="NEGATIVE">Okay, let me know if you change your mind later.</cancel>
     </dialog>
     
-    <dialog concept="IS_PRIME" scenario="isPrime-method">
-    
-    	<!--  NOTE: This method is totally not done/not functional. -->
+    <dialog concept="IS_PRIME" scenario="scenario-isprime">
     	
         <trigger annotation="isPrime"/>
     	
     	<!-- The intro prompt is offered to students. 
     	If they respond in the affirmative, the dialogue begins.-->
         <intro>Let's go into some more detail about your method to identify primes, okay?</intro>
-        <accept annotation="AFFIRMATIVE"></accept>
+        <accept annotation="AFFIRMATIVE">For the purposes of this problem, we recommend that you use a brute force method.</accept>
         <cancel annotation="NEGATIVE">Okay, let me know if you want to come back to it later.</cancel>                
         
     </dialog>

@@ -1,2 +1,0 @@
-all possible divisors
-/iterate (through|over) (divisors|numbers)/

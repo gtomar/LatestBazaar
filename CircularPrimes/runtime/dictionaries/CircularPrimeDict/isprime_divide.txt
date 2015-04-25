@@ -1,4 +1,4 @@
 divisibility
-/divides? by/
+/divide(s|d)?.+by/
 evenly
 goes into
