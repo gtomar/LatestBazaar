@@ -1,0 +1,2 @@
+/isPrime/
+/method.+(check|test|evaluate).+prim(e|ality)/

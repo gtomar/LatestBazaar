@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scenario SYSTEM "TuTalkScenario.dtd">
+<scenario default-language="en" scenario-name="scenario-circprime">
+	<configuration>
+		
+		<!-- It *is* possible to hook up a LightSide classifier to TuTalk, 
+		such that the predicted labels are treated as concepts. 
+		but not today. -->
+
+	</configuration>
+	
+	<!-- 
+	Concept 1: iterating over the rotations of a string
+	Concept 2: calling a method to rotate the string
+	Concept 3: checking if individual numbers are prime
+	 -->
+	
+	<!-- 'Concepts' define things that students might say,
+	     AND things that the tutor might say back. 
+	     Tutor concepts should take the form of phrase lists.
+		 Student concepts can be phrase lists, 
+		 regular expressions, or lists of annotations,
+	     but only one of these at a time. -->
+		
+	<concepts>
+		<!-- this is a special kind of concept for catching unexpected student responses -->
+		<concept label="unanticipated-response">
+			<phrase>anything else</phrase>
+		</concept>
+		
+		
+		<!-- tutor concepts. -->
+		<!-- the tutor will choose randomly between multiple phrases for a concept. -->	
+
+		<!--
+		<concept label="introduction">
+			<phrase></phrase>
+		</concept>
+		-->
+		
+		<concept label="conclusion">
+			<phrase>Good work. Let's move on to the next step.</phrase>
+		</concept>
+		
+		<concept label="ask-concept-1">
+			<phrase>However, you're not just testing one number, you're testing a series. How many times will you need to go through the loop?</phrase>
+		</concept>
+		
+		<concept label="ask-concept-2">
+			<phrase>Now you know how many times to iterate, but how will you find which number to test?</phrase>
+		</concept>
+		
+		<concept label="ask-concept-3">
+			<phrase>Finally, given a number from the rotated string, how will you know what your isCircularPrime method should return?</phrase>
+		</concept>
+		
+		<concept label="concept-1-help">
+			<phrase>Think about how many different numbers you'll have to test, and how you can find that number most easily.</phrase>
+		</concept>
+		
+		<concept label="concept-2-help">
+			<phrase>For example, if you want to test 179, you actually have to test three different numbers (179, 791, 971).
+Can you identify a method that would return the next number in that series?</phrase>
+		</concept>
+		
+		<concept label="concept-3-help">
+			<phrase>Remember, a number is a circular prime if each of its rotations is prime.</phrase>
+		</concept>
+		
+		<concept label="explain-concept-1">
+			<phrase>You need to iterate over the length of the number. There are a number of ways to do that, but for this exercise I want you to convert the number to a string, and then iterate up to the length of the string.
+You can convert an int to a string using:
+	String s = Integer.toString(i)
+You can find the length of the string using:
+	s.length()</phrase>
+		</concept>
+		
+		<concept label="explain-concept-2">
+			<phrase>For each iteration of your loop, you should call a RotateNumber method that takes a number as input, and returns its rotation.
+For example, it might take 179 and return 719.</phrase>
+		</concept>
+		
+		<concept label="explain-concept-3">
+			<phrase>For each rotation of the string that you identify, you should call another method (isPrime, or something similar), that tests whether it's a prime.
+We recommend converting the string back into an int before passing it to isPrime.
+int i = Integer.parseInt(s);</phrase>
+		</concept>
+		
+		<concept label="ok">
+			<phrase>Okay</phrase>
+			<phrase>Good</phrase>
+			<phrase>Great</phrase>
+			<phrase>Correct!</phrase>
+			<phrase>Wonderful</phrase>
+			<phrase>Perfect</phrase>
+			<phrase>Exactly</phrase>
+			<phrase>You're right</phrase>
+			<phrase>Spot on</phrase>
+			<phrase>Good work</phrase>
+			<phrase>That's correct</phrase>
+			<phrase>Good job</phrase>
+		</concept>
+		
+		<concept label="wrong">
+			<phrase>Not quite...</phrase>
+			<phrase>Almost...</phrase>
+			<phrase>Sorry...</phrase>
+			<phrase>Try again?</phrase>
+		</concept>
+		<!-- end tutor concepts. -->
+		
+		
+		<!-- student concepts. -->
+		
+		<!-- these match against external (MessageAnnotator) annotations. -->
+		<concept label="yes" type="annotation">
+			<phrase>AFFIRMATIVE</phrase>
+		</concept>
+		
+		<concept label="no" type="annotation">
+			<phrase>NEGATIVE</phrase>
+		</concept>
+		
+		<concept label="concept-1-right-answer" type="annotation">
+			<phrase>CIRCPRIME_ITERATION</phrase>
+		</concept>
+		
+		<concept label="concept-2-right-answer" type="annotation">
+			<phrase>CIRCPRIME_ROTATE</phrase>
+		</concept>
+		
+		<concept label="concept-3-right-answer" type="annotation">
+			<phrase>CIRCPRIME_ISPRIME</phrase>
+		</concept>
+		
+		<!-- these match against regular expressions. -->
+		
+		<concept label="concept-1-right-answer" type="regex">
+			<phrase>correct</phrase>
+			<phrase>right</phrase>
+			<phrase>accurate</phrase>
+		</concept>
+		
+		<concept label="concept-2-right-answer" type="regex">
+			<phrase>correct</phrase>
+			<phrase>right</phrase>
+			<phrase>accurate</phrase>
+		</concept>
+		
+		
+		<!-- end student concepts. -->
+		
+	</concepts>
+	
+	
+	<script>
+		<goal name="start" difficulty="0">
+			
+			<!--
+			<step>
+				<initiation>introduction</initiation>
+			</step>
+			  -->
+			
+			<step>
+				<!-- Every step begins with an initiating concept or literal phrase -->
+				<initiation>ask-concept-1</initiation>
+				
+				<!-- These are the "response" options. 
+					If the concept between the tags matches the student statement, 
+				    the "say" concept/phrase will be delivered by the tutor.
+				    "push" adds another goal to the dialogue's stack. 
+					 Note that goals should NOT be recursively nested. -->
+				
+				<response push="concept_2" say="Good. You should convert the int to a string in order to find its length.">concept-1-right-answer</response>
+                
+				<!-- unanticipated-response is special: it's anything that doesn't match one of the above. -->
+				<response push="concept_1_help" say="wrong">unanticipated-response</response>
+			</step>
+			
+			
+			<step>
+				<initiation>conclusion</initiation>
+			</step>
+		</goal>
+		
+		<!-- Goals are referenced by their names. "difficulty" is meaningless for now. -->
+		
+		<goal name="concept_2" difficulty="0">
+			<step>
+				<initiation>ask-concept-2</initiation>
+                <response push="concept_3" say="ok">concept-2-right-answer</response>
+                <response push="concept_2_help" say="wrong">unanticipated-response</response>
+			</step>
+		</goal>
+		
+		<goal name="concept_3" difficulty="0">
+			<step>
+				<initiation>ask-concept-3</initiation>
+                <response say="ok">concept-3-right-answer</response>
+                <response push="concept_3_help" say="wrong">unanticipated-response</response>
+			</step>
+		</goal>
+		
+		<goal name="concept_1_help" difficulty="0">
+			<step>
+				<initiation>concept-1-help</initiation>
+				<response push="concept_2" say="ok">concept-1-right-answer</response>
+				<response push="concept_2" say="explain-concept-1">unanticipated-response</response>
+			</step>
+		</goal>
+		
+		<goal name="concept_2_help" difficulty="0">
+			<step>
+				<initiation>concept-2-help</initiation>
+				<response push="concept_3" say="ok">concept-2-right-answer</response>
+				<response push="concept_3" say="explain-concept-2">unanticipated-response</response>
+			</step>
+		</goal>
+		
+		<goal name="concept_3_help" difficulty="0">
+			<step>
+				<initiation>concept-3-help</initiation>
+				<response say="ok">concept-3-right-answer</response>
+				<response say="explain-concept-3">unanticipated-response</response>
+			</step>
+		</goal>
+		
+	</script>
+
+</scenario>

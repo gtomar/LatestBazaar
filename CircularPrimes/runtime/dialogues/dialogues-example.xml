@@ -21,10 +21,13 @@
         <cancel annotation="NEGATIVE">Okay, let me know if you change your mind later.</cancel>
     </dialog>
     
-    <dialog concept="IS_CIRCULAR_PRIME" scenario="scenario-template">
-    	<trigger annotation="isCircularPrime"/>
+    <dialog concept="IS_CIRCULAR_PRIME" scenario="scenario-circprime">
+    	<trigger annotation="circprim"/>
     	
-    	<intro>TMP: talking about circular primes</intro>
+    	<intro>Should we talk more about your method for testing if a number is a circular prime?</intro>
+    	<accept annotation="AFFIRMATIVE">This method will take in a number and return a Boolean.</accept>
+    	<!-- Currently not possible to return to a method, right? But ideally this would be nice. -->
+        <cancel annotation="NEGATIVE">Okay, let me know if you change your mind later.</cancel>
     </dialog>
     
     <dialog concept="IS_PRIME" scenario="isPrime-method">

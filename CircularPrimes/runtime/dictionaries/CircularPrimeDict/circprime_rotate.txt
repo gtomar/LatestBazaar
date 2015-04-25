@@ -1,0 +1,2 @@
+/method.+rotat(e|ation).+string/
+/method.+string.+rotat(e|ation)/
