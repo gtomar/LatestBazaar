@@ -42,10 +42,12 @@
         
     </dialog>
     
-    <dialog concept="ROTATE_STRING" scenario="scenario-template">
-    	<trigger annotation="rotate_string"/>
+    <dialog concept="ROTATE" scenario="scenario-rotate">
+    	<trigger annotation="rotate"/>
     	
-    	<intro>TMP: talking about how we'll have a method to rotate the string</intro>
+    	<intro>Would you like to discuss your method to rotate the number?</intro>
+    	<accept annotation="AFFIRMATIVE">Okay. This method will have a string as input, and return another string as output.</accept>
+    	<cancel annotation="NEGATIVE">Sure, let me know if you want to come back to it later.</cancel>
     </dialog>
     
     

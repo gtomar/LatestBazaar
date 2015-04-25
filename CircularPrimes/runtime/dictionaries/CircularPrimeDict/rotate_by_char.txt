@@ -1,4 +1,0 @@
-charArray
-character
-character array
-char arr
