@@ -33,7 +33,7 @@
 		</concept>
 		
 		<concept label="ask-concept-1">
-			<phrase>First of all, do you know how to determine if a number is prime?</phrase>
+			<phrase>First of all, describe in general terms how your program will determine if a number is prime.</phrase>
 		</concept>
 		
 		<concept label="ask-concept-2">

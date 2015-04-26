@@ -64,7 +64,7 @@ Can you identify a method that would return the next number in that series?</phr
 		</concept>
 		
 		<concept label="concept-3-help">
-			<phrase>Remember, a number is a circular prime if each of its rotations is prime.</phrase>
+			<phrase>Remember, a number is a circular prime if each of its rotations is prime. Your answer should involve calling another method.</phrase>
 		</concept>
 		
 		<concept label="explain-concept-1">
@@ -197,7 +197,7 @@ int i = Integer.parseInt(s);</phrase>
 		<goal name="concept_3" difficulty="0">
 			<step>
 				<initiation>ask-concept-3</initiation>
-                <response =say="ok">concept-3-right-answer</response>
+                <response say="ok">concept-3-right-answer</response>
                 <response push="concept_3_help" say="wrong">unanticipated-response</response>
 			</step>
 		</goal>
