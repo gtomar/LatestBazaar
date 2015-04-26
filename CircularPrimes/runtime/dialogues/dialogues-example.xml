@@ -16,7 +16,7 @@
     	<trigger annotation="main"/>
     	
     	<intro>Do you want to talk more about the structure of your main method?</intro>
-    	<accept annotation="AFFIRMATIVE"></accept>
+    	<accept annotation="AFFIRMATIVE">Let's talk about the input to the main method.</accept>
     	<!-- Currently not possible to return to a method, right? But ideally this would be nice. -->
         <cancel annotation="NEGATIVE">Okay, let me know if you change your mind later.</cancel>
     </dialog>
