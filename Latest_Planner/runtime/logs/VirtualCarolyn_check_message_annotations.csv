@@ -1,0 +1,100 @@
+2015-04-11,23:04:53,0,VirtualCarolyn,1428807894017,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-04-11,23:04:59,0,VirtualCarolyn,1428807900039,What type of android app are you planning to develop?,TUTOR
+2015-04-11,23:05:06,0,AAAA,1428807906821,audio record,AUDIO_CAPTURE
+2015-04-11,23:05:06,0,VirtualCarolyn,1428807908046,"Great, I'll help you create a plan for an audio recorder.",TUTOR
+2015-04-11,23:05:07,0,VirtualCarolyn,1428807910064,Should we get started?,TUTOR
+2015-04-11,23:05:12,0,AAAA,1428807912716,yes,AFFIRMATIVE
+2015-04-11,23:05:17,0,VirtualCarolyn,1428807918071,"Spend some time coming up with your initial plan. Press ""I'm ready"" button when you think you are done. Let me know if you have any questions!",TUTOR
+2015-04-11,23:05:33,0,AAAA,1428807934623,which recorder api ?,RECORDER_API+QUESTION
+2015-04-11,23:05:34,0,VirtualCarolyn,1428807936132,"Correct, we need to create a new instance/object for recorder and choose a recorder api to use.",TUTOR
+2015-04-11,23:05:34,0,VirtualCarolyn,1428807938135,It seems you have a question regarding recorder instance.,TUTOR
+2015-04-11,23:05:34,0,VirtualCarolyn,1428807940139,I can help you decide on the type of recorder api to use and give you an example code snippet.,TUTOR
+2015-04-11,23:05:34,0,VirtualCarolyn,1428807940141,Have you decided on a recorder api to use?,TUTOR
+2015-04-11,23:05:52,0,AAAA,1428807953851,no what are my choices ?,HELP+QUESTION+NEGATIVE
+2015-04-11,23:05:53,0,VirtualCarolyn,1428807954151,"Okay, it seems plan is ready now. You're on your own from here on. Good luck!",NOTICE_DONE
+2015-04-11,23:05:53,0,VirtualCarolyn,1428807956155,"Okay, it seems plan is ready now. You're on your own from here on. Good luck!",NOTICE_DONE
+2015-04-11,23:05:55,0,VirtualCarolyn,1428807958159,Ok,TUTOR
+2015-04-11,23:05:55,0,VirtualCarolyn,1428807958160,Maybe this will help:,TUTOR
+2015-04-11,23:05:55,0,VirtualCarolyn,1428807958164,You can record audio using the MediaRecorder or AudioRecord APIs if supported by the device hardware,TUTOR
+2015-04-11,23:05:55,0,VirtualCarolyn,1428807958166,Which one would you like to choose?,TUTOR
+2015-04-11,23:06:08,0,AAAA,1428807968842,media recorder,
+2015-04-11,23:06:10,0,VirtualCarolyn,1428807972171,I am waiting for your response to start. Please ask for help if you are stuck.,TUTOR
+2015-04-11,23:06:10,0,VirtualCarolyn,1428807972174,Which one would you like to choose?,TUTOR
+2015-04-11,23:06:20,0,AAAA,1428807980209,medisrecorder,
+2015-04-11,23:06:20,0,VirtualCarolyn,1428807982181,I don't know what that is.,TUTOR
+2015-04-11,23:06:20,0,VirtualCarolyn,1428807982183,Which api will you use?,TUTOR
+2015-04-11,23:06:24,0,AAAA,1428807984170,mediarecorder,TYPE_RECORDER
+2015-04-11,23:06:24,0,VirtualCarolyn,1428807984186,"Okay, it seems plan is ready now. You're on your own from here on. Good luck!",NOTICE_DONE
+2015-04-11,23:06:25,0,VirtualCarolyn,1428807986189,"Use following code snippet to use MediaRecorder. But note that wav audio format is not supported by MediaRecorder.
+			
+			import android.media.MediaRecorder; 
+			MediaRecorder Recorder_obj = null;",TUTOR
+2015-04-11,23:06:25,0,VirtualCarolyn,1428807986190,"Ok, move on and decide other steps.",TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-04-11,23:18:25,0,VirtualCarolyn,1428808705923,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-04-11,23:18:31,0,VirtualCarolyn,1428808711943,What type of android app are you planning to develop?,TUTOR
+2015-04-11,23:18:36,0,AAAA,1428808717016,audio record,AUDIO_CAPTURE
+2015-04-11,23:18:37,0,VirtualCarolyn,1428808717949,"Great, I'll help you create a plan for an audio recorder.",TUTOR
+2015-04-11,23:18:37,0,VirtualCarolyn,1428808719954,Should we get started?,TUTOR
+2015-04-11,23:18:41,0,AAAA,1428808722033,yes,AFFIRMATIVE
+2015-04-11,23:18:42,0,VirtualCarolyn,1428808723960,"Spend some time coming up with your initial plan. Press ""I'm ready"" button when you think you are done. Let me know if you have any questions!",TUTOR
+2015-04-11,23:18:54,0,AAAA,1428808734942,which record api ?,QUESTION
+2015-04-11,23:19:11,0,AAAA,1428808751527,which recorder api ?,RECORDER_API+QUESTION
+2015-04-11,23:19:11,0,VirtualCarolyn,1428808751972,"Correct, we need to create a new instance/object for recorder and choose a recorder api to use.",TUTOR
+2015-04-11,23:19:11,0,VirtualCarolyn,1428808753976,It seems you have a question regarding recorder instance.,TUTOR
+2015-04-11,23:19:11,0,VirtualCarolyn,1428808755979,I can help you decide on the type of recorder api to use and give you an example code snippet.,TUTOR
+2015-04-11,23:19:11,0,VirtualCarolyn,1428808755981,Have you decided on a recorder api to use?,TUTOR
+2015-04-11,23:19:29,0,AAAA,1428808769666,what are my choices ?,HELP+QUESTION
+2015-04-11,23:19:29,0,VirtualCarolyn,1428808769989,"Okay, it seems plan is ready now. You're on your own from here on. Good luck!",NOTICE_DONE
+2015-04-11,23:19:31,0,VirtualCarolyn,1428808771993,Ok,TUTOR
+2015-04-11,23:19:31,0,VirtualCarolyn,1428808771995,Maybe this will help:,TUTOR
+2015-04-11,23:19:31,0,VirtualCarolyn,1428808771996,You can record audio using the MediaRecorder or AudioRecord APIs if supported by the device hardware,TUTOR
+2015-04-11,23:19:31,0,VirtualCarolyn,1428808771998,Which one would you like to choose?,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-04-11,23:23:30,0,VirtualCarolyn,1428809010714,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-04-11,23:23:36,0,VirtualCarolyn,1428809016734,What type of android app are you planning to develop?,TUTOR
+2015-04-11,23:23:40,0,AAAA,1428809020311,audio record,AUDIO_CAPTURE
+2015-04-11,23:23:40,0,VirtualCarolyn,1428809020738,"Great, I'll help you create a plan for an audio recorder.",TUTOR
+2015-04-11,23:23:40,0,VirtualCarolyn,1428809022742,Should we get started?,TUTOR
+2015-04-11,23:23:43,0,AAAA,1428809024027,yes,AFFIRMATIVE
+2015-04-11,23:23:45,0,VirtualCarolyn,1428809026748,"Spend some time coming up with your initial plan. Press ""I'm ready"" button when you think you are done. Let me know if you have any questions!",TUTOR
+2015-04-11,23:23:55,0,AAAA,1428809036101,which recorder api ?,RECORDER_API+QUESTION
+2015-04-11,23:23:56,0,VirtualCarolyn,1428809036754,"Correct, we need to create a new instance/object for recorder and choose a recorder api to use.",TUTOR
+2015-04-11,23:23:56,0,VirtualCarolyn,1428809038757,It seems you have a question regarding recorder instance.,TUTOR
+2015-04-11,23:23:56,0,VirtualCarolyn,1428809040762,I can help you decide on the type of recorder api to use and give you an example code snippet.,TUTOR
+2015-04-11,23:23:56,0,VirtualCarolyn,1428809040764,Have you decided on a recorder api to use?,TUTOR
+2015-04-11,23:24:15,0,AAAA,1428809055310,no,CHALLENGE_CONTRIBUTION+NEGATIVE
+2015-04-11,23:24:16,0,VirtualCarolyn,1428809056772,Ok,TUTOR
+2015-04-11,23:24:16,0,VirtualCarolyn,1428809056774,Maybe this will help:,TUTOR
+2015-04-11,23:24:16,0,VirtualCarolyn,1428809056776,You can record audio using the MediaRecorder or AudioRecord APIs if supported by the device hardware,TUTOR
+2015-04-11,23:24:16,0,VirtualCarolyn,1428809056779,Which one would you like to choose?,TUTOR
+2015-04-11,23:24:28,0,AAAA,1428809068196,mediarecorder,TYPE_RECORDER
+2015-04-11,23:24:31,0,VirtualCarolyn,1428809072787,"Use following code snippet to use MediaRecorder. But note that wav audio format is not supported by MediaRecorder.
+			
+			import android.media.MediaRecorder; 
+			MediaRecorder Recorder_obj = null;",TUTOR
+2015-04-11,23:24:31,0,VirtualCarolyn,1428809072789,Which api will you use?,TUTOR
+2015-04-11,23:24:42,0,AAAA,1428809082569,mediarecorder,TYPE_RECORDER
+2015-04-11,23:24:47,0,VirtualCarolyn,1428809088798,"Use following code snippet to use MediaRecorder. But note that wav audio format is not supported by MediaRecorder.
+			
+			import android.media.MediaRecorder; 
+			MediaRecorder Recorder_obj = null;",TUTOR
+2015-04-11,23:24:47,0,VirtualCarolyn,1428809088801,"Ok, move on and decide other steps.",TUTOR
+2015-04-11,23:24:57,0,AAAA,1428809097746,audio source,AUDIO_SOURCE
+2015-04-11,23:24:57,0,VirtualCarolyn,1428809098808,"Yes, we need to set an audio source for the recorder object.",TUTOR
+2015-04-11,23:25:01,0,AAAA,1428809101300,mic,TYPE_AUDIO_SOURCE
+2015-04-11,23:25:01,0,VirtualCarolyn,1428809102813,Move on and decide other steps.,TUTOR
+2015-04-11,23:25:13,0,AAAA,1428809113259,recorder api,RECORDER_API
+2015-04-11,23:25:13,0,VirtualCarolyn,1428809114821,"Correct, we need to create a new instance/object for recorder and choose a recorder api to use.",TUTOR
+2015-04-11,23:25:20,0,AAAA,1428809120916,which ?,QUESTION
+2015-04-11,23:25:20,0,VirtualCarolyn,1428809122828,It seems you have a question regarding recorder instance.,TUTOR
+2015-04-11,23:25:20,0,VirtualCarolyn,1428809124831,I can help you decide on the type of recorder api to use and give you an example code snippet.,TUTOR
+2015-04-11,23:25:20,0,VirtualCarolyn,1428809124832,Have you decided on a recorder api to use?,TUTOR
+2015-04-11,23:25:30,0,AAAA,1428809131011,what are my choices ?,HELP+QUESTION
+2015-04-11,23:25:31,0,VirtualCarolyn,1428809132837,"Okay, it seems plan is ready now. You're on your own from here on. Good luck!",NOTICE_DONE
+2015-04-11,23:25:31,0,VirtualCarolyn,1428809134841,Ok,TUTOR
+2015-04-11,23:25:31,0,VirtualCarolyn,1428809134844,Maybe this will help:,TUTOR
+2015-04-11,23:25:31,0,VirtualCarolyn,1428809134847,You can record audio using the MediaRecorder or AudioRecord APIs if supported by the device hardware,TUTOR
+2015-04-11,23:25:31,0,VirtualCarolyn,1428809134850,Which one would you like to choose?,TUTOR
+2015-04-11,23:26:31,0,VirtualCarolyn,1428809192873,I don't know what that is.,TUTOR
+2015-04-11,23:26:31,0,VirtualCarolyn,1428809192877,Which api will you use?,TUTOR

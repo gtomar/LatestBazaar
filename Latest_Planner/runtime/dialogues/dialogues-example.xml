@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dialogs>
 	
-	<dialog concept="GOAL_IDENTIFICATION" scenario="scenario-goal">    	 
+	<!--  <dialog concept="GOAL_IDENTIFICATION" scenario="scenario-goal">    	 
         <intro>What type of android app are you planning to develop?</intro>
         <accept annotation="AUDIO_CAPTURE">Great, I'll help you create a plan for an audio recorder.</accept>
         <cancel>Sorry, I can't help you with this. You are on your own.</cancel>
@@ -183,5 +183,71 @@
 
         </CONCEPT1>
     </CONCEPT>
+    -->
+ 
+    
+    <CONCEPT name="Nth_CIRCULAR_PRIME" priority="1">
+    
+        <CONCEPT1 name="ITERATION1" priority="1">
+        
+	         <CONCEPT2 name="COUNTER11" priority="1">
+	            <CONCEPT3 name="ITERATION11_STATEMENT" priority="1">
+	
+	            </CONCEPT3>
+	        </CONCEPT2>
+	         <CONCEPT2 name="COUNTER12" priority="1">
+	            <CONCEPT3 name="ITERATION12_STATEMENT" priority="1">
+	
+	            </CONCEPT3>
+	        </CONCEPT2> 
+	        
+        </CONCEPT1>
+ 
+        <CONCEPT1 name="IS_CIRCULAR_PRIME" priority="1">
+        
+            <CONCEPT2 name="ITERATION2" priority="1">
+		         <CONCEPT3 name="COUNTER2" priority="1">
+		            <CONCEPT4 name="ITERATION2_STATEMENT" priority="1">
+		
+		            </CONCEPT4>
+		        </CONCEPT3>
+            </CONCEPT2>
+            
+        	<CONCEPT2 name="IS_PRIME" priority="1">
+            	<CONCEPT3 name=”ITERATION3” priority=”1”>
+                	<CONCEPT4 name=”COUNTER4” priority=”1”>
+                         	
+                	</CONCEPT4>
+                </CONCEPT3>
+            	<CONCEPT3 name=”DIVISIBILITY_CHECK” priority=”1”>
+	                <CONCEPT4 name=”DIVISIBILITY_CHECK_STATEMENT” priority=”1”>
+	                         	
+	                </CONCEPT4>
+                </CONCEPT3>
+            	<CONCEPT3 name=”FLAG” priority=”1”>
+	                <CONCEPT4 name=”FLAG_STATEMENT” priority=”1”>
+	                         	
+	                </CONCEPT4>
+                </CONCEPT3>
+            </CONCEPT2>
+            
+            <CONCEPT2 name="ROTATE_STRING" priority="1">
+	            <CONCEPT3 name=”CONCATENATION” priority=”1”>
+					<CONCEPT4 name=”CONCATENATION_STATEMENT” priority=”1”>
+			                         	
+			        </CONCEPT4>
+	            </CONCEPT3>
+	            <CONCEPT3 name=”SUBSTRING” priority=”1”>
+					<CONCEPT4 name=”SUBSTRING_STATEMENT” priority=”1”>
+			                         	
+			        </CONCEPT4>
+	            </CONCEPT3>
+            </CONCEPT2>
+            
+
+        </CONCEPT1>       
+</CONCEPT>
+    
+    
     
 </dialogs>

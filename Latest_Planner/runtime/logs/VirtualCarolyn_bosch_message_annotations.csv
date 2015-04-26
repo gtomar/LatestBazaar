@@ -1,0 +1,70 @@
+2015-02-17,09:15:10,0,VirtualCarolyn,1424182511572,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-02-17,09:15:16,0,VirtualCarolyn,1424182517609,What type of android app are you planning to develop?,TUTOR
+2015-02-17,09:17:16,0,VirtualCarolyn,1424182637801,I am waiting for your response to start. Please ask for help if you are stuck.,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-02-17,09:21:01,0,VirtualCarolyn,1424182861918,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-02-17,09:21:07,0,VirtualCarolyn,1424182867950,What type of android app are you planning to develop?,TUTOR
+2015-02-17,09:21:27,0,Leah,1424182891983,I want to develop a voice recorder app,AUDIO_CAPTURE+GIVING_OPINION
+2015-02-17,09:21:31,0,VirtualCarolyn,1424182893982,"Great, I'll help you create a plan for an audio recorder.",TUTOR
+2015-02-17,09:21:32,0,VirtualCarolyn,1424182895989,Should we get started?,TUTOR
+2015-02-17,09:21:38,0,Leah,1424182898828,yes,AFFIRMATIVE
+2015-02-17,09:21:42,0,VirtualCarolyn,1424182904005,"Spend some time coming up with your initial plan. Press ""I'm ready"" button when you think you are done. Let me know if you have any questions!",TUTOR
+2015-02-17,09:22:11,0,Leah,1424182931833,I have no idea where to start,HELP+NEGATIVE
+2015-02-17,09:22:11,0,VirtualCarolyn,1424182932038,We need to set an output format type on recorder object.,TUTOR
+2015-02-17,09:22:25,0,Leah,1424182945200,but how ?,GIVING_OPINION+QUESTION
+2015-02-17,09:22:25,0,VirtualCarolyn,1424182946057,It seems you have a question regarding output format.,TUTOR
+2015-02-17,09:22:25,0,VirtualCarolyn,1424182948064,I can help you to decide the output file format to be used and example code snippet to do it.,TUTOR
+2015-02-17,09:22:25,0,VirtualCarolyn,1424182948067,"Have you decided or a format, or do you know of any you can use?",TUTOR
+2015-02-17,09:22:35,0,Leah,1424182955898,No,CHALLENGE_CONTRIBUTION+NEGATIVE
+2015-02-17,09:22:40,0,VirtualCarolyn,1424182962085,Ok,TUTOR
+2015-02-17,09:22:40,0,VirtualCarolyn,1424182962087,Maybe this will help:,TUTOR
+2015-02-17,09:22:40,0,VirtualCarolyn,1424182962090,"Possible audio formats include:
+aac_adts
+default format
+mpeg_4
+raw_amr
+three_gpp
+webm
+wav
+amr_nb
+amr_wb",TUTOR
+2015-02-17,09:22:40,0,VirtualCarolyn,1424182962092,Which one you will like to choose?,TUTOR
+2015-02-17,09:22:52,0,Leah,1424182972805,mpeg,TYPE_OUTPUT_FORMAT
+2015-02-17,09:22:56,0,VirtualCarolyn,1424182978112,"You can use MPEG4 media file format using following code snippet
+			
+			mRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);",TUTOR
+2015-02-17,09:22:56,0,VirtualCarolyn,1424182978116,"Ok, move on.",TUTOR
+2015-02-17,09:23:37,0,Leah,1424183017797,I will use vorbis audio encoder,TYPE_AUDIO_ENCODER+AUDIO_ENCODER
+2015-02-17,09:23:37,0,VirtualCarolyn,1424183018177,"Yes, we need to set an audio encoder for the recorder object.",TUTOR
+2015-02-17,09:23:37,0,VirtualCarolyn,1424183020183,Move on and decide other steps.,TUTOR
+2015-02-17,09:24:11,0,Leah,1424183052264,Which recorder api should I use ?,RECORDER_API+QUESTION
+2015-02-17,09:24:12,0,VirtualCarolyn,1424183054227,"Correct, we need to create a new instance/object for recorder and choose a recorder api to use.",TUTOR
+2015-02-17,09:24:12,0,VirtualCarolyn,1424183056236,It seems you have a question regarding recorder instance.,TUTOR
+2015-02-17,09:24:12,0,VirtualCarolyn,1424183058245,I can help you decide on the type of recorder api to use and give you an example code snippet.,TUTOR
+2015-02-17,09:24:12,0,VirtualCarolyn,1424183058248,Have you decided on a recorder api to use?,TUTOR
+2015-02-17,09:24:28,0,Leah,1424183068434,What are my choices ?,HELP+QUESTION
+2015-02-17,09:24:33,0,VirtualCarolyn,1424183074271,Ok,TUTOR
+2015-02-17,09:24:33,0,VirtualCarolyn,1424183074274,Maybe this will help:,TUTOR
+2015-02-17,09:24:33,0,VirtualCarolyn,1424183074277,You can record audio using the MediaRecorder or AudioRecord APIs if supported by the device hardware,TUTOR
+2015-02-17,09:24:33,0,VirtualCarolyn,1424183074279,Which one would you like to choose?,TUTOR
+2015-02-17,09:25:02,0,Leah,1424183102914,What's the difference between them ?,QUESTION
+2015-02-17,09:25:04,0,VirtualCarolyn,1424183104332,"If you use MediaRecorder, it will record compressed audio into a file.
+			
+If you use AudioRecord, you must read and compress the audio from the internal buffer separately.
+
+MediaRecorder can record only the following file types: AAC_ADTS, AMR_NB, AMR_WB, MPEG_4, RAW_AMR, THREE_GPP, WEBM",TUTOR
+2015-02-17,09:25:04,0,VirtualCarolyn,1424183104336,Which api will you use?,TUTOR
+2015-02-17,09:25:17,0,Leah,1424183117759,mediarecorder,TYPE_RECORDER
+2015-02-17,09:25:19,0,VirtualCarolyn,1424183120369,"Use following code snippet to use MediaRecorder. But note that wav audio format is not supported by MediaRecorder.
+			
+			import android.media.MediaRecorder; 
+			MediaRecorder Recorder_obj = null;",TUTOR
+2015-02-17,09:25:19,0,VirtualCarolyn,1424183120373,"Ok, move on and decide other steps.",TUTOR
+2015-02-17,09:25:56,0,VirtualCarolyn,1424183158491,Plan is not yet complete. You are missing some steps. Let me help you with this.,INCOMPLETE
+2015-02-17,09:25:56,0,VirtualCarolyn,1424183160499,We need to prepare the recorder instance before starting it.,TUTOR
+2015-02-17,09:26:12,0,VirtualCarolyn,1424183172523,I am waiting for your response to start. Please ask for help if you are stuck.,TUTOR
+2015-02-17,09:26:14,0,Leah,1424183174475,but how ?,GIVING_OPINION+QUESTION
+2015-02-17,09:26:14,0,VirtualCarolyn,1424183174529,Call recorder_obj.prepare() on the Recorder instance.,TUTOR
+2015-02-17,09:26:14,0,VirtualCarolyn,1424183176534,Is it clear?,TUTOR
+2015-02-17,09:26:21,0,Leah,1424183181528,ok,AFFIRMATIVE
+2015-02-17,09:26:24,0,VirtualCarolyn,1424183186556,Ok,TUTOR

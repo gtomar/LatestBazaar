@@ -1,0 +1,64 @@
+<entry timestamp="2015-04-11#23:04:10" user="PlanAgentRunner" level="INFO">Logger initialized</entry>
+<entry timestamp="2015-04-11#23:04:10" user="PlanAgentRunner" level="NORMAL">AgentOperator PlanAgentRunner created</entry>
+<entry timestamp="2015-04-11#23:04:10" user="PlanAgentRunner" level="NORMAL">Operation Created</entry>
+<entry timestamp="2015-04-11#23:04:10" user="PlanAgentRunner" level="NORMAL">Classes: [class basilica2.agents.listeners.PresenceWatcher, class basilica2.agents.listeners.MessageAnnotator, class basilica2.social.listeners.ActivityTracker, class basilica2.tutor.listeners.TutorialTriggerWatcher, class basilica2.tutor.listeners.TutorTurnWatcher, class basilica2.social.listeners.StrategyScoreComputer, class basilica2.social.listeners.RuleBasedTriggerComputer, class basilica2.social.listeners.SocialController, class basilica2.accountable.listeners.AgreeDisagreeActor, class basilica2.accountable.listeners.AskForExplanationActor, class basilica2.accountable.listeners.RevoiceActor, class basilica2.accountable.listeners.SayMoreActor, class basilica2.myagent.listeners.PlanWatcher]</entry>
+<entry timestamp="2015-04-11#23:04:10" user="PlanAgentRunner" level="NORMAL">Classes: [class basilica2.social.listeners.SocialController, class basilica2.accountable.listeners.AgreeDisagreeActor, class basilica2.accountable.listeners.AskForExplanationActor, class basilica2.accountable.listeners.RevoiceActor, class basilica2.accountable.listeners.SayMoreActor, class basilica2.agents.listeners.plan.PlanExecutor, class basilica2.tutor.listeners.TutorActor, class basilica2.myagent.listeners.PlanReactor]</entry>
+<entry timestamp="2015-04-11#23:04:11" user="PlanAgentRunner" level="NORMAL">Starting operation</entry>
+<entry timestamp="2015-04-11#23:04:11" user="PlanAgentRunner" level="NORMAL">Operation started</entry>
+<entry timestamp="2015-04-11#23:04:17" user="ConditionAgentUI" level="NORMAL">Conditions set to tutorial_trigger</entry>
+<entry timestamp="2015-04-11#23:04:17" user="PlanAgentRunner" level="NORMAL">setting basilica2.agents.room_name to check</entry>
+<entry timestamp="2015-04-11#23:04:17" user="PlanAgentRunner" level="NORMAL"><launching room=check/></entry>
+<entry timestamp="2015-04-11#23:04:17" user="AgentFactory" level="NORMAL">Making Agent from agent.xml</entry>
+<entry timestamp="2015-04-11#23:04:17" user="AgentFactory" level="NORMAL">File Read</entry>
+<entry timestamp="2015-04-11#23:04:17" user="AgentFactory" level="NORMAL">Agent Tag Read</entry>
+<entry timestamp="2015-04-11#23:04:17" user="AgentFactory" level="NORMAL">Components Tag Read</entry>
+<entry timestamp="2015-04-11#23:04:17" user="AgentFactory" level="NORMAL">Components read. N=5</entry>
+<entry timestamp="2015-04-11#23:04:17" user="AgentFactory" level="NORMAL">Agent build. VirtualCarolyn_check</entry>
+<entry timestamp="2015-04-11#23:04:17" user="PlanAgentRunner" level="NORMAL">Adding agent VirtualCarolyn_check</entry>
+<entry timestamp="2015-04-11#23:04:17" user="PlanAgentRunner" level="INFO">Added. 1 agents now working</entry>
+<entry timestamp="2015-04-11#23:04:17" user="PlanAgentRunner" level="INFO">Initializing new agent</entry>
+<entry timestamp="2015-04-11#23:04:18" user="PromptStepHandler" level="NORMAL">default priority=0.75, wait 0.1 seconds after prompts, +3.3333333333333335 wps</entry>
+<entry timestamp="2015-04-11#23:04:18" user="PlanAgentRunner" level="INFO">Starting new Agent</entry>
+<entry timestamp="2015-04-11#23:04:18" user="PlanAgentRunner" level="NORMAL">notified UI of agent launch for VirtualCarolyn_check</entry>
+<entry timestamp="2015-04-11#23:04:18" user="PlanAgentRunner" level="NORMAL">Agent added VirtualCarolyn_check</entry>
+<entry timestamp="2015-04-11#23:04:48" user="PresenceWatcher" level="NORMAL">STUDENTS COUNT: 1</entry>
+<entry timestamp="2015-04-11#23:04:48" user="PlanExecutor" level="NORMAL">PLAN: activiating next stage: initiate</entry>
+<entry timestamp="2015-04-11#23:04:48" user="PlanExecutor" level="NORMAL">Firing Stage 'initiate'</entry>
+<entry timestamp="2015-04-11#23:04:48" user="basilica2.agents.listeners.plan.Stage" level="NORMAL">finished stage initiate</entry>
+<entry timestamp="2015-04-11#23:04:48" user="PlanExecutor" level="NORMAL">Firing Stage 'body'</entry>
+<entry timestamp="2015-04-11#23:04:48" user="Step" level="NORMAL">Handlers for SHOW_IMAGE(whiteboard): [basilica2.agents.listeners.plan.WhiteboardStepHandler@493cab44]</entry>
+<entry timestamp="2015-04-11#23:04:48" user="WhiteboardStepHandler" level="NORMAL">whiteboard step image:SHOW_IMAGE</entry>
+<entry timestamp="2015-04-11#23:04:48" user="PlanExecutor" level="NORMAL">starting 5 second delay timer for SHOW_IMAGE</entry>
+<entry timestamp="2015-04-11#23:04:48" user="PresenceWatcher" level="NORMAL">STUDENTS COUNT: 1</entry>
+<entry timestamp="2015-04-11#23:04:49" user="" level="NORMAL">ACCEPTED! CREATE whiteboard-image http://blogs.adobe.com/digitalpublishing/files/2011/02/android_logo.gif</entry>
+<entry timestamp="2015-04-11#23:04:53" user="PlanExecutor" level="NORMAL">PLAN: current step done: SHOW_IMAGE</entry>
+<entry timestamp="2015-04-11#23:04:53" user="Step" level="NORMAL">Handlers for ABOUT_TUTORIALS_STEP(prompt): [basilica2.agents.listeners.plan.PromptStepHandler@1c16ed23]</entry>
+<entry timestamp="2015-04-11#23:04:53" user="PromptStepHandler" level="NORMAL">starting 5.8 second prompt delay</entry>
+<entry timestamp="2015-04-11#23:04:53" user="" level="NORMAL">accepted. Message from VirtualCarolyn: Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task. INTRO_SHORT.
+Starting blockout countdown... </entry>
+<entry timestamp="2015-04-11#23:04:59" user="PromptStepHandler" level="NORMAL">ending 5.8 second prompt delay</entry>
+<entry timestamp="2015-04-11#23:04:59" user="Step" level="NORMAL">Handlers for DEMO_TUTORIAL(dialogue): [basilica2.tutor.listeners.DialogStepHandler@41c65839]</entry>
+<entry timestamp="2015-04-11#23:05:00" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: What type of android app are you planning to develop? TUTOR</entry>
+<entry timestamp="2015-04-11#23:05:08" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Great, I'll help you create a plan for an audio recorder. TUTOR</entry>
+<entry timestamp="2015-04-11#23:05:10" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Should we get started? TUTOR</entry>
+<entry timestamp="2015-04-11#23:05:18" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Spend some time coming up with your initial plan. Press "I'm ready" button when you think you are done. Let me know if you have any questions! TUTOR</entry>
+<entry timestamp="2015-04-11#23:05:18" user="PlanExecutor" level="NORMAL">starting 10 second delay timer for DEMO_TUTORIAL</entry>
+<entry timestamp="2015-04-11#23:05:28" user="PlanExecutor" level="NORMAL">PLAN: current step done: DEMO_TUTORIAL</entry>
+<entry timestamp="2015-04-11#23:05:28" user="basilica2.agents.listeners.plan.Stage" level="NORMAL">finished stage body</entry>
+<entry timestamp="2015-04-11#23:05:36" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Correct, we need to create a new instance/object for recorder and choose a recorder api to use. TUTOR</entry>
+<entry timestamp="2015-04-11#23:05:38" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: It seems you have a question regarding recorder instance. TUTOR</entry>
+<entry timestamp="2015-04-11#23:05:40" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: I can help you decide on the type of recorder api to use and give you an example code snippet.|Have you decided on a recorder api to use? TUTOR</entry>
+<entry timestamp="2015-04-11#23:05:54" user="" level="NORMAL">accepted. Message from VirtualCarolyn: Okay, it seems plan is ready now. You're on your own from here on. Good luck! NOTICE_DONE.
+Starting blockout countdown... </entry>
+<entry timestamp="2015-04-11#23:05:56" user="" level="NORMAL">accepted. Message from VirtualCarolyn: Okay, it seems plan is ready now. You're on your own from here on. Good luck! NOTICE_DONE.
+Starting blockout countdown... </entry>
+<entry timestamp="2015-04-11#23:05:58" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Ok|Maybe this will help:|You can record audio using the MediaRecorder or AudioRecord APIs if supported by the device hardware|Which one would you like to choose? TUTOR</entry>
+<entry timestamp="2015-04-11#23:06:12" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: I am waiting for your response to start. Please ask for help if you are stuck.|Which one would you like to choose? TUTOR</entry>
+<entry timestamp="2015-04-11#23:06:22" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: I don't know what that is.|Which api will you use? TUTOR</entry>
+<entry timestamp="2015-04-11#23:06:24" user="" level="NORMAL">accepted. Message from VirtualCarolyn: Okay, it seems plan is ready now. You're on your own from here on. Good luck! NOTICE_DONE.
+Starting blockout countdown... </entry>
+<entry timestamp="2015-04-11#23:06:26" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Use following code snippet to use MediaRecorder. But note that wav audio format is not supported by MediaRecorder.
+			
+			import android.media.MediaRecorder; 
+			MediaRecorder Recorder_obj = null;|Ok, move on and decide other steps. TUTOR</entry>
+<entry timestamp="2015-04-11#23:06:26" user="PlanExecutor" level="NORMAL">starting 10 second delay timer for DEMO_TUTORIAL</entry>

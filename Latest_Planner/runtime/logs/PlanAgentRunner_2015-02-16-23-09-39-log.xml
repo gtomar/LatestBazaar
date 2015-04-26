@@ -1,0 +1,93 @@
+<entry timestamp="2015-02-16#23:09:39" user="PlanAgentRunner" level="INFO">Logger initialized</entry>
+<entry timestamp="2015-02-16#23:09:39" user="PlanAgentRunner" level="NORMAL">AgentOperator PlanAgentRunner created</entry>
+<entry timestamp="2015-02-16#23:09:39" user="PlanAgentRunner" level="NORMAL">Operation Created</entry>
+<entry timestamp="2015-02-16#23:09:39" user="PlanAgentRunner" level="NORMAL">Classes: [class basilica2.agents.listeners.PresenceWatcher, class basilica2.agents.listeners.MessageAnnotator, class basilica2.social.listeners.ActivityTracker, class basilica2.tutor.listeners.TutorialTriggerWatcher, class basilica2.tutor.listeners.TutorTurnWatcher, class basilica2.social.listeners.StrategyScoreComputer, class basilica2.social.listeners.RuleBasedTriggerComputer, class basilica2.social.listeners.SocialController, class basilica2.accountable.listeners.AgreeDisagreeActor, class basilica2.accountable.listeners.AskForExplanationActor, class basilica2.accountable.listeners.RevoiceActor, class basilica2.accountable.listeners.SayMoreActor, class basilica2.myagent.listeners.PlanWatcher]</entry>
+<entry timestamp="2015-02-16#23:09:39" user="PlanAgentRunner" level="NORMAL">Classes: [class basilica2.social.listeners.SocialController, class basilica2.accountable.listeners.AgreeDisagreeActor, class basilica2.accountable.listeners.AskForExplanationActor, class basilica2.accountable.listeners.RevoiceActor, class basilica2.accountable.listeners.SayMoreActor, class basilica2.agents.listeners.plan.PlanExecutor, class basilica2.tutor.listeners.TutorActor, class basilica2.myagent.listeners.PlanReactor]</entry>
+<entry timestamp="2015-02-16#23:09:40" user="PlanAgentRunner" level="NORMAL">Starting operation</entry>
+<entry timestamp="2015-02-16#23:09:40" user="PlanAgentRunner" level="NORMAL">Operation started</entry>
+<entry timestamp="2015-02-16#23:09:50" user="ConditionAgentUI" level="NORMAL">Conditions set to tutorial_trigger</entry>
+<entry timestamp="2015-02-16#23:09:56" user="PlanAgentRunner" level="NORMAL">setting basilica2.agents.room_name to testing_bosch</entry>
+<entry timestamp="2015-02-16#23:09:56" user="PlanAgentRunner" level="NORMAL"><launching room=testing_bosch/></entry>
+<entry timestamp="2015-02-16#23:09:56" user="AgentFactory" level="NORMAL">Making Agent from agent.xml</entry>
+<entry timestamp="2015-02-16#23:09:57" user="AgentFactory" level="NORMAL">File Read</entry>
+<entry timestamp="2015-02-16#23:09:57" user="AgentFactory" level="NORMAL">Agent Tag Read</entry>
+<entry timestamp="2015-02-16#23:09:57" user="AgentFactory" level="NORMAL">Components Tag Read</entry>
+<entry timestamp="2015-02-16#23:09:57" user="AgentFactory" level="NORMAL">Components read. N=5</entry>
+<entry timestamp="2015-02-16#23:09:57" user="AgentFactory" level="NORMAL">Agent build. VirtualCarolyn_testing_bosch</entry>
+<entry timestamp="2015-02-16#23:09:57" user="PlanAgentRunner" level="NORMAL">Adding agent VirtualCarolyn_testing_bosch</entry>
+<entry timestamp="2015-02-16#23:09:57" user="PlanAgentRunner" level="INFO">Added. 1 agents now working</entry>
+<entry timestamp="2015-02-16#23:09:57" user="PlanAgentRunner" level="INFO">Initializing new agent</entry>
+<entry timestamp="2015-02-16#23:09:57" user="PromptStepHandler" level="NORMAL">default priority=0.75, wait 0.1 seconds after prompts, +3.3333333333333335 wps</entry>
+<entry timestamp="2015-02-16#23:09:57" user="PlanAgentRunner" level="INFO">Starting new Agent</entry>
+<entry timestamp="2015-02-16#23:09:57" user="PlanAgentRunner" level="NORMAL">notified UI of agent launch for VirtualCarolyn_testing_bosch</entry>
+<entry timestamp="2015-02-16#23:09:57" user="PlanAgentRunner" level="NORMAL">Agent added VirtualCarolyn_testing_bosch</entry>
+<entry timestamp="2015-02-16#23:10:24" user="PresenceWatcher" level="NORMAL">STUDENTS COUNT: 1</entry>
+<entry timestamp="2015-02-16#23:10:24" user="PlanExecutor" level="NORMAL">PLAN: activiating next stage: initiate</entry>
+<entry timestamp="2015-02-16#23:10:24" user="PlanExecutor" level="NORMAL">Firing Stage 'initiate'</entry>
+<entry timestamp="2015-02-16#23:10:24" user="basilica2.agents.listeners.plan.Stage" level="NORMAL">finished stage initiate</entry>
+<entry timestamp="2015-02-16#23:10:24" user="PlanExecutor" level="NORMAL">Firing Stage 'body'</entry>
+<entry timestamp="2015-02-16#23:10:24" user="Step" level="NORMAL">Handlers for SHOW_IMAGE(whiteboard): [basilica2.agents.listeners.plan.WhiteboardStepHandler@1a1933cc]</entry>
+<entry timestamp="2015-02-16#23:10:24" user="WhiteboardStepHandler" level="NORMAL">whiteboard step image:SHOW_IMAGE</entry>
+<entry timestamp="2015-02-16#23:10:24" user="PlanExecutor" level="NORMAL">starting 5 second delay timer for SHOW_IMAGE</entry>
+<entry timestamp="2015-02-16#23:10:24" user="PresenceWatcher" level="NORMAL">STUDENTS COUNT: 1</entry>
+<entry timestamp="2015-02-16#23:10:25" user="" level="NORMAL">ACCEPTED! CREATE whiteboard-image http://blogs.adobe.com/digitalpublishing/files/2011/02/android_logo.gif</entry>
+<entry timestamp="2015-02-16#23:10:29" user="PlanExecutor" level="NORMAL">PLAN: current step done: SHOW_IMAGE</entry>
+<entry timestamp="2015-02-16#23:10:29" user="Step" level="NORMAL">Handlers for ABOUT_TUTORIALS_STEP(prompt): [basilica2.agents.listeners.plan.PromptStepHandler@7613e00b]</entry>
+<entry timestamp="2015-02-16#23:10:29" user="PromptStepHandler" level="NORMAL">starting 5.8 second prompt delay</entry>
+<entry timestamp="2015-02-16#23:10:31" user="" level="NORMAL">accepted. Message from VirtualCarolyn: Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task. INTRO_SHORT.
+Starting blockout countdown... </entry>
+<entry timestamp="2015-02-16#23:10:35" user="PromptStepHandler" level="NORMAL">ending 5.8 second prompt delay</entry>
+<entry timestamp="2015-02-16#23:10:35" user="Step" level="NORMAL">Handlers for DEMO_TUTORIAL(dialogue): [basilica2.tutor.listeners.DialogStepHandler@309c3c24]</entry>
+<entry timestamp="2015-02-16#23:10:35" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: What type of android app are you planning to develop? TUTOR</entry>
+<entry timestamp="2015-02-16#23:10:49" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Great, I'll help you create a plan for an audio recorder. TUTOR</entry>
+<entry timestamp="2015-02-16#23:10:51" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Should we get started? TUTOR</entry>
+<entry timestamp="2015-02-16#23:10:55" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Spend some time coming up with your initial plan. Press "I'm ready" button when you think you are done. Let me know if you have any questions! TUTOR</entry>
+<entry timestamp="2015-02-16#23:10:55" user="PlanExecutor" level="NORMAL">starting 10 second delay timer for DEMO_TUTORIAL</entry>
+<entry timestamp="2015-02-16#23:11:05" user="PlanExecutor" level="NORMAL">PLAN: current step done: DEMO_TUTORIAL</entry>
+<entry timestamp="2015-02-16#23:11:05" user="basilica2.agents.listeners.plan.Stage" level="NORMAL">finished stage body</entry>
+<entry timestamp="2015-02-16#23:11:11" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: We need to set an output format type on recorder object. TUTOR</entry>
+<entry timestamp="2015-02-16#23:11:19" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: It seems you have a question regarding output format. TUTOR</entry>
+<entry timestamp="2015-02-16#23:11:21" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: I can help you to decide the output file format to be used and example code snippet to do it.|Do you know or decided on any format that can be used? TUTOR</entry>
+<entry timestamp="2015-02-16#23:11:29" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Ok|Maybe this will help:|You may probably want to use one of the following possible formats
+aac_adts
+default format
+mpeg_4
+raw_amr
+three_gpp
+webm
+wav
+amr_nb
+amr_wb|Which one you will like to choose? TUTOR</entry>
+<entry timestamp="2015-02-16#23:11:45" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: You can use MPEG4 media file format using following code snippet
+			
+			mRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);|Ok, move on. TUTOR</entry>
+<entry timestamp="2015-02-16#23:11:45" user="PlanExecutor" level="NORMAL">starting 10 second delay timer for DEMO_TUTORIAL</entry>
+<entry timestamp="2015-02-16#23:11:55" user="PlanExecutor" level="NORMAL">PLAN: current step done: DEMO_TUTORIAL</entry>
+<entry timestamp="2015-02-16#23:11:55" user="basilica2.agents.listeners.plan.Stage" level="NORMAL">finished stage body</entry>
+<entry timestamp="2015-02-16#23:12:09" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Yes, we need to set an audio encoder for the recorder object. TUTOR</entry>
+<entry timestamp="2015-02-16#23:12:11" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Move on and decide other steps. TUTOR</entry>
+<entry timestamp="2015-02-16#23:12:25" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Correct, we need to create a new instance/object for recorder and choose a recorder api to use. TUTOR</entry>
+<entry timestamp="2015-02-16#23:12:27" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: It seems you have a question regarding recorder instance. TUTOR</entry>
+<entry timestamp="2015-02-16#23:12:29" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: I can help you decide on the type of recorder api to use and give you an example code snippet.|Have you decided on a recorder api to use? TUTOR</entry>
+<entry timestamp="2015-02-16#23:12:35" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Ok|Maybe this will help:|You can record audio using the MediaRecorder or AudioRecord APIs if supported by the device hardware|Which one would you like to choose? TUTOR</entry>
+<entry timestamp="2015-02-16#23:13:11" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: If you use MediaRecorder, it will record compressed audio into a file.
+			
+			If you use AudioRecord, you must read and compress the audio from the internal buffer separately.
+			
+			MediaRecorder can record only the following file types: AAC_ADTS, AMR_NB, AMR_WB, MPEG_4, RAW_AMR, THREE_GPP, WEBM|Which api will you use? TUTOR</entry>
+<entry timestamp="2015-02-16#23:13:27" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Use following code snippet to use MediaRecorder. But note that wav audio format is not supported by MediaRecorder.
+			
+			import android.media.MediaRecorder; 
+			MediaRecorder Recorder_obj = null;|Ok, move on and decide other steps. TUTOR</entry>
+<entry timestamp="2015-02-16#23:13:27" user="PlanExecutor" level="NORMAL">starting 10 second delay timer for DEMO_TUTORIAL</entry>
+<entry timestamp="2015-02-16#23:13:37" user="PlanExecutor" level="NORMAL">PLAN: current step done: DEMO_TUTORIAL</entry>
+<entry timestamp="2015-02-16#23:13:37" user="basilica2.agents.listeners.plan.Stage" level="NORMAL">finished stage body</entry>
+<entry timestamp="2015-02-16#23:13:41" user="" level="NORMAL">accepted. Message from VirtualCarolyn: Plan is not yet complete. You are missing some steps. Let me help you with this. INCOMPLETE.
+Starting blockout countdown... </entry>
+<entry timestamp="2015-02-16#23:13:43" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: You need to Start audio recording TUTOR</entry>
+<entry timestamp="2015-02-16#23:13:55" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: To start audio capture, call Recorder_obj.start(). TUTOR</entry>
+<entry timestamp="2015-02-16#23:13:57" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Is it clear? TUTOR</entry>
+<entry timestamp="2015-02-16#23:14:05" user="" level="NORMAL">ACCEPTED! Message from VirtualCarolyn: Ok TUTOR</entry>
+<entry timestamp="2015-02-16#23:14:05" user="PlanExecutor" level="NORMAL">starting 10 second delay timer for DEMO_TUTORIAL</entry>
+<entry timestamp="2015-02-16#23:14:12" user="PlanAgentRunner" level="NORMAL">Starting operation</entry>
+<entry timestamp="2015-02-16#23:14:12" user="PlanAgentRunner" level="NORMAL">Operation started</entry>

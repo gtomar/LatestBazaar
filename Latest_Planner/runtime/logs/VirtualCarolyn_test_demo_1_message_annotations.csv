@@ -1,0 +1,66 @@
+2015-01-06,01:54:42,0,VirtualCarolyn,1420527283489,Hello! I'm VirtualCarolyn. Take a minute to introduce yourselves.,INTRODUCE
+2015-01-06,01:54:56,0,gst,1420527296803,i am gaurav,GIVING_NAME+AFFIRMATIVE
+2015-01-06,01:54:56,0,VirtualCarolyn,1420527297521,"Hi, Gaurav.",GREET
+2015-01-06,01:55:42,0,VirtualCarolyn,1420527343566,"While I may not tell how to develop the desired app directly, I can help/guide you planning its development.",SETUP
+2015-01-06,01:55:58,0,VirtualCarolyn,1420527359583,I will share images to the whiteboard to help/guide you,WHITEBOARD_INSTRUCTIONS
+2015-01-06,01:56:11,0,VirtualCarolyn,1420527373601,Now I'll start an interactive dialogue.,ABOUT_TUTORIALS
+2015-01-06,01:56:13,0,VirtualCarolyn,1420527375604,"What type of android app, you are planning to develop?",TUTOR
+2015-01-06,01:56:43,0,gst,1420527407277,I want to develop a voice recorder app,AUDIO_CAPTURE+GIVING_OPINION
+2015-01-06,01:56:47,0,VirtualCarolyn,1420527407683,"Great, we will be planning to develop an audio recorder.",TUTOR
+2015-01-06,01:56:47,0,VirtualCarolyn,1420527409686,Should we get started?,TUTOR
+2015-01-06,01:56:59,0,gst,1420527419995,yes,AFFIRMATIVE
+2015-01-06,01:57:03,0,VirtualCarolyn,1420527423700,"Spend some time to come up with your initial plan. Press ""I'm ready"" button when you think you are done.",TUTOR
+2015-01-06,01:57:13,0,VirtualCarolyn,1420527435714,...,END_MACRO
+2015-01-06,01:57:40,0,gst,1420527461437,Which recorder api I should use ?,RECORDER_API+QUESTION
+2015-01-06,01:57:41,0,VirtualCarolyn,1420527461738,"Correct, we need to create a new instance/object for recorder and choose a recorder api to do so.",TUTOR
+2015-01-06,01:57:41,0,VirtualCarolyn,1420527463741,"But, it seems you have a question regarding recorder instance.",TUTOR
+2015-01-06,01:57:41,0,VirtualCarolyn,1420527465744,I can help you to decide the type of recorder api to be used and example code snippet to do it.,TUTOR
+2015-01-06,01:57:41,0,VirtualCarolyn,1420527465746,Do you know or decided on any recorder api that can be used?,TUTOR
+2015-01-06,01:57:54,0,gst,1420527475009,no,CHALLENGE_CONTRIBUTION+NEGATIVE
+2015-01-06,01:57:56,0,VirtualCarolyn,1420527477763,Ok,TUTOR
+2015-01-06,01:57:56,0,VirtualCarolyn,1420527477764,Maybe this will help:,TUTOR
+2015-01-06,01:57:56,0,VirtualCarolyn,1420527477765,You can record audio using the MediaRecorder or AudioRecord APIs if supported by the device hardware,TUTOR
+2015-01-06,01:57:56,0,VirtualCarolyn,1420527477766,Which one you will like to choose?,TUTOR
+2015-01-06,01:58:22,0,gst,1420527502447,mediarecorder i think,TYPE_RECORDER+GIVING_OPINION
+2015-01-06,01:58:22,0,VirtualCarolyn,1420527503792,"Use following code snippet to use MediaRecorder. But note that wav audio format is not supported by MediaRecorder.
+			
+			import android.media.MediaRecorder; 
+			MediaRecorder Recorder_obj = null;",TUTOR
+2015-01-06,01:58:22,0,VirtualCarolyn,1420527503793,"Ok, move on and decide other steps.",TUTOR
+2015-01-06,01:58:24,0,VirtualCarolyn,1420527505797,... okay,SHOW_COMPREHENSION_APPROVAL+SOCIAL
+2015-01-06,01:58:53,0,gst,1420527533840,i will use mic as audio source,TYPE_AUDIO_SOURCE+AUDIO_SOURCE
+2015-01-06,01:58:53,0,VirtualCarolyn,1420527535831,"Yes, we need to set an audio source on recorder object..",TUTOR
+2015-01-06,01:59:38,0,VirtualCarolyn,1420527579871,I am waiting for your response to start. Please ask for help if you are stuck.,TUTOR
+2015-01-06,02:00:17,0,gst,1420527618392,i need to decide on audio encoding,HELP_REQUEST
+2015-01-06,02:00:29,0,gst,1420527629962,audio encoder i mean,AUDIO_ENCODER
+2015-01-06,02:00:29,0,VirtualCarolyn,1420527631912,"Yes, we need to set an audio encoder on recorder object..",TUTOR
+2015-01-06,02:00:37,0,gst,1420527638077,but which one ?,GIVING_OPINION+QUESTION
+2015-01-06,02:00:38,0,VirtualCarolyn,1420527639920,"But, it seems you have a question regarding audio encoding.",TUTOR
+2015-01-06,02:00:38,0,VirtualCarolyn,1420527641925,I can help you to decide the type of audio encoding to be used and example code snippet to do it.,TUTOR
+2015-01-06,02:00:38,0,VirtualCarolyn,1420527641925,Do you know or decided on any audio encoding that can be used?,TUTOR
+2015-01-06,02:00:53,0,gst,1420527653393,hmm i think yes,GIVING_OPINION+AFFIRMATIVE
+2015-01-06,02:00:53,0,VirtualCarolyn,1420527653939,Ok,TUTOR
+2015-01-06,02:00:53,0,VirtualCarolyn,1420527653940,Which codec you will use?,TUTOR
+2015-01-06,02:00:55,0,VirtualCarolyn,1420527655943,Alright,SHOW_COMPREHENSION_APPROVAL+SOCIAL
+2015-01-06,02:01:21,0,gst,1420527681550,vorbis codec,TYPE_AUDIO_ENCODER+AUDIO_ENCODER
+2015-01-06,02:01:24,0,VirtualCarolyn,1420527685968,I am waiting for your response to start. Please ask for help if you are stuck.,TUTOR
+2015-01-06,02:01:24,0,VirtualCarolyn,1420527685969,Which codec you will use?,TUTOR
+2015-01-06,02:01:44,0,gst,1420527705080,i said vorbis,TYPE_AUDIO_ENCODER
+2015-01-06,02:01:50,0,VirtualCarolyn,1420527711989,I don't know what that is.,TUTOR
+2015-01-06,02:01:50,0,VirtualCarolyn,1420527711990,"Ok, move on.",TUTOR
+2015-01-06,02:02:15,0,gst,1420527736320,Please help what should I do next,CONFUSION+HELP_REQUEST+HELP+QUESTION
+2015-01-06,02:02:16,0,VirtualCarolyn,1420527738018,"Yes, we need to set an output format type on recorder object..",TUTOR
+2015-01-06,02:02:51,0,gst,1420527771251,ok I will use mpeg,TYPE_OUTPUT_FORMAT+AFFIRMATIVE
+2015-01-06,02:02:51,0,VirtualCarolyn,1420527772048,"Yes, we need to set an output format type on recorder object..",TUTOR
+2015-01-06,02:02:51,0,VirtualCarolyn,1420527774050,Move on and decide other steps.,TUTOR
+2015-01-06,02:03:37,0,gst,1420527819290,I should start with programming stuff,
+2015-01-06,02:03:55,0,gst,1420527836517,i will start recorder using recorder_obj.start(),START
+2015-01-06,02:03:56,0,VirtualCarolyn,1420527838185,Start audio recording,TUTOR
+2015-01-06,02:04:41,0,VirtualCarolyn,1420527882224,I am waiting for your response to start. Please ask for help if you are stuck.,TUTOR
+2015-01-06,02:05:22,0,gst,1420527922934,i will then stop recorder using recorder_obj.stop(),STOP
+2015-01-06,02:05:22,0,VirtualCarolyn,1420527924299,Start audio recording,TUTOR
+2015-01-06,02:05:41,0,VirtualCarolyn,1420527942314,Move on and decide other steps.,TUTOR
+2015-01-06,02:06:14,0,gst,1420527974749,anything else help,CONFUSION+HELP_REQUEST+HELP
+2015-01-06,02:06:14,0,VirtualCarolyn,1420527976344,We need to prepare recorder instance before starting it.,TUTOR
+2015-01-06,02:06:54,0,gst,1420528014178,ok how ?,AFFIRMATIVE+QUESTION
+2015-01-06,02:06:54,0,VirtualCarolyn,1420528014381,Call recorder_obj.prepare() on the Recorder instance.,TUTOR

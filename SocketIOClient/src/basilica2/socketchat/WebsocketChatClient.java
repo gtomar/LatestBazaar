@@ -323,6 +323,10 @@ public class WebsocketChatClient extends Component implements ChatClient
 				WhiteboardEvent me = new WhiteboardEvent(WebsocketChatClient.this, message, (String)args[0], message);
 				WebsocketChatClient.this.broadcast(me);
 			}
+			else if(event.equals("updatemethodstub"))
+			{
+				System.out.println("updatemethodstub");
+			}
 			else if(event.equals("updatecode"))
 			{
 				CodeEvent me = new CodeEvent(WebsocketChatClient.this, (String)args[0], (String)args[1], (String)args[2], (String)args[3], (String)args[4], (String)args[5]);

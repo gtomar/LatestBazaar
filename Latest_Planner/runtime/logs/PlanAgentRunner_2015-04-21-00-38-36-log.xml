@@ -1,0 +1,39 @@
+<entry timestamp="2015-04-21#00:38:36" user="PlanAgentRunner" level="INFO">Logger initialized</entry>
+<entry timestamp="2015-04-21#00:38:36" user="PlanAgentRunner" level="NORMAL">AgentOperator PlanAgentRunner created</entry>
+<entry timestamp="2015-04-21#00:38:36" user="PlanAgentRunner" level="NORMAL">Operation Created</entry>
+<entry timestamp="2015-04-21#00:38:36" user="PlanAgentRunner" level="NORMAL">Classes: [class basilica2.agents.listeners.PresenceWatcher, class basilica2.agents.listeners.MessageAnnotator, class basilica2.social.listeners.ActivityTracker, class basilica2.tutor.listeners.TutorialTriggerWatcher, class basilica2.tutor.listeners.TutorTurnWatcher, class basilica2.social.listeners.StrategyScoreComputer, class basilica2.social.listeners.RuleBasedTriggerComputer, class basilica2.social.listeners.SocialController, class basilica2.accountable.listeners.AgreeDisagreeActor, class basilica2.accountable.listeners.AskForExplanationActor, class basilica2.accountable.listeners.RevoiceActor, class basilica2.accountable.listeners.SayMoreActor, class basilica2.myagent.listeners.PlanWatcher]</entry>
+<entry timestamp="2015-04-21#00:38:36" user="PlanAgentRunner" level="NORMAL">Classes: [class basilica2.social.listeners.SocialController, class basilica2.accountable.listeners.AgreeDisagreeActor, class basilica2.accountable.listeners.AskForExplanationActor, class basilica2.accountable.listeners.RevoiceActor, class basilica2.accountable.listeners.SayMoreActor, class basilica2.agents.listeners.plan.PlanExecutor, class basilica2.tutor.listeners.TutorActor, class basilica2.myagent.listeners.PlanReactor]</entry>
+<entry timestamp="2015-04-21#00:38:36" user="PlanAgentRunner" level="NORMAL">Starting operation</entry>
+<entry timestamp="2015-04-21#00:38:36" user="PlanAgentRunner" level="NORMAL">Operation started</entry>
+<entry timestamp="2015-04-21#00:38:38" user="ConditionAgentUI" level="NORMAL">Conditions set to tutorial_trigger</entry>
+<entry timestamp="2015-04-21#00:38:40" user="PlanAgentRunner" level="NORMAL">setting basilica2.agents.room_name to root</entry>
+<entry timestamp="2015-04-21#00:38:40" user="PlanAgentRunner" level="NORMAL"><launching room=root/></entry>
+<entry timestamp="2015-04-21#00:38:40" user="AgentFactory" level="NORMAL">Making Agent from agent.xml</entry>
+<entry timestamp="2015-04-21#00:38:40" user="AgentFactory" level="NORMAL">File Read</entry>
+<entry timestamp="2015-04-21#00:38:40" user="AgentFactory" level="NORMAL">Agent Tag Read</entry>
+<entry timestamp="2015-04-21#00:38:40" user="AgentFactory" level="NORMAL">Components Tag Read</entry>
+<entry timestamp="2015-04-21#00:38:40" user="AgentFactory" level="NORMAL">Components read. N=5</entry>
+<entry timestamp="2015-04-21#00:38:40" user="AgentFactory" level="NORMAL">Agent build. VirtualCarolyn_root</entry>
+<entry timestamp="2015-04-21#00:38:40" user="PlanAgentRunner" level="NORMAL">Adding agent VirtualCarolyn_root</entry>
+<entry timestamp="2015-04-21#00:38:40" user="PlanAgentRunner" level="INFO">Added. 1 agents now working</entry>
+<entry timestamp="2015-04-21#00:38:40" user="PlanAgentRunner" level="INFO">Initializing new agent</entry>
+<entry timestamp="2015-04-21#00:38:40" user="PromptStepHandler" level="NORMAL">default priority=0.75, wait 0.1 seconds after prompts, +3.3333333333333335 wps</entry>
+<entry timestamp="2015-04-21#00:38:41" user="PlanAgentRunner" level="INFO">Starting new Agent</entry>
+<entry timestamp="2015-04-21#00:38:41" user="PresenceWatcher" level="NORMAL">STUDENTS COUNT: 1</entry>
+<entry timestamp="2015-04-21#00:38:41" user="PlanExecutor" level="NORMAL">PLAN: activiating next stage: initiate</entry>
+<entry timestamp="2015-04-21#00:38:41" user="PlanExecutor" level="NORMAL">Firing Stage 'initiate'</entry>
+<entry timestamp="2015-04-21#00:38:41" user="basilica2.agents.listeners.plan.Stage" level="NORMAL">finished stage initiate</entry>
+<entry timestamp="2015-04-21#00:38:41" user="PlanExecutor" level="NORMAL">Firing Stage 'body'</entry>
+<entry timestamp="2015-04-21#00:38:41" user="Step" level="NORMAL">Handlers for SHOW_IMAGE(whiteboard): [basilica2.agents.listeners.plan.WhiteboardStepHandler@e1cbe19]</entry>
+<entry timestamp="2015-04-21#00:38:41" user="WhiteboardStepHandler" level="NORMAL">whiteboard step image:SHOW_IMAGE</entry>
+<entry timestamp="2015-04-21#00:38:41" user="PlanExecutor" level="NORMAL">starting 5 second delay timer for SHOW_IMAGE</entry>
+<entry timestamp="2015-04-21#00:38:41" user="PlanAgentRunner" level="NORMAL">notified UI of agent launch for VirtualCarolyn_root</entry>
+<entry timestamp="2015-04-21#00:38:41" user="PlanAgentRunner" level="NORMAL">Agent added VirtualCarolyn_root</entry>
+<entry timestamp="2015-04-21#00:38:42" user="" level="NORMAL">ACCEPTED! CREATE whiteboard-image http://blogs.adobe.com/digitalpublishing/files/2011/02/android_logo.gif</entry>
+<entry timestamp="2015-04-21#00:38:46" user="PlanExecutor" level="NORMAL">PLAN: current step done: SHOW_IMAGE</entry>
+<entry timestamp="2015-04-21#00:38:46" user="Step" level="NORMAL">Handlers for ABOUT_TUTORIALS_STEP(prompt): [basilica2.agents.listeners.plan.PromptStepHandler@45d68783]</entry>
+<entry timestamp="2015-04-21#00:38:46" user="PromptStepHandler" level="NORMAL">starting 5.8 second prompt delay</entry>
+<entry timestamp="2015-04-21#00:38:46" user="" level="NORMAL">accepted. Message from VirtualCarolyn: Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task. INTRO_SHORT.
+Starting blockout countdown... </entry>
+<entry timestamp="2015-04-21#00:38:51" user="PromptStepHandler" level="NORMAL">ending 5.8 second prompt delay</entry>
+<entry timestamp="2015-04-21#00:38:51" user="Step" level="NORMAL">Handlers for DEMO_TUTORIAL(dialogue): [basilica2.tutor.listeners.DialogStepHandler@4efde2c1]</entry>
