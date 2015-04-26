@@ -2,8 +2,7 @@
 <dialogs>
 	
 	<dialog concept="GOAL_IDENTIFICATION" scenario="scenario-instructions">
-    	
-    	
+    
     	<!-- The intro prompt is offered to students. 
     	If they respond in the affirmative, the dialogue begins.-->
         <intro>You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.</intro>
@@ -30,16 +29,12 @@
         <cancel annotation="NEGATIVE">Okay, let me know if you change your mind later.</cancel>
     </dialog>
     
-    <dialog concept="IS_PRIME" scenario="scenario-isprime">
+	<dialog concept="IS_PRIME" scenario="scenario-isprime">
+    	<trigger annotation="isprime"/>
     	
-        <trigger annotation="isPrime"/>
-    	
-    	<!-- The intro prompt is offered to students. 
-    	If they respond in the affirmative, the dialogue begins.-->
-        <intro>Let's go into some more detail about your method to identify primes, okay?</intro>
-        <accept annotation="AFFIRMATIVE">For the purposes of this problem, we recommend that you use a brute force method.</accept>
-        <cancel annotation="NEGATIVE">Okay, let me know if you want to come back to it later.</cancel>                
-        
+    	<intro>Let's go into some more detail about your method to identify primes, okay?</intro>
+    	<accept annotation="AFFIRMATIVE">For the purposes of this problem, we recommend that you use a brute force method.</accept>
+    	<cancel annotation="NEGATIVE">Okay, let me know if you want to come back to it later.</cancel>
     </dialog>
     
     <dialog concept="ROTATE" scenario="scenario-rotate">
@@ -50,66 +45,89 @@
     	<cancel annotation="NEGATIVE">Sure, let me know if you want to come back to it later.</cancel>
     </dialog>
     
-    <CONCEPT name="Nth_CIRCULAR_PRIME" priority="1">
+    <dialog concept="MAIN_ARGS_TOP" scenario="scenario-donothing">
+    	<trigger annotation="main_args_top"/>
+    	<intro>The input is a list of string arguments, and can be accessed using args[0].
+You'll want to use it as an int, though, so you should call something like:
+int n = Integer.parseInt(args[0]);</intro>
+		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
+    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
+    </dialog>
     
-        <CONCEPT1 name="ITERATION1" priority="1">
-        
-	         <CONCEPT2 name="COUNTER11" priority="1">
-	            <CONCEPT3 name="ITERATION11_STATEMENT" priority="1">
-	
-	            </CONCEPT3>
-	        </CONCEPT2>
-	         <CONCEPT2 name="COUNTER12" priority="1">
-	            <CONCEPT3 name="ITERATION12_STATEMENT" priority="1">
-	
-	            </CONCEPT3>
-	        </CONCEPT2> 
-	        
+    <dialog concept="MAIN_ITER_N_TOP" scenario="scenario-donothing">
+    	<trigger annotation="main_iter_n_top"/>
+    	<intro>You should make a counter that starts at 0 and iterates up to n. Increment it each time you find a circular prime.</intro>
+		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
+    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
+    </dialog>
+    
+    <dialog concept="CIRCPRIME_ITER_TOP" scenario="scenario-donothing">
+    	<trigger annotation="circprime_iter_top"/>
+    	<intro>You need to iterate over the length of the number. There are a number of ways to do that, but for this exercise I want you to convert the number to a string, and then iterate up to the length of the string.
+You can convert an int to a string using:
+	String s = Integer.toString(i)
+You can find the length of the string using:
+	s.length()</intro>
+		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
+    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
+    </dialog>
+    
+    <dialog concept="ROTATE_SUBSTRING_TOP" scenario="scenario-donothing">
+    	<trigger annotation="rotate_substring_top"/>
+    	<intro>You can call substring twice to get the two parts of the string.
+	String a = s.substring(0,1); -> first letter of s
+	String b = s.substring(1,s.length()); -> the rest of the string</intro>
+		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
+    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
+    </dialog>
+    
+    <dialog concept="ROTATE_CONCAT_TOP" scenario="scenario-donothing">
+    	<trigger annotation="rotate_concat_top"/>
+    	<intro>To put the strings back together, you just need to concatenate them in the opposite order. For example:
+	String c = b + a;
+Then you can return the new string.</intro>
+		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
+    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
+    </dialog>
+    
+    <dialog concept="PRIME_METHOD_TOP" scenario="scenario-donothing">
+    	<trigger annotation="isprime_method_top"/>
+    	<intro>For the purpose of this exercise we'd like you to iterate through every possible divisor and see if your input can be divided by it.</intro>
+		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
+    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
+    </dialog>
+    
+    <dialog concept="PRIME_ITER_TOP" scenario="scenario-donothing">
+    	<trigger annotation="isprime_iter_top"/>
+    	<intro>You should have an iterator that goes from 2 up to (input-1).</intro>
+		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
+    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
+    </dialog>
+    
+    <dialog concept="PRIME_DIVIDE_TOP" scenario="scenario-donothing">
+    	<trigger annotation="isprime_divide_top"/>
+    	<intro>For each number (i) up to the input (n), you should try n/i. If the remainder is 0, that means n is not prime, so you can safely return False. If you finish iterating and have not found any divisors, then you can return True.
+I recommend using the mod function (n%i) to test for divisibility.</intro>
+		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
+    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
+    </dialog>
+    
+    <CONCEPT name="GOAL_IDENTIFICATION" priority="1"></CONCEPT>
+    <CONCEPT name="NTH_CIRCULAR_PRIME" priority="1">
+        <CONCEPT1 name="MAIN" priority="1">
+	         <CONCEPT2 name="MAIN_ARGS_TOP" priority="1"></CONCEPT2>
+	         <CONCEPT2 name="MAIN_ITER_N_TOP" priority="1"></CONCEPT2>
+	         <CONCEPT2 name="IS_CIRCULAR_PRIME" priority="1">
+	         	<CONCEPT3 name="CIRCPRIME_ITER_TOP" priority="1"></CONCEPT3>
+	         	<CONCEPT3 name="ROTATE" priority="1"></CONCEPT3>
+	         		<CONCEPT4 name="ROTATE_SUBSTRING_TOP" priority="1"></CONCEPT4>
+	         		<CONCEPT4 name="ROTATE_CONCAT_TOP" priority="1"</CONCEPT4>
+	         	<CONCEPT3 name="IS_PRIME" priority="1"></CONCEPT3>
+	         		<CONCEPT4 name="PRIME_METHOD_TOP" priority="1"></CONCEPT4>
+	         		<CONCEPT4 name="PRIME_ITER_TOP" priority="1"></CONCEPT4>
+	         		<CONCEPT4 name="PRIME_DIVIDE_TOP" priority="1"></CONCEPT4>
+	         </CONCEPT2>
         </CONCEPT1>
- 
-        <CONCEPT1 name="IS_CIRCULAR_PRIME" priority="1">
-        
-            <CONCEPT2 name="ITERATION2" priority="1">
-		         <CONCEPT3 name="COUNTER2" priority="1">
-		            <CONCEPT4 name="ITERATION2_STATEMENT" priority="1">
-		
-		            </CONCEPT4>
-		        </CONCEPT3>
-            </CONCEPT2>
-            
-        	<CONCEPT2 name="IS_PRIME" priority="1">
-            	<CONCEPT3 name=”ITERATION3” priority=”1”>
-                	<CONCEPT4 name=”COUNTER4” priority=”1”>
-                         	
-                	</CONCEPT4>
-                </CONCEPT3>
-            	<CONCEPT3 name=”DIVISIBILITY_CHECK” priority=”1”>
-	                <CONCEPT4 name=”DIVISIBILITY_CHECK_STATEMENT” priority=”1”>
-	                         	
-	                </CONCEPT4>
-                </CONCEPT3>
-            	<CONCEPT3 name=”FLAG” priority=”1”>
-	                <CONCEPT4 name=”FLAG_STATEMENT” priority=”1”>
-	                         	
-	                </CONCEPT4>
-                </CONCEPT3>
-            </CONCEPT2>
-            
-            <CONCEPT2 name="ROTATE_STRING" priority="1">
-	            <CONCEPT3 name=”CONCATENATION” priority=”1”>
-					<CONCEPT4 name=”CONCATENATION_STATEMENT” priority=”1”>
-			                         	
-			        </CONCEPT4>
-	            </CONCEPT3>
-	            <CONCEPT3 name=”SUBSTRING” priority=”1”>
-					<CONCEPT4 name=”SUBSTRING_STATEMENT” priority=”1”>
-			                         	
-			        </CONCEPT4>
-	            </CONCEPT3>
-            </CONCEPT2>
-            
+	</CONCEPT>
 
-        </CONCEPT1>       
-    </CONCEPT>
-    
 </dialogs>

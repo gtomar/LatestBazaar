@@ -1,4 +1,6 @@
-is prime
-is a prime
-isprime
-primality
+/is prime/
+/is a prime/
+/isprime/
+/primality/
+/method.+prim(e|ality)/
+/prim(e|ality).+method/
