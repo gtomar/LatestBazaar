@@ -214,31 +214,31 @@
             </CONCEPT2>
             
         	<CONCEPT2 name="IS_PRIME" priority="1">
-            	<CONCEPT3 name=”ITERATION3” priority=”1”>
-                	<CONCEPT4 name=”COUNTER4” priority=”1”>
+            	<CONCEPT3 name="ITERATION3" priority="1">
+                	<CONCEPT4 name="COUNTER4" priority="1">
                          	
                 	</CONCEPT4>
                 </CONCEPT3>
-            	<CONCEPT3 name=”DIVISIBILITY_CHECK” priority=”1”>
-	                <CONCEPT4 name=”DIVISIBILITY_CHECK_STATEMENT” priority=”1”>
+            	<CONCEPT3 name="DIVISIBILITY_CHECK" priority="1">
+	                <CONCEPT4 name="DIVISIBILITY_CHECK_STATEMENT" priority="1">
 	                         	
 	                </CONCEPT4>
                 </CONCEPT3>
-            	<CONCEPT3 name=”FLAG” priority=”1”>
-	                <CONCEPT4 name=”FLAG_STATEMENT” priority=”1”>
+            	<CONCEPT3 name="FLAG" priority="1">
+	                <CONCEPT4 name="FLAG_STATEMENT" priority="1">
 	                         	
 	                </CONCEPT4>
                 </CONCEPT3>
             </CONCEPT2>
             
             <CONCEPT2 name="ROTATE_STRING" priority="1">
-	            <CONCEPT3 name=”CONCATENATION” priority=”1”>
-					<CONCEPT4 name=”CONCATENATION_STATEMENT” priority=”1”>
+	            <CONCEPT3 name="CONCATENATION" priority="1">
+					<CONCEPT4 name="CONCATENATION_STATEMENT" priority="1">
 			                         	
 			        </CONCEPT4>
 	            </CONCEPT3>
-	            <CONCEPT3 name=”SUBSTRING” priority=”1”>
-					<CONCEPT4 name=”SUBSTRING_STATEMENT” priority=”1”>
+	            <CONCEPT3 name="SUBSTRING" priority="1">
+					<CONCEPT4 name="SUBSTRING_STATEMENT" priority="1">
 			                         	
 			        </CONCEPT4>
 	            </CONCEPT3>
