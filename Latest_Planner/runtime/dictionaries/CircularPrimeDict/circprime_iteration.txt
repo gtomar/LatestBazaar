@@ -1,0 +1,3 @@
+/length of number/
+/len.+(input|number|\sn\s).+string/
+/len.+string.+(input|number|\sn\s)/

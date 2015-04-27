@@ -1,0 +1,2 @@
+/main.+(args|argument|input)/
+/(args|argument|input).+main/

@@ -20,7 +20,7 @@
 			<phrase>anything else</phrase>
 		</concept>
 		<concept label="intro">
-			<phrase>Is it clear?</phrase>
+			<phrase>Okay?</phrase>
 		</concept>
 		
 		<concept label="yes" type="annotation">
@@ -43,13 +43,16 @@
 
 	<script>
 		<goal name="start" difficulty="1">
+			<!-- 
 			<step>
 				<initiation>intro</initiation>
 				<response say="yes_response">yes</response>
 				<response say="no_response">no</response>
 				<response say="no_response">unanticipated-response</response>
 			</step>
+							-->
 		</goal>
 	</script>
-
+	
 </scenario>
+

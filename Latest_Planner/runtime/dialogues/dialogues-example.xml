@@ -1,253 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dialogs>
 	
-	<!--  <dialog concept="GOAL_IDENTIFICATION" scenario="scenario-goal">    	 
-        <intro>What type of android app are you planning to develop?</intro>
-        <accept annotation="AUDIO_CAPTURE">Great, I'll help you create a plan for an audio recorder.</accept>
-        <cancel>Sorry, I can't help you with this. You are on your own.</cancel>
+	<dialog concept="GOAL_IDENTIFICATION" scenario="scenario-instructions">
+    
+    	<!-- The intro prompt is offered to students. 
+    	If they respond in the affirmative, the dialogue begins.-->
+        <intro>You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.</intro>
+        <accept annotation="AFFIRMATIVE">Let’s make sure you understand the problem by going through our three test cases.</accept>
+        <!-- This should really be a time-out-try-again rather than a cancel -->
+        <cancel>Are you ready to get started?</cancel>
     </dialog>
     
-    <dialog concept="RECORDER_API" scenario="scenario-recorder_api">
+    <dialog concept="MAIN" scenario="scenario-main">
+    	<trigger annotation="main"/>
     	
-        <intro>Correct, we need to create a new instance/object for recorder and choose a recorder api to use.</intro>
-        <accept annotation="QUESTION">It seems you have a question regarding recorder instance.</accept>
-        <cancel annotation="TYPE_RECORDER">Move on and decide other steps.</cancel>                
-        
+    	<intro>Do you want to talk more about the structure of your main method?</intro>
+    	<accept annotation="AFFIRMATIVE">Let's talk about the input to the main method.</accept>
+    	<!-- Currently not possible to return to a method, right? But ideally this would be nice. -->
+        <cancel annotation="NEGATIVE">Okay, let me know if you change your mind later.</cancel>
     </dialog>
-
-    <dialog concept="RECORDER_API_HELP" scenario="scenario-recorder_api">
+    
+    <dialog concept="IS_CIRCULAR_PRIME" scenario="scenario-circprime">
+    	<trigger annotation="circprim"/>
     	
-        <intro>We need to create a new instance/object for recorder and choose a recorder api to use.</intro>
-        <accept annotation="QUESTION">It seems you have a question regarding recorder instance.</accept>
-        <cancel annotation="TYPE_RECORDER">Move on and decide other steps.</cancel>                
-        
+    	<intro>Should we talk more about your method for testing if a number is a circular prime?</intro>
+    	<accept annotation="AFFIRMATIVE">This method will take in a number and return a Boolean.</accept>
+    	<!-- Currently not possible to return to a method, right? But ideally this would be nice. -->
+        <cancel annotation="NEGATIVE">Okay, let me know if you change your mind later.</cancel>
     </dialog>
     
-    <dialog concept="AUDIO_SOURCE" scenario="scenario-audio_source">
-
-        <intro>Yes, we need to set an audio source for the recorder object.</intro>
-        <accept annotation="QUESTION">It seems you have a question regarding audio sources or how to set them.</accept>
-        <cancel annotation="TYPE_AUDIO_SOURCE">Move on and decide other steps.</cancel>                
-        
-    </dialog>
-
-    <dialog concept="AUDIO_SOURCE_HELP" scenario="scenario-audio_source">
-
-        <intro>We need to set an audio source for the recorder object.</intro>
-        <accept annotation="QUESTION">It seems you have a question regarding audio sources or how to set them.</accept>
-        <cancel annotation="TYPE_AUDIO_SOURCE">Move on and decide other steps.</cancel>                
-        
+	<dialog concept="IS_PRIME" scenario="scenario-isprime">
+    	<trigger annotation="isprime"/>
+    	
+    	<intro>Let's go into some more detail about your method to identify primes, okay?</intro>
+    	<accept annotation="AFFIRMATIVE">For the purposes of this problem, we recommend that you use a brute force method.</accept>
+    	<cancel annotation="NEGATIVE">Okay, let me know if you want to come back to it later.</cancel>
     </dialog>
     
-    <dialog concept="AUDIO_ENCODER" scenario="scenario-audio_encoding">
-
-        <intro>Yes, we need to set an audio encoder for the recorder object.</intro>
-        <accept annotation="QUESTION">It seems you have a question regarding audio encoding.</accept>
-        <cancel annotation="TYPE_AUDIO_ENCODER">Move on and decide other steps.</cancel>                
-        
-    </dialog>
-
-    <dialog concept="AUDIO_ENCODER_HELP" scenario="scenario-audio_encoding">
-
-        <intro>We need to set an audio encoder for the recorder object.</intro>
-        <accept annotation="QUESTION">It seems you have a question regarding audio encoding.</accept>
-        <cancel annotation="TYPE_AUDIO_ENCODER">Move on and decide other steps.</cancel>                
-        
+    <dialog concept="ROTATE" scenario="scenario-rotate">
+    	<trigger annotation="rotate"/>
+    	
+    	<intro>Would you like to discuss your method to rotate the number?</intro>
+    	<accept annotation="AFFIRMATIVE">Okay. This method will have a string as input, and return another string as output.</accept>
+    	<cancel annotation="NEGATIVE">Sure, let me know if you want to come back to it later.</cancel>
     </dialog>
     
-    <dialog concept="OUTPUT_FORMAT" scenario="scenario-output_format">
-
-        <intro>Yes, we need to set an output format type on recorder object.</intro>
-        <accept annotation="QUESTION">It seems you have a question regarding output format.</accept>
-        <cancel annotation="TYPE_OUTPUT_FORMAT">Move on and decide other steps.</cancel>                
-        
-    </dialog>
-
-    <dialog concept="OUTPUT_FORMAT_HELP" scenario="scenario-output_format">
-
-        <intro>We need to set an output format type on recorder object.</intro>
-        <accept annotation="QUESTION">It seems you have a question regarding output format.</accept>
-        <cancel annotation="TYPE_OUTPUT_FORMAT">Move on and decide other steps.</cancel>                
-        
-    </dialog>
-
-    <dialog concept="PREPARE" scenario="scenario-donothing">
-
-        <intro>Yes, we need to prepare the recorder instance before starting it.</intro>
-        <accept annotation="QUESTION">Call recorder_obj.prepare() on the Recorder instance.</accept>
-        <cancel annotation="PREPARE_SYNTAX">Move on and decide other steps.</cancel>                
-        
-    </dialog>
-
-    <dialog concept="PREPARE_HELP" scenario="scenario-donothing">
-
-        <intro>We need to prepare the recorder instance before starting it.</intro>
-        <accept annotation="QUESTION">Call recorder_obj.prepare() on the Recorder instance.</accept>
-        <cancel annotation="PREPARE_SYNTAX">Move on and decide other steps.</cancel>                
-        
+    <dialog concept="MAIN_ARGS_TOP" scenario="scenario-donothing">
+    	<trigger annotation="main_args_top"/>
+    	<intro>The input is a list of string arguments, and can be accessed using args[0].
+You'll want to use it as an int, though, so you should call something like:
+int n = Integer.parseInt(args[0]);</intro>
+		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
+    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
     </dialog>
     
-    <dialog concept="RELEASE" scenario="scenario-donothing">
-
-        <intro>Correct, we need to call release on recorder,when we are done with the Recorder instance,</intro>
-        <accept annotation="QUESTION">Call recorder_obj.release() on the Recorder instance.</accept>
-        <cancel annotation="RELEASE_SYNTAX">Move on and decide other steps.</cancel>                
-        
-    </dialog>
-
-    <dialog concept="RELEASE_HELP" scenario="scenario-donothing">
-
-        <intro>When you are done with the Recorder instance, call release on recorder. It is always recommended to free the resource immediately.</intro>
-        <accept annotation="QUESTION">Call recorder_obj.release() on the Recorder instance.</accept>
-        <cancel annotation="RELEASE_SYNTAX">Move on and decide other steps.</cancel>                
-        
+    <dialog concept="MAIN_ITER_N_TOP" scenario="scenario-donothing">
+    	<trigger annotation="main_iter_n_top"/>
+    	<intro>You should make a counter that starts at 0 and iterates up to n. Increment it each time you find a circular prime.</intro>
+		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
+    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
     </dialog>
     
-        <dialog concept="START" scenario="scenario-donothing">
-
-        <intro>Yes, you need to Start audio recording</intro>
-        <accept annotation="QUESTION">To start audio capture, call Recorder_obj.start().</accept>
-        <cancel annotation="START_SYNTAX">Move on and decide other steps.</cancel>                
-        
+    <dialog concept="CIRCPRIME_ITER_TOP" scenario="scenario-donothing">
+    	<trigger annotation="circprime_iter_top"/>
+    	<intro>You need to iterate over the length of the number. There are a number of ways to do that, but for this exercise I want you to convert the number to a string, and then iterate up to the length of the string.
+You can convert an int to a string using:
+	String s = Integer.toString(i)
+You can find the length of the string using:
+	s.length()</intro>
+		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
+    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
     </dialog>
     
-    <dialog concept="START_HELP" scenario="scenario-donothing">
-
-        <intro>You need to Start audio recording</intro>
-        <accept annotation="QUESTION">To start audio capture, call Recorder_obj.start().</accept>
-        <cancel annotation="START_SYNTAX">Move on and decide other steps.</cancel>                
-        
+    <dialog concept="ROTATE_SUBSTRING_TOP" scenario="scenario-donothing">
+    	<trigger annotation="rotate_substring_top"/>
+    	<intro>You can call substring twice to get the two parts of the string.
+	String a = s.substring(0,1); -> first letter of s
+	String b = s.substring(1,s.length()); -> the rest of the string</intro>
+		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
+    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
     </dialog>
     
-    <dialog concept="STOP" scenario="scenario-donothing">
-
-        <intro>Yes, you need to Stop audio recording</intro>
-        <accept annotation="QUESTION">To stop audio capture, call Recorder_obj.start().</accept>
-        <cancel annotation="STOP_SYNTAX">Move on and decide other steps.</cancel>                
-        
+    <dialog concept="ROTATE_CONCAT_TOP" scenario="scenario-donothing">
+    	<trigger annotation="rotate_concat_top"/>
+    	<intro>To put the strings back together, you just need to concatenate them in the opposite order. For example:
+	String c = b + a;
+Then you can return the new string.</intro>
+		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
+    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
     </dialog>
     
-       <dialog concept="STOP_HELP" scenario="scenario-donothing">
-
-        <intro>You need to Stop audio recording</intro>
-        <accept annotation="QUESTION">To stop audio capture, call Recorder_obj.start().</accept>
-        <cancel annotation="STOP_SYNTAX">Move on and decide other steps.</cancel>                
-        
-    </dialog>    
+    <dialog concept="PRIME_METHOD_TOP" scenario="scenario-donothing">
+    	<trigger annotation="isprime_method_top"/>
+    	<intro>For the purpose of this exercise we'd like you to iterate through every possible divisor and see if your input can be divided by it.</intro>
+		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
+    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
+    </dialog>
     
-    <CONCEPT name="RECORDER_API" priority="1">
-        <CONCEPT1 name="TYPE_RECORDER" priority="1">
-            <CONCEPT2 name="TYPE_RECORDER_STATEMENT" priority="1">
-
-            </CONCEPT2>
+    <dialog concept="PRIME_ITER_TOP" scenario="scenario-donothing">
+    	<trigger annotation="isprime_iter_top"/>
+    	<intro>You should have an iterator that goes from 2 up to (input-1).</intro>
+		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
+    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
+    </dialog>
+    
+    <dialog concept="PRIME_DIVIDE_TOP" scenario="scenario-donothing">
+    	<trigger annotation="isprime_divide_top"/>
+    	<intro>For each number (i) up to the input (n), you should try n/i. If the remainder is 0, that means n is not prime, so you can safely return False. If you finish iterating and have not found any divisors, then you can return True.
+I recommend using the mod function (n%i) to test for divisibility.</intro>
+		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
+    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
+    </dialog>
+    
+    <CONCEPT name="GOAL_IDENTIFICATION" priority="1"></CONCEPT>
+    <CONCEPT name="NTH_CIRCULAR_PRIME" priority="1">
+        <CONCEPT1 name="MAIN" priority="1">
+	         <CONCEPT2 name="MAIN_ARGS_TOP" priority="1"></CONCEPT2>
+	         <CONCEPT2 name="MAIN_ITER_N_TOP" priority="1"></CONCEPT2>
+	         <CONCEPT2 name="IS_CIRCULAR_PRIME" priority="1">
+	         	<CONCEPT3 name="CIRCPRIME_ITER_TOP" priority="1"></CONCEPT3>
+	         	<CONCEPT3 name="ROTATE" priority="1"></CONCEPT3>
+	         		<CONCEPT4 name="ROTATE_SUBSTRING_TOP" priority="1"></CONCEPT4>
+	         		<CONCEPT4 name="ROTATE_CONCAT_TOP" priority="1"</CONCEPT4>
+	         	<CONCEPT3 name="IS_PRIME" priority="1"></CONCEPT3>
+	         		<CONCEPT4 name="PRIME_METHOD_TOP" priority="1"></CONCEPT4>
+	         		<CONCEPT4 name="PRIME_ITER_TOP" priority="1"></CONCEPT4>
+	         		<CONCEPT4 name="PRIME_DIVIDE_TOP" priority="1"></CONCEPT4>
+	         </CONCEPT2>
         </CONCEPT1>
-    </CONCEPT>
-    <CONCEPT name="AUDIO_SOURCE" priority="1">
-        <CONCEPT1 name="TYPE_AUDIO_SOURCE" priority="1">
-            <CONCEPT2 name="AUDIO_SOURCE_STATEMENT" priority="1">
-                
-            </CONCEPT2>
-        </CONCEPT1>
-    </CONCEPT>
-    <CONCEPT name="AUDIO_ENCODER" priority="1">
-        <CONCEPT1 name="TYPE_AUDIO_ENCODER" priority="1">
-            <CONCEPT2 name="AUDIO_ENCODER_STATEMENT" priority="1">
-                
-            </CONCEPT2>
-        </CONCEPT1>
-    </CONCEPT>
-    <CONCEPT name="OUTPUT_FORMAT" priority="1">
-        <CONCEPT1 name="TYPE_OUTPUT_FORMAT" priority="1">
-            <CONCEPT2 name="AUDIO_OUTPUT_FORMAT_STATEMENT" priority="1">
-                
-            </CONCEPT2>
-        </CONCEPT1>
-    </CONCEPT>
-    <CONCEPT name="PREPARE" priority="1">
-        <CONCEPT1 name="PREPARE_SYNTAX" priority="1">
+	</CONCEPT>
 
-        </CONCEPT1>
-    </CONCEPT>    
-    <CONCEPT name="START" priority="1">
-        <CONCEPT1 name="START_SYNTAX" priority="1">
-
-        </CONCEPT1>
-    </CONCEPT>
-    <CONCEPT name="STOP" priority="1">
-        <CONCEPT1 name="STOP_SYNTAX" priority="1">
-
-        </CONCEPT1>
-    </CONCEPT>
-    <CONCEPT name="RELEASE" priority="1">
-        <CONCEPT1 name="RELEASE_SYNTAX" priority="1">
-
-        </CONCEPT1>
-    </CONCEPT>
-    -->
- 
-    
-    <CONCEPT name="Nth_CIRCULAR_PRIME" priority="1">
-    
-        <CONCEPT1 name="ITERATION1" priority="1">
-        
-	         <CONCEPT2 name="COUNTER11" priority="1">
-	            <CONCEPT3 name="ITERATION11_STATEMENT" priority="1">
-	
-	            </CONCEPT3>
-	        </CONCEPT2>
-	         <CONCEPT2 name="COUNTER12" priority="1">
-	            <CONCEPT3 name="ITERATION12_STATEMENT" priority="1">
-	
-	            </CONCEPT3>
-	        </CONCEPT2> 
-	        
-        </CONCEPT1>
- 
-        <CONCEPT1 name="IS_CIRCULAR_PRIME" priority="1">
-        
-            <CONCEPT2 name="ITERATION2" priority="1">
-		         <CONCEPT3 name="COUNTER2" priority="1">
-		            <CONCEPT4 name="ITERATION2_STATEMENT" priority="1">
-		
-		            </CONCEPT4>
-		        </CONCEPT3>
-            </CONCEPT2>
-            
-        	<CONCEPT2 name="IS_PRIME" priority="1">
-            	<CONCEPT3 name="ITERATION3" priority="1">
-                	<CONCEPT4 name="COUNTER4" priority="1">
-                         	
-                	</CONCEPT4>
-                </CONCEPT3>
-            	<CONCEPT3 name="DIVISIBILITY_CHECK" priority="1">
-	                <CONCEPT4 name="DIVISIBILITY_CHECK_STATEMENT" priority="1">
-	                         	
-	                </CONCEPT4>
-                </CONCEPT3>
-            	<CONCEPT3 name="FLAG" priority="1">
-	                <CONCEPT4 name="FLAG_STATEMENT" priority="1">
-	                         	
-	                </CONCEPT4>
-                </CONCEPT3>
-            </CONCEPT2>
-            
-            <CONCEPT2 name="ROTATE_STRING" priority="1">
-	            <CONCEPT3 name="CONCATENATION" priority="1">
-					<CONCEPT4 name="CONCATENATION_STATEMENT" priority="1">
-			                         	
-			        </CONCEPT4>
-	            </CONCEPT3>
-	            <CONCEPT3 name="SUBSTRING" priority="1">
-					<CONCEPT4 name="SUBSTRING_STATEMENT" priority="1">
-			                         	
-			        </CONCEPT4>
-	            </CONCEPT3>
-            </CONCEPT2>
-            
-
-        </CONCEPT1>       
-</CONCEPT>
-    
-    
-    
 </dialogs>

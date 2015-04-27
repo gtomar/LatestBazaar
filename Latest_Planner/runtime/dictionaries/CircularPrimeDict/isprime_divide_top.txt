@@ -1,0 +1,4 @@
+divisibility
+/divide(s|d)?.+by/
+evenly
+goes into
