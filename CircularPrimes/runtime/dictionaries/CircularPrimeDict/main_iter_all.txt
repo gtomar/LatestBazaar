@@ -1,0 +1,2 @@
+/(from|starting|begin|counter|iterate).+(0|zero)/
+/(test|check).+(each|every)/

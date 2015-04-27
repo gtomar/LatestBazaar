@@ -1,0 +1,2 @@
+/concat.+(switch|reverse|opposite)/
+/(switch|reverse|opposite).+concat/

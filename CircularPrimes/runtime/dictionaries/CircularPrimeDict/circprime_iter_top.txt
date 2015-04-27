@@ -1,0 +1,2 @@
+/(iter|loop|count).+len.+(input|number)/
+/len.+(input|number|\sn\s).+(iter|loop|count)/

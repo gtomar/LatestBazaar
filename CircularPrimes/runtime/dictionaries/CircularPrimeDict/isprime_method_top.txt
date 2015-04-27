@@ -1,0 +1,4 @@
+/(test|check|see if|try).+(each|every|all|any).+prim(e|ality)/
+/prim(e|ality).+(test|check|see if|try).+(each|every|all|any)/
+/brute force.+prim(e|ality)/
+/prim(e|ality).+brute force/

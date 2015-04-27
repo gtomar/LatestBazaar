@@ -1,0 +1,4 @@
+/(loop|iterate).+(2|two).+(through|over).+(divisors|numbers).+prim/
+/(loop|iterate).+(2|two).+input.+prim/
+/prim.+(loop|iterate).+(2|two).+(through|over).+(divisors|numbers)/
+/prim.+(loop|iterate).+(2|two).+input/

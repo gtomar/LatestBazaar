@@ -1,0 +1,3 @@
+/isCircularPrime/
+iscircularprime
+/(check|test|Bool).+circular prime/

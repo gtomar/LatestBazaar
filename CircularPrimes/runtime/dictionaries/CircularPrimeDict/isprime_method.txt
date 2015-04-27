@@ -1,0 +1,1 @@
+/(test|check|see if|try).+(each|every|all|any)/
