@@ -71,3 +71,118 @@ DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
 2015-04-21,01:55:45,0,VirtualCarolyn,1429595746531,What type of android app are you planning to develop?,TUTOR
 2015-04-21,01:57:45,0,VirtualCarolyn,1429595866580,I am waiting for your response to start. Please ask for help if you are stuck.,TUTOR
 2015-04-21,02:00:45,0,VirtualCarolyn,1429596046643,"Sorry, I can't help you with this. You are on your own.",TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-04-27,18:00:18,0,VirtualCarolyn,1430172019388,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-04-27,18:01:00,0,VirtualCarolyn,1430172061724,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-04-27,18:05:49,0,VirtualCarolyn,1430172351518,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-04-27,18:05:55,0,VirtualCarolyn,1430172357539,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-04-27,18:07:55,0,VirtualCarolyn,1430172477590,I am waiting for your response to start. Please ask for help if you are stuck.,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-04-27,18:14:59,0,VirtualCarolyn,1430172900788,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-04-27,18:16:16,0,VirtualCarolyn,1430172977648,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-04-27,18:16:21,0,VirtualCarolyn,1430172983666,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-04-27,18:16:33,0,root,1430172993669,i am done,AFFIRMATIVE
+2015-04-27,18:16:33,0,VirtualCarolyn,1430172995674,Let’s make sure you understand the problem by going through our three test cases.,TUTOR
+2015-04-27,18:16:33,0,VirtualCarolyn,1430172997679,"You saw in the instructions that if you input 0, it should print 2.",TUTOR
+2015-04-27,18:16:33,0,VirtualCarolyn,1430172997682,What happens if you input 9?,TUTOR
+2015-04-27,18:16:42,0,root,1430173002870,71,
+2015-04-27,18:16:44,0,VirtualCarolyn,1430173005687,Good job,TUTOR
+2015-04-27,18:16:44,0,VirtualCarolyn,1430173005690,How about an input of 16?,TUTOR
+2015-04-27,18:16:49,0,root,1430173009347,199,
+2015-04-27,18:16:54,0,VirtualCarolyn,1430173015698,Exactly,TUTOR
+2015-04-27,18:16:54,0,VirtualCarolyn,1430173015700,"Great! You can hit “Submit” at any time to see what your program does given these three inputs (0, 9, 16).",TUTOR
+2015-04-27,18:16:54,0,VirtualCarolyn,1430173015703,"Okay, let’s get started. I’m here to listen how you think through the problem, and help you as much as you want. To begin with, talk through your plan with me, and then as you proceed through the implementation, continue to go through your thought process with me.",TUTOR
+2015-04-27,18:17:04,0,root,1430173024824,main,MAIN
+2015-04-27,18:17:04,0,VirtualCarolyn,1430173025710,Do you want to talk more about the structure of your main method?,TUTOR
+2015-04-27,18:17:09,0,root,1430173029975,yes,AFFIRMATIVE
+2015-04-27,18:17:09,0,VirtualCarolyn,1430173031716,Let's talk about the input to the main method.,TUTOR
+2015-04-27,18:17:10,0,VirtualCarolyn,1430173033720,How will you access it and what form should it be in?,TUTOR
+2015-04-27,18:17:27,0,root,1430173048665,it will be an integer may be,GIVING_OPINION
+2015-04-27,18:17:30,0,VirtualCarolyn,1430173051731,I am waiting for your response to start. Please ask for help if you are stuck.,TUTOR
+2015-04-27,18:17:30,0,VirtualCarolyn,1430173051736,How will you access it and what form should it be in?,TUTOR
+2015-04-27,18:17:34,0,root,1430173054353,i will use args[0],
+2015-04-27,18:17:35,0,VirtualCarolyn,1430173055747,Try again?,TUTOR
+2015-04-27,18:17:35,0,VirtualCarolyn,1430173055753,"Think about what form the input takes, and how you need to use it. How do you read the input, and how do you transform it?",TUTOR
+2015-04-27,18:18:35,0,VirtualCarolyn,1430173115775,"The input is a list of string arguments, and can be accessed using args[0].
+You'll want to use it as an int, though, so you should call something like:
+int n = Integer.parseInt(args[0]);",TUTOR
+2015-04-27,18:18:35,0,VirtualCarolyn,1430173115778,"One you have your int n, what will you do with it?",TUTOR
+2015-04-27,18:19:02,0,root,1430173142298,check whether it is prime or not,GIVING_OPINION+ISPRIME+NEGATIVE
+2015-04-27,18:19:06,0,VirtualCarolyn,1430173147791,I am waiting for your response to start. Please ask for help if you are stuck.,TUTOR
+2015-04-27,18:19:06,0,VirtualCarolyn,1430173147793,"One you have your int n, what will you do with it?",TUTOR
+2015-04-27,18:19:35,0,VirtualCarolyn,1430173175804,Try again?,TUTOR
+2015-04-27,18:19:35,0,VirtualCarolyn,1430173175806,"Remember, n is an iteger indicating the index of the circular prime you want to return. How will you know when you've found n circular primes?",TUTOR
+2015-04-27,18:20:11,0,root,1430173211247,i will maintain a counter,MAIN
+2015-04-27,18:20:11,0,VirtualCarolyn,1430173211819,I am waiting for your response to start. Please ask for help if you are stuck.,TUTOR
+2015-04-27,18:20:11,0,VirtualCarolyn,1430173211822,"Remember, n is an iteger indicating the index of the circular prime you want to return. How will you know when you've found n circular primes?",TUTOR
+2015-04-27,18:20:31,0,root,1430173233506,i will maintain a counter to keep track of circular primes,MAIN
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-04-27,18:24:55,0,VirtualCarolyn,1430173497284,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-04-27,18:25:01,0,VirtualCarolyn,1430173503302,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-04-27,18:25:08,0,root,1430173508899,i m done,
+2015-04-27,18:25:57,0,root,1430173557216,done,
+2015-04-27,18:25:58,0,root,1430173558779,done,
+2015-04-27,18:26:03,0,root,1430173563674,r u mad,
+2015-04-27,18:26:09,0,root,1430173569834,please talk,HELP_REQUEST
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-04-27,18:27:07,0,VirtualCarolyn,1430173629357,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-04-27,18:27:13,0,VirtualCarolyn,1430173635377,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-04-27,18:27:22,0,root,1430173642535,i m done,
+2015-04-27,18:27:54,0,root,1430173674755,i am done,AFFIRMATIVE
+2015-04-27,18:27:54,0,VirtualCarolyn,1430173675398,Let’s make sure you understand the problem by going through our three test cases.,TUTOR
+2015-04-27,18:27:54,0,VirtualCarolyn,1430173677402,"You saw in the instructions that if you input 0, it should print 2.",TUTOR
+2015-04-27,18:27:54,0,VirtualCarolyn,1430173677405,What happens if you input 9?,TUTOR
+2015-04-27,18:28:23,0,root,1430173703791,71,
+2015-04-27,18:28:25,0,VirtualCarolyn,1430173707418,Correct!,TUTOR
+2015-04-27,18:28:25,0,VirtualCarolyn,1430173707421,How about an input of 16?,TUTOR
+2015-04-27,18:28:31,0,root,1430173711157,199,
+2015-04-27,18:28:35,0,VirtualCarolyn,1430173717430,Good job,TUTOR
+2015-04-27,18:28:35,0,VirtualCarolyn,1430173717433,"Great! You can hit “Submit” at any time to see what your program does given these three inputs (0, 9, 16).",TUTOR
+2015-04-27,18:28:35,0,VirtualCarolyn,1430173717435,"Okay, let’s get started. I’m here to listen how you think through the problem, and help you as much as you want. To begin with, talk through your plan with me, and then as you proceed through the implementation, continue to go through your thought process with me.",TUTOR
+2015-04-27,18:29:24,0,root,1430173765378,i need a method to check whether a number is a prime or not,HELP_REQUEST+CIRCPRIME_ISPRIME+ISPRIME+NEGATIVE
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-04-27,18:32:55,0,VirtualCarolyn,1430173976576,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-04-27,18:33:00,0,VirtualCarolyn,1430173982594,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-04-27,18:33:16,0,root,1430173996822,i am done,AFFIRMATIVE
+2015-04-27,18:33:16,0,VirtualCarolyn,1430173998606,Let’s make sure you understand the problem by going through our three test cases.,TUTOR
+2015-04-27,18:33:16,0,VirtualCarolyn,1430174000610,"You saw in the instructions that if you input 0, it should print 2.",TUTOR
+2015-04-27,18:33:16,0,VirtualCarolyn,1430174000613,What happens if you input 9?,TUTOR
+2015-04-27,18:34:04,0,root,1430174045099,71,
+2015-04-27,18:34:07,0,VirtualCarolyn,1430174048632,That's correct,TUTOR
+2015-04-27,18:34:07,0,VirtualCarolyn,1430174048635,How about an input of 16?,TUTOR
+2015-04-27,18:34:09,0,root,1430174049470,199,
+2015-04-27,18:34:13,0,VirtualCarolyn,1430174054642,Spot on,TUTOR
+2015-04-27,18:34:13,0,VirtualCarolyn,1430174054645,"Great! You can hit “Submit” at any time to see what your program does given these three inputs (0, 9, 16).",TUTOR
+2015-04-27,18:34:13,0,VirtualCarolyn,1430174054648,"Okay, let’s get started. I’m here to listen how you think through the problem, and help you as much as you want. To begin with, talk through your plan with me, and then as you proceed through the implementation, continue to go through your thought process with me.",TUTOR
+2015-04-27,18:35:42,0,root,1430174143021,main,MAIN
+2015-04-27,18:35:43,0,VirtualCarolyn,1430174144683,Do you want to talk more about the structure of your main method?,TUTOR
+2015-04-27,18:35:48,0,root,1430174148178,yes,AFFIRMATIVE
+2015-04-27,18:35:48,0,VirtualCarolyn,1430174148687,Let's talk about the input to the main method.,TUTOR
+2015-04-27,18:35:48,0,VirtualCarolyn,1430174150690,How will you access it and what form should it be in?,TUTOR
+2015-04-27,18:36:48,0,VirtualCarolyn,1430174208712,Sorry...,TUTOR
+2015-04-27,18:36:48,0,VirtualCarolyn,1430174208715,"Think about what form the input takes, and how you need to use it. How do you read the input, and how do you transform it?",TUTOR
+2015-04-27,18:37:13,0,root,1430174233238,abc,
+2015-04-27,18:37:13,0,VirtualCarolyn,1430174234727,Try ?,TUTOR
+2015-04-27,18:37:13,0,VirtualCarolyn,1430174234730,"Think about what form the input takes, and how you need to use it. How do you read the input, and how do you transform it?",TUTOR
+2015-04-27,18:37:29,0,root,1430174249217,abc,
+2015-04-27,18:37:29,0,VirtualCarolyn,1430174250738,"The input is a list of string arguments, and can be accessed using args[0].
+You'll want to use it as an int, though, so you should call something like:
+int n = Integer.parseInt(args[0]);",TUTOR
+2015-04-27,18:37:29,0,VirtualCarolyn,1430174250741,"One you have your int n, what will you do with it?",TUTOR
+2015-04-27,18:37:44,0,root,1430174264389,abc,
+2015-04-27,18:37:44,0,VirtualCarolyn,1430174264750,Try ?,TUTOR
+2015-04-27,18:37:44,0,VirtualCarolyn,1430174264752,"One you have your int n, what will you do with it?",TUTOR
+2015-04-27,18:38:29,0,VirtualCarolyn,1430174310772,Try again?,TUTOR
+2015-04-27,18:38:29,0,VirtualCarolyn,1430174310775,"Remember, n is an iteger indicating the index of the circular prime you want to return. How will you know when you've found n circular primes?",TUTOR
+2015-04-27,18:39:29,0,VirtualCarolyn,1430174370798,You should make a counter that starts at 0 and iterates up to n. Increment it each time you find a circular prime.,TUTOR
+2015-04-27,18:39:29,0,VirtualCarolyn,1430174370801,What other methods will you call from your main method?,TUTOR
+2015-04-27,18:39:46,0,root,1430174386175,kk,
+2015-04-27,18:39:49,0,VirtualCarolyn,1430174390810,Try ?,TUTOR
+2015-04-27,18:39:49,0,VirtualCarolyn,1430174390813,What other methods will you call from your main method?,TUTOR
+2015-04-27,18:40:29,0,VirtualCarolyn,1430174430834,Almost...,TUTOR
+2015-04-27,18:40:29,0,VirtualCarolyn,1430174430837,"You'll need to check if numbers are circular primes. Since you'll be doing that repeatedly, it's a good idea to separate it out into a separate method.",TUTOR
+2015-04-27,18:41:29,0,VirtualCarolyn,1430174490870,You'll need to call a different method called isCircularPrime (or something similar) that returns a boolean(True or False).,TUTOR
+2015-04-27,18:41:29,0,VirtualCarolyn,1430174490873,How will you know which numbers to test to see if it's a circular prime?,TUTOR
