@@ -2,7 +2,7 @@
 <dialogs>
 	
 	<dialog concept="GOAL_IDENTIFICATION" scenario="scenario-instructions">
-    
+        <trigger annotation="main"/>
     	<!-- The intro prompt is offered to students. 
     	If they respond in the affirmative, the dialogue begins.-->
         <intro>You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.</intro>
@@ -121,7 +121,7 @@ I recommend using the mod function (n%i) to test for divisibility.</intro>
 	         	<CONCEPT3 name="CIRCPRIME_ITER_TOP" priority="1"></CONCEPT3>
 	         	<CONCEPT3 name="ROTATE" priority="1"></CONCEPT3>
 	         		<CONCEPT4 name="ROTATE_SUBSTRING_TOP" priority="1"></CONCEPT4>
-	         		<CONCEPT4 name="ROTATE_CONCAT_TOP" priority="1"</CONCEPT4>
+	         		<CONCEPT4 name="ROTATE_CONCAT_TOP" priority="1"></CONCEPT4>
 	         	<CONCEPT3 name="IS_PRIME" priority="1"></CONCEPT3>
 	         		<CONCEPT4 name="PRIME_METHOD_TOP" priority="1"></CONCEPT4>
 	         		<CONCEPT4 name="PRIME_ITER_TOP" priority="1"></CONCEPT4>
