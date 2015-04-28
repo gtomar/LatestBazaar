@@ -17,6 +17,7 @@
         <cancel annotation="NEGATIVE">Okay, let me know if you change your mind later.</cancel>
     </dialog>
     
+    <!-- TO-DO: Distinguish this from IS_PRIME -->
     <dialog concept="IS_CIRCULAR_PRIME" scenario="scenario-circprime">
     	
     	<intro>Should we talk more about your method for testing if a number is a circular prime?</intro>
@@ -24,6 +25,7 @@
         <cancel annotation="NEGATIVE">Okay, let me know if you change your mind later.</cancel>
     </dialog>
     
+    <!-- TO-DO: Distinguish this from IS_CIRCULAR_PRIME -->
 	<dialog concept="IS_PRIME" scenario="scenario-isprime">
     	
     	<intro>Let's go into some more detail about your method to identify primes, okay?</intro>
@@ -42,15 +44,16 @@
     <dialog concept="MAIN_ARGS_TOP" scenario="scenario-donothing">
     	<intro>The input is a list of string arguments, and can be accessed using args[0].
 You'll want to use it as an int, though, so you should call something like:
-int n = Integer.parseInt(args[0]);</intro>
-		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
-    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
+int n = Integer.parseInt(args[0]);
+Okay?</intro>
+		<accept annotation="NEGATIVE">Sorry, that's all I've got for you on that topic right now.</accept>
+    	<cancel annotation="AFFIRMATIVE">Great</cancel>
     </dialog>
     
     <dialog concept="MAIN_ITER_N_TOP" scenario="scenario-donothing">
-    	<intro>You should make a counter that starts at 0 and iterates up to n. Increment it each time you find a circular prime.</intro>
-		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
-    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
+    	<intro>You should make a counter that starts at 0 and iterates up to n. Increment it each time you find a circular prime. Okay?</intro>
+		<accept annotation="NEGATIVE">Sorry, that's all I've got for you on that topic right now.</accept>
+    	<cancel annotation="AFFIRMATIVE">Great</cancel>
     </dialog>
     
     <dialog concept="CIRCPRIME_ITER_TOP" scenario="scenario-donothing">
@@ -58,45 +61,53 @@ int n = Integer.parseInt(args[0]);</intro>
 You can convert an int to a string using:
 	String s = Integer.toString(i)
 You can find the length of the string using:
-	s.length()</intro>
-		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
-    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
+	s.length()
+Okay?</intro>
+		<accept annotation="NEGATIVE">Sorry, that's all I've got for you on that topic right now.</accept>
+    	<cancel annotation="AFFIRMATIVE">Great</cancel>
     </dialog>
     
+    <!-- TO-DO: This one isn't reacting at all? -->
     <dialog concept="ROTATE_SUBSTRING_TOP" scenario="scenario-donothing">
     	<intro>You can call substring twice to get the two parts of the string.
 	String a = s.substring(0,1); -> first letter of s
-	String b = s.substring(1,s.length()); -> the rest of the string</intro>
-		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
-    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
+	String b = s.substring(1,s.length()); -> the rest of the string
+Okay?</intro>
+		<accept annotation="NEGATIVE">Sorry, that's all I've got for you on that topic right now.</accept>
+    	<cancel annotation="AFFIRMATIVE">Great</cancel>
     </dialog>
     
+    <!-- TO-DO: This one isn't reacting at all? -->
     <dialog concept="ROTATE_CONCAT_TOP" scenario="scenario-donothing">
     	<intro>To put the strings back together, you just need to concatenate them in the opposite order. For example:
 	String c = b + a;
-Then you can return the new string.</intro>
-		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
-    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
+Then you can return the new string.
+Okay?</intro>
+		<accept annotation="NEGATIVE">Sorry, that's all I've got for you on that topic right now.</accept>
+    	<cancel annotation="AFFIRMATIVE">Great</cancel>
     </dialog>
     
+    <!-- TO-DO: This one isn't reacting at all? -->
     <dialog concept="IS_PRIME_METHOD_TOP" scenario="scenario-donothing">
-    	<intro>For the purpose of this exercise we'd like you to iterate through every possible divisor and see if your input can be divided by it.</intro>
-		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
-    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
+    	<intro>For the purpose of this exercise we'd like you to iterate through every possible divisor and see if your input can be divided by it.
+Okay?</intro>
+		<accept annotation="NEGATIVE">Sorry, that's all I've got for you on that topic right now.</accept>
+    	<cancel annotation="AFFIRMATIVE">Great</cancel>
     </dialog>
     
-    <dialog concept="IS_PRIME_ITER_TOP" scenario="scenario-donothing">
-    	<trigger annotation="isprime_iter_top"/>
-    	<intro>You should have an iterator that goes from 2 up to (input-1).</intro>
-		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
-    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
+    <!-- TO-DO: This one isn't reacting at all? -->
+    <dialog concept="IS_PRIME_ITERATE_TOP" scenario="scenario-donothing">
+    	<intro>You should have an iterator that goes from 2 up to (input-1). Okay?</intro>
+		<accept annotation="NEGATIVE">Sorry, that's all I've got for you on that topic right now.</accept>
+    	<cancel annotation="AFFIRMATIVE">Great</cancel>
     </dialog>
     
     <dialog concept="IS_PRIME_DIVIDE_TOP" scenario="scenario-donothing">
     	<intro>For each number (i) up to the input (n), you should try n/i. If the remainder is 0, that means n is not prime, so you can safely return False. If you finish iterating and have not found any divisors, then you can return True.
-I recommend using the mod function (n%i) to test for divisibility.</intro>
-		<accept annotation="AFFIRMATIVE">Okey dokey.</accept>
-    	<cancel annotation="NEGATIVE">Nevermind then</cancel>
+I recommend using the mod function (n%i) to test for divisibility.
+Okay?</intro>
+		<accept annotation="NEGATIVE">Sorry, that's all I've got for you on that topic right now.</accept>
+    	<cancel annotation="AFFIRMATIVE">Great</cancel>
     </dialog>
     
     <CONCEPT name="INSTRUCTION_REVIEW" priority="1"></CONCEPT>

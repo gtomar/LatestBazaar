@@ -98,10 +98,10 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	private int introduction_cue_timeout2 = 60;
 	private int tutorTimeout = 120;
 	//edited by gst
-	private String request_poke_prompt_text = "Try?";
+	private String request_poke_prompt_text = "That's not quite what I'm looking for...try rephrasing?";
 	private String goahead_prompt_text = "Let's go ahead with this.";
 	//edited by gst
-	private String response_poke_prompt_text = "Try?";
+	private String response_poke_prompt_text = "That's not quite what I'm looking for...try rephrasing?";
 	private String dont_know_prompt_text = "Anybody?";
 	private String moving_on_text = "Okay, let's move on.";
 	private String tutorialCondition = "tutorial";

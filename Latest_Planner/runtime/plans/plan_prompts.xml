@@ -43,6 +43,10 @@
     	<text>Welcome! I'm [AGENT NAME]. I'm here to have an interactive dialogue with you to assist you in your programming task.</text>
     </prompt>
     
+    <prompt strategy="task" id="WARNING">
+    	<text>WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.</text>
+    </prompt>
+    
     <prompt strategy="task" id="FINISH_TUTORIALS">
     	<text>(You can trigger the same tutorial dynamically by talking about animals - see dialouges/dialogues-example.xml and dictionaries/animals.txt for details)</text>
     </prompt>

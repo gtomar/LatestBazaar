@@ -1,3 +1,3 @@
 /isCircularPrime/
 iscircularprime
-/(check|test|Bool).+circular prime/
+/method.+(check|test|Bool|whether).+circular prime/
