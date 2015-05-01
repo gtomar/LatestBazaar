@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 public class interpretCode {
 	
-	public static String getMethod(String code, String diff) throws IOException {
+	public String getMethod(String code, String diff) throws IOException {
 		//possible currentSections are "main", "isCircularPrime," "isPrime," "rotate", "unknown"
 		String currentSection = "";
 		
@@ -32,9 +32,9 @@ public class interpretCode {
 				Matcher primeName = isPrimePat.matcher(methodName);
 				Matcher rotateName = rotatePat.matcher(methodName);
 				if (circularPrimeName.matches()) {
-					currentSection = "isCircularPrime";
+					currentSection = "is_circular_prime";
 				} else if(primeName.matches()) {
-					currentSection = "isPrime";
+					currentSection = "is_prime";
 				} else if(rotateName.matches()) {
 					currentSection = "rotate";
 				} else if(methodName == "main") {
@@ -53,19 +53,6 @@ public class interpretCode {
 		return "unknown";
 	}
 
-	public static void main(String[] args) {
-	    String code = args[0];
-	    String diff = args[1];
-
-	    String ret = "";
-		try {
-			ret = getMethod(code, diff);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	    System.out.println(ret);
-	}
+	
 
 }

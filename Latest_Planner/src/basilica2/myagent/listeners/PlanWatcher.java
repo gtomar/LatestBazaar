@@ -1,6 +1,9 @@
 package basilica2.myagent.listeners;
 
+import java.io.IOException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 
 import edu.cmu.cs.lti.basilica2.core.Event;
 import basilica2.agents.components.InputCoordinator;
@@ -12,7 +15,7 @@ import basilica2.agents.events.ReadyEvent;
 import basilica2.agents.events.priority.PriorityEvent;
 import basilica2.agents.events.priority.PriorityEvent.Callback;
 import basilica2.agents.listeners.BasilicaPreProcessor;
-import basilica2.social.events.DormantGroupEvent;
+import basilica2.social.events.DormantStudentEvent;
 import basilica2.tutor.events.DoTutoringEvent;
 
 
@@ -23,6 +26,7 @@ import org.w3c.dom.NodeList;
 
 import basilica2.myagent.Code;
 import basilica2.myagent.PlanTree;
+import basilica2.myagent.interpretCode;
 
 public class PlanWatcher implements BasilicaPreProcessor
 {
@@ -31,14 +35,16 @@ public class PlanWatcher implements BasilicaPreProcessor
 
 	public PlanTree tree;
 	public Code code;
+	public PlanTree currentTree;
 
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public PlanWatcher() 
     {
-    	plan="";
+		Date date= new Date();
+		plan="";
     	tree = new PlanTree("ROOT");
-    	code = new Code();
+    	code = new Code(new Timestamp(date.getTime()));
     	tree.root.parent = null;
     	String dialogueConfigFile="dialogues/dialogues-example.xml";
     	loadconfiguration(dialogueConfigFile, tree);
@@ -57,23 +63,48 @@ public class PlanWatcher implements BasilicaPreProcessor
         }
 	}
 	
-	
-	public void findInTree(PlanTree tree, String concept)
+	private boolean isWholeTreeTraversed(PlanTree tree)
 	{
-		if(tree.root.name.equals(concept) && tree.root.identified == false)
+		ArrayList list = tree.root.children;
+		boolean traversed = true;
+        for (int i = 0; i < list.size(); i++) {
+        	PlanTree t = (PlanTree) list.get(i);
+        	if( t.root.identified == false){
+        		return false;
+        	}
+        	if(isWholeTreeTraversed(t) == false){
+        		return false;
+        	}
+        }
+        return true;
+	}
+	
+	public boolean findInTree(PlanTree tree, String concept)
+	{
+		boolean found = false;
+		if(tree.root.name.equals(concept))
 		{
-			tree.root.identified = true;
-			plan = plan + concept + "\n";
-			IsParentIdentified(tree);
+			if(tree.root.identified == false){
+				tree.root.identified = true;
+				plan = plan + concept + "\n";
+				currentTree = tree;
+				IsParentIdentified(tree);
+				return true;			
+			}
+			else
+			{
+				return false;
+			}
 		}
 		else
 		{
 			ArrayList list = tree.root.children;
 	        for (int i = 0; i < list.size(); i++) {
 	        	PlanTree t = (PlanTree) list.get(i);
-	        	findInTree(t, concept);
+	        	found = found | findInTree(t, concept);
 	        }
 		}
+		return found;
 	}
 	
 	
@@ -85,6 +116,7 @@ public class PlanWatcher implements BasilicaPreProcessor
 			tree.root.identified = true;
 			concept = (String) tree.root.name;
 			plan = plan + concept + "\n";
+			currentTree = tree;
 			IsParentIdentified(tree);
 		}
 		else
@@ -123,6 +155,7 @@ public class PlanWatcher implements BasilicaPreProcessor
         if(identified)
         {
         	parent.root.identified = true;
+        	currentTree = parent;
         	IsParentIdentified(parent);
         }
 	}
@@ -184,6 +217,7 @@ public class PlanWatcher implements BasilicaPreProcessor
 	@Override
 	public void preProcessEvent(InputCoordinator source, Event event)
 	{
+		
 		if (event instanceof MessageEvent)
 		{
 			MessageEvent me = (MessageEvent)event;
@@ -191,11 +225,15 @@ public class PlanWatcher implements BasilicaPreProcessor
 			
 			for (String s: annotations)
 		    {
-				findInTree(tree,s);
+				if(findInTree(tree,s))
+				{
+					sendMethodEvent(source, s);
+					System.out.println("sent method proposal => " + s);
+				}
 				
 				printTree(tree);
 				System.out.println(tree.root.name + " " + tree.root.identified);
-				if(tree.root.identified)
+				if(isWholeTreeTraversed(tree))
 				{
 					//this new event will be added to the queue for second-stage processing.
 					PlanEvent plan = new PlanEvent(source,  "Okay, it seems plan is ready now. You're on your own from here on. Good luck!", "NOTICE_DONE");
@@ -211,7 +249,7 @@ public class PlanWatcher implements BasilicaPreProcessor
 	    }
 		else if (event instanceof ReadyEvent)
 		{
-			if(tree.root.identified)
+			if(isWholeTreeTraversed(tree))
 			{
 				
 				PlanEvent plan = new PlanEvent(source,  "Okay, it seems plan is ready now. You're on your own from here on. Good luck!", "NOTICE_DONE");
@@ -220,7 +258,7 @@ public class PlanWatcher implements BasilicaPreProcessor
 			else
 			{
 		    	printTree(tree);
-		    	String key = findUnidentifiedConcept(tree);
+		    	String key = findUnidentifiedConcept(currentTree.root.parent);
 				PlanEvent plan = new PlanEvent(source,  "Plan is not yet complete. You are missing some steps. Let me help you with this.", "INCOMPLETE");
 
 				source.queueNewEvent(plan);
@@ -238,53 +276,91 @@ public class PlanWatcher implements BasilicaPreProcessor
 			code.fullTextChanges.add(((CodeEvent) event).fullTextChange);
 			code.overallChange =((CodeEvent) event).overallChange;
 			
-			System.out.println("method time.");
+			System.out.println(((CodeEvent) event).insertTextChange);
+			System.out.println(((CodeEvent) event).insertLinesChange);
+			System.out.println(((CodeEvent) event).overallChange);
 			
+			Date date= new Date();
+			code.timestamp = new Timestamp(date.getTime());
 			
-			//source.queueNewEvent(method);
-			
-			MethodEvent method = new MethodEvent(source, "hello", "METHOD_SUGGESTION");
-			
-			
-			PriorityEvent blackout = PriorityEvent.makeBlackoutEvent(method.from, method, 1000000.0, 5, 15);
-			
-			
-			blackout.addCallback(new Callback()
-			{
-				@Override
-				public void accepted(PriorityEvent p) 
-				{
-	
-					
-				}
-
-				@Override
-				public void rejected(PriorityEvent p) 
-				{ 
-					// ignore our rejected proposals
-				}
-			});
-			
-			/*
-			 * There are other was to add a proposal besides addProposal -- see addEventProposal, pushProposal, etc in InputCoordinator.
-			 */
-			source.addProposal(blackout);
-		}
-		/*else if (event instanceof DormantGroupEvent)
-		{
-			for (String key : myConcepts.keySet()) {
-			    if(myConcepts.get(key)==0)
-			    {					
-					DoTutoringEvent toot = new DoTutoringEvent(source, key);
-					source.addPreprocessedEvent(toot);
-					myConcepts.put(key, 1);
-					NumConcepts = NumConcepts - 1;
-					break;
-			    }
+			String method1 = "unknown";
+			interpretCode interpretcode = new interpretCode();
+			try {
+				method1 = interpretcode.getMethod(code.overallChange, ((CodeEvent) event).insertTextChange);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-		}	*/			
-	}
+			if(method1 != "unknown" && findInTree(tree,method1))
+			{
+				System.out.println("method => " + method1);
+			}
+			
+			
+			String method2 = "unknown";
+			try {
+				method2 = interpretcode.getMethod(code.overallChange, ((CodeEvent) event).insertLinesChange);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			if(method2 != "unknown" && findInTree(tree,method2))
+			{
+				System.out.println("method => " + method2);
+			}
+			
+			
+			
+			
+			
+			
+		}
+		else if (event instanceof DormantStudentEvent)
+		{
+			Date date= new Date();
+			Timestamp currentTimestamp = new Timestamp(date.getTime());
+			
+	    	if(currentTimestamp.getTime() - code.timestamp.getTime() > 60000)
+	    	{
+				String key = findUnidentifiedConcept(currentTree.root.parent);
+				PlanEvent plan = new PlanEvent(source,  "You seem to be stuck. Let me help you with this.", "STUCK");
 
+				source.queueNewEvent(plan);
+					    
+				DoTutoringEvent toot = new DoTutoringEvent(source, key);
+				source.addPreprocessedEvent(toot);
+	    	}
+		}			
+	}
+    
+	public void sendMethodEvent(InputCoordinator source, String method1)
+	{
+		MethodEvent method = new MethodEvent(source, method1, "METHOD_SUGGESTION");
+		
+		PriorityEvent blackout = PriorityEvent.makeBlackoutEvent(method.from, method, 1000000.0, 5, 15);
+		
+		
+		blackout.addCallback(new Callback()
+		{
+			@Override
+			public void accepted(PriorityEvent p) 
+			{
+
+				
+			}
+
+			@Override
+			public void rejected(PriorityEvent p) 
+			{ 
+				// ignore our rejected proposals
+			}
+		});
+		
+		/*
+		 * There are other was to add a proposal besides addProposal -- see addEventProposal, pushProposal, etc in InputCoordinator.
+		 */
+		source.addProposal(blackout);
+	}
 	
 	/**
 	 * @return the classes of events that this Preprocessor cares about
@@ -293,6 +369,6 @@ public class PlanWatcher implements BasilicaPreProcessor
 	public Class[] getPreprocessorEventClasses()
 	{
 		//only MessageEvents will be delivered to this watcher.
-		return new Class[]{MessageEvent.class, ReadyEvent.class, DormantGroupEvent.class, CodeEvent.class};
+		return new Class[]{MessageEvent.class, ReadyEvent.class, DormantStudentEvent.class, CodeEvent.class};
 	}
 }

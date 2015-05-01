@@ -186,3 +186,215 @@ int n = Integer.parseInt(args[0]);",TUTOR
 2015-04-27,18:40:29,0,VirtualCarolyn,1430174430837,"You'll need to check if numbers are circular primes. Since you'll be doing that repeatedly, it's a good idea to separate it out into a separate method.",TUTOR
 2015-04-27,18:41:29,0,VirtualCarolyn,1430174490870,You'll need to call a different method called isCircularPrime (or something similar) that returns a boolean(True or False).,TUTOR
 2015-04-27,18:41:29,0,VirtualCarolyn,1430174490873,How will you know which numbers to test to see if it's a circular prime?,TUTOR
+2015-04-27,18:42:29,0,VirtualCarolyn,1430174550895,Not quite...,TUTOR
+2015-04-27,18:42:29,0,VirtualCarolyn,1430174550897,You'll have to look at each possible number until you find the right number of circular primes. How will you do that?,TUTOR
+2015-04-27,18:43:29,0,VirtualCarolyn,1430174610918,You should make a counter that starts at 0 and iterates up to n. Increment it each time you find a circular prime.,TUTOR
+2015-04-27,18:43:29,0,VirtualCarolyn,1430174610920,Good work. Let's move on to the next part of your plan.,TUTOR
+2015-04-27,18:43:36,0,VirtualCarolyn,1430174616925,...,END_MACRO
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-04-29,23:01:35,0,VirtualCarolyn,1430362895591,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-04-29,23:01:41,0,VirtualCarolyn,1430362901660,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-04-29,23:03:41,0,VirtualCarolyn,1430363021710,Try ?,TUTOR
+2015-04-29,23:06:41,0,VirtualCarolyn,1430363201785,Are you ready to get started?,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-04-30,00:00:18,0,VirtualCarolyn,1430366419359,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-04-30,00:00:24,0,VirtualCarolyn,1430366425452,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-04-30,00:02:24,0,VirtualCarolyn,1430366545501,Try ?,TUTOR
+2015-04-30,00:05:24,0,VirtualCarolyn,1430366725602,Are you ready to get started?,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-04-30,17:00:16,0,VirtualCarolyn,1430427616539,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-04-30,17:00:22,0,VirtualCarolyn,1430427622590,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-01,00:36:40,0,VirtualCarolyn,1430455000489,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-01,00:36:45,0,VirtualCarolyn,1430455006566,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-01,00:36:59,0,VirtualCarolyn,1430455020574,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-01,00:37:12,0,root,1430455032485,yes,AFFIRMATIVE
+2015-05-01,00:37:22,0,root,1430455042935,i am done,AFFIRMATIVE+DONE
+2015-05-01,00:37:22,0,VirtualCarolyn,1430455044591,Let’s make sure you understand the problem by going through our three test cases.,TUTOR
+2015-05-01,00:37:23,0,VirtualCarolyn,1430455046596,"You saw in the instructions that if you input 0, it should print 2.",TUTOR
+2015-05-01,00:37:23,0,VirtualCarolyn,1430455046599,What happens if you input 9?,TUTOR
+2015-05-01,00:37:33,0,root,1430455053594,71,
+2015-05-01,00:37:38,0,VirtualCarolyn,1430455058605,Good,TUTOR
+2015-05-01,00:37:38,0,VirtualCarolyn,1430455058607,How about an input of 16?,TUTOR
+2015-05-01,00:37:41,0,root,1430455062065,199,
+2015-05-01,00:37:43,0,VirtualCarolyn,1430455064614,Perfect,TUTOR
+2015-05-01,00:37:43,0,VirtualCarolyn,1430455064616,"Great! You can hit “Submit” at any time to see what your program does given these three inputs (0, 9, 16).",TUTOR
+2015-05-01,00:37:43,0,VirtualCarolyn,1430455064618,"Okay, let’s get started. I’m here to listen how you think through the problem, and help you as much as you want. To begin with, talk through your plan with me, and then as you proceed through the implementation, continue to go through your thought process with me.",TUTOR
+2015-05-01,00:37:51,0,root,1430455072263,is prime method,IS_PRIME
+2015-05-01,00:37:52,0,VirtualCarolyn,1430455074628,"Let's go into some more detail about your method to identify primes, okay?",TUTOR
+2015-05-01,00:39:52,0,VirtualCarolyn,1430455192671,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-01,00:42:52,0,VirtualCarolyn,1430455372729,"Okay, let me know if you want to come back to it later.",TUTOR
+2015-05-01,00:45:21,0,root,1430455521618,rotate string,ROTATE
+2015-05-01,00:45:21,0,VirtualCarolyn,1430455524781,Would you like to discuss your method to rotate the number?,TUTOR
+2015-05-01,00:45:28,0,root,1430455528557,no,CHALLENGE_CONTRIBUTION+NEGATIVE
+2015-05-01,00:45:28,0,VirtualCarolyn,1430455528787,"Sure, let me know if you want to come back to it later.",TUTOR
+2015-05-01,00:45:44,0,root,1430455546729,I want to discuss rotate string,ROTATE+GIVING_OPINION
+2015-05-01,00:45:46,0,VirtualCarolyn,1430455546800,Would you like to discuss your method to rotate the number?,TUTOR
+2015-05-01,00:46:08,0,root,1430455568921,yes,AFFIRMATIVE
+2015-05-01,00:46:08,0,VirtualCarolyn,1430455570812,"Okay. This method will have a string as input, and return another string as output.",TUTOR
+2015-05-01,00:46:08,0,VirtualCarolyn,1430455572817,How will you separate the character you want to move from the rest of the string?,TUTOR
+2015-05-01,00:46:31,0,root,1430455591929,concatenate,
+2015-05-01,00:46:34,0,VirtualCarolyn,1430455594827,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-01,00:46:34,0,VirtualCarolyn,1430455594828,How will you separate the character you want to move from the rest of the string?,TUTOR
+2015-05-01,00:46:51,0,root,1430455613576,get first character and append it to the end,
+2015-05-01,00:46:55,0,VirtualCarolyn,1430455616839,Not quite...,TUTOR
+2015-05-01,00:46:55,0,VirtualCarolyn,1430455616842,"A handy way to parse a string in Java is the substring method.
+If you call s.substring(a,b) it gives you a string greater than or equal to index a and less than index b.
+For example:
+	""abcdef"".substring(2,4) = ""cd""",TUTOR
+2015-05-01,00:47:05,0,root,1430455626001,ok thanks,AFFIRMATIVE
+2015-05-01,00:47:10,0,VirtualCarolyn,1430455630852,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-01,00:47:10,0,VirtualCarolyn,1430455630855,"A handy way to parse a string in Java is the substring method.
+If you call s.substring(a,b) it gives you a string greater than or equal to index a and less than index b.
+For example:
+	""abcdef"".substring(2,4) = ""cd""",TUTOR
+2015-05-01,00:47:21,0,root,1430455641202,ok i will use substring,AFFIRMATIVE+ROTATE_SUBSTRING_TOP+ROTATE_SUBSTRING
+2015-05-01,00:47:25,0,VirtualCarolyn,1430455646863,That's correct,TUTOR
+2015-05-01,00:47:25,0,VirtualCarolyn,1430455646864,Now what do you need to do to return the rotated string?,TUTOR
+2015-05-01,00:47:35,0,root,1430455656015,concatenate,
+2015-05-01,00:47:36,0,VirtualCarolyn,1430455656874,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-01,00:47:36,0,VirtualCarolyn,1430455656877,Now what do you need to do to return the rotated string?,TUTOR
+2015-05-01,00:47:43,0,root,1430455663459,i dont know,
+2015-05-01,00:48:17,0,root,1430455697429,thr,
+2015-05-01,00:48:30,0,root,1430455710282,is prime,IS_PRIME
+2015-05-01,00:49:46,0,root,1430455786415,is circular prime,
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-01,00:52:15,0,VirtualCarolyn,1430455936996,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-01,00:52:21,0,VirtualCarolyn,1430455943018,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-01,00:52:35,0,VirtualCarolyn,1430455957027,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-01,00:54:35,0,VirtualCarolyn,1430456075068,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-01,00:57:35,0,VirtualCarolyn,1430456255130,Are you ready to get started?,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-01,01:28:44,0,VirtualCarolyn,1430458126201,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-01,01:28:50,0,VirtualCarolyn,1430458132220,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-01,01:29:04,0,VirtualCarolyn,1430458144233,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-01,01:29:17,0,root,1430458157856,i am done,AFFIRMATIVE+DONE
+2015-05-01,01:29:17,0,VirtualCarolyn,1430458158241,Let’s make sure you understand the problem by going through our three test cases.,TUTOR
+2015-05-01,01:29:17,0,VirtualCarolyn,1430458160246,"You saw in the instructions that if you input 0, it should print 2.",TUTOR
+2015-05-01,01:29:17,0,VirtualCarolyn,1430458160248,What happens if you input 9?,TUTOR
+2015-05-01,01:29:21,0,root,1430458161656,71,
+2015-05-01,01:29:22,0,VirtualCarolyn,1430458164253,Wonderful,TUTOR
+2015-05-01,01:29:22,0,VirtualCarolyn,1430458164256,How about an input of 16?,TUTOR
+2015-05-01,01:29:24,0,root,1430458164926,199,
+2015-05-01,01:29:28,0,VirtualCarolyn,1430458168263,Good job,TUTOR
+2015-05-01,01:29:28,0,VirtualCarolyn,1430458168266,"Great! You can hit “Submit” at any time to see what your program does given these three inputs (0, 9, 16).",TUTOR
+2015-05-01,01:29:28,0,VirtualCarolyn,1430458168268,"Okay, let’s get started. I’m here to listen how you think through the problem, and help you as much as you want. To begin with, talk through your plan with me, and then as you proceed through the implementation, continue to go through your thought process with me.",TUTOR
+2015-05-01,01:29:42,0,root,1430458183117,is circular prime,
+2015-05-01,01:29:59,0,root,1430458199984,is prime,IS_PRIME
+2015-05-01,01:29:59,0,VirtualCarolyn,1430458202285,"Let's go into some more detail about your method to identify primes, okay?",TUTOR
+2015-05-01,01:32:00,0,VirtualCarolyn,1430458320336,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-01,01:32:10,0,root,1430458330961,rotate string,ROTATE
+2015-05-01,01:32:10,0,VirtualCarolyn,1430458334349,Would you like to discuss your method to rotate the number?,TUTOR
+2015-05-01,01:33:27,0,root,1430458407512,yes,AFFIRMATIVE
+2015-05-01,01:33:27,0,VirtualCarolyn,1430458408408,"Okay. This method will have a string as input, and return another string as output.",TUTOR
+2015-05-01,01:33:27,0,VirtualCarolyn,1430458410413,How will you separate the character you want to move from the rest of the string?,TUTOR
+2015-05-01,01:33:35,0,root,1430458415506,rotate string,ROTATE
+2015-05-01,01:33:37,0,VirtualCarolyn,1430458418419,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-01,01:33:37,0,VirtualCarolyn,1430458418422,How will you separate the character you want to move from the rest of the string?,TUTOR
+2015-05-01,01:33:47,0,root,1430458427472,is prime,IS_PRIME
+2015-05-01,01:33:47,0,VirtualCarolyn,1430458428429,Not quite...,TUTOR
+2015-05-01,01:33:47,0,VirtualCarolyn,1430458428432,"A handy way to parse a string in Java is the substring method.
+If you call s.substring(a,b) it gives you a string greater than or equal to index a and less than index b.
+For example:
+	""abcdef"".substring(2,4) = ""cd""",TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-01,01:34:16,0,VirtualCarolyn,1430458457857,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-01,01:34:22,0,VirtualCarolyn,1430458463874,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-01,01:34:35,0,VirtualCarolyn,1430458475881,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-01,01:35:28,0,root,1430458529200,i am done,AFFIRMATIVE+DONE
+2015-05-01,01:35:29,0,VirtualCarolyn,1430458529901,Let’s make sure you understand the problem by going through our three test cases.,TUTOR
+2015-05-01,01:35:29,0,VirtualCarolyn,1430458531907,"You saw in the instructions that if you input 0, it should print 2.",TUTOR
+2015-05-01,01:35:29,0,VirtualCarolyn,1430458531909,What happens if you input 9?,TUTOR
+2015-05-01,01:35:32,0,root,1430458532617,71,
+2015-05-01,01:35:33,0,root,1430458533876,199,
+2015-05-01,01:35:34,0,VirtualCarolyn,1430458535916,Exactly,TUTOR
+2015-05-01,01:35:34,0,VirtualCarolyn,1430458535918,How about an input of 16?,TUTOR
+2015-05-01,01:35:38,0,root,1430458538737,199,
+2015-05-01,01:35:39,0,VirtualCarolyn,1430458539924,Okay,TUTOR
+2015-05-01,01:35:39,0,VirtualCarolyn,1430458539927,"Great! You can hit “Submit” at any time to see what your program does given these three inputs (0, 9, 16).",TUTOR
+2015-05-01,01:35:39,0,VirtualCarolyn,1430458539929,"Okay, let’s get started. I’m here to listen how you think through the problem, and help you as much as you want. To begin with, talk through your plan with me, and then as you proceed through the implementation, continue to go through your thought process with me.",TUTOR
+2015-05-01,01:35:44,0,root,1430458544709,is prime,IS_PRIME
+2015-05-01,01:35:44,0,VirtualCarolyn,1430458547941,"Let's go into some more detail about your method to identify primes, okay?",TUTOR
+2015-05-01,01:37:33,0,root,1430458653583,rotate string,ROTATE
+2015-05-01,01:37:33,0,VirtualCarolyn,1430458656037,Would you like to discuss your method to rotate the number?,TUTOR
+2015-05-01,01:37:44,0,VirtualCarolyn,1430458666050,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-01,01:39:16,0,root,1430458757050,riotate string,
+2015-05-01,01:39:20,0,root,1430458760602,rotate string,ROTATE
+2015-05-01,01:39:20,0,VirtualCarolyn,1430458762083,Would you like to discuss your method to rotate the number?,TUTOR
+2015-05-01,01:39:33,0,VirtualCarolyn,1430458774105,That's not quite what I'm looking for...try rephrasing?,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-01,01:40:07,0,VirtualCarolyn,1430458807685,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-01,01:40:13,0,VirtualCarolyn,1430458813702,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-01,01:40:25,0,root,1430458825587,rotate string,ROTATE
+2015-05-01,01:40:25,0,VirtualCarolyn,1430458827719,Would you like to discuss your method to rotate the number?,TUTOR
+2015-05-01,01:40:26,0,VirtualCarolyn,1430458829722,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-01,01:40:50,0,root,1430458851126,is prime,IS_PRIME
+2015-05-01,01:40:51,0,VirtualCarolyn,1430458853739,"Let's go into some more detail about your method to identify primes, okay?",TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-01,01:42:17,0,VirtualCarolyn,1430458937330,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-01,01:42:23,0,VirtualCarolyn,1430458943346,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-01,01:42:33,0,root,1430458953325,is prime,IS_PRIME
+2015-05-01,01:42:33,0,VirtualCarolyn,1430458955356,"Let's go into some more detail about your method to identify primes, okay?",TUTOR
+2015-05-01,01:42:36,0,VirtualCarolyn,1430458957361,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-01,01:43:04,0,root,1430458984860,rotate string,ROTATE
+2015-05-01,01:43:04,0,VirtualCarolyn,1430458987377,Would you like to discuss your method to rotate the number?,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-01,01:43:51,0,VirtualCarolyn,1430459033047,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-01,01:43:57,0,VirtualCarolyn,1430459039080,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-01,01:44:10,0,VirtualCarolyn,1430459051088,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-01,01:46:10,0,VirtualCarolyn,1430459171132,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-01,01:49:10,0,VirtualCarolyn,1430459351190,Are you ready to get started?,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-01,12:55:29,0,VirtualCarolyn,1430499329955,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-01,12:55:35,0,VirtualCarolyn,1430499336036,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-01,12:55:49,0,VirtualCarolyn,1430499350045,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-01,12:55:55,0,root,1430499356338,I am done,AFFIRMATIVE+DONE
+2015-05-01,12:55:56,0,VirtualCarolyn,1430499358055,Let’s make sure you understand the problem by going through our three test cases.,TUTOR
+2015-05-01,12:55:56,0,VirtualCarolyn,1430499360059,"You saw in the instructions that if you input 0, it should print 2.",TUTOR
+2015-05-01,12:55:56,0,VirtualCarolyn,1430499360062,What happens if you input 9?,TUTOR
+2015-05-01,12:56:01,0,root,1430499361174,71,
+2015-05-01,12:56:01,0,VirtualCarolyn,1430499362065,Good,TUTOR
+2015-05-01,12:56:01,0,VirtualCarolyn,1430499362068,How about an input of 16?,TUTOR
+2015-05-01,12:56:03,0,root,1430499363551,199,
+2015-05-01,12:56:06,0,VirtualCarolyn,1430499368077,Good,TUTOR
+2015-05-01,12:56:06,0,VirtualCarolyn,1430499368080,"Great! You can hit “Submit” at any time to see what your program does given these three inputs (0, 9, 16).",TUTOR
+2015-05-01,12:56:06,0,VirtualCarolyn,1430499368082,"Okay, let’s get started. I’m here to listen how you think through the problem, and help you as much as you want. To begin with, talk through your plan with me, and then as you proceed through the implementation, continue to go through your thought process with me.",TUTOR
+2015-05-01,12:56:27,0,root,1430499391399,i will like to write a method for prime number,POSITIVITY+IS_PRIME
+2015-05-01,12:56:31,0,VirtualCarolyn,1430499394150,"Let's go into some more detail about your method to identify primes, okay?",TUTOR
+2015-05-01,12:57:26,0,root,1430499446240,I dont want to,GIVING_OPINION
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-01,12:59:07,0,VirtualCarolyn,1430499549056,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-01,12:59:13,0,VirtualCarolyn,1430499555077,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-01,12:59:26,0,VirtualCarolyn,1430499567084,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-01,12:59:34,0,root,1430499575148,i am done,AFFIRMATIVE+DONE
+2015-05-01,12:59:35,0,VirtualCarolyn,1430499577091,Let’s make sure you understand the problem by going through our three test cases.,TUTOR
+2015-05-01,12:59:35,0,VirtualCarolyn,1430499579096,"You saw in the instructions that if you input 0, it should print 2.",TUTOR
+2015-05-01,12:59:35,0,VirtualCarolyn,1430499579098,What happens if you input 9?,TUTOR
+2015-05-01,12:59:39,0,root,1430499579768,71,
+2015-05-01,12:59:40,0,VirtualCarolyn,1430499581102,Good work,TUTOR
+2015-05-01,12:59:40,0,VirtualCarolyn,1430499581114,How about an input of 16?,TUTOR
+2015-05-01,12:59:42,0,root,1430499582238,199,
+2015-05-01,12:59:45,0,VirtualCarolyn,1430499587122,Okay,TUTOR
+2015-05-01,12:59:45,0,VirtualCarolyn,1430499587125,"Great! You can hit “Submit” at any time to see what your program does given these three inputs (0, 9, 16).",TUTOR
+2015-05-01,12:59:45,0,VirtualCarolyn,1430499587126,"Okay, let’s get started. I’m here to listen how you think through the problem, and help you as much as you want. To begin with, talk through your plan with me, and then as you proceed through the implementation, continue to go through your thought process with me.",TUTOR
+2015-05-01,12:59:53,0,root,1430499593423,is prime,IS_PRIME
+2015-05-01,12:59:53,0,VirtualCarolyn,1430499597136,"Let's go into some more detail about your method to identify primes, okay?",TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-01,13:00:37,0,VirtualCarolyn,1430499638995,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-01,13:00:43,0,VirtualCarolyn,1430499645015,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-01,13:00:57,0,VirtualCarolyn,1430499659024,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-01,13:01:11,0,root,1430499671949,is prime,IS_PRIME
+2015-05-01,13:01:11,0,VirtualCarolyn,1430499675034,"Let's go into some more detail about your method to identify primes, okay?",TUTOR
+2015-05-01,13:02:57,0,VirtualCarolyn,1430499779072,That's not quite what I'm looking for...try rephrasing?,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-01,13:03:17,0,VirtualCarolyn,1430499798943,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-01,13:03:23,0,VirtualCarolyn,1430499804970,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-01,13:03:36,0,VirtualCarolyn,1430499816977,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-01,13:05:36,0,VirtualCarolyn,1430499937051,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-01,13:08:36,0,VirtualCarolyn,1430500117120,Are you ready to get started?,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-01,13:17:02,0,VirtualCarolyn,1430500624461,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-01,13:17:08,0,VirtualCarolyn,1430500630482,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-01,13:17:22,0,VirtualCarolyn,1430500642489,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-01,13:19:22,0,VirtualCarolyn,1430500762530,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-01,13:22:22,0,VirtualCarolyn,1430500942590,Are you ready to get started?,TUTOR

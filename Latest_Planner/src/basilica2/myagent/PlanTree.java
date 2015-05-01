@@ -6,7 +6,7 @@ import java.util.List;
 
 public class PlanTree<String> {
     public Node<String> root;
-
+    
     public PlanTree(String rootData) {
         root = new Node<String>();
         root.name = rootData;
