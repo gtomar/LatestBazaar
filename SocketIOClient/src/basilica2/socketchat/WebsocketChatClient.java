@@ -330,6 +330,7 @@ public class WebsocketChatClient extends Component implements ChatClient
 			else if(event.equals("updatecode"))
 			{
 				CodeEvent me = new CodeEvent(WebsocketChatClient.this, (String)args[0], (String)args[1], (String)args[2], (String)args[3], (String)args[4], (String)args[5]);
+				System.out.println("We got : " + (String)args[5]);
 				WebsocketChatClient.this.broadcast(me);
 			}
 			else if(event.equals("updatepresence"))

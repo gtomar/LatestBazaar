@@ -44,11 +44,15 @@ public class PlanWatcher implements BasilicaPreProcessor
 		Date date= new Date();
 		plan="";
     	tree = new PlanTree("ROOT");
+    	currentTree = tree;
     	code = new Code(new Timestamp(date.getTime()));
     	tree.root.parent = null;
+
     	String dialogueConfigFile="dialogues/dialogues-example.xml";
     	loadconfiguration(dialogueConfigFile, tree);
-
+    	findInTree(tree,"ROOT");
+    	findInTree(tree,"INSTRUCTION_REVIEW");
+    	findInTree(tree,"NTH_CIRCULAR_PRIME");
 	}
     
 
@@ -155,7 +159,7 @@ public class PlanWatcher implements BasilicaPreProcessor
         if(identified)
         {
         	parent.root.identified = true;
-        	currentTree = parent;
+        	//currentTree = parent;
         	IsParentIdentified(parent);
         }
 	}
@@ -241,8 +245,16 @@ public class PlanWatcher implements BasilicaPreProcessor
 				}
 				else if(s.equals("HELP"))
 				{           
-					String key = findUnidentifiedConcept(tree);
-			    	DoTutoringEvent toot = new DoTutoringEvent(source, key+"_HELP");
+					PlanTree parent  = currentTree.root.parent;
+					System.out.println("HELP : " + currentTree.root.name);
+					System.out.println("PLAN : " + plan);
+					String key = findUnidentifiedConcept(parent);
+					while(key==null)
+					{
+						parent = parent.root.parent;
+						key = findUnidentifiedConcept(parent);
+					}
+			    	DoTutoringEvent toot = new DoTutoringEvent(source, key);
 					source.addPreprocessedEvent(toot);
 				}			
 	        }								    
@@ -258,7 +270,13 @@ public class PlanWatcher implements BasilicaPreProcessor
 			else
 			{
 		    	printTree(tree);
-		    	String key = findUnidentifiedConcept(currentTree.root.parent);
+				PlanTree parent  = currentTree.root.parent;
+				String key = findUnidentifiedConcept(parent);
+				while(key==null || key == "ROOT")
+				{
+					parent = parent.root.parent;
+					key = findUnidentifiedConcept(parent);
+				}
 				PlanEvent plan = new PlanEvent(source,  "Plan is not yet complete. You are missing some steps. Let me help you with this.", "INCOMPLETE");
 
 				source.queueNewEvent(plan);
@@ -291,6 +309,7 @@ public class PlanWatcher implements BasilicaPreProcessor
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			System.out.println("method1 # " + method1);
 			if(method1 != "unknown" && findInTree(tree,method1))
 			{
 				System.out.println("method => " + method1);
@@ -304,6 +323,7 @@ public class PlanWatcher implements BasilicaPreProcessor
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			System.out.println("method2 # " + method2);
 			if(method2 != "unknown" && findInTree(tree,method2))
 			{
 				System.out.println("method => " + method2);
@@ -322,7 +342,13 @@ public class PlanWatcher implements BasilicaPreProcessor
 			
 	    	if(currentTimestamp.getTime() - code.timestamp.getTime() > 60000)
 	    	{
-				String key = findUnidentifiedConcept(currentTree.root.parent);
+				PlanTree parent  = currentTree.root.parent;
+				String key = findUnidentifiedConcept(parent);
+				while(key==null || key == "ROOT")
+				{
+					parent = parent.root.parent;
+					key = findUnidentifiedConcept(parent);
+				}
 				PlanEvent plan = new PlanEvent(source,  "You seem to be stuck. Let me help you with this.", "STUCK");
 
 				source.queueNewEvent(plan);

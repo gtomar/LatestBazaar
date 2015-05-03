@@ -398,3 +398,217 @@ DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
 2015-05-01,13:17:22,0,VirtualCarolyn,1430500642489,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
 2015-05-01,13:19:22,0,VirtualCarolyn,1430500762530,That's not quite what I'm looking for...try rephrasing?,TUTOR
 2015-05-01,13:22:22,0,VirtualCarolyn,1430500942590,Are you ready to get started?,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-02,23:37:11,0,VirtualCarolyn,1430624232190,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-02,23:37:17,0,VirtualCarolyn,1430624238308,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-02,23:37:31,0,VirtualCarolyn,1430624252317,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-02,23:38:05,0,root,1430624286052,i am done,AFFIRMATIVE+DONE
+2015-05-02,23:38:06,0,VirtualCarolyn,1430624286332,Let’s make sure you understand the problem by going through our three test cases.,TUTOR
+2015-05-02,23:38:06,0,VirtualCarolyn,1430624288335,"You saw in the instructions that if you input 0, it should print 2.",TUTOR
+2015-05-02,23:38:06,0,VirtualCarolyn,1430624288338,What happens if you input 9?,TUTOR
+2015-05-02,23:38:14,0,root,1430624294207,71,
+2015-05-02,23:38:16,0,VirtualCarolyn,1430624298345,You're right,TUTOR
+2015-05-02,23:38:16,0,VirtualCarolyn,1430624298348,How about an input of 16?,TUTOR
+2015-05-02,23:38:19,0,root,1430624299184,199,
+2015-05-02,23:38:21,0,VirtualCarolyn,1430624302354,Perfect,TUTOR
+2015-05-02,23:38:21,0,VirtualCarolyn,1430624302357,"Great! You can hit “Submit” at any time to see what your program does given these three inputs (0, 9, 16).",TUTOR
+2015-05-02,23:38:21,0,VirtualCarolyn,1430624302358,"Okay, let’s get started. I’m here to listen how you think through the problem, and help you as much as you want. To begin with, talk through your plan with me, and then as you proceed through the implementation, continue to go through your thought process with me.",TUTOR
+2015-05-02,23:38:49,0,root,1430624329178,main method,MAIN
+2015-05-02,23:38:49,0,VirtualCarolyn,1430624332373,Do you want to talk more about the structure of your main method?,TUTOR
+2015-05-02,23:39:00,0,root,1430624340338,yes,AFFIRMATIVE
+2015-05-02,23:39:00,0,VirtualCarolyn,1430624340379,Let's talk about the input to the main method.,TUTOR
+2015-05-02,23:39:00,0,VirtualCarolyn,1430624342384,How will you access it and what form should it be in?,TUTOR
+2015-05-02,23:39:17,0,root,1430624357350,args[0] integer,MAIN_ARGUMENT
+2015-05-02,23:39:20,0,VirtualCarolyn,1430624362392,Wonderful,TUTOR
+2015-05-02,23:39:20,0,VirtualCarolyn,1430624362395,"One you have your int n, what will you do with it?",TUTOR
+2015-05-02,23:39:46,0,root,1430624386881,counter for n,
+2015-05-02,23:39:51,0,VirtualCarolyn,1430624392408,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-02,23:39:51,0,VirtualCarolyn,1430624392409,"One you have your int n, what will you do with it?",TUTOR
+2015-05-02,23:40:00,0,root,1430624400244,initialize counter,
+2015-05-02,23:40:01,0,VirtualCarolyn,1430624402420,Sorry...,TUTOR
+2015-05-02,23:40:01,0,VirtualCarolyn,1430624402421,"Remember, n is an iteger indicating the index of the circular prime you want to return. How will you know when you've found n circular primes?",TUTOR
+2015-05-02,23:40:14,0,root,1430624414407,maintain counter,MAIN
+2015-05-02,23:40:17,0,VirtualCarolyn,1430624418429,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-02,23:40:17,0,VirtualCarolyn,1430624418431,"Remember, n is an iteger indicating the index of the circular prime you want to return. How will you know when you've found n circular primes?",TUTOR
+2015-05-02,23:40:31,0,root,1430624432074,maintain counter ,MAIN
+2015-05-02,23:40:32,0,VirtualCarolyn,1430624434436,You should make a counter that starts at 0 and iterates up to n. Increment it each time you find a circular prime.,TUTOR
+2015-05-02,23:40:32,0,VirtualCarolyn,1430624434438,What other methods will you call from your main method?,TUTOR
+2015-05-02,23:40:50,0,root,1430624450140,isprime,IS_PRIME
+2015-05-02,23:40:52,0,VirtualCarolyn,1430624454446,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-02,23:40:52,0,VirtualCarolyn,1430624454448,What other methods will you call from your main method?,TUTOR
+2015-05-02,23:40:57,0,root,1430624457396,iscircualrprime,
+2015-05-02,23:40:58,0,VirtualCarolyn,1430624458450,Not quite...,TUTOR
+2015-05-02,23:40:58,0,VirtualCarolyn,1430624458452,"You'll need to check if numbers are circular primes. Since you'll be doing that repeatedly, it's a good idea to separate it out into a separate method.",TUTOR
+2015-05-02,23:41:16,0,root,1430624477080,is circular prime,
+2015-05-02,23:41:18,0,VirtualCarolyn,1430624480459,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-02,23:41:18,0,VirtualCarolyn,1430624480460,"You'll need to check if numbers are circular primes. Since you'll be doing that repeatedly, it's a good idea to separate it out into a separate method.",TUTOR
+2015-05-02,23:41:58,0,VirtualCarolyn,1430624518489,You'll need to call a different method called isCircularPrime (or something similar) that returns a boolean(True or False).,TUTOR
+2015-05-02,23:41:58,0,VirtualCarolyn,1430624518492,How will you know which numbers to test to see if it's a circular prime?,TUTOR
+2015-05-02,23:42:58,0,VirtualCarolyn,1430624578541,Sorry...,TUTOR
+2015-05-02,23:42:58,0,VirtualCarolyn,1430624578545,You'll have to look at each possible number until you find the right number of circular primes. How will you do that?,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-02,23:47:23,0,VirtualCarolyn,1430624843939,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-02,23:47:29,0,VirtualCarolyn,1430624849984,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-02,23:47:42,0,VirtualCarolyn,1430624863992,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-02,23:48:51,0,root,1430624933582,Please help I am stcuk,CONFUSION+HELP_REQUEST+AFFIRMATIVE+HELP
+2015-05-02,23:48:53,0,root,1430624934213,stuck,HELP
+2015-05-02,23:48:57,0,root,1430624937293,please help,CONFUSION+HELP_REQUEST+HELP
+2015-05-02,23:49:42,0,VirtualCarolyn,1430624984083,That's not quite what I'm looking for...try rephrasing?,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-02,23:50:12,0,VirtualCarolyn,1430625013623,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-02,23:50:17,0,VirtualCarolyn,1430625019639,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-02,23:50:31,0,VirtualCarolyn,1430625031651,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-02,23:51:07,0,root,1430625067611,please help,CONFUSION+HELP_REQUEST+HELP
+2015-05-02,23:52:31,0,VirtualCarolyn,1430625151693,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-02,23:55:31,0,VirtualCarolyn,1430625331793,Are you ready to get started?,TUTOR
+2015-05-02,23:55:32,0,root,1430625332415,i am done,AFFIRMATIVE+DONE
+2015-05-02,23:55:36,0,root,1430625336582,yes,AFFIRMATIVE
+2015-05-02,23:57:34,0,root,1430625454838,please help,CONFUSION+HELP_REQUEST+HELP
+2015-05-02,23:57:34,0,VirtualCarolyn,1430625455843,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-02,23:57:42,0,root,1430625462317,i am done,AFFIRMATIVE+DONE
+2015-05-02,23:57:42,0,VirtualCarolyn,1430625463853,Let’s make sure you understand the problem by going through our three test cases.,TUTOR
+2015-05-02,23:57:42,0,VirtualCarolyn,1430625465856,"You saw in the instructions that if you input 0, it should print 2.",TUTOR
+2015-05-02,23:57:42,0,VirtualCarolyn,1430625465857,What happens if you input 9?,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-02,23:58:45,0,VirtualCarolyn,1430625527310,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-02,23:58:51,0,VirtualCarolyn,1430625533329,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-02,23:58:58,0,root,1430625538442,i am done,AFFIRMATIVE+DONE
+2015-05-02,23:59:05,0,VirtualCarolyn,1430625545334,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-02,23:59:10,0,root,1430625550813,ia m done,DONE
+2015-05-02,23:59:10,0,VirtualCarolyn,1430625551338,Let’s make sure you understand the problem by going through our three test cases.,TUTOR
+2015-05-02,23:59:10,0,VirtualCarolyn,1430625553343,"You saw in the instructions that if you input 0, it should print 2.",TUTOR
+2015-05-02,23:59:10,0,VirtualCarolyn,1430625553346,What happens if you input 9?,TUTOR
+2015-05-02,23:59:25,0,root,1430625565123,71,
+2015-05-02,23:59:26,0,VirtualCarolyn,1430625567356,That's correct,TUTOR
+2015-05-02,23:59:26,0,VirtualCarolyn,1430625567358,How about an input of 16?,TUTOR
+2015-05-02,23:59:27,0,root,1430625568086,199,
+2015-05-02,23:59:31,0,VirtualCarolyn,1430625571361,Good job,TUTOR
+2015-05-02,23:59:31,0,VirtualCarolyn,1430625571363,"Great! You can hit “Submit” at any time to see what your program does given these three inputs (0, 9, 16).",TUTOR
+2015-05-02,23:59:31,0,VirtualCarolyn,1430625571365,"Okay, let’s get started. I’m here to listen how you think through the problem, and help you as much as you want. To begin with, talk through your plan with me, and then as you proceed through the implementation, continue to go through your thought process with me.",TUTOR
+2015-05-02,23:59:48,0,root,1430625589074,Please help,CONFUSION+HELP_REQUEST+HELP
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-03,00:16:48,0,VirtualCarolyn,1430626608850,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-03,00:16:54,0,VirtualCarolyn,1430626614907,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-03,00:17:07,0,VirtualCarolyn,1430626628926,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-03,00:19:08,0,VirtualCarolyn,1430626748973,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-03,00:21:37,0,root,1430626897666,i am done,AFFIRMATIVE+DONE
+2015-05-03,00:21:37,0,VirtualCarolyn,1430626899043,Let’s make sure you understand the problem by going through our three test cases.,TUTOR
+2015-05-03,00:21:37,0,VirtualCarolyn,1430626901048,"You saw in the instructions that if you input 0, it should print 2.",TUTOR
+2015-05-03,00:21:37,0,VirtualCarolyn,1430626901050,What happens if you input 9?,TUTOR
+2015-05-03,00:21:45,0,root,1430626905418,71,
+2015-05-03,00:21:48,0,VirtualCarolyn,1430626909054,Good work,TUTOR
+2015-05-03,00:21:48,0,VirtualCarolyn,1430626909055,How about an input of 16?,TUTOR
+2015-05-03,00:21:49,0,root,1430626909828,199,
+2015-05-03,00:21:53,0,VirtualCarolyn,1430626915059,Good job,TUTOR
+2015-05-03,00:21:53,0,VirtualCarolyn,1430626915061,"Great! You can hit “Submit” at any time to see what your program does given these three inputs (0, 9, 16).",TUTOR
+2015-05-03,00:21:53,0,VirtualCarolyn,1430626915062,"Okay, let’s get started. I’m here to listen how you think through the problem, and help you as much as you want. To begin with, talk through your plan with me, and then as you proceed through the implementation, continue to go through your thought process with me.",TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-03,00:27:16,0,VirtualCarolyn,1430627237643,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-03,00:27:21,0,VirtualCarolyn,1430627243703,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-03,00:27:35,0,VirtualCarolyn,1430627255712,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-03,00:28:16,0,VirtualCarolyn,1430627296543,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-03,00:28:21,0,VirtualCarolyn,1430627302581,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-03,00:28:35,0,VirtualCarolyn,1430627316590,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-03,00:28:52,0,root,1430627333013,i am done,AFFIRMATIVE+DONE
+2015-05-03,00:28:53,0,VirtualCarolyn,1430627334611,Let’s make sure you understand the problem by going through our three test cases.,TUTOR
+2015-05-03,00:28:53,0,VirtualCarolyn,1430627336621,"You saw in the instructions that if you input 0, it should print 2.",TUTOR
+2015-05-03,00:28:53,0,VirtualCarolyn,1430627336625,What happens if you input 9?,TUTOR
+2015-05-03,00:28:59,0,root,1430627339661,71,
+2015-05-03,00:29:03,0,VirtualCarolyn,1430627344631,Good work,TUTOR
+2015-05-03,00:29:03,0,VirtualCarolyn,1430627344637,How about an input of 16?,TUTOR
+2015-05-03,00:29:05,0,root,1430627345896,199,
+2015-05-03,00:29:08,0,VirtualCarolyn,1430627350646,Good job,TUTOR
+2015-05-03,00:29:08,0,VirtualCarolyn,1430627350648,"Great! You can hit “Submit” at any time to see what your program does given these three inputs (0, 9, 16).",TUTOR
+2015-05-03,00:29:08,0,VirtualCarolyn,1430627350650,"Okay, let’s get started. I’m here to listen how you think through the problem, and help you as much as you want. To begin with, talk through your plan with me, and then as you proceed through the implementation, continue to go through your thought process with me.",TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-03,00:31:17,0,VirtualCarolyn,1430627478414,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-03,00:31:23,0,VirtualCarolyn,1430627484431,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-03,00:31:37,0,VirtualCarolyn,1430627498438,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-03,00:31:41,0,root,1430627502060,i am done,AFFIRMATIVE+DONE
+2015-05-03,00:31:42,0,VirtualCarolyn,1430627502444,Let’s make sure you understand the problem by going through our three test cases.,TUTOR
+2015-05-03,00:31:42,0,VirtualCarolyn,1430627504451,"You saw in the instructions that if you input 0, it should print 2.",TUTOR
+2015-05-03,00:31:42,0,VirtualCarolyn,1430627504453,What happens if you input 9?,TUTOR
+2015-05-03,00:31:46,0,root,1430627506891,71,
+2015-05-03,00:31:47,0,VirtualCarolyn,1430627508456,Perfect,TUTOR
+2015-05-03,00:31:47,0,VirtualCarolyn,1430627508459,How about an input of 16?,TUTOR
+2015-05-03,00:31:49,0,root,1430627509169,199,
+2015-05-03,00:31:52,0,VirtualCarolyn,1430627512463,Wonderful,TUTOR
+2015-05-03,00:31:52,0,VirtualCarolyn,1430627512465,"Great! You can hit “Submit” at any time to see what your program does given these three inputs (0, 9, 16).",TUTOR
+2015-05-03,00:31:52,0,VirtualCarolyn,1430627512467,"Okay, let’s get started. I’m here to listen how you think through the problem, and help you as much as you want. To begin with, talk through your plan with me, and then as you proceed through the implementation, continue to go through your thought process with me.",TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-03,00:36:03,0,VirtualCarolyn,1430627765129,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-03,00:36:09,0,VirtualCarolyn,1430627771148,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-03,00:40:05,0,VirtualCarolyn,1430628006850,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-03,00:40:11,0,VirtualCarolyn,1430628012868,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-03,00:40:24,0,VirtualCarolyn,1430628026905,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-03,00:42:17,0,VirtualCarolyn,1430628138781,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-03,00:42:23,0,VirtualCarolyn,1430628144797,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-03,00:42:36,0,VirtualCarolyn,1430628158815,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-03,00:43:31,0,VirtualCarolyn,1430628213149,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-03,00:43:37,0,VirtualCarolyn,1430628219165,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-03,00:43:51,0,VirtualCarolyn,1430628231177,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-03,00:44:31,0,VirtualCarolyn,1430628272654,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-03,00:44:37,0,VirtualCarolyn,1430628278671,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-03,00:46:06,0,VirtualCarolyn,1430628367634,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-03,00:46:11,0,VirtualCarolyn,1430628373650,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-03,00:46:23,0,root,1430628383499,please help,CONFUSION+HELP_REQUEST+HELP
+2015-05-03,00:46:23,0,VirtualCarolyn,1430628383674,Do you want to talk more about the structure of your main method?,TUTOR
+2015-05-03,00:46:25,0,VirtualCarolyn,1430628385677,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-03,00:48:23,0,VirtualCarolyn,1430628503761,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-03,00:48:25,0,VirtualCarolyn,1430628505777,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-03,00:51:23,0,VirtualCarolyn,1430628683869,"Okay, let me know if you change your mind later.",TUTOR
+2015-05-03,00:51:25,0,VirtualCarolyn,1430628685871,Are you ready to get started?,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-03,01:01:28,0,VirtualCarolyn,1430629289796,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-03,01:01:34,0,VirtualCarolyn,1430629295811,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-03,01:01:47,0,VirtualCarolyn,1430629307816,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-03,01:03:06,0,root,1430629387040,please help,CONFUSION+HELP_REQUEST+HELP
+2015-05-03,01:03:07,0,VirtualCarolyn,1430629387865,Do you want to talk more about the structure of your main method?,TUTOR
+2015-05-03,01:03:47,0,VirtualCarolyn,1430629427880,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-03,01:05:07,0,VirtualCarolyn,1430629507910,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-03,01:06:47,0,VirtualCarolyn,1430629607957,Are you ready to get started?,TUTOR
+2015-05-03,01:08:07,0,VirtualCarolyn,1430629687994,"Okay, let me know if you change your mind later.",TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-03,01:18:01,0,VirtualCarolyn,1430630283151,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-03,01:18:07,0,VirtualCarolyn,1430630289193,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-03,01:18:20,0,VirtualCarolyn,1430630301201,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-03,01:18:21,0,root,1430630302253,I am done,AFFIRMATIVE+DONE
+2015-05-03,01:18:22,0,VirtualCarolyn,1430630303206,Let’s make sure you understand the problem by going through our three test cases.,TUTOR
+2015-05-03,01:18:22,0,VirtualCarolyn,1430630305211,"You saw in the instructions that if you input 0, it should print 2.",TUTOR
+2015-05-03,01:18:22,0,VirtualCarolyn,1430630305214,What happens if you input 9?,TUTOR
+2015-05-03,01:18:27,0,root,1430630307536,71,
+2015-05-03,01:18:32,0,VirtualCarolyn,1430630313219,Good work,TUTOR
+2015-05-03,01:18:32,0,VirtualCarolyn,1430630313222,How about an input of 16?,TUTOR
+2015-05-03,01:18:34,0,root,1430630314714,199,
+2015-05-03,01:18:37,0,VirtualCarolyn,1430630319229,Spot on,TUTOR
+2015-05-03,01:18:37,0,VirtualCarolyn,1430630319232,"Great! You can hit “Submit” at any time to see what your program does given these three inputs (0, 9, 16).",TUTOR
+2015-05-03,01:18:37,0,VirtualCarolyn,1430630319239,"Okay, let’s get started. I’m here to listen how you think through the problem, and help you as much as you want. To begin with, talk through your plan with me, and then as you proceed through the implementation, continue to go through your thought process with me.",TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-03,01:26:14,0,VirtualCarolyn,1430630774875,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-03,01:26:20,0,VirtualCarolyn,1430630780924,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-03,01:26:33,0,VirtualCarolyn,1430630794936,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-03,01:28:33,0,VirtualCarolyn,1430630914988,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-03,01:31:33,0,VirtualCarolyn,1430631095063,Are you ready to get started?,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-03,01:32:23,0,VirtualCarolyn,1430631144500,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-03,01:32:29,0,VirtualCarolyn,1430631150552,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-03,01:32:43,0,VirtualCarolyn,1430631164560,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-03,01:34:43,0,VirtualCarolyn,1430631284600,That's not quite what I'm looking for...try rephrasing?,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-03,01:36:46,0,VirtualCarolyn,1430631406764,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-03,01:36:52,0,VirtualCarolyn,1430631412785,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-03,01:37:06,0,VirtualCarolyn,1430631426792,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-03,01:39:06,0,VirtualCarolyn,1430631547009,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-03,01:42:06,0,VirtualCarolyn,1430631727128,Are you ready to get started?,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-03,14:02:26,0,VirtualCarolyn,1430676148395,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-03,14:02:32,0,VirtualCarolyn,1430676154443,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-03,14:02:46,0,VirtualCarolyn,1430676166458,"You have 50 minutes to work on the problem. Do as much as possible, but don�t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you�re done.",TUTOR
+2015-05-03,14:04:46,0,VirtualCarolyn,1430676286575,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-03,14:07:46,0,VirtualCarolyn,1430676466794,Are you ready to get started?,TUTOR

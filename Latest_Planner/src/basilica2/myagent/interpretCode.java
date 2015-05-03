@@ -29,46 +29,50 @@ public class interpretCode {
 			}
 		}
 		//For now, we're going to treat the longest line of the diff as the entire diff
-		diff = mostImpt;
+		//diff = mostImpt;
 		diff = diff.replaceAll("\\(", "\\\\(");
 		diff = diff.replaceAll("\\)", "\\\\)");
 		diff = diff.replaceAll("\\{", "\\\\{");
 		diff = diff.replaceAll("\\}", "\\\\}");
 		System.out.print("Will be looking for pattern: ");
 		System.out.println(diff);
+		System.out.println("in " + code);
 		Pattern d = Pattern.compile(diff);
 		
 		//Read in lines of the code
 		BufferedReader codeReader = new BufferedReader(new StringReader(code));
 		for (String line = codeReader.readLine(); line != null; line = codeReader.readLine()) {
-		    System.out.println("Looking at line: ");
-		    System.out.println(line);
+		    //System.out.println("Looking at line: ");
+		    //System.out.println(line);
 			//first see if the line is a method signature
 			Matcher m = method.matcher(line);
 			if (m.matches()) {
+				currentSection = "";
 				String methodName = m.group(2);
 			    System.out.print("Found a method name: ");
 			    System.out.println(methodName);
+			    
 				Matcher circularPrimeName = isCircularPrimePat.matcher(methodName);
 				Matcher primeName = isPrimePat.matcher(methodName);
 				Matcher rotateName = rotatePat.matcher(methodName);
-				if (circularPrimeName.matches()) {
+
+				if (circularPrimeName.find()) {
 				    System.out.println("Method: is_circular_prime");
 					currentSection = "is_circular_prime";
-				} else if(primeName.matches()) {
+				} else if(primeName.find()) {
 				    System.out.println("Method: is_prime");
 					currentSection = "is_prime";
-				} else if(rotateName.matches()) {
+				} else if(rotateName.find()) {
 				    System.out.println("Method: rotate");
 					currentSection = "rotate";
-				} else if(methodName == "main") {
-				    System.out.println("main");
+				} else if(methodName.equals("main")) {
+				    System.out.println("Method: main");
 					currentSection = "main";
 				}
 			}
 			Matcher currentLine = d.matcher(line);
 			if (currentLine.matches()) {
-			    System.out.println("Found my match");
+			    System.out.println("Found my match : " + currentSection);
 				//Identified the location of the diff
 				//But wait, this will cause problems if the same line is repeated...
 				//Or if the diff is more than one line...
