@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scenario SYSTEM "TuTalkScenario.dtd">
+<scenario default-language="en" scenario-name="scenario-template">
+	<configuration>
+		
+		<!-- It *is* possible to hook up a LightSide classifier to TuTalk, 
+		such that the predicted labels are treated as concepts. 
+		but not today. -->
+
+	</configuration>
+	
+	<!-- 'Concepts' define things that students might say,
+	     AND things that the tutor might say back. 
+	     Tutor concepts should take the form of phrase lists.
+		 Student concepts can be phrase lists, 
+		 regular expressions, or lists of annotations,
+	     but only one of these at a time. -->
+		
+	<concepts>
+		<!-- this is a special kind of concept for catching unexpected student responses -->
+		<concept label="unanticipated-response">
+			<phrase>anything else</phrase>
+		</concept>
+		
+		
+		<!-- tutor concepts. -->
+		<!-- the tutor will choose randomly between multiple phrases for a concept. -->	
+
+		<concept label="introduction">
+			<phrase>In this problem, you're finding the nth circular prime.</phrase>
+		</concept>
+		
+		<concept label="conclusion">
+			<phrase>Seems like you understand pretty well.</phrase>
+		</concept>
+		
+		<concept label="ask-concept-1">
+			<phrase>Do you understand what a circular prime is?</phrase>
+		</concept>
+		
+		<concept label="ask-concept-2">
+			<phrase>Do you understand what's meant by nth?</phrase>
+		</concept>
+		
+		<concept label="explain-concept-1">
+			<phrase>A circular prime is one where you can re-arrange the digits - not in any order, but by rotating them - and any resulting number will also be prime.</phrase>
+		</concept>
+		
+		<concept label="explain-concept-2">
+			<phrase>Essentially you're creating a 0-indexed list of primes, and stopping when you reach number n, and returning it.</phrase>
+		</concept>
+		
+		<concept label="ok">
+			<phrase>Okay</phrase>
+			<phrase>Good</phrase>
+			<phrase>Great</phrase>
+			<phrase>Correct!</phrase>
+			<phrase>Wonderful</phrase>
+			<phrase>Perfect</phrase>
+			<phrase>Exactly</phrase>
+			<phrase>You're right</phrase>
+			<phrase>Spot on</phrase>
+			<phrase>Good work</phrase>
+			<phrase>That's correct</phrase>
+			<phrase>Good job</phrase>
+		</concept>
+		
+		<concept label="wrong">
+			<phrase>Not quite...</phrase>
+			<phrase>Almost...</phrase>
+			<phrase>Sorry...</phrase>
+			<phrase>Try again?</phrase>
+		</concept>
+		<!-- end tutor concepts. -->
+		
+		
+		<!-- student concepts. -->
+		
+		<!-- these match against external (MessageAnnotator) annotations. -->
+		<concept label="yes" type="annotation">
+			<phrase>AFFIRMATIVE</phrase>
+		</concept>
+		
+		<concept label="no" type="annotation">
+			<phrase>NEGATIVE</phrase>
+		</concept>
+		
+		<!-- these match against regular expressions. -->
+		
+		<concept label="concept-1-right-answer" type="annotation">
+			<phrase>DESCRIBE_CIRCULAR_PRIME</phrase>
+			<phrase>AFFIRMATIVE</phrase>
+		</concept>
+		
+		<concept label="concept-2-right-answer" type="annotation">
+			<phrase>DESCRIBE_NTH</phrase>
+			<phrase>AFFIRMATIVE</phrase>
+		</concept>
+			
+		<!-- end student concepts. -->
+		
+	</concepts>
+	
+	
+	<script>
+		<goal name="start" difficulty="0">
+			
+			<!--   <step>-->
+				<!-- OPTIONAL INTRODUCTION  -->
+				<!--   <initiation>introduction</initiation>
+			</step> -->
+			
+			<step>
+				<!-- Every step begins with an initiating concept or literal phrase -->
+				<initiation>ask-concept-1</initiation>
+				
+				<!-- These are the "response" options. 
+					If the concept between the tags matches the student statement, 
+				    the "say" concept/phrase will be delivered by the tutor.
+				    "push" adds another goal to the dialogue's stack. 
+					 Note that goals should NOT be recursively nested. -->
+				
+				<response push="concept_2" say="explain-concept-1">concept-1-right-answer</response>
+                
+				<!-- unanticipated-response is special: it's anything that doesn't match one of the above. -->
+				<response push="concept_2" say="explain-concept-1">unanticipated-response</response>
+			</step>
+			
+			
+			<step>
+				<initiation>conclusion</initiation>
+			</step>
+		</goal>
+		
+		<!-- Goals are referenced by their names. "difficulty" is meaningless for now. -->
+		
+		<goal name="concept_2" difficulty="0">
+			<step>
+				<initiation>ask-concept-2</initiation>
+                <response say="explain-concept-2">concept-2-right-answer</response>
+                <response say="explain-concept-2">unanticipated-response</response>
+			</step>
+		</goal>
+		
+	</script>
+
+</scenario>

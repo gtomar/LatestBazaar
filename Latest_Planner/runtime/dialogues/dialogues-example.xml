@@ -10,6 +10,13 @@
         <cancel>Are you ready to get started?</cancel>
     </dialog>
     
+    <dialog concept="NTH_CIRCULAR_PRIME" scenario="scenario-nth-circular-prime">
+    <intro>Do you want to review the instructions for the assignment?</intro>
+    <accept annotation="AFFIRMATIVE">All right</accept>
+    <cancel annotation="NEGATIVE">No problem</cancel>  
+    
+    </dialog>
+    
     <!-- TO-DO: Distinguish this from MAIN_ARGS_TOP -->
     <dialog concept="MAIN" scenario="scenario-main">	
     	<intro>Do you want to talk more about the structure of your main method?</intro>
