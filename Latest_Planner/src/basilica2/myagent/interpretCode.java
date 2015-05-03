@@ -37,6 +37,7 @@ public class interpretCode {
 		System.out.print("Will be looking for pattern: ");
 		System.out.println(diff);
 		System.out.println("in " + code);
+		
 		Pattern d = Pattern.compile(diff);
 		
 		//Read in lines of the code
@@ -79,6 +80,8 @@ public class interpretCode {
 				return currentSection;
 			}
 		}
+		
+		
 		
 		return "unknown";
 	}
