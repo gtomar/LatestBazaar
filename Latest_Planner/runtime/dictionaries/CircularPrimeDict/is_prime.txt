@@ -4,3 +4,4 @@
 /primality/
 /method.+prim(e|ality)/
 /prim(e|ality).+method/
+/identify.+prime/
