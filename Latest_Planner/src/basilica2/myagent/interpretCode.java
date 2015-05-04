@@ -8,6 +8,56 @@ import java.util.regex.Pattern;
 
 public class interpretCode {
 	
+    public String getTopic(String diff, String method) {
+
+	//Main method
+	if (method.equals("main")) {
+	    if (Pattern.matches(".*args\\[.*", diff)) {
+		return "main_argument";
+	    } else if (Pattern.matches(".*(c|C)ircular(p|P)rime[a-zA-Z]*\\(.*", diff)) {
+		return "main_circular_primes";
+	    } else if (Pattern.matches(".*= ?0;.*", diff)) {
+		return "main_iter_n";
+	    } else if (Pattern.matches(".*= ?2;.*", diff)) {
+		return "main_iter_all";
+	    }
+	}
+	
+	//is_circular_prime method
+	if (method.equals("is_circular_prime")) {
+	    if (Pattern.matches(".*length\\(.*", diff)) {
+		return "circprime_iteration";
+	    } else if (Pattern.matches(".*(p|P)rime[a-zA-Z]+\\(.*", diff)) {
+		return "circprime_isprime";
+	    } else if (Pattern.matches(".*(r|R)otat[a-zA-Z]+\\(.*", diff)) {
+		return "circprime_rotate";
+	    }
+	}
+
+	//is_prime method
+	if (method.equals("is_prime")) {
+	    //The "method" section just involves identifying a method, not really writing code. Now that I think about it, maybe this is a bad way to divide things? But for now I will not try to identify that section
+	    if (Pattern.matches(".*[a-z] ?(/|%) ?[a-z].*", diff)) {
+		return "isprime_divide";
+	    } else if (Pattern.matches(".*= ?2;.*", diff)) {
+		return "isprime_iteration";
+	    }
+	}
+	    
+	//rotate method
+	if (method.equals("rotate")) {
+	    if (Pattern.matches(".*[a-z] ?(+) ?[a-z].*", diff)) {
+		return "rotate_concat";
+	    } else if (Pattern.matches(".*substring.*", diff)) {
+		return "substring";
+	    }
+	}
+
+	//didn't identify anything
+	return method;
+
+    }
+	
 	public String getMethod(String code, String diff) throws IOException {
 		//possible currentSections are "main", "isCircularPrime," "isPrime," "rotate", "unknown"
 		String currentSection = "";
@@ -68,7 +118,8 @@ public class interpretCode {
 			//System.out.println(diff);
 			if (line.equals(diff)) {
 			    //System.out.println("found my match in line");
-			    return currentSection;
+			    String currentTopic = getTopic(diff, currentSection);
+			    return currentTopic;
 			    //This will still cause problems if the line is repeated verbatim in multiple places in the code
 			}
 		}
