@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import edu.cmu.cs.lti.basilica2.core.Event;
+import edu.cmu.cs.lti.project911.utils.log.Logger;
 import basilica2.agents.components.InputCoordinator;
 import basilica2.agents.events.CodeEvent;
 import basilica2.agents.events.MessageEvent;
@@ -17,7 +18,11 @@ import basilica2.agents.events.priority.PriorityEvent.Callback;
 import basilica2.agents.listeners.BasilicaPreProcessor;
 import basilica2.social.events.DormantStudentEvent;
 import basilica2.tutor.events.DoTutoringEvent;
+import basilica2.agents.listeners.BasilicaAdapter;
 
+import edu.cmu.cs.lti.basilica2.core.Agent;
+import edu.cmu.cs.lti.basilica2.core.Event;
+import edu.cmu.cs.lti.project911.utils.log.Logger;
 
 import org.apache.xerces.parsers.DOMParser;
 import org.w3c.dom.Document;
@@ -28,7 +33,7 @@ import basilica2.myagent.Code;
 import basilica2.myagent.PlanTree;
 import basilica2.myagent.interpretCode;
 
-public class PlanWatcher implements BasilicaPreProcessor
+public class PlanWatcher extends BasilicaAdapter implements BasilicaPreProcessor 
 {
     
 	private String plan;
@@ -39,8 +44,9 @@ public class PlanWatcher implements BasilicaPreProcessor
 
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public PlanWatcher() 
+	public PlanWatcher(Agent a) 
     {
+		super(a);
 		Date date= new Date();
 		plan="";
     	tree = new PlanTree("ROOT");
@@ -233,6 +239,7 @@ public class PlanWatcher implements BasilicaPreProcessor
 				{
 					sendMethodEvent(source, s);
 					System.out.println("sent method proposal => " + s);
+					log(Logger.LOG_NORMAL, "plan after message event => " + plan);
 				}
 				
 				printTree(tree);
@@ -246,8 +253,6 @@ public class PlanWatcher implements BasilicaPreProcessor
 				else if(s.equals("HELP"))
 				{           
 					PlanTree parent  = currentTree.root.parent;
-					System.out.println("HELP : " + currentTree.root.name);
-					System.out.println("PLAN : " + plan);
 					String key = findUnidentifiedConcept(parent);
 					while(key==null)
 					{
@@ -287,12 +292,21 @@ public class PlanWatcher implements BasilicaPreProcessor
 		}
 		else if (event instanceof CodeEvent)
 		{
+			
+			
 			code.insertTextChanges.add(((CodeEvent) event).insertTextChange);
 			code.insertLinesChanges.add(((CodeEvent) event).insertLinesChange);
 			code.deleteTextChanges.add(((CodeEvent) event).deleteTextChange);
 			code.deleteLinesChanges.add(((CodeEvent) event).deleteLinesChange);
 			code.fullTextChanges.add(((CodeEvent) event).fullTextChange);
 			code.overallChange =((CodeEvent) event).overallChange;
+			
+			int length = code.insertTextChanges.size();
+			String previous_change = "";
+			if(length >= 2)
+			{
+				previous_change = code.insertTextChanges.get(length-2);
+			}
 			
 			System.out.println(((CodeEvent) event).insertTextChange);
 			System.out.println(((CodeEvent) event).insertLinesChange);
@@ -310,9 +324,9 @@ public class PlanWatcher implements BasilicaPreProcessor
 				e.printStackTrace();
 			}
 			System.out.println("method1 # " + method1);
-			if(method1 != "unknown" && findInTree(tree,method1))
+			if(findInTree(tree,method1.toUpperCase()))
 			{
-				System.out.println("method => " + method1);
+				System.out.println("method1 => " + method1);
 			}
 			
 			
@@ -324,15 +338,33 @@ public class PlanWatcher implements BasilicaPreProcessor
 				e.printStackTrace();
 			}
 			System.out.println("method2 # " + method2);
-			if(method2 != "unknown" && findInTree(tree,method2))
+			if(findInTree(tree,method2.toUpperCase()))
 			{
-				System.out.println("method => " + method2);
+				System.out.println("method2 => " + method2);
+			}
+		
+			String method3 = "unknown";
+			try {
+				method3 = interpretcode.getMethod(code.overallChange, previous_change + ((CodeEvent) event).insertLinesChange);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			System.out.println("method3 # " + method3);
+			if(findInTree(tree,method3.toUpperCase()))
+			{
+				System.out.println("method3 => " + method3);
 			}
 			
-			
-			
-			
-			
+
+			log(Logger.LOG_NORMAL, "insertTextChange: " + ((CodeEvent) event).insertTextChange + "\n" +
+					               "insertLinesChange: " + ((CodeEvent) event).insertLinesChange + "\n" +
+					               "previous change: " + previous_change + "\n" +
+					               "method1: " + method1 + "\n" +
+					               "method2: " + method2 + "\n" +
+					               "method3: " + method3);
+			log(Logger.LOG_NORMAL, "Code => " + ((CodeEvent) event).overallChange);
+			log(Logger.LOG_NORMAL, "plan after code event => " + plan);
 			
 		}
 		else if (event instanceof DormantStudentEvent)
@@ -396,5 +428,19 @@ public class PlanWatcher implements BasilicaPreProcessor
 	{
 		//only MessageEvents will be delivered to this watcher.
 		return new Class[]{MessageEvent.class, ReadyEvent.class, DormantStudentEvent.class, CodeEvent.class};
+	}
+
+
+	@Override
+	public void processEvent(InputCoordinator source, Event event) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public Class[] getListenerEventClasses() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

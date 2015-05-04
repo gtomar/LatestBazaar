@@ -8,15 +8,15 @@ import java.util.regex.Pattern;
 
 public class interpretCode {
 	
-	public static String getMethod(String code, String diff) throws IOException {
+	public String getMethod(String code, String diff) throws IOException {
 		//possible currentSections are "main", "isCircularPrime," "isPrime," "rotate", "unknown"
 		String currentSection = "";
 		
 		//Set up regular expressions for identifying the current method
-		Pattern method = Pattern.compile("(public|private).* ([a-zA-Z0-9]+)\\(.+\\) ?\\{");
-		Pattern isCircularPrimePat = Pattern.compile(".*(prim.*circ|circ.*prim)");
-		Pattern isPrimePat = Pattern.compile(".*prim.*");
-		Pattern rotatePat = Pattern.compile("rotat");
+		Pattern method = Pattern.compile(".*(public|private).* ([a-zA-Z0-9]+)\\(.*\\) ?\\{.*");
+		Pattern isCircularPrimePat = Pattern.compile(".*((p|P)rim.*(c|C)irc|(c|C)irc.*(p|P)rim)");
+		Pattern isPrimePat = Pattern.compile(".*(p|P)rim.*");
+		Pattern rotatePat = Pattern.compile("(r|R)otat");
 		
 		//Set up regex to find location of diff
 		BufferedReader diffReader = new BufferedReader(new StringReader(diff));
@@ -29,18 +29,10 @@ public class interpretCode {
 			}
 		}
 		//For now, we're going to treat the longest line of the diff as the entire diff
-		//diff = mostImpt;
-		diff = diff.replaceAll("\\(", "\\\\(");
-		diff = diff.replaceAll("\\)", "\\\\)");
-		diff = diff.replaceAll("\\{", "\\\\{");
-		diff = diff.replaceAll("\\}", "\\\\}");
-		System.out.print("Will be looking for pattern: ");
-		System.out.println(diff);
-		System.out.println("in " + code);
-		
-		Pattern d = Pattern.compile(diff);
-		
+		diff = mostImpt;
+		System.out.println("Pattern: " + diff);
 		//Read in lines of the code
+				currentSection = "";
 		BufferedReader codeReader = new BufferedReader(new StringReader(code));
 		for (String line = codeReader.readLine(); line != null; line = codeReader.readLine()) {
 		    //System.out.println("Looking at line: ");
@@ -48,11 +40,10 @@ public class interpretCode {
 			//first see if the line is a method signature
 			Matcher m = method.matcher(line);
 			if (m.matches()) {
-				currentSection = "";
+			    //System.out.println("found a method");
 				String methodName = m.group(2);
 			    System.out.print("Found a method name: ");
 			    System.out.println(methodName);
-			    
 				Matcher circularPrimeName = isCircularPrimePat.matcher(methodName);
 				Matcher primeName = isPrimePat.matcher(methodName);
 				Matcher rotateName = rotatePat.matcher(methodName);
@@ -71,13 +62,14 @@ public class interpretCode {
 					currentSection = "main";
 				}
 			}
-			Matcher currentLine = d.matcher(line);
-			if (currentLine.matches()) {
-			    System.out.println("Found my match : " + currentSection);
-				//Identified the location of the diff
-				//But wait, this will cause problems if the same line is repeated...
-				//Or if the diff is more than one line...
-				return currentSection;
+			//System.out.println("Comparing line: ");
+			//System.out.println(line);
+			//System.out.println("and diff: ");
+			//System.out.println(diff);
+			if (line.equals(diff)) {
+			    //System.out.println("found my match in line");
+			    return currentSection;
+			    //This will still cause problems if the line is repeated verbatim in multiple places in the code
 			}
 		}
 		
@@ -85,7 +77,6 @@ public class interpretCode {
 		
 		return "unknown";
 	}
-
 	
 
 }

@@ -349,7 +349,7 @@ public class WebsocketChatClient extends Component implements ChatClient
 			{
 				System.out.println("Ignoring historical messages.");
 			}
-			
+	
 			else
 			{
 				System.out.println("Server triggered unhandled event '" + event + "'");
