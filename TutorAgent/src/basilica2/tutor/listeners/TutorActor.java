@@ -555,6 +555,13 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 		//TODONE: fire pp TutorTurnsEvent too
 		String[] turns = tutorTurns.toArray(new String[0]);
 		TutorTurnsEvent tte = new TutorTurnsEvent(source, turns);
+		
+		//gst : should it be here
+		if(turns.length == 0)
+		{
+			return;
+		}
+		
 		source.queueNewEvent(tte);
 		//PriorityEvent pete = PriorityEvent.makeBlackoutEvent("TUTOR_DIALOG", new MessageEvent(source, getAgent().getUsername(), join(turns), "TUTOR"), 1.0, 45, 10);
 		//((BlacklistSource)pete.getSource()).addExceptions("TUTOR_DIALOG");

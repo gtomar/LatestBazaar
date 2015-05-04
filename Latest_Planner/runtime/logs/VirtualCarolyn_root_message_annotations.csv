@@ -612,3 +612,9 @@ DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
 2015-05-03,14:02:46,0,VirtualCarolyn,1430676166458,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
 2015-05-03,14:04:46,0,VirtualCarolyn,1430676286575,That's not quite what I'm looking for...try rephrasing?,TUTOR
 2015-05-03,14:07:46,0,VirtualCarolyn,1430676466794,Are you ready to get started?,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-04,15:58:12,0,VirtualCarolyn,1430769492883,...,END_MACRO
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-04,16:06:24,0,VirtualCarolyn,1430769986782,...,END_MACRO
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-04,16:11:52,0,VirtualCarolyn,1430770313174,...,END_MACRO
