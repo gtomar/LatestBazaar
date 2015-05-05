@@ -124,13 +124,15 @@ Okay?</intro>
 	         <CONCEPT2 name="MAIN_ITER_N_TOP" detailed_name="the iteration in the main method" priority="1"></CONCEPT2>
 	         <CONCEPT2 name="IS_CIRCULAR_PRIME" detailed_name="a method to find if a number is a circular prime" priority="1">
 	         	<CONCEPT3 name="CIRCPRIME_ITER_TOP" detailed_name="the iteration in your circular prime method" priority="1"></CONCEPT3>
-	         	<CONCEPT3 name="ROTATE" detailed_name="a method to rotate a number" priority="1"></CONCEPT3>
+	         	<CONCEPT3 name="ROTATE" detailed_name="a method to rotate a number" priority="1">
 	         		<CONCEPT4 name="ROTATE_SUBSTRING_TOP" detailed_name="taking substrings within your rotate method" priority="1"></CONCEPT4>
 	         		<CONCEPT4 name="ROTATE_CONCAT_TOP" detailed_name="concatenating strings together" priority="1"></CONCEPT4>
-	         	<CONCEPT3 name="IS_PRIME"  detailed_name="a method to find if a number is a prime or not" priority="1"></CONCEPT3>
+	         	</CONCEPT3>
+	         	<CONCEPT3 name="IS_PRIME"  detailed_name="a method to find if a number is a prime or not" priority="1">
 	         		<CONCEPT4 name="PRIME_METHOD_TOP" detailed_name="a design for your isPrime method" priority="1"></CONCEPT4>
 	         		<CONCEPT4 name="PRIME_ITER_TOP" detailed_name="iteration in the isPrime method" priority="1"></CONCEPT4>
 	         		<CONCEPT4 name="PRIME_DIVIDE_TOP" detailed_name="checking divisibility in the isPrime method" priority="1"></CONCEPT4>
+	         	</CONCEPT3>
 	         </CONCEPT2>
         </CONCEPT1>
 	</CONCEPT>

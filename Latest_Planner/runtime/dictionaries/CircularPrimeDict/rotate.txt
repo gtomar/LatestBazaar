@@ -1,2 +1,4 @@
 /rotat(e|ion)/
 /transform/
+/rotat/
+/permut/
