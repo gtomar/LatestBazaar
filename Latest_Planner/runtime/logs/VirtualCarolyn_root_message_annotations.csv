@@ -618,3 +618,9 @@ DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
 2015-05-04,16:06:24,0,VirtualCarolyn,1430769986782,...,END_MACRO
 DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
 2015-05-04,16:11:52,0,VirtualCarolyn,1430770313174,...,END_MACRO
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-04,16:16:27,0,VirtualCarolyn,1430770588872,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-04,16:16:33,0,VirtualCarolyn,1430770594895,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-04,16:16:46,0,VirtualCarolyn,1430770606910,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-04,16:18:46,0,VirtualCarolyn,1430770726950,That's not quite what I'm looking for...try rephrasing?,TUTOR
+2015-05-04,16:21:46,0,VirtualCarolyn,1430770907020,Are you ready to get started?,TUTOR

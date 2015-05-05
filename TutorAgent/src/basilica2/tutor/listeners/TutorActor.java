@@ -89,7 +89,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	private InputCoordinator source;
 	
 	private double tutorMessagePriority = 0.75;
-	private boolean interruptForNewDialogues = false;
+	private boolean interruptForNewDialogues = true;
 	private boolean startAnyways = true;//gst edited it to true
 	private String dialogueFolder = "dialogs";
 	

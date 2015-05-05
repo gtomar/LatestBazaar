@@ -16,6 +16,7 @@ import basilica2.agents.events.ReadyEvent;
 import basilica2.agents.events.priority.PriorityEvent;
 import basilica2.agents.events.priority.PriorityEvent.Callback;
 import basilica2.agents.listeners.BasilicaPreProcessor;
+import basilica2.social.events.DormantGroupEvent;
 import basilica2.social.events.DormantStudentEvent;
 import basilica2.tutor.events.DoTutoringEvent;
 import basilica2.agents.listeners.BasilicaAdapter;
@@ -367,7 +368,7 @@ public class PlanWatcher extends BasilicaAdapter implements BasilicaPreProcessor
 			log(Logger.LOG_NORMAL, "plan after code event => " + plan);
 			
 		}
-		else if (event instanceof DormantStudentEvent)
+		else if (event instanceof DormantStudentEvent || event instanceof DormantGroupEvent)
 		{
 			Date date= new Date();
 			Timestamp currentTimestamp = new Timestamp(date.getTime());
@@ -427,7 +428,7 @@ public class PlanWatcher extends BasilicaAdapter implements BasilicaPreProcessor
 	public Class[] getPreprocessorEventClasses()
 	{
 		//only MessageEvents will be delivered to this watcher.
-		return new Class[]{MessageEvent.class, ReadyEvent.class, DormantStudentEvent.class, CodeEvent.class};
+		return new Class[]{MessageEvent.class, ReadyEvent.class, DormantStudentEvent.class, CodeEvent.class, DormantGroupEvent.class};
 	}
 
 

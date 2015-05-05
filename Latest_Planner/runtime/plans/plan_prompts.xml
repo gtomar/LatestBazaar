@@ -28,7 +28,7 @@
     </prompt> 
     
     <prompt strategy="task" id="END_MACRO">
-    	<text>...</text>
+    	<text>Time’s up. Thank you for participating! Your help is essential to our research efforts.</text>
     </prompt>
     
     <prompt strategy="task" id="ABOUT_ACCOUNTABLE_TALK">

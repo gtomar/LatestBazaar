@@ -16,16 +16,17 @@
         
     </stage>
     <stage name="body" type="other" delay="5">
-        <!--  <step type="prompt" delay="0" prompt="INTRO_SHORT" >ABOUT_TUTORIALS_STEP</step>
+        <step type="prompt" delay="0" prompt="INTRO_SHORT" >ABOUT_TUTORIALS_STEP</step>
         <step type="prompt" delay="2" prompt="WARNING">ABOUT_TUTORIALS_STEP</step>
         <step type="dialogue" delay="5" dialogue="INSTRUCTION_REVIEW">DEMO_TUTORIAL</step>
-        <step type="dialogue" delay="5" dialogue="NTH_CIRCULAR_PRIME">DEMO_TUTORIAL</step> -->
+        <step type="dialogue" delay="3000" dialogue="NTH_CIRCULAR_PRIME">DEMO_TUTORIAL</step>
         <!-- Uncomment this (and comment above) to go through dialog components sequentially
         <step type="dialogue"  delay="5" dialogue="GOAL_IDENTIFICATION">DEMO_TUTORIAL</step>
         <step type="dialogue"  delay="5" dialogue="MAIN">DEMO_TUTORIAL</step>
         <step type="dialogue"  delay="5" dialogue="IS_CIRCULAR_PRIME">DEMO_TUTORIAL</step>
     	<step type="dialogue"  delay="5" dialogue="IS_PRIME">DEMO_TUTORIAL</step>
     	<step type="dialogue"  delay="5" dialogue="ROTATE">DEMO_TUTORIAL</step>  -->
-        <step type="prompt" delay="5" prompt="END_MACRO" >Actually, it looks like you're done planning. Good work!</step>
+        <step type="prompt" delay="300" prompt="END_MACRO" >Actually, it looks like you're done planning. Good work!</step>
+        
     </stage>
 </plan>
