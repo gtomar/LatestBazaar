@@ -33,7 +33,7 @@
     </dialog>
     
     <!-- TO-DO: Distinguish this from IS_CIRCULAR_PRIME -->
-	<dialog concept="IS_PRIME" scenario="scenario-isprime" name="a method to find if a number is a prime or not">
+	<dialog concept="IS_PRIME" scenario="scenario-isprime">
     	
     	<intro>Let's go into some more detail about your method to identify primes, okay?</intro>
     	<accept annotation="AFFIRMATIVE">For the purposes of this problem, we recommend that you use a brute force method.</accept>
@@ -127,7 +127,7 @@ Okay?</intro>
 	         	<CONCEPT3 name="ROTATE" priority="1"></CONCEPT3>
 	         		<CONCEPT4 name="ROTATE_SUBSTRING_TOP" priority="1"></CONCEPT4>
 	         		<CONCEPT4 name="ROTATE_CONCAT_TOP" priority="1"></CONCEPT4>
-	         	<CONCEPT3 name="IS_PRIME" priority="1"></CONCEPT3>
+	         	<CONCEPT3 name="IS_PRIME"  detailed_name="a method to find if a number is a prime or not" priority="1"></CONCEPT3>
 	         		<CONCEPT4 name="PRIME_METHOD_TOP" priority="1"></CONCEPT4>
 	         		<CONCEPT4 name="PRIME_ITER_TOP" priority="1"></CONCEPT4>
 	         		<CONCEPT4 name="PRIME_DIVIDE_TOP" priority="1"></CONCEPT4>
