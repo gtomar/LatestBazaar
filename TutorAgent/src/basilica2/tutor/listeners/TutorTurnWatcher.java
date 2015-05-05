@@ -143,7 +143,7 @@ public class TutorTurnWatcher extends BasilicaAdapter implements TimeoutReceiver
 	{
 		if (isCoordinating)
 		{
-			updateEpisodeLog(currentConcept, me.getFrom() + "\t" + me.getText(), "ST_TBA");
+			//updateEpisodeLog(currentConcept, me.getFrom() + "\t" + me.getText(), "ST_TBA");
 			studentTurns.add(me.getText());
 			contributors.add(me.getFrom());
 			annotations.addAll(Arrays.asList(me.getAllAnnotations()));

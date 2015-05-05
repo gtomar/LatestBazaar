@@ -46,7 +46,7 @@ public class interpretCode {
 	    
 	//rotate method
 	if (method.equals("rotate")) {
-	    if (Pattern.matches(".*[a-z] ?(+) ?[a-z].*", diff)) {
+	    if (Pattern.matches(".*[a-z] ?(\\+) ?[a-z].*", diff)) {
 		return "rotate_concat";
 	    } else if (Pattern.matches(".*substring.*", diff)) {
 		return "substring";

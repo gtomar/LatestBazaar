@@ -624,3 +624,19 @@ DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
 2015-05-04,16:16:46,0,VirtualCarolyn,1430770606910,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
 2015-05-04,16:18:46,0,VirtualCarolyn,1430770726950,That's not quite what I'm looking for...try rephrasing?,TUTOR
 2015-05-04,16:21:46,0,VirtualCarolyn,1430770907020,Are you ready to get started?,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-04,23:31:13,0,VirtualCarolyn,1430796675505,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-04,23:31:21,0,VirtualCarolyn,1430796681785,I see you are working on your main method. Good! Let me know if you want to talk about it more.,STUCK
+2015-05-04,23:31:19,0,VirtualCarolyn,1430796683801,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-04,23:31:33,0,VirtualCarolyn,1430796693883,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-04,23:33:17,0,root,1430796799036,i am done,AFFIRMATIVE+DONE
+2015-05-04,23:33:19,0,VirtualCarolyn,1430796800600,Let’s make sure you understand the problem by going through our three test cases.,TUTOR
+2015-05-04,23:33:19,0,VirtualCarolyn,1430796802649,"You saw in the instructions that if you input 0, it should print 2.",TUTOR
+2015-05-04,23:33:19,0,VirtualCarolyn,1430796802669,What happens if you input 9?,TUTOR
+DATE,TIME,TYPING_DURATION,AUTHOR,NOTE,TEXT,ANNOTATIONS
+2015-05-04,23:36:52,0,VirtualCarolyn,1430797013093,Welcome! I'm VirtualCarolyn. I'm here to have an interactive dialogue with you to assist you in your programming task.,INTRO_SHORT
+2015-05-04,23:36:58,0,VirtualCarolyn,1430797019197,"WARNING: I am a WORK IN PROGRESS. Please be aware that for now, you MUST write your entire response in a SINGLE MESSAGE. Otherwise I will NOT UNDERSTAND YOU. Sorry...hopefully I'll be able to understand multiple messages soon.",WARNING
+2015-05-04,23:37:10,0,VirtualCarolyn,1430797031264,I see you are working on your main method. Good! Let me know if you want to talk about it more.,STUCK
+2015-05-04,23:37:12,0,VirtualCarolyn,1430797033277,"You have 50 minutes to work on the problem. Do as much as possible, but don’t worry about it if you are unable to finish.You can find a description of the problem at the top of your programming buffer. Please take a minute to read and understand it. Let me know when you’re done.",TUTOR
+2015-05-04,23:37:22,0,VirtualCarolyn,1430797043364,I see you are working on a method to rotate a number. Good! Let me know if you want to talk about it more.,STUCK
+2015-05-04,23:38:52,0,VirtualCarolyn,1430797133722,I see you are working on a method to find if a number is a prime or not. Good! Let me know if you want to talk about it more.,STUCK

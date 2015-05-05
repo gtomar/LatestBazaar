@@ -50,7 +50,7 @@ public class PlanWatcher extends BasilicaAdapter implements BasilicaPreProcessor
 		super(a);
 		Date date= new Date();
 		plan="";
-    	tree = new PlanTree("ROOT");
+    	tree = new PlanTree("ROOT", "ROOT");
     	currentTree = tree;
     	code = new Code(new Timestamp(date.getTime()));
     	tree.root.parent = null;
@@ -203,11 +203,12 @@ public class PlanWatcher extends BasilicaAdapter implements BasilicaPreProcessor
 			{
 				Element conceptElement = (Element) conceptNodes.item(i);
 				String conceptName = conceptElement.getAttribute("name");
+				String conceptDetailedName = conceptElement.getAttribute("detailed_name");
 				
 				String[] triggers = new String[1];
 				triggers[0] = conceptName;  
 				
-				PlanTree temp_tree = new PlanTree(conceptName);
+				PlanTree temp_tree = new PlanTree(conceptName, conceptDetailedName);
 				temp_tree.root.parent = tree;
 				tree.root.children.add(temp_tree);
 				
@@ -328,6 +329,9 @@ public class PlanWatcher extends BasilicaAdapter implements BasilicaPreProcessor
 			if(findInTree(tree,method1.toUpperCase()))
 			{
 				System.out.println("method1 => " + method1);
+				PlanEvent plan = new PlanEvent(source,  "I see you are working on " + currentTree.root.detailed_name + ". Good! Let me know if you want to talk about it more.", "STUCK");
+
+				source.queueNewEvent(plan);
 			}
 			
 			
@@ -342,6 +346,9 @@ public class PlanWatcher extends BasilicaAdapter implements BasilicaPreProcessor
 			if(findInTree(tree,method2.toUpperCase()))
 			{
 				System.out.println("method2 => " + method2);
+				PlanEvent plan = new PlanEvent(source,  "I see you are working on " + currentTree.root.detailed_name + ". Good! Let me know if you want to talk about it more.", "STUCK");
+
+				source.queueNewEvent(plan);
 			}
 		
 			String method3 = "unknown";
@@ -355,6 +362,9 @@ public class PlanWatcher extends BasilicaAdapter implements BasilicaPreProcessor
 			if(findInTree(tree,method3.toUpperCase()))
 			{
 				System.out.println("method3 => " + method3);
+				PlanEvent plan = new PlanEvent(source,  "I see you are working on " + currentTree.root.detailed_name + ". Good! Let me know if you want to talk about it more.", "STUCK");
+
+				source.queueNewEvent(plan);
 			}
 			
 
