@@ -2,3 +2,5 @@
 /prim(e|ality).+(test|check|see if|try).+(each|every|all|any)/
 /brute force.+prim(e|ality)/
 /prim(e|ality).+brute force/
+/(divisible|divided).+(any|all|each|every).+(less|smaller) (than|then).+(itself|target|input|number).+(greater|larger|bigger).+1/
+/(divisible|divided).+(any|all|each|every).+(greater|larger|bigger).+1.+(less|smaller) (than|then).+(itself|target|input|number)/
