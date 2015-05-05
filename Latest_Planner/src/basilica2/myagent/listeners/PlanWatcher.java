@@ -390,6 +390,10 @@ public class PlanWatcher extends BasilicaAdapter implements BasilicaPreProcessor
 				while(key==null || key == "ROOT")
 				{
 					parent = parent.root.parent;
+					if(parent == null)
+					{
+						 return;//improve
+					}
 					key = findUnidentifiedConcept(parent);
 				}
 				PlanEvent plan = new PlanEvent(source,  "You seem to be stuck. Let me help you with this.", "STUCK");
