@@ -33,7 +33,7 @@
     </dialog>
     
     <!-- TO-DO: Distinguish this from IS_CIRCULAR_PRIME -->
-	<dialog concept="IS_PRIME" scenario="scenario-isprime">
+	<dialog concept="IS_PRIME" scenario="scenario-isprime" name="a method to find if a number is a prime or not">
     	
     	<intro>Let's go into some more detail about your method to identify primes, okay?</intro>
     	<accept annotation="AFFIRMATIVE">For the purposes of this problem, we recommend that you use a brute force method.</accept>
