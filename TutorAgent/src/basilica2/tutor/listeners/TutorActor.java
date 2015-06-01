@@ -69,7 +69,7 @@ import edu.cmu.cs.lti.tutalk.slim.TuTalkAutomata;
 
 /**
  * 
- * @author rohitk --> dadamson
+ * @author rohitk --> dadamson --> gst, leah.nh
  */
 public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 {
@@ -97,14 +97,13 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	private int introduction_cue_timeout = 60;
 	private int introduction_cue_timeout2 = 60;
 	private int tutorTimeout = 120;
-	//edited by gst
 	private String request_poke_prompt_text = "That's not quite what I'm looking for...try rephrasing?";
 	private String goahead_prompt_text = "Let's go ahead with this.";
-	//edited by gst
 	private String response_poke_prompt_text = "That's not quite what I'm looking for...try rephrasing?";
 	private String dont_know_prompt_text = "Anybody?";
 	private String moving_on_text = "Okay, let's move on.";
 	private String tutorialCondition = "tutorial";
+	private String level = "BEGINNER";
 
 	// private List<Dialog> dialogsReadyQueue = new ArrayList<Dialog>();
 
@@ -113,16 +112,22 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 
 		public String conceptName;
 		public String scenarioName;
+		public String scenarioNameBeginner;
+		public String scenarioNameIntermediate;
+		public String scenarioNameAdvanced;
 		public String introText;
 		public String acceptAnnotation;
 		public String acceptText;
 		public String cancelAnnotation;
 		public String cancelText;
 
-		public Dialog(String conceptName, String scenarioName, String introText, String cueAnnotation, String cueText, String cancelAnnotation, String cancelText)
+		public Dialog(String conceptName, String scenarioName, String introText, String cueAnnotation, String cueText, String cancelAnnotation, String cancelText, String scenarioNameBeginner, String scenarioNameIntermediate, String scenarioNameAdvanced)
 		{
 			this.conceptName = conceptName;
 			this.scenarioName = scenarioName;
+			this.scenarioNameBeginner = scenarioNameBeginner;
+			this.scenarioNameIntermediate = scenarioNameIntermediate;
+			this.scenarioNameAdvanced = scenarioNameAdvanced;
 			this.introText = introText;
 			this.acceptAnnotation = cueAnnotation;
 			this.acceptText = cueText;
@@ -171,6 +176,9 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 						Element dialogElement = (Element) dialogNodes.item(i);
 						String conceptName = dialogElement.getAttribute("concept");
 						String name = dialogElement.getAttribute("scenario");
+						String nameBeginner = dialogElement.getAttribute("scenario-beginner");
+						String nameIntermediate = dialogElement.getAttribute("scenario-intermediate");
+						String nameAdvanced = dialogElement.getAttribute("scenario-advanced");
 						String introText = null;
 						String cueText = null;
 						String cueAnnotation = null;
@@ -197,7 +205,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 							cancelAnnotation = cancelElement.getAttribute("annotation");
 							cancelText = cancelElement.getTextContent();
 						}
-						Dialog d = new Dialog(conceptName, name, introText, cueAnnotation, cueText, cancelAnnotation, cancelText);
+						Dialog d = new Dialog(conceptName, name, introText, cueAnnotation, cueText, cancelAnnotation, cancelText, nameBeginner, nameIntermediate, nameAdvanced);
 						proposedDialogs.put(conceptName, d);
 					}
 				}
@@ -347,11 +355,29 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 		currentConcept = d.conceptName;
 		currentAutomata = new TuTalkAutomata("tutor", "students");
 		currentAutomata.setEvaluator(new FuzzyTurnEvaluator());
-		currentAutomata.setScenario(Scenario.loadScenario(dialogueFolder  + File.separator + d.scenarioName + ".xml"));
+		String scenarioName = determineScenario(d);
+		currentAutomata.setScenario(Scenario.loadScenario(dialogueFolder  + File.separator + scenarioName + ".xml"));
 		answerers = new ArrayList<String>();
 		//TODONE: figure out what "requests" are and why we care
-		TutoringStartedEvent tse = new TutoringStartedEvent(source, d.scenarioName, d.conceptName);
+		TutoringStartedEvent tse = new TutoringStartedEvent(source, scenarioName, d.conceptName);
 		source.queueNewEvent(tse);
+	}
+	
+	private String determineScenario(Dialog d) {
+		String name = "";
+		if (level.equals("BEGINNER")) {
+			name = d.scenarioNameBeginner;
+		} else if (level.equals("INTERMEDIATE")) {
+			name = d.scenarioNameIntermediate;
+		} else if (level.equals("ADVANCED")) {
+			name = d.scenarioNameIntermediate;
+		}
+		System.out.println("*****FOUND SCENARIO NAME: " + name + "*****");
+		if (name.equals("")) {
+			name = d.scenarioName;
+		}
+		System.out.println("*****FOUND SCENARIO NAME: " + name + "*****");
+		return name;
 	}
 
 	private void handleMoveOnEvent(MoveOnEvent mve)

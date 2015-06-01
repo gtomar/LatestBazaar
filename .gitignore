@@ -1,6 +1,7 @@
 */runtime/logs/*
 */build/classes/*
 .metadata/*
+.recommenders/*
 */bin/
 *~
 *.class

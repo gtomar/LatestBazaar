@@ -16,7 +16,7 @@
 		<!-- the tutor will choose randomly between multiple phrases for a concept. -->	
 
 		<concept label="introduction">
-			<phrase>Optional introduction</phrase>
+			<phrase>This is the beginner version of the scenario.</phrase>
 		</concept>
 		
 		<concept label="conclusion">
@@ -105,10 +105,10 @@
 	<script>
 		<goal name="start" difficulty="0">
 			
-			<!--   <step>-->
+			<step>
 				<!-- OPTIONAL INTRODUCTION  -->
-				<!--   <initiation>introduction</initiation>
-			</step> -->
+				<initiation>introduction</initiation>
+			</step>
 			
 			<step>
 				<!-- Every step begins with an initiating concept or literal phrase -->
@@ -153,7 +153,7 @@
 		<goal name="step_2_help">
 			<step>
 				<initiation>step-2-help</initiation>
-				<response say="ok">step-2-right-answer</response>
+				<response say="ok">concept-2-right-answer</response>
 				<response say="step-2-detail">unanticipated-response</response>
 			</step>
 		</goal>
