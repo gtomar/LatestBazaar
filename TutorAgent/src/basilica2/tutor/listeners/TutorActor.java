@@ -403,12 +403,21 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 						{
 							if (!nullExpected)
 							{
-								// If expecting non-null response and didnt get
+								// Go with Unanticipated Response match
+								expectingResponse = false;
+								noMatchingResponseCount = 0;
+								List<String> tutorTurns = currentAutomata.progress(concept);
+								processTutorTurns(tutorTurns);
+								
+								/** Section to give student a second chance to answer the question.
+								 * 
+								
+								// If expecting non-null response and didn't get
 								// it, poke for response
 								noMatchingResponseCount++;
 								if (noMatchingResponseCount == 1)
 								{
-									//TODONE: fire poke event in repsonse to student message
+									//TODONE: fire poke event in response to student message
 //									TutorTurnsEvent tte = new TutorTurnsEvent(this, new String[] { response_poke_prompt_text,
 //											lastTutorTurns.get(lastTutorTurns.size() - 1) });
 //									this.dispatchEvent(myAgent.getComponent(tutoring_actor_name), tte);
@@ -422,7 +431,9 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 									noMatchingResponseCount = 0;
 									List<String> tutorTurns = currentAutomata.progress(concept);
 									processTutorTurns(tutorTurns);
-								}
+								} */
+
+								
 							}
 							else
 							{
