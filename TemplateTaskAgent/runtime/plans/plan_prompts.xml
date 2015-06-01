@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prompts>
+<!-- These can be referenced by id rather than writing the desired text directly as a step.
+	 If there are multiple text options, it will choose one at random. -->
+    
+    <prompt strategy="task" id="INTRODUCE">
+        <text>Hello! I'm [AGENT NAME]. What's your name?</text>
+    </prompt>
+    
+    <prompt strategy="task" id="GREET">
+        <text>Hi, [NAME].</text>
+        <text>Nice to meet you, [NAME].</text>
+        <text>Howdy, [NAME]!</text>
+        <text>Hello, [NAME]!</text>
+    </prompt>
+    
+    <prompt strategy="task" id="END_MACRO">
+    	<text>Time’s up. Thank you for participating! Your help is essential to our research efforts.</text>
+    </prompt>
+    
+    <prompt strategy="task" id="INTRO_SHORT">
+    	<text>Welcome! I'm [AGENT NAME]. I'm here to have an interactive dialogue with you to assist you in your task.</text>
+    </prompt>
+     
+</prompts>

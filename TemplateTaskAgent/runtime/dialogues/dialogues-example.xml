@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dialogs>
+	
+	<!-- Each of these dialogues can be prompted at any time using the regular expression associated with the concept name -->
+	
+	
+	<dialog concept="CONCEPT_NAME" scenario="scenario-template">
+		<!-- The intro prompt is offered to students. 
+    	If they respond in the affirmative, the dialogue begins.-->
+    	<intro>Do you want to start this scenario?</intro>
+    	<accept annotation="AFFIRMATIVE">Okay, let's get started.</accept>
+    	<cancel annotation="NEGATIVE">Okay, let me know if you change your mind later.</cancel>
+	</dialog>
+	
+	<dialog concept="SUBCONCEPT" scenario="scenario-template">
+		<!-- The intro prompt is offered to students. 
+    	If they respond in the affirmative, the dialogue begins.-->
+    	<intro>Do you want to start this scenario?</intro>
+    	<accept annotation="AFFIRMATIVE">Okay, let's get started.</accept>
+    	<cancel annotation="NEGATIVE">Okay, let me know if you change your mind later.</cancel>
+	</dialog>
+	
+	<dialog concept="SUBCONCEPT2" scenario="scenario-template">
+		<!-- The intro prompt is offered to students. 
+    	If they respond in the affirmative, the dialogue begins.-->
+    	<intro>Do you want to start this scenario?</intro>
+    	<accept annotation="AFFIRMATIVE">Okay, let's get started.</accept>
+    	<cancel annotation="NEGATIVE">Okay, let me know if you change your mind later.</cancel>
+	</dialog>
+    
+    <!-- CONCEPT TREE
+    The concept tree supports different concept dialogs that can be accessed non-sequentially.
+    They must be triggered by a user statement
+    To enforce sequentiality, or have the system trigger a dialog, use properties/plan_steps.xml-->
+    <CONCEPT name="CONCEPT_NAME" priority="1">
+    	<!-- subconcepts support the method of completing sub-concepts as equivalent to completing a concept -->
+        <CONCEPT1 name="SUBCONCEPT" priority="1"></CONCEPT1>
+    	<CONCEPT1 name="SUBCONCEPT2" priority="1"></CONCEPT1>
+	</CONCEPT>
+
+</dialogs>

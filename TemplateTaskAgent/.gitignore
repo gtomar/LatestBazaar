@@ -1,0 +1,8 @@
+*/runtime/logs/*
+*/build/classes/*
+.metadata/*
+*/bin/
+*~
+*.class
+PlannerAgent/runtime/Text.png
+*.jar
