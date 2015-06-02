@@ -356,11 +356,18 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 		currentAutomata = new TuTalkAutomata("tutor", "students");
 		currentAutomata.setEvaluator(new FuzzyTurnEvaluator());
 		String scenarioName = determineScenario(d);
+		System.out.println("***Loading Scenario " + scenarioName);
 		currentAutomata.setScenario(Scenario.loadScenario(dialogueFolder  + File.separator + scenarioName + ".xml"));
 		answerers = new ArrayList<String>();
 		//TODONE: figure out what "requests" are and why we care
 		TutoringStartedEvent tse = new TutoringStartedEvent(source, scenarioName, d.conceptName);
 		source.queueNewEvent(tse);
+	}
+	
+	public void setLevel(String newlevel) {
+		this.level = newlevel;
+		System.out.println("*****SET NEW LEVEL********");
+		System.out.println(this.level);
 	}
 	
 	private String determineScenario(Dialog d) {
@@ -372,13 +379,23 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 		} else if (level.equals("ADVANCED")) {
 			name = d.scenarioNameIntermediate;
 		}
-		System.out.println("*****FOUND SCENARIO NAME: " + name + "*****");
 		if (name.equals("")) {
 			name = d.scenarioName;
 		}
-		System.out.println("*****FOUND SCENARIO NAME: " + name + "*****");
 		return name;
 	}
+	
+	private void handleMessageEvent(MessageEvent me)
+	{
+		String[] beginner = me.checkAnnotation("BEGINNER");
+		String[] intermediate = me.checkAnnotation("INTERMEDIATE");
+		String[] advanced = me.checkAnnotation("ADVANCED");		
+		
+		System.out.println("*********String beginner: " + beginner);
+		System.out.println("*********String intermediate: " + intermediate);
+		System.out.println("*********String advanced: " + advanced);
+	}
+
 
 	private void handleMoveOnEvent(MoveOnEvent mve)
 	{
@@ -735,6 +752,13 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	@Override
 	public void preProcessEvent(InputCoordinator source, Event event)
 	{
+		System.out.println("********preprocess event");
+		this.source = source;
+		if (event instanceof MessageEvent)
+		{
+			handleMessageEvent((MessageEvent) event);
+			System.out.println("**********message event");
+		}
 	}
 
 	@Override

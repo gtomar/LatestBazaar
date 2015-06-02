@@ -4,6 +4,11 @@
 	<!-- Each of these dialogues can be prompted at any time using the regular expression associated with the concept name -->
 	<!-- Each dialog must have a default scenario field, and may optionally have scenario-beginner, scenario-intermediate, and scenario-advanced fields. -->
 	
+	<dialog concept="SET_LEVEL" scenario="scenario-level">
+	<intro>Would you like to specify your experience level before we start?</intro>
+	<accept annotation="AFFIRMATIVE">Okay</accept>
+	<cancel annotation="NEGATIVE">No problem.</cancel>
+	</dialog>
 	
 	<dialog concept="CONCEPT_NAME" scenario="scenario-template" scenario-beginner="scenario-beginner">
 		<!-- The intro prompt is offered to students. 
