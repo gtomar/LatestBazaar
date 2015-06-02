@@ -30,7 +30,6 @@
  *  
  */
 package basilica2.tutor.listeners;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -48,6 +47,8 @@ import basilica2.agents.events.priority.PriorityEvent;
 import basilica2.agents.events.priority.BlacklistSource;
 import basilica2.agents.events.priority.PriorityEvent.Callback;
 import basilica2.agents.listeners.BasilicaAdapter;
+//import basilica2.social.events.DormantGroupEvent;
+//import basilica2.social.events.DormantStudentEvent;
 //import basilica2.social.data.TurnCounts;
 import basilica2.tutor.events.DoTutoringEvent;
 import basilica2.tutor.events.DoneTutoringEvent;
@@ -103,7 +104,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	private String dont_know_prompt_text = "Anybody?";
 	private String moving_on_text = "Okay, let's move on.";
 	private String tutorialCondition = "tutorial";
-	private String level = "BEGINNER";
+	private String level = "INTERMEDIATE";
 
 	// private List<Dialog> dialogsReadyQueue = new ArrayList<Dialog>();
 
@@ -356,18 +357,11 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 		currentAutomata = new TuTalkAutomata("tutor", "students");
 		currentAutomata.setEvaluator(new FuzzyTurnEvaluator());
 		String scenarioName = determineScenario(d);
-		System.out.println("***Loading Scenario " + scenarioName);
 		currentAutomata.setScenario(Scenario.loadScenario(dialogueFolder  + File.separator + scenarioName + ".xml"));
 		answerers = new ArrayList<String>();
 		//TODONE: figure out what "requests" are and why we care
 		TutoringStartedEvent tse = new TutoringStartedEvent(source, scenarioName, d.conceptName);
 		source.queueNewEvent(tse);
-	}
-	
-	public void setLevel(String newlevel) {
-		this.level = newlevel;
-		System.out.println("*****SET NEW LEVEL********");
-		System.out.println(this.level);
 	}
 	
 	private String determineScenario(Dialog d) {
@@ -389,11 +383,23 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	{
 		String[] beginner = me.checkAnnotation("BEGINNER");
 		String[] intermediate = me.checkAnnotation("INTERMEDIATE");
-		String[] advanced = me.checkAnnotation("ADVANCED");		
+		String[] advanced = me.checkAnnotation("ADVANCED");
+		System.out.println(beginner);
+		System.out.println(intermediate);
+		System.out.println(advanced);
+
+		if (beginner != null) {
+			this.level = "BEGINNER";
+		}
+		if (intermediate != null) {
+			this.level = "INTERMEDIATE";
+		}
+		if (advanced != null) {
+			this.level = "ADVANCED";
+		}
 		
-		System.out.println("*********String beginner: " + beginner);
-		System.out.println("*********String intermediate: " + intermediate);
-		System.out.println("*********String advanced: " + advanced);
+		//System.out.println("********LEVEL IS NOW: " + this.level);
+		
 	}
 
 
@@ -752,18 +758,17 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	@Override
 	public void preProcessEvent(InputCoordinator source, Event event)
 	{
-		System.out.println("********preprocess event");
 		this.source = source;
 		if (event instanceof MessageEvent)
 		{
 			handleMessageEvent((MessageEvent) event);
-			System.out.println("**********message event");
 		}
 	}
 
 	@Override
 	public Class[] getPreprocessorEventClasses()
 	{
-		return new Class[0];
+		//return new Class[0];
+		return new Class[] {MessageEvent.class};
 	}
 }
