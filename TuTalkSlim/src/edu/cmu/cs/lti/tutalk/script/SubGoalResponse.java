@@ -31,6 +31,8 @@
  */
 package edu.cmu.cs.lti.tutalk.script;
 
+import java.util.ArrayList;
+
 /**
  * 
  * @author rohitk
@@ -45,6 +47,15 @@ public class SubGoalResponse extends Response
 		super(c);
 		subgoal = goal;
 		setFeedback(sayThis);
+	}
+	
+	public SubGoalResponse(Concept c, Goal goal, Feedback sayThis, ArrayList<String> skills, String masteryType)
+	{
+		super(c);
+		subgoal = goal;
+		setFeedback(sayThis);
+		setSkillset(skills);
+		setMastery(masteryType);
 	}
 
 	public void setSubGoal(Goal sg)

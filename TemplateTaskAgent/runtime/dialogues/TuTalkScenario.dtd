@@ -215,9 +215,7 @@
   sem NMTOKEN #IMPLIED
   say NMTOKENS #IMPLIED
   say-nomatch NMTOKENS #IMPLIED
-  truth-val (yes|no|partial|unknown) "unknown"
-  skillset NMTOKENS #IMPLIED
-  mastery (plus|minus) "plus">
+  truth-val (yes|no|partial|unknown) "unknown">
 
 <!-- the nomatch attributes below help implement multiple answer parts and 
      should only be used when multi-answer-expected has been set in 
@@ -242,7 +240,9 @@
   sem NMTOKEN #IMPLIED
   say NMTOKENS #IMPLIED
   say-nomatch NMTOKENS #IMPLIED
-  truth-val (yes|no|partial|unknown) "unknown">
+  truth-val (yes|no|partial|unknown) "unknown"
+  skillset NMTOKENS #IMPLIED
+  mastery (plus|minus) "plus">
 
 <!-- allows a step in a goal to simply embed another goal -->
 <!ELEMENT subgoal (#PCDATA)>

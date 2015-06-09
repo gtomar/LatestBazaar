@@ -31,6 +31,8 @@
  */
 package edu.cmu.cs.lti.tutalk.script;
 
+import java.util.ArrayList;
+
 /**
  * 
  * @author rohitk
@@ -47,6 +49,11 @@ public abstract class Response
 	 * optional "say" parameter
 	 */
 	protected Feedback sayThis;
+	
+	/** parameters to communicate skill level information
+	 */
+	private ArrayList<String> skillset;
+	private String mastery;
 
 	public Response(Concept c)
 	{
@@ -73,4 +80,24 @@ public abstract class Response
 	{
 		return sayThis;
 	}
+	
+    public void setSkillset(ArrayList<String> skills)
+    {
+    	skillset = skills;
+    }
+    
+    public ArrayList<String> getSkillset()
+    {
+    	return skillset;
+    }
+    
+    public void setMastery(String masteryType)
+    {
+    	mastery = masteryType;
+    }
+    
+    public String getMastery()
+    {
+    	return mastery;
+    }
 }

@@ -76,7 +76,7 @@ public class Scenario
 		return getGoal(start_goal_name);
 	}
 	
-	public HashMap<String, String[]> getSkillSets()
+	public HashMap<String, ArrayList<String>> getSkillSets()
 	{
 		return mySkillSets;
 	}
@@ -224,6 +224,43 @@ public class Scenario
 					}
 
 				}
+				
+				// Read the skillsets
+				System.out.println("*****READING SKILLSETS");
+				NodeList ns11 = scenarioElement.getElementsByTagName("skillsets");
+				if ((ns11 != null) && (ns11.getLength() != 0))
+				{
+					Element conceptsElement = (Element) ns11.item(0);
+					NodeList ns12 = conceptsElement.getElementsByTagName("skillset");
+					if ((ns12 != null) && (ns12.getLength() != 0))
+					{
+						for (int i = 0; i < ns12.getLength(); i++)
+						{
+							Element conceptElement = (Element) ns12.item(i);
+							String label = conceptElement.getAttribute("label");
+							System.out.println("Label: " + label);
+
+							//Concept c;
+							//c = new DictionaryConcept(label);
+							ArrayList<String> skillList = new ArrayList<String>();
+							NodeList ns13 = conceptElement.getElementsByTagName("skill");
+							if ((ns13 != null) && (ns13.getLength() != 0))
+							{
+								for (int j = 0; j < ns13.getLength(); j++)
+								{
+									Element skillElement = (Element) ns13.item(j);
+									//((DictionaryConcept) c).addPhrase(skillElement.getTextContent().trim());
+									System.out.println("skill element: " + skillElement.getTextContent());
+									skillList.add(skillElement.getTextContent());
+								}
+							}
+							
+							sc.mySkillSets.put(label, skillList);
+						}
+					}
+
+				}
+				
 
 				// Add some default concepts
 				// dont_know
@@ -267,8 +304,8 @@ public class Scenario
 								{
 									Element stepElement = (Element) ns7.item(j);
 									Step s = null;
-									// Detemine the type of step it is &
-									// intantiate it
+									// Determine the type of step it is &
+									// instantiate it
 									NodeList ns8 = stepElement.getElementsByTagName("subgoal");
 									if ((ns8 != null) && (ns8.getLength() != 0))
 									{
@@ -301,6 +338,9 @@ public class Scenario
 													Response r = null;
 													String sayConceptName = responseElement.getAttribute("say");
 													String pushGoalName = responseElement.getAttribute("push");
+													String skillsetName = responseElement.getAttribute("skillset");
+													String masteryValue = responseElement.getAttribute("mastery");
+													ArrayList<String> currentSkillset = null;
 													
 													Concept conceptToMatch = sc.getConceptLibrary().getConcept(respConceptName);
 													if(conceptToMatch == null)
@@ -320,18 +360,44 @@ public class Scenario
 														}
 														sayFeedback = new Feedback(feedbackConcept);
 													}
+													
+													//Check that if there is a skillset name, it must have an associated skillset, and an associated mastery type (plus or minus)
+													if (!skillsetName.equals(""))
+													{
+														currentSkillset = sc.mySkillSets.get(skillsetName);
+														if (currentSkillset == null) {
+															System.err.println("WARNING: No skillset defined for skillset=\""+skillsetName+"\" in "+filename);
+														}
+														if (masteryValue == null)
+														{
+															System.err.println("WARNING: No mastery type accompanying skillset " + skillsetName);
+														}
+														System.out.println("Found skillset: " + skillsetName);
+														System.out.println("Associated with skills: " + currentSkillset.toString());
+													}
+													
 
 													if (pushGoalName != null && pushGoalName.length() != 0)
 													{
 														Goal subgoal = goals.get(pushGoalName);
-														if(subgoal == null)
+														if(subgoal == null) {
 															System.err.println("WARNING: No goal defined for push=\""+pushGoalName+"\" in "+filename);
-														else
+														}
+														else if (masteryValue != null && currentSkillset != null) {
+															r = new SubGoalResponse(conceptToMatch, subgoal, sayFeedback, currentSkillset, masteryValue);
+														} else {
 															r = new SubGoalResponse(conceptToMatch, subgoal, sayFeedback);
+														}
 													}
 													else
 													{
-														r = new FeedbackResponse(conceptToMatch, sayFeedback);
+														if (masteryValue != null && currentSkillset != null)
+														{
+															r = new FeedbackResponse(conceptToMatch, sayFeedback, currentSkillset, masteryValue);
+														} else
+														{
+															r = new FeedbackResponse(conceptToMatch, sayFeedback);
+														}
 													}
 													((InitiationResponseStep) s).addResponse(r);
 												}
@@ -350,43 +416,6 @@ public class Scenario
 					}
 				}
 				
-				
-				// Read the skillsets
-
-				System.out.println("*****READING SKILLSETS");
-				NodeList ns11 = scenarioElement.getElementsByTagName("skillsets");
-				if ((ns11 != null) && (ns11.getLength() != 0))
-				{
-					Element conceptsElement = (Element) ns11.item(0);
-					NodeList ns12 = conceptsElement.getElementsByTagName("skillset");
-					if ((ns12 != null) && (ns12.getLength() != 0))
-					{
-						for (int i = 0; i < ns12.getLength(); i++)
-						{
-							Element conceptElement = (Element) ns12.item(i);
-							String label = conceptElement.getAttribute("label");
-							System.out.println("Label: " + label);
-
-							//Concept c;
-							//c = new DictionaryConcept(label);
-							ArrayList<String> skillList = new ArrayList<String>();
-							NodeList ns13 = conceptElement.getElementsByTagName("skill");
-							if ((ns13 != null) && (ns13.getLength() != 0))
-							{
-								for (int j = 0; j < ns13.getLength(); j++)
-								{
-									Element skillElement = (Element) ns13.item(j);
-									//((DictionaryConcept) c).addPhrase(skillElement.getTextContent().trim());
-									System.out.println("skill element: " + skillElement.getTextContent());
-									skillList.add(skillElement.getTextContent());
-								}
-							}
-							
-							sc.mySkillSets.put(label, skillList);
-						}
-					}
-
-				}
 				
 			}
 		}

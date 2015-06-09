@@ -17,6 +17,5 @@
     </stage>
     <stage name="body" type="other" delay="5">
         <step type="prompt" delay="0" prompt="INTRO_SHORT" >ABOUT_TUTORIALS_STEP</step>
-        <step type="dialogue" delay="2" dialogue="SET_LEVEL">DEMO_TUTORIAL</step>
     </stage>
 </plan>

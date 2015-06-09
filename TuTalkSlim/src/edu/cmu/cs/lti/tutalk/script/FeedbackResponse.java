@@ -31,15 +31,24 @@
  */
 package edu.cmu.cs.lti.tutalk.script;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author rohitk
  */
 public class FeedbackResponse extends Response {
-
-
+	
     public FeedbackResponse(Concept c, Feedback f) 
     {
         super(c, f);
     }
+    
+    public FeedbackResponse(Concept c, Feedback f, ArrayList<String> skills, String masteryType) 
+    {
+        super(c, f);
+        setSkillset(skills);
+        setMastery(masteryType);
+    }
+   
 }
