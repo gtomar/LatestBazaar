@@ -57,7 +57,8 @@ public class Scenario
 	private String myName;
 	private ConceptLibrary myConceptLibrary;
 	private List<Goal> myGoals;
-
+	private HashMap<String, ArrayList<String>> mySkillSets = new HashMap<String, ArrayList<String>>();
+	
 	public Scenario(String name)
 	{
 		myName = name;
@@ -73,6 +74,11 @@ public class Scenario
 	public Goal getStartGoal()
 	{
 		return getGoal(start_goal_name);
+	}
+	
+	public HashMap<String, String[]> getSkillSets()
+	{
+		return mySkillSets;
 	}
 
 	public Goal getGoal(String gname)
@@ -231,6 +237,8 @@ public class Scenario
 				sc.getConceptLibrary().addConcept(cdk);
 
 				Map<String, Goal> goals = new Hashtable<String, Goal>();
+				
+				
 
 				// Read the Script
 				NodeList ns5 = scenarioElement.getElementsByTagName("script");
@@ -341,6 +349,45 @@ public class Scenario
 						}
 					}
 				}
+				
+				
+				// Read the skillsets
+
+				System.out.println("*****READING SKILLSETS");
+				NodeList ns11 = scenarioElement.getElementsByTagName("skillsets");
+				if ((ns11 != null) && (ns11.getLength() != 0))
+				{
+					Element conceptsElement = (Element) ns11.item(0);
+					NodeList ns12 = conceptsElement.getElementsByTagName("skillset");
+					if ((ns12 != null) && (ns12.getLength() != 0))
+					{
+						for (int i = 0; i < ns12.getLength(); i++)
+						{
+							Element conceptElement = (Element) ns12.item(i);
+							String label = conceptElement.getAttribute("label");
+							System.out.println("Label: " + label);
+
+							//Concept c;
+							//c = new DictionaryConcept(label);
+							ArrayList<String> skillList = new ArrayList<String>();
+							NodeList ns13 = conceptElement.getElementsByTagName("skill");
+							if ((ns13 != null) && (ns13.getLength() != 0))
+							{
+								for (int j = 0; j < ns13.getLength(); j++)
+								{
+									Element skillElement = (Element) ns13.item(j);
+									//((DictionaryConcept) c).addPhrase(skillElement.getTextContent().trim());
+									System.out.println("skill element: " + skillElement.getTextContent());
+									skillList.add(skillElement.getTextContent());
+								}
+							}
+							
+							sc.mySkillSets.put(label, skillList);
+						}
+					}
+
+				}
+				
 			}
 		}
 		catch (Exception ex)
@@ -350,6 +397,7 @@ public class Scenario
 
 		return sc;
 	}
+	
 
 	protected static Concept makeDummyConcept(String respConceptName)
 	{

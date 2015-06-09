@@ -168,6 +168,12 @@
   lang NMTOKEN #IMPLIED
   flag NMTOKEN #IMPLIED
   minimal (yes|no) "no">
+  
+<!-- SKILLSETS -->
+<!ELEMENT skillsets (skillset+)>
+<!ELEMENT skillset (skill*)>
+<!ATTLIST skillset label NMTOKEN #REQUIRED>
+<!-- Lists the skills that can be referenced, and modified, by any given response. -->
 
 <!-- difficulty is a label or number that indicates the difficulty level 
      of a goal -->
@@ -209,7 +215,9 @@
   sem NMTOKEN #IMPLIED
   say NMTOKENS #IMPLIED
   say-nomatch NMTOKENS #IMPLIED
-  truth-val (yes|no|partial|unknown) "unknown">
+  truth-val (yes|no|partial|unknown) "unknown"
+  skillset NMTOKENS #IMPLIED
+  mastery (plus|minus) "plus">
 
 <!-- the nomatch attributes below help implement multiple answer parts and 
      should only be used when multi-answer-expected has been set in 
@@ -225,6 +233,8 @@
 <!-- truth-val is whether the concept in this context is true or not
      or vague/partial or the truth value is irrelevant or simply
      unknown (unknown) -->
+<!-- skillset is the name of the skillset affected by this response -->
+<!-- mastery indicated whether the response indicates that the person is mastering or struggling with skills involved. -->
 <!ELEMENT response (#PCDATA)>
 <!ATTLIST response
   push NMTOKENS #IMPLIED

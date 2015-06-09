@@ -4,6 +4,14 @@
 	<configuration>
 
 	</configuration>
+	
+	<skillsets>
+		<skillset label="default">
+			<skill>bread</skill>
+			<skill>window</skill>
+		</skillset>
+	
+	</skillsets>
 		
 	<concepts>
 		<!-- this is a special kind of concept for catching unexpected student responses -->
@@ -101,7 +109,6 @@
 		
 	</concepts>
 	
-	
 	<script>
 		<goal name="start" difficulty="0">
 			
@@ -120,7 +127,7 @@
 				    "push" adds another goal to the dialogue's stack. 
 					 Note that goals should NOT be recursively nested. -->
 				
-				<response push="step_2" say="ok">step-1-right-answer</response>
+				<response push="step_2" skillset="default" mastery="plus" say="ok">step-1-right-answer</response>
                 
 				<!-- unanticipated-response is special: it's anything that doesn't match one of the above. -->
 				<response push="step_1_help" say="wrong">unanticipated-response</response>
@@ -137,6 +144,7 @@
 		<goal name="step_2">
 			<step>
 				<initiation>do-step-2</initiation>
+				
                 <response say="ok">step-2-right-answer</response>
                 <response push="step_2_help" say="wrong">unanticipated-response</response>
 			</step>
