@@ -57,7 +57,6 @@ public class Scenario
 	private String myName;
 	private ConceptLibrary myConceptLibrary;
 	private List<Goal> myGoals;
-	private HashMap<String, ArrayList<String>> mySkillSets = new HashMap<String, ArrayList<String>>();
 	
 	public Scenario(String name)
 	{
@@ -74,11 +73,6 @@ public class Scenario
 	public Goal getStartGoal()
 	{
 		return getGoal(start_goal_name);
-	}
-	
-	public HashMap<String, ArrayList<String>> getSkillSets()
-	{
-		return mySkillSets;
 	}
 
 	public Goal getGoal(String gname)
@@ -225,42 +219,6 @@ public class Scenario
 
 				}
 				
-				// Read the skillsets
-				System.out.println("*****READING SKILLSETS");
-				NodeList ns11 = scenarioElement.getElementsByTagName("skillsets");
-				if ((ns11 != null) && (ns11.getLength() != 0))
-				{
-					Element conceptsElement = (Element) ns11.item(0);
-					NodeList ns12 = conceptsElement.getElementsByTagName("skillset");
-					if ((ns12 != null) && (ns12.getLength() != 0))
-					{
-						for (int i = 0; i < ns12.getLength(); i++)
-						{
-							Element conceptElement = (Element) ns12.item(i);
-							String label = conceptElement.getAttribute("label");
-							System.out.println("Label: " + label);
-
-							//Concept c;
-							//c = new DictionaryConcept(label);
-							ArrayList<String> skillList = new ArrayList<String>();
-							NodeList ns13 = conceptElement.getElementsByTagName("skill");
-							if ((ns13 != null) && (ns13.getLength() != 0))
-							{
-								for (int j = 0; j < ns13.getLength(); j++)
-								{
-									Element skillElement = (Element) ns13.item(j);
-									//((DictionaryConcept) c).addPhrase(skillElement.getTextContent().trim());
-									System.out.println("skill element: " + skillElement.getTextContent());
-									skillList.add(skillElement.getTextContent());
-								}
-							}
-							
-							sc.mySkillSets.put(label, skillList);
-						}
-					}
-
-				}
-				
 
 				// Add some default concepts
 				// dont_know
@@ -304,6 +262,8 @@ public class Scenario
 								{
 									Element stepElement = (Element) ns7.item(j);
 									Step s = null;
+									//Create a list to store KCs
+									ArrayList<String> kcList = null;
 									// Determine the type of step it is &
 									// instantiate it
 									NodeList ns8 = stepElement.getElementsByTagName("subgoal");
@@ -315,6 +275,26 @@ public class Scenario
 									}
 									else
 									{
+										NodeList ns11 = stepElement.getElementsByTagName("KCset");
+										if ((ns11 != null) && (ns11.getLength() != 0))
+										{
+											NodeList ns12 = stepElement.getElementsByTagName("KC");
+											if ((ns12 != null) && (ns12.getLength() != 0))
+											{
+												kcList = new ArrayList<String>();
+												for (int k = 0; k < ns12.getLength(); k++)
+												{
+													Element kcElement = (Element) ns12.item(k);
+													String kcName = kcElement.getTextContent();
+													kcList.add(kcName);
+												}
+												System.out.println("********Found associated KCs: " + kcList.toString());
+											}
+											else
+											{
+												System.err.println("WARNING: Knowledge Component Set contains no KCs.");
+											}
+										}
 										NodeList ns10 = stepElement.getElementsByTagName("initiation");
 										if ((ns10 != null) && (ns10.getLength() != 0))
 										{
@@ -338,9 +318,7 @@ public class Scenario
 													Response r = null;
 													String sayConceptName = responseElement.getAttribute("say");
 													String pushGoalName = responseElement.getAttribute("push");
-													String skillsetName = responseElement.getAttribute("skillset");
-													String masteryValue = responseElement.getAttribute("mastery");
-													ArrayList<String> currentSkillset = null;
+													String resultValue = responseElement.getAttribute("result");
 													
 													Concept conceptToMatch = sc.getConceptLibrary().getConcept(respConceptName);
 													if(conceptToMatch == null)
@@ -361,19 +339,11 @@ public class Scenario
 														sayFeedback = new Feedback(feedbackConcept);
 													}
 													
-													//Check that if there is a skillset name, it must have an associated skillset, and an associated mastery type (plus or minus)
-													if (!skillsetName.equals(""))
+													//Check that if there is a result value, there must be an associated KCset.
+													//"Unknown" is a default from the .dtd file, and indicates that it was not specified for the response.
+													if (!resultValue.equals("unknown") && kcList == null)
 													{
-														currentSkillset = sc.mySkillSets.get(skillsetName);
-														if (currentSkillset == null) {
-															System.err.println("WARNING: No skillset defined for skillset=\""+skillsetName+"\" in "+filename);
-														}
-														if (masteryValue == null)
-														{
-															System.err.println("WARNING: No mastery type accompanying skillset " + skillsetName);
-														}
-														System.out.println("Found skillset: " + skillsetName);
-														System.out.println("Associated with skills: " + currentSkillset.toString());
+														System.err.println("WARNING: No knowledge components defined for response where push=\""+pushGoalName+"\" in "+filename);
 													}
 													
 
@@ -383,17 +353,17 @@ public class Scenario
 														if(subgoal == null) {
 															System.err.println("WARNING: No goal defined for push=\""+pushGoalName+"\" in "+filename);
 														}
-														else if (masteryValue != null && currentSkillset != null) {
-															r = new SubGoalResponse(conceptToMatch, subgoal, sayFeedback, currentSkillset, masteryValue);
+														else if (resultValue != null && kcList != null) {
+															r = new SubGoalResponse(conceptToMatch, subgoal, sayFeedback, kcList, resultValue);
 														} else {
 															r = new SubGoalResponse(conceptToMatch, subgoal, sayFeedback);
 														}
 													}
 													else
 													{
-														if (masteryValue != null && currentSkillset != null)
+														if (resultValue != null && kcList != null)
 														{
-															r = new FeedbackResponse(conceptToMatch, sayFeedback, currentSkillset, masteryValue);
+															r = new FeedbackResponse(conceptToMatch, sayFeedback, kcList, resultValue);
 														} else
 														{
 															r = new FeedbackResponse(conceptToMatch, sayFeedback);

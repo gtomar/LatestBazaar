@@ -2,16 +2,7 @@
 <!DOCTYPE scenario SYSTEM "TuTalkScenario.dtd">
 <scenario default-language="en" scenario-name="scenario-template">
 	<configuration>
-
 	</configuration>
-	
-	<skillsets>
-		<skillset label="default">
-			<skill>bread</skill>
-			<skill>window</skill>
-		</skillset>
-	
-	</skillsets>
 		
 	<concepts>
 		<!-- this is a special kind of concept for catching unexpected student responses -->
@@ -118,6 +109,10 @@
 			</step> -->
 			
 			<step>
+				<KCset>
+					<KC>bread</KC>
+					<KC>window</KC>
+				</KCset>
 				<!-- Every step begins with an initiating concept or literal phrase -->
 				<initiation>do-step-1</initiation>
 				
@@ -127,7 +122,7 @@
 				    "push" adds another goal to the dialogue's stack. 
 					 Note that goals should NOT be recursively nested. -->
 				
-				<response push="step_2" skillset="default" mastery="plus" say="ok">step-1-right-answer</response>
+				<response push="step_2" result="success" say="ok">step-1-right-answer</response>
                 
 				<!-- unanticipated-response is special: it's anything that doesn't match one of the above. -->
 				<response push="step_1_help" say="wrong">unanticipated-response</response>
