@@ -64,6 +64,7 @@ import edu.cmu.cs.lti.project911.utils.time.Timer;
 import edu.cmu.cs.lti.tutalk.script.Concept;
 import edu.cmu.cs.lti.tutalk.script.Response;
 import edu.cmu.cs.lti.tutalk.script.Scenario;
+import edu.cmu.cs.lti.tutalk.script.TutorTurns;
 import edu.cmu.cs.lti.tutalk.slim.EvaluatedConcept;
 import edu.cmu.cs.lti.tutalk.slim.FuzzyTurnEvaluator;
 import edu.cmu.cs.lti.tutalk.slim.TuTalkAutomata;
@@ -349,8 +350,8 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 		System.out.println("***TUTORING STARTED EVENT***");
 		if(currentConcept.equals(tse.getConcept()))
 		{
-			List<String> tutorTurns = currentAutomata.start();
-			processTutorTurns(tutorTurns);
+			TutorTurns tt = currentAutomata.start();
+			processTutorTurns(tt.getTutorTurns());
 		}
 		else
 		{
@@ -436,8 +437,8 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 				{
 					log(Logger.LOG_WARNING, "Moving on without an Unanticipated-Response Handler. Could be weird!");
 				}
-				List<String> tutorTurns = currentAutomata.progress(response.getConcept());
-				processTutorTurns(tutorTurns);
+				TutorTurns tt = currentAutomata.progress(response.getConcept());
+				processTutorTurns(tt.getTutorTurns());
 			}
 		}
 	}
@@ -470,8 +471,8 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 								// Go with Unanticipated Response match
 								expectingResponse = false;
 								noMatchingResponseCount = 0;
-								List<String> tutorTurns = currentAutomata.progress(concept);
-								processTutorTurns(tutorTurns);
+								TutorTurns tt = currentAutomata.progress(concept);
+								processTutorTurns(tt.getTutorTurns());
 								
 								/** Section to give student a second chance to answer the question.
 								 * 
@@ -505,8 +506,8 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 								// process it and move on
 								expectingResponse = false;
 								noMatchingResponseCount = 0;
-								List<String> tutorTurns = currentAutomata.progress(concept);
-								processTutorTurns(tutorTurns);
+								TutorTurns tt = currentAutomata.progress(concept);
+								processTutorTurns(tt.getTutorTurns());
 							}
 						}
 						/*else if (concept.getLabel().equalsIgnoreCase("_dont_know_"))
@@ -532,8 +533,8 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 							// If Response is non-null, process it
 							expectingResponse = false;
 							noMatchingResponseCount = 0;
-							List<String> tutorTurns = currentAutomata.progress(concept);
-							processTutorTurns(tutorTurns);
+							TutorTurns tt = currentAutomata.progress(concept);
+							processTutorTurns(tt.getTutorTurns());
 						}
 					}
 				}

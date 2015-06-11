@@ -52,8 +52,8 @@ public abstract class Response
 	
 	/** parameters to communicate skill level information
 	 */
-	private ArrayList<String> skillset;
-	private String mastery;
+	private ArrayList<String> KCset;
+	private String KCresult;
 
 	public Response(Concept c)
 	{
@@ -81,23 +81,23 @@ public abstract class Response
 		return sayThis;
 	}
 	
-    public void setKCset(ArrayList<String> skills)
+    public void setKCset(ArrayList<String> kcs)
     {
-    	skillset = skills;
+    	KCset = kcs;
     }
     
     public ArrayList<String> getKCset()
     {
-    	return skillset;
+    	return KCset;
     }
     
     public void setResult(String resultType)
     {
-    	mastery = resultType;
+    	KCresult = resultType;
     }
     
     public String getResult()
     {
-    	return mastery;
+    	return KCresult;
     }
 }

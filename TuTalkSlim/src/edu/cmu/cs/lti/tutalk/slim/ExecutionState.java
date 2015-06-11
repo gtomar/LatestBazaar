@@ -36,6 +36,7 @@ import edu.cmu.cs.lti.tutalk.script.Goal;
 import edu.cmu.cs.lti.tutalk.script.Initiation;
 import edu.cmu.cs.lti.tutalk.script.Response;
 import edu.cmu.cs.lti.tutalk.script.Step;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,6 +53,8 @@ public class ExecutionState {
     private List<Goal> todoStack;
     private List<Executable> doneList;
     private List<Response> expected;
+    private List<String> activeKCs;
+    private String KCresult;
 
     public ExecutionState() {
         todoStack = new ArrayList<Goal>();
@@ -147,6 +150,26 @@ public class ExecutionState {
         ret += "</state>";
         return ret;
     }
+    
+	public void setKCs(List<String> kcs)
+	{
+		activeKCs = kcs;
+	}
+	
+	public List<String> getKCs()
+	{
+		return activeKCs;
+	}
+	
+	public void setResult(String r)
+	{
+		KCresult = r;
+	}
+	
+	public String getResult()
+	{
+		return KCresult;
+	}
 
     public void log(String from, String message, boolean stateInfo) {
 //        System.out.println("<" + from + ">\t\t" + message);

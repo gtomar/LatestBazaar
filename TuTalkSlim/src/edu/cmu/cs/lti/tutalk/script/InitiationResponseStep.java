@@ -38,6 +38,7 @@ import java.util.List;
 /**
  * 
  * @author rohitk
+ * leah.nh (added KCs)
  */
 public class InitiationResponseStep extends Step
 {
@@ -129,6 +130,8 @@ public class InitiationResponseStep extends Step
 						responseMatched = true;
 						state.setExpected(new ArrayList<Response>());
 						Response matchedResponse = responses.get(i);
+						state.setKCs(matchedResponse.getKCset());
+						state.setResult(matchedResponse.getResult());
 						if (matchedResponse instanceof SubGoalResponse)
 						{
 							subGoal = ((SubGoalResponse) matchedResponse).getSubGoal();

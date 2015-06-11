@@ -40,6 +40,7 @@ import edu.cmu.cs.lti.tutalk.script.Goal;
 import edu.cmu.cs.lti.tutalk.script.Response;
 import edu.cmu.cs.lti.tutalk.script.ResponseExpected;
 import edu.cmu.cs.lti.tutalk.script.Scenario;
+import edu.cmu.cs.lti.tutalk.script.TutorTurns;
 
 /**
  *
@@ -81,7 +82,7 @@ public class TuTalkAutomata {
         currentScenario = s;
     }
 
-    public List<String> start() 
+    public TutorTurns start() 
     {
         if (currentScenario != null) 
         {
@@ -92,8 +93,9 @@ public class TuTalkAutomata {
         return progress();
     }
 
-    public List<String> progress() 
+    public TutorTurns progress() 
     {
+        TutorTurns tt = new TutorTurns();
         List<Concept> executionTrail = new ArrayList<Concept>();
         if (currentScenario != null) 
         {
@@ -103,6 +105,11 @@ public class TuTalkAutomata {
                 if (goal != null) 
                 {
                     Concept c = goal.execute(currentState);
+                    //Transfer KCs from state to TutorTurns. When finished, remove them from state so they're not accidentally reused.
+                    tt.setKCset(currentState.getKCs());
+                    tt.setResult(currentState.getResult());
+                    currentState.setKCs(null);
+                    currentState.setResult(null);
                     if (c != null) 
                     {
                         if (c instanceof ResponseExpected) 
@@ -131,15 +138,14 @@ public class TuTalkAutomata {
             while (true);
         }
 
-        List<String> tutorTurns = new ArrayList<String>();
         if (!executionTrail.isEmpty()) 
         {
             for (Concept c : executionTrail) 
             {
-                tutorTurns.add(templater.renderTemplate(c.getText()));
+                tt.addTurns(templater.renderTemplate(c.getText()));
             } 
         }
-        return tutorTurns;
+        return tt;
     }
 
     public List<EvaluatedConcept> evaluateTuteeTurn(String turn, Collection<String> annotations) 
@@ -158,10 +164,13 @@ public class TuTalkAutomata {
     {
         return evaluateTuteeTurn(turn, new ArrayList<String>());
     }
+ 
 
-    public List<String> progress(Concept inputConcept) 
+    public TutorTurns progress(Concept inputConcept) 
     {
         List<Concept> executionTrail = new ArrayList<Concept>();
+        TutorTurns tt = new TutorTurns();
+        
         if (currentScenario != null) 
         {
             do 
@@ -170,6 +179,11 @@ public class TuTalkAutomata {
                 if (goal != null) 
                 {
                     Concept c = goal.execute(inputConcept, currentState);
+                    //Transfer KCs from state to TutorTurns. When finished, remove them from state so they're not accidentally reused.
+                    tt.setKCset(currentState.getKCs());
+                    tt.setResult(currentState.getResult());
+                    currentState.setKCs(null);
+                    currentState.setResult(null);
                     if (c != null) 
                     {
                         if (c instanceof ResponseExpected) 
@@ -193,20 +207,19 @@ public class TuTalkAutomata {
                 }
             } while (true);
         }
-
-        List<String> tutorTurns = new ArrayList<String>();
+        
         if (!executionTrail.isEmpty()) 
         {
             for (Concept c : executionTrail) 
             {
-                tutorTurns.add(templater.renderTemplate(c.getText()));
+                tt.addTurns(templater.renderTemplate(c.getText()));
             }
         }
 
-        List<String> moreTurns = progress();
-        tutorTurns.addAll(moreTurns);
+        TutorTurns tt2 = progress();
+        tt.combine(tt2);
 
-        return tutorTurns;
+        return tt;
     }
 
     public void reset() 

@@ -44,11 +44,11 @@ public class FeedbackResponse extends Response {
         super(c, f);
     }
     
-    public FeedbackResponse(Concept c, Feedback f, ArrayList<String> skills, String masteryType) 
+    public FeedbackResponse(Concept c, Feedback f, ArrayList<String> kcs, String resultType) 
     {
         super(c, f);
-        setSkillset(skills);
-        setMastery(masteryType);
+        setKCset(kcs);
+        setResult(resultType);
     }
    
 }

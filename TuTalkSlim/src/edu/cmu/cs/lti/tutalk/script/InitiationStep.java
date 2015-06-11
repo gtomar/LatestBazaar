@@ -57,7 +57,6 @@ public class InitiationStep extends Step
 	{
 		if (!isDone())
 		{
-
 			state.log("step.initiation." + initiation.getConcept().getLabel(), "Executing ... ", false);
 
 			Concept ret = initiation.execute(state);
