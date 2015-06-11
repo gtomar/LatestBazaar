@@ -48,7 +48,7 @@ import org.w3c.dom.NodeList;
 
 /**
  * 
- * @author rohitk
+ * @author rohitk --> leah.nh
  */
 public class Scenario
 {
@@ -355,7 +355,8 @@ public class Scenario
 														}
 														else if (resultValue != null && kcList != null) {
 															r = new SubGoalResponse(conceptToMatch, subgoal, sayFeedback, kcList, resultValue);
-														} else {
+														}
+														else {
 															r = new SubGoalResponse(conceptToMatch, subgoal, sayFeedback);
 														}
 													}

@@ -81,22 +81,22 @@ public abstract class Response
 		return sayThis;
 	}
 	
-    public void setSkillset(ArrayList<String> skills)
+    public void setKCset(ArrayList<String> skills)
     {
     	skillset = skills;
     }
     
-    public ArrayList<String> getSkillset()
+    public ArrayList<String> getKCset()
     {
     	return skillset;
     }
     
-    public void setMastery(String masteryType)
+    public void setResult(String resultType)
     {
-    	mastery = masteryType;
+    	mastery = resultType;
     }
     
-    public String getMastery()
+    public String getResult()
     {
     	return mastery;
     }

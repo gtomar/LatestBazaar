@@ -49,13 +49,13 @@ public class SubGoalResponse extends Response
 		setFeedback(sayThis);
 	}
 	
-	public SubGoalResponse(Concept c, Goal goal, Feedback sayThis, ArrayList<String> skills, String masteryType)
+	public SubGoalResponse(Concept c, Goal goal, Feedback sayThis, ArrayList<String> KCs, String resultType)
 	{
 		super(c);
 		subgoal = goal;
 		setFeedback(sayThis);
-		setSkillset(skills);
-		setMastery(masteryType);
+		setKCset(KCs);
+		setResult(resultType);
 	}
 
 	public void setSubGoal(Goal sg)

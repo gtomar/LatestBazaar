@@ -220,12 +220,14 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 
 	protected void processEvent(Event e)
 	{
+		System.out.println("***PROCESS EVENT***");
 //		if(!System.getProperty("basilica2.agents.condition").contains(tutorialCondition))
 //		{
 //			return;
 //		}
 		if (e instanceof DoTutoringEvent)
 		{
+			System.out.println("it was a dotutoringevent");
 			//queue up the start of the tutoring engine.
 			
 			handleDoTutoringEvent((DoTutoringEvent) e);
@@ -239,28 +241,37 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 		}
 		else if (e instanceof TutoringStartedEvent)
 		{
+			System.out.println("it was a tutoringstartedevent");
 			//start dialog engine
 			handleTutoringStartedEvent((TutoringStartedEvent) e);
 		}
 		else if (e instanceof MessageEvent)
 		{
+			System.out.println("it was a messageevent");
 			//check for concept match and start specific dialog - mostly used for affirmative to 'are you ready'
 			handleRequestDetectedEvent((MessageEvent) e);
 		}
 		else if (e instanceof StudentTurnsEvent)
 		{
+			System.out.println("it was a studentturnsevent");
 			//aggregated student input
 			handleStudentTurnsEvent((StudentTurnsEvent) e);
 		}
 		else if (e instanceof MoveOnEvent)
 		{
+			System.out.println("it was a moveonevent");
 			//someone's decided we should progress the dialog
 			handleMoveOnEvent((MoveOnEvent) e);
+		}
+		else
+		{
+			System.out.println("it wasn't any of those events");
 		}
 	}
 
 	private void handleDoTutoringEvent(DoTutoringEvent dte)
 	{
+		System.out.println("***DO TUTORING EVENT***");
 		Dialog d = proposedDialogs.get(dte.getConcept());
 		if (d != null)
 		{
@@ -301,6 +312,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 
 	private synchronized void handleRequestDetectedEvent(MessageEvent e)
 	{
+		System.out.println("***REQUEST DETECTED EVENT***");
 		for(String concept : e.getAllAnnotations())
 		{
 			Dialog killMeNow = null;
@@ -334,7 +346,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 
 	public void handleTutoringStartedEvent(TutoringStartedEvent tse)
 	{
-		
+		System.out.println("***TUTORING STARTED EVENT***");
 		if(currentConcept.equals(tse.getConcept()))
 		{
 			List<String> tutorTurns = currentAutomata.start();
@@ -381,6 +393,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	
 	private void handleMessageEvent(MessageEvent me)
 	{
+		System.out.println("***MESSAGE EVENT***");
 		String[] beginner = me.checkAnnotation("BEGINNER");
 		String[] intermediate = me.checkAnnotation("INTERMEDIATE");
 		String[] advanced = me.checkAnnotation("ADVANCED");
@@ -405,6 +418,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 
 	private void handleMoveOnEvent(MoveOnEvent mve)
 	{
+		System.out.println("***MOVE ON EVENT***");
 		if (expectingResponse)
 		{
 			if (currentAutomata != null)
@@ -445,6 +459,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 					List<EvaluatedConcept> matchingConcepts = currentAutomata.evaluateTuteeTurn(studentTurn, ste.getAnnotations());
 					if (matchingConcepts.size() != 0)
 					{
+						System.out.println("******matched a concept");
 						System.out.println(matchingConcepts.get(0).getClass().getSimpleName());
 						System.out.println(matchingConcepts.get(0).concept.getClass().getSimpleName());
 						Concept concept = matchingConcepts.get(0).concept;
