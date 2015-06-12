@@ -31,5 +31,6 @@
 	<classpathentry kind="lib" path="/BasilicaCore/lib/OtherLibraries/Utilities.jar" sourcepath="/Users/dadamson/Laboratory/basilica/911-Libraries/Utilities/src"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/BaseAgent"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/TuTalkSlim"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
