@@ -32,5 +32,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/BaseAgent"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/TuTalkSlim"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="/Users/leah/Tulip/CMU/Summer2015/KTDemo/KnowledgeTracing/gson-2.2.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -221,14 +221,12 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 
 	protected void processEvent(Event e)
 	{
-		System.out.println("***PROCESS EVENT***");
 //		if(!System.getProperty("basilica2.agents.condition").contains(tutorialCondition))
 //		{
 //			return;
 //		}
 		if (e instanceof DoTutoringEvent)
 		{
-			System.out.println("it was a dotutoringevent");
 			//queue up the start of the tutoring engine.
 			
 			handleDoTutoringEvent((DoTutoringEvent) e);
@@ -242,31 +240,26 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 		}
 		else if (e instanceof TutoringStartedEvent)
 		{
-			System.out.println("it was a tutoringstartedevent");
 			//start dialog engine
 			handleTutoringStartedEvent((TutoringStartedEvent) e);
 		}
 		else if (e instanceof MessageEvent)
 		{
-			System.out.println("it was a messageevent");
 			//check for concept match and start specific dialog - mostly used for affirmative to 'are you ready'
 			handleRequestDetectedEvent((MessageEvent) e);
 		}
 		else if (e instanceof StudentTurnsEvent)
 		{
-			System.out.println("it was a studentturnsevent");
 			//aggregated student input
 			handleStudentTurnsEvent((StudentTurnsEvent) e);
 		}
 		else if (e instanceof MoveOnEvent)
 		{
-			System.out.println("it was a moveonevent");
 			//someone's decided we should progress the dialog
 			handleMoveOnEvent((MoveOnEvent) e);
 		}
 		else
 		{
-			System.out.println("it wasn't any of those events");
 		}
 	}
 
@@ -352,6 +345,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 		{
 			TutorTurns tt = currentAutomata.start();
 			processTutorTurns(tt.getTutorTurns());
+			processKC(tt);
 		}
 		else
 		{
@@ -439,6 +433,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 				}
 				TutorTurns tt = currentAutomata.progress(response.getConcept());
 				processTutorTurns(tt.getTutorTurns());
+				processKC(tt);
 			}
 		}
 	}
@@ -473,6 +468,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 								noMatchingResponseCount = 0;
 								TutorTurns tt = currentAutomata.progress(concept);
 								processTutorTurns(tt.getTutorTurns());
+								processKC(tt);
 								
 								/** Section to give student a second chance to answer the question.
 								 * 
@@ -508,6 +504,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 								noMatchingResponseCount = 0;
 								TutorTurns tt = currentAutomata.progress(concept);
 								processTutorTurns(tt.getTutorTurns());
+								processKC(tt);
 							}
 						}
 						/*else if (concept.getLabel().equalsIgnoreCase("_dont_know_"))
@@ -535,6 +532,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 							noMatchingResponseCount = 0;
 							TutorTurns tt = currentAutomata.progress(concept);
 							processTutorTurns(tt.getTutorTurns());
+							processKC(tt);
 						}
 					}
 				}
@@ -665,6 +663,24 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 //		this.dispatchEvent(myAgent.getComponent(tutoring_actor_name), tte);
 
 		// Waits for AcknowledgeMessage Event and then updates expectations
+	}
+	
+	
+	/**Deal with a change in Knowledge Components, as passed up in TutorTurns from the state
+	 * @param tt
+	 */
+	private void processKC(TutorTurns tt)
+	{
+		//Only process if these two are not null
+		if (tt.getKCset() != null && tt.getResult() != null)
+		{
+			System.out.println(tt.toString());
+			//right now I'm using this to change TutorActor state directly,
+			//but it might work better or be more elegant to create a KnowledgeTracingEvent,
+			//and have a Listener listen for the kte.
+			//KnowledgeTracingEvent kte = new KnowledgeTracingEvent(source, tt.getKCset(), tt.getResult());
+			//However, for the moment, I see no reason to
+		}
 	}
 
 	public void timedOut(String id)

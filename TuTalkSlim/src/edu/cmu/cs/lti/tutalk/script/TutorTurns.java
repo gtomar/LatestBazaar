@@ -72,5 +72,10 @@ public class TutorTurns {
 	{
 		tutorTurns.add(s);
 	}
+	
+	public String toString()
+	{
+		return "Most recent tutor turns: " + tutorTurns.toString() + "\nKCs to change: " + kcSet.toString() + "\nResult of action: " + result;
+	}
 
 }
