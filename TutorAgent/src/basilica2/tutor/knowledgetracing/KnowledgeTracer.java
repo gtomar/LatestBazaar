@@ -30,10 +30,21 @@ public class KnowledgeTracer {
 	HashMap<String, UserModel> users = new HashMap<String, UserModel>();
 	Gson gee = new GsonBuilder().enableComplexMapKeySerialization().create();
 	
-	public KnowledgeTracer() throws JsonSyntaxException, JsonIOException, FileNotFoundException
+	public KnowledgeTracer()
 	{
 		String userFilePath = "bob_user.json";
-		loadUserModels(userFilePath);
+		try {
+			loadUserModels(userFilePath);
+		} catch (JsonSyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JsonIOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public void loadUserModels(String userFilePath) throws JsonSyntaxException, JsonIOException, FileNotFoundException

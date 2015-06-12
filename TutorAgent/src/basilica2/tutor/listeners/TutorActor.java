@@ -32,6 +32,7 @@
 package basilica2.tutor.listeners;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -56,6 +57,7 @@ import basilica2.tutor.events.MoveOnEvent;
 import basilica2.tutor.events.StudentTurnsEvent;
 import basilica2.tutor.events.TutorTurnsEvent;
 import basilica2.tutor.events.TutoringStartedEvent;
+import basilica2.tutor.knowledgetracing.KnowledgeTracer;
 import edu.cmu.cs.lti.basilica2.core.Agent;
 import edu.cmu.cs.lti.basilica2.core.Event;
 import edu.cmu.cs.lti.project911.utils.log.Logger;
@@ -106,6 +108,8 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	private String moving_on_text = "Okay, let's move on.";
 	private String tutorialCondition = "tutorial";
 	private String level = "INTERMEDIATE";
+	
+	private KnowledgeTracer tracer = new KnowledgeTracer();
 
 	// private List<Dialog> dialogsReadyQueue = new ArrayList<Dialog>();
 
@@ -680,6 +684,26 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 			//and have a Listener listen for the kte.
 			//KnowledgeTracingEvent kte = new KnowledgeTracingEvent(source, tt.getKCset(), tt.getResult());
 			//However, for the moment, I see no reason to
+			
+			//transform result from String to Boolean
+			boolean result;
+			String resultString = tt.getResult();
+			if (resultString.equals("success"))
+			{
+				result = true;
+			}
+			else if (resultString.equals("failure"))
+			{
+				result = false;
+			}
+			else
+			{
+				//There should be other checks against this when the xml file is read, but just in case.
+				System.err.println("Warning: encountered a Knowledge Tracing result that is neither success nor failure.");
+				result = false;
+			}
+			
+			tracer.observeAttempt("bob", "placeholder_id", result, tt.getKCset());
 		}
 	}
 
