@@ -1,5 +1,6 @@
 package edu.cmu.cs.lti.tutalk.script;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,7 +19,7 @@ public class TutorTurns {
 	
 	public TutorTurns()
 	{
-		tutorTurns = null;
+		tutorTurns = new ArrayList<String>();
 		kcSet = null;
 		result = null;
 	}

@@ -35,9 +35,11 @@ import edu.cmu.cs.lti.tutalk.script.Concept;
 import edu.cmu.cs.lti.tutalk.script.DictionaryConcept;
 import edu.cmu.cs.lti.tutalk.script.Response;
 import edu.cmu.cs.lti.tutalk.script.Scenario;
+import edu.cmu.cs.lti.tutalk.script.TutorTurns;
 import edu.cmu.cs.lti.tutalk.slim.EvaluatedConcept;
 import edu.cmu.cs.lti.tutalk.slim.FuzzyTurnEvaluator;
 import edu.cmu.cs.lti.tutalk.slim.TuTalkAutomata;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -62,7 +64,7 @@ public class Tester {
         // Test replacement variables
         auto.addReplacementVariable("lol", "Laughing out Loud");
 
-        List<String> turns = auto.start();
+        List<String> turns = auto.start().getTutorTurns();
         while (true) 
         {
             System.out.println("=============================");
@@ -98,7 +100,7 @@ public class Tester {
                 matchingConcepts = auto.evaluateTuteeTurn(input, new ArrayList<String>(0));
             }
             System.out.println("Matched Concept " + matchingConcepts.get(0).concept.getLabel());
-            turns = auto.progress(matchingConcepts.get(0).concept);
+            turns = auto.progress(matchingConcepts.get(0).concept).getTutorTurns();
         }
     }
 }
