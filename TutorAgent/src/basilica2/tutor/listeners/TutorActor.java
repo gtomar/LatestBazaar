@@ -107,7 +107,6 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	private String dont_know_prompt_text = "Anybody?";
 	private String moving_on_text = "Okay, let's move on.";
 	private String tutorialCondition = "tutorial";
-	private String level = "INTERMEDIATE";
 	
 	private KnowledgeTracer tracer = new KnowledgeTracer();
 
@@ -117,23 +116,19 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	{
 
 		public String conceptName;
-		public String scenarioName;
-		public String scenarioNameBeginner;
-		public String scenarioNameIntermediate;
-		public String scenarioNameAdvanced;
+		public ArrayList<String> kcs;
+		public ArrayList<String> scenarios;
 		public String introText;
 		public String acceptAnnotation;
 		public String acceptText;
 		public String cancelAnnotation;
 		public String cancelText;
 
-		public Dialog(String conceptName, String scenarioName, String introText, String cueAnnotation, String cueText, String cancelAnnotation, String cancelText, String scenarioNameBeginner, String scenarioNameIntermediate, String scenarioNameAdvanced)
+		public Dialog(String conceptName, ArrayList<String> kcs, ArrayList<String> scenarios, String introText, String cueAnnotation, String cueText, String cancelAnnotation, String cancelText)
 		{
 			this.conceptName = conceptName;
-			this.scenarioName = scenarioName;
-			this.scenarioNameBeginner = scenarioNameBeginner;
-			this.scenarioNameIntermediate = scenarioNameIntermediate;
-			this.scenarioNameAdvanced = scenarioNameAdvanced;
+			this.kcs = kcs;
+			this.scenarios = scenarios;
 			this.introText = introText;
 			this.acceptAnnotation = cueAnnotation;
 			this.acceptText = cueText;
@@ -181,15 +176,42 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 					{
 						Element dialogElement = (Element) dialogNodes.item(i);
 						String conceptName = dialogElement.getAttribute("concept");
-						String name = dialogElement.getAttribute("scenario");
-						String nameBeginner = dialogElement.getAttribute("scenario-beginner");
-						String nameIntermediate = dialogElement.getAttribute("scenario-intermediate");
-						String nameAdvanced = dialogElement.getAttribute("scenario-advanced");
 						String introText = null;
 						String cueText = null;
 						String cueAnnotation = null;
 						String cancelText = null;
 						String cancelAnnotation = null;
+						NodeList kcSetNodes = dialogElement.getElementsByTagName("KCset");
+						ArrayList<String> kcs = new ArrayList<String>();
+						if ((kcSetNodes != null) && (kcSetNodes.getLength() != 0))
+						{
+							Element kcSetElement = (Element) kcSetNodes.item(0);
+							NodeList kcNodes = kcSetElement.getElementsByTagName("KC");
+							for (int j=0; j<kcNodes.getLength(); j++)
+							{
+								Element kcElement = (Element) kcNodes.item(j);
+								kcs.add(kcElement.getTextContent());
+							}
+						}
+						NodeList scenariosNode = dialogElement.getElementsByTagName("scenarios");
+						ArrayList<String> scenarios = new ArrayList<String>();
+						if ((scenariosNode != null) && (scenariosNode.getLength() != 0))
+						{
+							Element scenariosElement = (Element) scenariosNode.item(0);
+							NodeList scenarioNodes = scenariosElement.getElementsByTagName("scenario");
+							for (int j=0; j<scenarioNodes.getLength(); j++)
+							{
+								Element scenarioElement = (Element) scenarioNodes.item(j);
+								scenarios.add(scenarioElement.getTextContent());
+							}
+						}
+						else
+						{
+							//If there aren't any scenarios listed within the dialog, use the one found in the attribute.
+							//Makes it compatible with non-KC dialogs
+							//Probably needs a case for if this is null, too?
+							scenarios.add(dialogElement.getAttribute("scenario"));
+						}
 						NodeList introNodes = dialogElement.getElementsByTagName("intro");
 						if ((introNodes != null) && (introNodes.getLength() != 0))
 						{
@@ -211,7 +233,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 							cancelAnnotation = cancelElement.getAttribute("annotation");
 							cancelText = cancelElement.getTextContent();
 						}
-						Dialog d = new Dialog(conceptName, name, introText, cueAnnotation, cueText, cancelAnnotation, cancelText, nameBeginner, nameIntermediate, nameAdvanced);
+						Dialog d = new Dialog(conceptName, kcs, scenarios, introText, cueAnnotation, cueText, cancelAnnotation, cancelText);
 						proposedDialogs.put(conceptName, d);
 					}
 				}
@@ -373,41 +395,25 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	}
 	
 	private String determineScenario(Dialog d) {
-		String name = "";
-		if (level.equals("BEGINNER")) {
-			name = d.scenarioNameBeginner;
-		} else if (level.equals("INTERMEDIATE")) {
-			name = d.scenarioNameIntermediate;
-		} else if (level.equals("ADVANCED")) {
-			name = d.scenarioNameIntermediate;
+		ArrayList<String> scenarios = d.scenarios;
+		ArrayList<String> kcs = d.kcs;
+		//If the scenario list has only one element, we ignore kcs and use it
+		if (!kcs.isEmpty())
+		{
+			log(Logger.LOG_WARNING, "Knowledge Components are listed, but ignored because there is only one scenario.");
+			return scenarios.get(0); 
 		}
-		if (name.equals("")) {
-			name = d.scenarioName;
+		else if (scenarios.size()==1)
+		{
+			return scenarios.get(0);
 		}
-		return name;
-	}
-	
-	private void handleMessageEvent(MessageEvent me)
-	{
-		String[] beginner = me.checkAnnotation("BEGINNER");
-		String[] intermediate = me.checkAnnotation("INTERMEDIATE");
-		String[] advanced = me.checkAnnotation("ADVANCED");
-		System.out.println(beginner);
-		System.out.println(intermediate);
-		System.out.println(advanced);
-
-		if (beginner != null) {
-			this.level = "BEGINNER";
+		//Use Knowledge Components to determine which scenario to choose 
+		else
+		{
+			double successProb = tracer.getProbabilityOfSuccess("bob", kcs);
+			//temporarily return first element as default for testing purposes
+			return scenarios.get(0); 
 		}
-		if (intermediate != null) {
-			this.level = "INTERMEDIATE";
-		}
-		if (advanced != null) {
-			this.level = "ADVANCED";
-		}
-		
-		//System.out.println("********LEVEL IS NOW: " + this.level);
-		
 	}
 
 
@@ -752,7 +758,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 				d2 = pendingDialogs.remove(d2.acceptAnnotation);
 				if (d2 != null)
 				{
-					//TODONE: continue dialog even if students haven't responded approrpriately.
+					//TODONE: continue dialog even if students haven't responded appropriately.
 //					CancelRequestEvent cre = new CancelRequestEvent(this, tokens[1]);
 //					this.dispatchEvent(myAgent.getComponent(request_detector_name), cre);
 //
@@ -823,10 +829,6 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	public void preProcessEvent(InputCoordinator source, Event event)
 	{
 		this.source = source;
-		if (event instanceof MessageEvent)
-		{
-			handleMessageEvent((MessageEvent) event);
-		}
 	}
 
 	@Override
