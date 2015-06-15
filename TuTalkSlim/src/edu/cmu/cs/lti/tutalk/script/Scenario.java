@@ -106,6 +106,7 @@ public class Scenario
 			parser.parse(filename);
 			System.err.println("done parsing!");
 			Document dom = parser.getDocument();
+			System.err.println("in between");
 			NodeList ns1 = dom.getElementsByTagName("scenario");
 			if ((ns1 != null) && (ns1.getLength() != 0))
 			{

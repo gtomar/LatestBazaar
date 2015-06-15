@@ -105,11 +105,9 @@ public class TuTalkAutomata {
                 if (goal != null) 
                 {
                     Concept c = goal.execute(currentState);
-                    //Transfer KCs from state to TutorTurns. When finished, remove them from state so they're not accidentally reused.
+                    //Transfer KCs from state to TutorTurns.
                     tt.setKCset(currentState.getKCs());
                     tt.setResult(currentState.getResult());
-                    currentState.setKCs(null);
-                    currentState.setResult(null);
                     if (c != null) 
                     {
                         if (c instanceof ResponseExpected) 
@@ -179,11 +177,9 @@ public class TuTalkAutomata {
                 if (goal != null) 
                 {
                     Concept c = goal.execute(inputConcept, currentState);
-                    //Transfer KCs from state to TutorTurns. When finished, remove them from state so they're not accidentally reused.
+                    //Transfer KCs from state to TutorTurns.
                     tt.setKCset(currentState.getKCs());
                     tt.setResult(currentState.getResult());
-                    currentState.setKCs(null);
-                    currentState.setResult(null);
                     if (c != null) 
                     {
                         if (c instanceof ResponseExpected) 

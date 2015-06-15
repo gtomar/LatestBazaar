@@ -20,8 +20,8 @@ public class TutorTurns {
 	public TutorTurns()
 	{
 		tutorTurns = new ArrayList<String>();
-		kcSet = null;
-		result = null;
+		kcSet = new ArrayList<String>();
+		result = "";
 	}
 	
 	public void setTutorTurns(List<String> tt)
@@ -57,15 +57,20 @@ public class TutorTurns {
 	public void combine(TutorTurns tt2)
 	{
 		tutorTurns.addAll(tt2.getTutorTurns());
-		if(kcSet!=null && tt2.getKCset()!=null)
+		if(kcSet!=null && tt2.getKCset()!=null && !(kcSet.equals(tt2.getKCset())))
 		{
 			//I'm not sure if this is a possible situation. I think it's not?
 			//If it is, then we will have to find a more sophisticated method of combining TutorTurns.
 			System.err.println("Cannot combine two KC sets.");
+			System.out.println("First tutorTurns:");
+			this.toString();
+			System.out.println("Second tutorTurns:");
+			tt2.toString();
 		} else if (tt2.kcSet!=null)
 		{
-			kcSet = tt2.getKCset();
-			result = tt2.getResult();
+			//System.out.println("Combining tutorTurns");
+			setKCset(tt2.getKCset());
+			setResult(result = tt2.getResult());
 		}
 	}
 	
@@ -76,7 +81,17 @@ public class TutorTurns {
 	
 	public String toString()
 	{
-		return "Most recent tutor turns: " + tutorTurns.toString() + "\nKCs to change: " + kcSet.toString() + "\nResult of action: " + result;
+		System.out.println(tutorTurns.toString());
+		if (kcSet != null)
+			System.out.println(kcSet.toString());
+		else
+			System.out.println("KC Set null");
+		if (result!=null)
+			System.out.println(result);
+		else
+			System.out.println("result null");
+		return tutorTurns.toString();
+		//return "!!!!!!!!!!!!!!!!!Most recent tutor turns: " + tutorTurns.toString() + "\nKCs to change: " + kcSet.toString() + "\nResult of action: " + result;
 	}
 
 }

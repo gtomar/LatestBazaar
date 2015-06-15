@@ -16,7 +16,6 @@ import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 
-import basilica2.tutor.*;
 
 /**
  * Interface between TutorActor and BayesianKnowledgeTracing

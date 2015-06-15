@@ -110,8 +110,8 @@
 			
 			<step>
 				<KCset>
-					<KC>bread</KC>
-					<KC>window</KC>
+					<KC>step1-KC1</KC>
+					<KC>step1-KC2</KC>
 				</KCset>
 				<!-- Every step begins with an initiating concept or literal phrase -->
 				<initiation>do-step-1</initiation>
@@ -125,7 +125,7 @@
 				<response push="step_2" result="success" say="ok">step-1-right-answer</response>
                 
 				<!-- unanticipated-response is special: it's anything that doesn't match one of the above. -->
-				<response push="step_1_help" say="wrong">unanticipated-response</response>
+				<response push="step_1_help" say="wrong" result="failure">unanticipated-response</response>
 			</step>
 			
 			
@@ -147,17 +147,25 @@
 		
 		<goal name="step_1_help">
 			<step>
+				<KCset>
+					<KC>step1help-KC1</KC>
+					<KC>step1help-KC2</KC>
+				</KCset>
 				<initiation>step-1-help</initiation>
-				<response push="step_2" say="ok">step-1-right-answer</response>
-				<response push="step_2" say="step-1-detail">unanticipated-response</response>
+				<response push="step_2" say="ok" result="success">step-1-right-answer</response>
+				<response push="step_2" say="step-1-detail" result="failure">unanticipated-response</response>
 			</step>
 		</goal>
 		
 		<goal name="step_2_help">
 			<step>
+				<KCset>
+					<KC>step2help-KC1</KC>
+					<KC>step2help-KC2</KC>
+				</KCset>
 				<initiation>step-2-help</initiation>
-				<response say="ok">step-2-right-answer</response>
-				<response say="step-2-detail">unanticipated-response</response>
+				<response say="ok" result="success">step-2-right-answer</response>
+				<response say="step-2-detail" result="failure">unanticipated-response</response>
 			</step>
 		</goal>
 		

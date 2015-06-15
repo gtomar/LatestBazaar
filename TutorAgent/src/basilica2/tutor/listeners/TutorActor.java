@@ -94,7 +94,7 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	
 	private double tutorMessagePriority = 0.75;
 	private boolean interruptForNewDialogues = true;
-	private boolean startAnyways = true;//gst edited it to true
+	private boolean startAnyways = false;//gst edited it to true
 	private String dialogueFolder = "dialogs";
 	
 	private String dialogueConfigFile = "dialogues/dialogues-config.xml";
@@ -269,7 +269,6 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 
 	private void handleDoTutoringEvent(DoTutoringEvent dte)
 	{
-		System.out.println("***DO TUTORING EVENT***");
 		Dialog d = proposedDialogs.get(dte.getConcept());
 		if (d != null)
 		{
@@ -310,7 +309,6 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 
 	private synchronized void handleRequestDetectedEvent(MessageEvent e)
 	{
-		System.out.println("***REQUEST DETECTED EVENT***");
 		for(String concept : e.getAllAnnotations())
 		{
 			Dialog killMeNow = null;
@@ -344,7 +342,6 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 
 	public void handleTutoringStartedEvent(TutoringStartedEvent tse)
 	{
-		System.out.println("***TUTORING STARTED EVENT***");
 		if(currentConcept.equals(tse.getConcept()))
 		{
 			TutorTurns tt = currentAutomata.start();
@@ -392,7 +389,6 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	
 	private void handleMessageEvent(MessageEvent me)
 	{
-		System.out.println("***MESSAGE EVENT***");
 		String[] beginner = me.checkAnnotation("BEGINNER");
 		String[] intermediate = me.checkAnnotation("INTERMEDIATE");
 		String[] advanced = me.checkAnnotation("ADVANCED");
@@ -417,7 +413,6 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 
 	private void handleMoveOnEvent(MoveOnEvent mve)
 	{
-		System.out.println("***MOVE ON EVENT***");
 		if (expectingResponse)
 		{
 			if (currentAutomata != null)
@@ -459,7 +454,6 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 					List<EvaluatedConcept> matchingConcepts = currentAutomata.evaluateTuteeTurn(studentTurn, ste.getAnnotations());
 					if (matchingConcepts.size() != 0)
 					{
-						System.out.println("******matched a concept");
 						System.out.println(matchingConcepts.get(0).getClass().getSimpleName());
 						System.out.println(matchingConcepts.get(0).concept.getClass().getSimpleName());
 						Concept concept = matchingConcepts.get(0).concept;
@@ -675,35 +669,49 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	 */
 	private void processKC(TutorTurns tt)
 	{
-		//Only process if these two are not null
-		if (tt.getKCset() != null && tt.getResult() != null)
+		//Only process if these two are not null and not empty
+		if (tt.getKCset()!=null && tt.getResult()!=null)
 		{
-			System.out.println(tt.toString());
-			//right now I'm using this to change TutorActor state directly,
-			//but it might work better or be more elegant to create a KnowledgeTracingEvent,
-			//and have a Listener listen for the kte.
-			//KnowledgeTracingEvent kte = new KnowledgeTracingEvent(source, tt.getKCset(), tt.getResult());
-			//However, for the moment, I see no reason to
+			if (!tt.getKCset().isEmpty() && !tt.getResult().equals(""))
+			{
+				//right now I'm using this to change TutorActor state directly,
+				//but it might work better or be more elegant to create a KnowledgeTracingEvent,
+				//and have a Listener listen for the kte.
+				//KnowledgeTracingEvent kte = new KnowledgeTracingEvent(source, tt.getKCset(), tt.getResult());
+				//However, for the moment, I see no reason to
 			
-			//transform result from String to Boolean
-			boolean result;
-			String resultString = tt.getResult();
-			if (resultString.equals("success"))
-			{
-				result = true;
-			}
-			else if (resultString.equals("failure"))
-			{
-				result = false;
+				//transform result from String to Boolean
+				boolean result;
+				String resultString = tt.getResult();
+				if (resultString.equals("success"))
+				{
+					result = true;
+					log(Logger.LOG_NORMAL, "Observing success");
+				}
+				else if (resultString.equals("failure"))
+				{
+					result = false;
+					log(Logger.LOG_NORMAL, "Observing failure");
+				}
+				else
+				{
+					//There should be other checks against this when the xml file is read, but just in case.
+					System.err.println("Warning: encountered a Knowledge Tracing result that is neither success nor failure.");
+					System.err.println("KCset: " + tt.getKCset().toString());
+					System.err.println("Result: " + tt.getResult());
+					result = false;
+				}
+			
+				tracer.observeAttempt("bob", "placeholder_id", result, tt.getKCset());
 			}
 			else
 			{
-				//There should be other checks against this when the xml file is read, but just in case.
-				System.err.println("Warning: encountered a Knowledge Tracing result that is neither success nor failure.");
-				result = false;
+				log(Logger.LOG_NORMAL, "Empty Knowledge Tracing for this step");
 			}
-			
-			tracer.observeAttempt("bob", "placeholder_id", result, tt.getKCset());
+		}
+		else
+		{
+			log(Logger.LOG_NORMAL, "No Knowledge Tracing for this step");
 		}
 	}
 
