@@ -397,21 +397,35 @@ public class TutorActor extends BasilicaAdapter implements TimeoutReceiver
 	private String determineScenario(Dialog d) {
 		ArrayList<String> scenarios = d.scenarios;
 		ArrayList<String> kcs = d.kcs;
+		System.err.println("Scenarios: " + scenarios.toString());
+		System.err.println("Knowledge components: " + kcs.toString());
 		//If the scenario list has only one element, we ignore kcs and use it
-		if (!kcs.isEmpty())
+		if (scenarios.size()==1)
 		{
-			log(Logger.LOG_WARNING, "Knowledge Components are listed, but ignored because there is only one scenario.");
-			return scenarios.get(0); 
-		}
-		else if (scenarios.size()==1)
-		{
+			if (!kcs.isEmpty())
+			{
+				log(Logger.LOG_WARNING, "Knowledge Components are listed, but ignored because there is only one scenario.");
+			}
 			return scenarios.get(0);
 		}
 		//Use Knowledge Components to determine which scenario to choose 
 		else
 		{
 			double successProb = tracer.getProbabilityOfSuccess("bob", kcs);
-			//temporarily return first element as default for testing purposes
+			System.err.println("Probability of success: " + successProb);
+			int numScs = scenarios.size();
+			for (int i=0;i<numScs;i++)
+			{
+				double cutoff = (double) (i+1) / numScs;
+				System.err.println("Found potential cutoff: " + cutoff);
+				if (successProb <= cutoff)
+				{
+					System.err.println("Using  scenario: " + scenarios.get(i));
+					return scenarios.get(i);
+				}
+			}
+			//if something goes wrong, return first element as default
+			log(Logger.LOG_WARNING, "Unable to match probability of success with appropriate scenario. Using first by default");
 			return scenarios.get(0); 
 		}
 	}

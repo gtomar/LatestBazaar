@@ -10,7 +10,7 @@
 	<cancel annotation="NEGATIVE">No problem.</cancel>
 	</dialog>
 	
-	<dialog concept="OLD_CONCEPT_NAME" scenario="scenario-template" scenario-beginner="scenario-beginner">
+	<dialog concept="OLD_CONCEPT_NAME" scenario="scenario-template">
 		<!-- The intro prompt is offered to students. 
     	If they respond in the affirmative, the dialogue begins.-->
     	<intro>Do you want to start this scenario?</intro>
@@ -26,13 +26,12 @@
 		<!-- Questions to consider:
 		Should there be a fixed number of scenarios, or should it be flexible?
 		Having only 1 scenario should definitely be an option.
-		It would be good to be back-compatible. This may just require an if-old-version, else-new-version type thing
 		 -->
 		<scenarios>
 		<!-- Note: order matters! The first should be the most basic, while the last is the most complex. -->
-			<scenario>scenario-template</scenario>
-			<scenario>scenario-template</scenario>
-			<scenario>scenario-template</scenario>
+			<scenario>scenario-template1</scenario>
+			<scenario>scenario-template2</scenario>
+			<scenario>scenario-template3</scenario>
 		</scenarios>
     	<intro>Do you want to start this scenario?</intro>
     	<accept annotation="AFFIRMATIVE">Okay, let's get started.</accept>

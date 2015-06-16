@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scenario SYSTEM "TuTalkScenario.dtd">
+<scenario default-language="en" scenario-name="scenario-template">
+	<configuration>
+	</configuration>
+		
+	<concepts>
+		<!-- this is a special kind of concept for catching unexpected student responses -->
+		<concept label="unanticipated-response">
+			<phrase>anything else</phrase>
+		</concept>
+		
+		
+		<!-- tutor concepts. -->
+		<!-- the tutor will choose randomly between multiple phrases for a concept. -->	
+
+		<concept label="introduction">
+			<phrase>Welcome to scenario level 2!</phrase>
+		</concept>
+		
+		<concept label="conclusion">
+			<phrase>Good work.</phrase>
+		</concept>
+		
+		<concept label="do-step-1">
+			<phrase>Do Step 1. Let me know when you're done.</phrase>
+		</concept>
+		
+		<concept label="do-step-2">
+			<phrase>Do Step 2. Let me know when you're done.</phrase>
+		</concept>
+		
+		<concept label="step-1-help">
+			<phrase>Here's some more information about Step 1. I hope that helps.</phrase>
+		</concept>
+		
+		<concept label="step-2-help">
+			<phrase>Here's some more information about Step 2. I hope that helps.</phrase>
+		</concept>
+		
+		<concept label="step-1-detail">
+			<phrase>Here's a detailed description of Step 1.</phrase>
+		</concept>
+		
+		<concept label="step-2-detail">
+			<phrase>Here's a detailed description of Step 2.</phrase>
+		</concept>
+		
+		<concept label="ok">
+			<phrase>Okay</phrase>
+			<phrase>Good</phrase>
+			<phrase>Great</phrase>
+			<phrase>Correct!</phrase>
+			<phrase>Wonderful</phrase>
+			<phrase>Perfect</phrase>
+			<phrase>Exactly</phrase>
+			<phrase>You're right</phrase>
+			<phrase>Spot on</phrase>
+			<phrase>Good work</phrase>
+			<phrase>That's correct</phrase>
+			<phrase>Good job</phrase>
+		</concept>
+		
+		<concept label="wrong">
+			<phrase>Let me see if I can help you out.</phrase>
+			<phrase>Here's a tip.</phrase>
+			<phrase>Here's a pointer.</phrase>
+		</concept>
+		<!-- end tutor concepts. -->
+		
+		
+		<!-- student concepts. -->
+		
+		<!-- these match against external (MessageAnnotator) annotations. -->
+		<concept label="yes" type="annotation">
+			<phrase>AFFIRMATIVE</phrase>
+		</concept>
+		
+		<concept label="no" type="annotation">
+			<phrase>NEGATIVE</phrase>
+		</concept>
+		
+		<!-- these match against regular expressions. -->
+		
+		<concept label="step-1-right-answer" type="regex">
+			<phrase>done</phrase>
+			<phrase>finished</phrase>
+			<phrase>ok</phrase>
+			<phrase>got it</phrase>
+		</concept>
+		
+		<concept label="step-2-right-answer" type="regex">
+			<phrase>done</phrase>
+			<phrase>finished</phrase>
+			<phrase>ok</phrase>
+			<phrase>got it</phrase>
+		</concept>
+		
+		<!-- end student concepts. -->
+		
+	</concepts>
+	
+	<script>
+		<goal name="start" difficulty="0">
+			
+			<step>
+				<initiation>introduction</initiation>
+			</step>
+			
+			<step>
+				<KCset>
+					<KC>step1-KC1</KC>
+					<KC>step1-KC2</KC>
+				</KCset>
+				<!-- Every step begins with an initiating concept or literal phrase -->
+				<initiation>do-step-1</initiation>
+				
+				<!-- These are the "response" options. 
+					If the concept between the tags matches the student statement, 
+				    the "say" concept/phrase will be delivered by the tutor.
+				    "push" adds another goal to the dialogue's stack. 
+					 Note that goals should NOT be recursively nested. -->
+				
+				<response push="step_2" result="success" say="ok">step-1-right-answer</response>
+                
+				<!-- unanticipated-response is special: it's anything that doesn't match one of the above. -->
+				<response push="step_1_help" say="wrong" result="failure">unanticipated-response</response>
+			</step>
+			
+			
+			<step>
+				<initiation>conclusion</initiation>
+			</step>
+		</goal>
+		
+		<!-- Goals are referenced by their names. -->
+		
+		<goal name="step_2">
+			<step>
+				<initiation>do-step-2</initiation>
+				
+                <response say="ok">step-2-right-answer</response>
+                <response push="step_2_help" say="wrong">unanticipated-response</response>
+			</step>
+		</goal>
+		
+		<goal name="step_1_help">
+			<step>
+				<KCset>
+					<KC>step1help-KC1</KC>
+					<KC>step1help-KC2</KC>
+				</KCset>
+				<initiation>step-1-help</initiation>
+				<response push="step_2" say="ok" result="success">step-1-right-answer</response>
+				<response push="step_2" say="step-1-detail" result="failure">unanticipated-response</response>
+			</step>
+		</goal>
+		
+		<goal name="step_2_help">
+			<step>
+				<KCset>
+					<KC>step2help-KC1</KC>
+					<KC>step2help-KC2</KC>
+				</KCset>
+				<initiation>step-2-help</initiation>
+				<response say="ok" result="success">step-2-right-answer</response>
+				<response say="step-2-detail" result="failure">unanticipated-response</response>
+			</step>
+		</goal>
+		
+	</script>
+
+</scenario>

@@ -102,9 +102,8 @@ public class Scenario
 		try
 		{
 			DOMParser parser = new DOMParser();
-			System.err.println("parsing...");
 			parser.parse(filename);
-			System.err.println("done parsing!");
+			System.out.println("Parsed scenario file");
 			Document dom = parser.getDocument();
 			NodeList ns1 = dom.getElementsByTagName("scenario");
 			if ((ns1 != null) && (ns1.getLength() != 0))
